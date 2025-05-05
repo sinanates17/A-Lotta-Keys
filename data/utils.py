@@ -1,19 +1,21 @@
-from ossapi import Ossapi, ossapi
-from config import OSU_API_ID, OSU_API_SECRET, OSU_API_VERSION, DEBUG
+from ossapi import Ossapi, ossapi, Beatmapset, Beatmap, Score, Statistics
+from config import OSU_API_ID, OSU_API_SECRET, DEBUG
 from datetime import datetime
 from time import sleep
 
+OSU_API_VERSION = 20220704
+
 class Helper:
-    def __init__(self, prefix="[DATA_UTILS] "):
+    def __init__(self, prefix="[Helper] "):
         self.prefix = prefix
         self.osu_api = Ossapi(client_id=OSU_API_ID, client_secret=OSU_API_SECRET, api_version=OSU_API_VERSION)
 
-    def beatmapset_to_dict(self, beatmapset: ossapi.Beatmapset):
-
+    @staticmethod
+    def beatmapset_to_dict(beatmapset: Beatmapset):
         beatmapset_dict = {
             'artist' : beatmapset.artist,
             'artist_unicode' : beatmapset.artist_unicode,
-            'beatmaps' : [self.beatmap_to_dict(diff) for diff in beatmapset.beatmaps],
+            'beatmaps' : [Helper.beatmap_to_dict(diff) for diff in beatmapset.beatmaps],
             'bpm': beatmapset.bpm,
             'creator': beatmapset.creator,
             'description': beatmapset.description,
@@ -40,7 +42,8 @@ class Helper:
 
         return beatmapset_dict
     
-    def beatmap_to_dict(self, beatmap: ossapi.Beatmap):
+    @staticmethod
+    def beatmap_to_dict(beatmap: Beatmap):
 
         beatmap_dict = {
             'accuracy': beatmap.accuracy,
@@ -54,8 +57,8 @@ class Helper:
             'cs': beatmap.cs,
             'difficulty rating': beatmap.difficulty_rating,
             'drain': beatmap.drain,
-            'fail times': beatmap.failtimes.fail,
-            'exit times': beatmap.failtimes.exit,
+            #'fail times': beatmap.failtimes.fail,
+            #'exit times': beatmap.failtimes.exit,
             'hit length': beatmap.hit_length,
             'id': beatmap.id,
             'last updated': [beatmap.last_updated.month, beatmap.last_updated.day, beatmap.last_updated.year, beatmap.last_updated.hour]
@@ -63,7 +66,7 @@ class Helper:
             'max combo': beatmap.max_combo,
             'mode': beatmap.mode.value,
             'mode int': beatmap.mode_int,
-            'owner': beatmap.owner, #TEST THIS
+            'owner': beatmap.owner,
             'passcount': beatmap.passcount,
             'playcount': beatmap.playcount,
             'ranked': beatmap.ranked.value,
@@ -76,22 +79,18 @@ class Helper:
 
         return beatmap_dict
     
-    def score_to_dict(self, score: ossapi.Score):
+    @staticmethod
+    def score_to_dict(score: Score): #Intended for API version 20220704
 
         score_dict = {
             'accuracy': score.accuracy,
-            'beatmap id': score.beatmap_id,
+            'beatmap id': score.beatmap.id,
             'best id': score.best_id,
-            'build id': score.build_id,
-            'classic total score': score.classic_total_score,
-            'ended at': [score.ended_at.month, score.ended_at.day, score.ended_at.year, score.ended_at.hour]
-                if isinstance(score.ended_at, datetime) else None,
-            'has replay': score.has_replay,
+            'created at': [score.created_at.month, score.created_at.day, score.created_at.year, score.created_at.hour, score.created_at.minute]
+                if isinstance(score.created_at, datetime) else None,
+            'replay': score.replay,
             'id': score.id,
-            'is perfect combo': score.is_perfect_combo,
-            'legacy perfect': score.legacy_perfect,
-            'legacy score id': score.legacy_score_id,
-            'legacy total score': score.legacy_total_score,
+            'perfect': score.perfect,
             'max combo': score.max_combo,
             'mods': bin(score.mods.value),
             'passed': score.passed,
@@ -101,39 +100,25 @@ class Helper:
             'rank global': score.rank_global,
             'ranked': score.ranked,
             'replay': score.replay,
-            'ruleset id': score.ruleset_id,
-            'started at': [score.started_at.month, score.started_at.day, score.started_at.year, score.started_at.hour] 
-                if isinstance(score.started_at, datetime) else None,
-            'statistics': self.score_statistics_to_dict(score.statistics),
-            'total score': score.total_score,
-            'total score without mods': score.total_score_without_mods,
-            'type': score.type,
+            'statistics': Helper.score_statistics_to_dict(score.statistics),
+            'score': score.score,
             'user id': score.user_id,
-            'weight': score.weight
+            'weight': score.weight,
+            'internal id': f"{score.user_id}{score.created_at.strftime("%d%m%Y%H%M%S")}"
         }
 
         return score_dict
 
-    def score_statistics_to_dict(self, stats: ossapi.Statistics):
+    @staticmethod
+    def score_statistics_to_dict(stats: Statistics):
 
-        statistics_dict = {
-            'combo break': stats.combo_break,
-            'good': stats.good,
-            'great': stats.great,
-            'ignore hit': stats.ignore_hit,
-            'ignore miss': stats.ignore_miss,
-            'large bonus': stats.large_bonus,
-            'large tick hit': stats.large_tick_hit,
-            'large tick miss': stats.large_tick_miss,
-            'legacy combo increase': stats.legacy_combo_increase,
-            'meh': stats.meh,
-            'miss': stats.miss,
-            'ok': stats.ok,
-            'perfect': stats.perfect,
-            'slider tail hit': stats.slider_tail_hit,
-            'small bonus': stats.small_bonus,
-            'small tick hit': stats.small_tick_hit,
-            'small tick miss': stats.small_tick_miss
+        statistics_dict = { #Intended for API version 20220704
+            'count 50': stats.count_50,
+            'count 100': stats.count_100,
+            'count 300': stats.count_300,
+            'count geki': stats.count_geki,
+            'count katu': stats.count_katu,
+            'count miss': stats.count_miss,
         }
         
         return statistics_dict
@@ -151,7 +136,20 @@ class Helper:
             result = self.osu_api.search_beatmapsets(**kwargs, cursor=result.cursor)
 
             for beatmapset in result.beatmapsets:
-                print(beatmapset.title) #Temporary until I implement a logger
+                #print(beatmapset.title) #Temporary until I implement a logger
                 total.append(beatmapset)
 
         return total
+    
+    def user_scores_many_beatmaps(self, user_id: int, beatmap_ids: list[int]) -> list[Ossapi.score]:
+        scores = []
+
+        length = len(beatmap_ids)
+
+        for i, beatmap_id in enumerate(beatmap_ids):
+            sleep(3)
+            print(f"Request {i} of {length}") #Temporary until I implement a logger
+            result = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
+            scores += result
+
+        return scores
