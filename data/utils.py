@@ -84,7 +84,7 @@ class Helper:
 
         score_dict = {
             'accuracy': score.accuracy,
-            'beatmap id': score.beatmap.id,
+            'beatmap id': score.beatmap_id if isinstance(score.beatmap_id, int) else score.beatmap.id,
             'best id': score.best_id,
             'created at': [score.created_at.month, score.created_at.day, score.created_at.year, score.created_at.hour, score.created_at.minute]
                 if isinstance(score.created_at, datetime) else None,
@@ -141,15 +141,36 @@ class Helper:
 
         return total
     
-    def user_scores_many_beatmaps(self, user_id: int, beatmap_ids: list[int]) -> list[Ossapi.score]:
+    def user_scores_many_beatmaps(self, user_id: int, beatmap_ids: list[int]) -> list[Score]:
         scores = []
-
         length = len(beatmap_ids)
 
         for i, beatmap_id in enumerate(beatmap_ids):
             sleep(3)
             print(f"Request {i} of {length}") #Temporary until I implement a logger
-            result = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
-            scores += result
+            results = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
+            for result in results: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
+                result.beatmap_id = beatmap_id
+            scores += results
 
+        return scores
+    
+    def user_ids_per_beatmap(self, beatmap_ids: list[int]) -> dict[int:list[int]]:
+        beatmap_ids_w_user_ids = { id:[] for id in beatmap_ids}
+
+        for i, beatmap_id in enumerate(beatmap_ids):
+            sleep(3)
+            beatmap_scores = self.osu_api.beatmap_scores(beatmap_id=beatmap_id, limit=100).scores
+            beatmap_ids_w_user_ids[beatmap_id] = [score.user_id for score in beatmap_scores]
+            print(f"Beatmap {i+1} of {len(beatmap_ids)} | {len(beatmap_scores)} users")
+
+        return beatmap_ids_w_user_ids
+    
+    def beatmap_user_scores(self, beatmap_id: int, user_id: int, **kwargs) -> list[Score]:
+        sleep(3)
+        scores = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id, **kwargs)
+
+        for score in scores: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
+            score.beatmap_id = beatmap_id
+        
         return scores
