@@ -83,28 +83,23 @@ class Helper:
     def score_to_dict(score: Score): #Intended for API version 20220704
 
         score_dict = {
-            'accuracy': score.accuracy,
-            'beatmap id': score.beatmap_id if isinstance(score.beatmap_id, int) else score.beatmap.id,
-            'best id': score.best_id,
-            'created at': [score.created_at.month, score.created_at.day, score.created_at.year, score.created_at.hour, score.created_at.minute]
+            'acc': score.accuracy,
+            'map id': score.beatmap_id if isinstance(score.beatmap_id, int) else score.beatmap.id,
+            'time': [score.created_at.month, score.created_at.day, score.created_at.year, score.created_at.hour, score.created_at.minute]
                 if isinstance(score.created_at, datetime) else None,
             'replay': score.replay,
             'id': score.id,
-            'perfect': score.perfect,
+            'pf': score.perfect,
             'max combo': score.max_combo,
             'mods': bin(score.mods.value),
             'passed': score.passed,
             'pp': score.pp,
             'rank': score.rank.value,
-            'rank country': score.rank_country,
-            'rank global': score.rank_global,
             'ranked': score.ranked,
-            'replay': score.replay,
-            'statistics': Helper.score_statistics_to_dict(score.statistics),
+            'stats': Helper.score_statistics_to_dict(score.statistics),
             'score': score.score,
             'user id': score.user_id,
-            'weight': score.weight,
-            'internal id': f"{score.user_id}{score.created_at.strftime("%d%m%Y%H%M%S")}"
+            'int id': f"{score.user_id}{score.created_at.strftime("%d%m%Y%H%M%S")}"
         }
 
         return score_dict
@@ -113,12 +108,12 @@ class Helper:
     def score_statistics_to_dict(stats: Statistics):
 
         statistics_dict = { #Intended for API version 20220704
-            'count 50': stats.count_50,
-            'count 100': stats.count_100,
-            'count 300': stats.count_300,
-            'count geki': stats.count_geki,
-            'count katu': stats.count_katu,
-            'count miss': stats.count_miss,
+            '50': stats.count_50,
+            '100': stats.count_100,
+            '300': stats.count_300,
+            'geki': stats.count_geki,
+            'katu': stats.count_katu,
+            '0': stats.count_miss,
         }
         
         return statistics_dict
@@ -130,7 +125,7 @@ class Helper:
         print(f'Page {page}') #Temporary until I implement a logger
 
         while result.cursor is not None:
-            sleep(3)
+            sleep(2)
             page += 1
             print(f'Page {page}') #Temporary until I implement a logger
             result = self.osu_api.search_beatmapsets(**kwargs, cursor=result.cursor)
@@ -146,7 +141,7 @@ class Helper:
         length = len(beatmap_ids)
 
         for i, beatmap_id in enumerate(beatmap_ids):
-            sleep(3)
+            sleep(2)
             print(f"Request {i} of {length}") #Temporary until I implement a logger
             results = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
             for result in results: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
@@ -159,7 +154,7 @@ class Helper:
         beatmap_ids_w_user_ids = { id:[] for id in beatmap_ids}
 
         for i, beatmap_id in enumerate(beatmap_ids):
-            sleep(3)
+            sleep(2)
             beatmap_scores = self.osu_api.beatmap_scores(beatmap_id=beatmap_id, limit=100).scores
             beatmap_ids_w_user_ids[beatmap_id] = [score.user_id for score in beatmap_scores]
             print(f"Beatmap {i+1} of {len(beatmap_ids)} | {len(beatmap_scores)} users")
@@ -167,7 +162,7 @@ class Helper:
         return beatmap_ids_w_user_ids
     
     def beatmap_user_scores(self, beatmap_id: int, user_id: int, **kwargs) -> list[Score]:
-        sleep(3)
+        sleep(2)
         scores = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id, **kwargs)
 
         for score in scores: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
