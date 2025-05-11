@@ -1,0 +1,104 @@
+{
+    "id": 2333847,
+    "title": "Pluton",
+    "artist": "Makina",
+    "titleu": "プルトン",
+    "artistu": "マキナ",
+    "favs": 52,
+    "desc": null,
+    "source": "",
+    "tags": "chordstream brackets fa featured artist mg mpg mappers' guild trance chiptune electronic instrumental 8-bit 8bit -45 yoshikawa45 akito yoshikawa 吉川 ざくろ zakuro d'va;;;;;;;;5 studio h.e.x. comiket72 c72 comiket",
+    "host id": 12589220,
+    "submitted": "030425025022",
+    "ranked": "032525020321",
+    "beatmaps": {
+        "5008549": {
+            "version": "[10K] Easy",
+            "sr": 1.3,
+            "keys": 10.0,
+            "mapper id": 12589220,
+            "status": 1,
+            "updated": 31725054246,
+            "url": "https://osu.ppy.sh/beatmaps/5008549",
+            "drain": 6.5,
+            "rice": 467,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 992,
+            "total passes": 181,
+            "play history": {
+                "051125060602": 992
+            },
+            "pass history": {
+                "051125060602": 181
+            }
+        },
+        "5008550": {
+            "version": "[10K] Hard",
+            "sr": 3.33,
+            "keys": 10.0,
+            "mapper id": 12589220,
+            "status": 1,
+            "updated": 31725054246,
+            "url": "https://osu.ppy.sh/beatmaps/5008550",
+            "drain": 7.5,
+            "rice": 1415,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 249,
+            "total passes": 142,
+            "play history": {
+                "051125060602": 249
+            },
+            "pass history": {
+                "051125060602": 142
+            }
+        },
+        "5008551": {
+            "version": "[10K] Normal",
+            "sr": 2.24,
+            "keys": 10.0,
+            "mapper id": 12589220,
+            "status": 1,
+            "updated": 31725054247,
+            "url": "https://osu.ppy.sh/beatmaps/5008551",
+            "drain": 7.0,
+            "rice": 889,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 308,
+            "total passes": 108,
+            "play history": {
+                "051125060602": 308
+            },
+            "pass history": {
+                "051125060602": 108
+            }
+        },
+        "5010008": {
+            "version": "[10K] Insane",
+            "sr": 4.33,
+            "keys": 10.0,
+            "mapper id": 12589220,
+            "status": 1,
+            "updated": 31725054247,
+            "url": "https://osu.ppy.sh/beatmaps/5010008",
+            "drain": 8.0,
+            "rice": 1980,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 291,
+            "total passes": 158,
+            "play history": {
+                "051125060602": 291
+            },
+            "pass history": {
+                "051125060602": 158
+            }
+        }
+    }
+}

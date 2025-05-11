@@ -1,0 +1,104 @@
+{
+    "id": 2060871,
+    "title": "Towa no Utage (w/ YUC'e)",
+    "artist": "Aiobahn",
+    "titleu": "永久の宴 (w/ YUC'e)",
+    "artistu": "Aiobahn",
+    "favs": 85,
+    "desc": null,
+    "source": "",
+    "tags": "featured artist fa mappers' guild mg mpg japanese electronic j-pop jpop progressive house m​ä​rchen ep electro maru-164 maltine records",
+    "host id": 3427638,
+    "submitted": "091523094547",
+    "ranked": "092924024247",
+    "beatmaps": {
+        "4308024": {
+            "version": "[10K] Easy",
+            "sr": 1.0,
+            "keys": 10.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 92124234447,
+            "url": "https://osu.ppy.sh/beatmaps/4308024",
+            "drain": 6.5,
+            "rice": 288,
+            "ln": 42,
+            "players": [],
+            "scores": {},
+            "total plays": 1594,
+            "total passes": 485,
+            "play history": {
+                "051125060602": 1594
+            },
+            "pass history": {
+                "051125060602": 485
+            }
+        },
+        "4308030": {
+            "version": "[10K] Normal",
+            "sr": 1.73,
+            "keys": 10.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 92124234448,
+            "url": "https://osu.ppy.sh/beatmaps/4308030",
+            "drain": 7.0,
+            "rice": 625,
+            "ln": 48,
+            "players": [],
+            "scores": {},
+            "total plays": 634,
+            "total passes": 304,
+            "play history": {
+                "051125060602": 634
+            },
+            "pass history": {
+                "051125060602": 304
+            }
+        },
+        "4308334": {
+            "version": "[10K] Hard",
+            "sr": 2.43,
+            "keys": 10.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 92124234448,
+            "url": "https://osu.ppy.sh/beatmaps/4308334",
+            "drain": 7.5,
+            "rice": 1120,
+            "ln": 82,
+            "players": [],
+            "scores": {},
+            "total plays": 536,
+            "total passes": 182,
+            "play history": {
+                "051125060602": 536
+            },
+            "pass history": {
+                "051125060602": 182
+            }
+        },
+        "4308362": {
+            "version": "[10K] R-sane",
+            "sr": 3.42,
+            "keys": 10.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 92124234449,
+            "url": "https://osu.ppy.sh/beatmaps/4308362",
+            "drain": 8.0,
+            "rice": 1818,
+            "ln": 60,
+            "players": [],
+            "scores": {},
+            "total plays": 440,
+            "total passes": 169,
+            "play history": {
+                "051125060602": 440
+            },
+            "pass history": {
+                "051125060602": 169
+            }
+        }
+    }
+}

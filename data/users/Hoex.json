@@ -1,0 +1,33 @@
+{
+    "id": 13323980,
+    "name": "Hoex",
+    "avater url": "https://a.ppy.sh/13323980?1740236321.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "13323980103024013342": {
+            "uid": 13323980,
+            "bid": 4206519,
+            "time": "103024013342",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 32,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.37706270627062705,
+            "grade": "D",
+            "score": 109489,
+            "320": 31,
+            "300": 33,
+            "200": 12,
+            "100": 4,
+            "50": 17,
+            "0": 105
+        }
+    }
+}

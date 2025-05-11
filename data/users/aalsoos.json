@@ -1,0 +1,30 @@
+{
+    "id": 19945614,
+    "name": "aalsoos",
+    "avater url": "https://a.ppy.sh/19945614?1745875468.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "19945614050925124556": {
+            "uid": 19945614,
+            "bid": 4283889,
+            "time": "050925124556",
+            "mods": [],
+            "combo": 255,
+            "passed": true,
+            "pp": 56.5293,
+            "acc": 0.9696969696969697,
+            "grade": "S",
+            "score": 833973,
+            "320": 588,
+            "300": 416,
+            "200": 42,
+            "100": 7,
+            "50": 2,
+            "0": 12
+        }
+    }
+}

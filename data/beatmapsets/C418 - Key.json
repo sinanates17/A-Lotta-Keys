@@ -1,0 +1,60 @@
+{
+    "id": 2305351,
+    "title": "Key",
+    "artist": "C418",
+    "titleu": "Key",
+    "artistu": "C418",
+    "favs": 94,
+    "desc": null,
+    "source": "Minecraft",
+    "tags": "piano calm ambient volume alpha videogame daniel rosenfeld instrumental video game music vgm soundtrack ost original",
+    "host id": 22172595,
+    "submitted": "010825153030",
+    "ranked": "022425074334",
+    "beatmaps": {
+        "4928843": {
+            "version": "[10K] Calm",
+            "sr": 0.93,
+            "keys": 10.0,
+            "mapper id": 22172595,
+            "status": 1,
+            "updated": 21625191359,
+            "url": "https://osu.ppy.sh/beatmaps/4928843",
+            "drain": 7.0,
+            "rice": 1,
+            "ln": 74,
+            "players": [],
+            "scores": {},
+            "total plays": 979,
+            "total passes": 294,
+            "play history": {
+                "051125060602": 979
+            },
+            "pass history": {
+                "051125060602": 294
+            }
+        },
+        "4952911": {
+            "version": "[10K] Easy",
+            "sr": 0.7,
+            "keys": 10.0,
+            "mapper id": 22172595,
+            "status": 1,
+            "updated": 21625191400,
+            "url": "https://osu.ppy.sh/beatmaps/4952911",
+            "drain": 6.0,
+            "rice": 36,
+            "ln": 21,
+            "players": [],
+            "scores": {},
+            "total plays": 1693,
+            "total passes": 416,
+            "play history": {
+                "051125060602": 1693
+            },
+            "pass history": {
+                "051125060602": 416
+            }
+        }
+    }
+}

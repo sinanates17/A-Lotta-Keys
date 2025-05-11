@@ -1,0 +1,104 @@
+{
+    "id": 1542298,
+    "title": "Beginning",
+    "artist": "C418",
+    "titleu": "Beginning",
+    "artistu": "C418",
+    "favs": 331,
+    "desc": null,
+    "source": "Minecraft",
+    "tags": "mojang studios minecraft: volume alpha vol videogame video game vgm vg ost original soundtrack sound track sounds and effects progressive ambient piano classical instrumental atmospheric calm relaxing nostalgic nostalgia mc 2011 daniel rosenfeld track song 22 track_22 song_22 twenty-two twenty two independent ghostly international ernua -aku bad mapper bad_mapper overranked okappi arutama linkff001 vincus xbomb72 byad by-ad by ad andreychomik slyme mari 0hara mari_0hara pepti meiqth mniam arpia97 panshow pan- bighzonda bigh 050 big_h_zonda_kit",
+    "host id": 16352736,
+    "submitted": "080721115548",
+    "ranked": "110724090446",
+    "beatmaps": {
+        "4708185": {
+            "version": "10K | xBomb's Easy",
+            "sr": 0.75,
+            "keys": 10.0,
+            "mapper id": 7688476,
+            "status": 1,
+            "updated": 102924234839,
+            "url": "https://osu.ppy.sh/beatmaps/4708185",
+            "drain": 6.0,
+            "rice": 49,
+            "ln": 3,
+            "players": [],
+            "scores": {},
+            "total plays": 1117,
+            "total passes": 276,
+            "play history": {
+                "051125060602": 1117
+            },
+            "pass history": {
+                "051125060602": 276
+            }
+        },
+        "4708186": {
+            "version": "10K | xBomb's Normal",
+            "sr": 0.83,
+            "keys": 10.0,
+            "mapper id": 7688476,
+            "status": 1,
+            "updated": 102924234839,
+            "url": "https://osu.ppy.sh/beatmaps/4708186",
+            "drain": 7.0,
+            "rice": 33,
+            "ln": 29,
+            "players": [],
+            "scores": {},
+            "total plays": 939,
+            "total passes": 265,
+            "play history": {
+                "051125060602": 939
+            },
+            "pass history": {
+                "051125060602": 265
+            }
+        },
+        "4709514": {
+            "version": "9K | Vincus' Easy",
+            "sr": 0.71,
+            "keys": 9.0,
+            "mapper id": 16124906,
+            "status": 1,
+            "updated": 102924234841,
+            "url": "https://osu.ppy.sh/beatmaps/4709514",
+            "drain": 7.0,
+            "rice": 44,
+            "ln": 4,
+            "players": [],
+            "scores": {},
+            "total plays": 529,
+            "total passes": 173,
+            "play history": {
+                "051125060602": 529
+            },
+            "pass history": {
+                "051125060602": 173
+            }
+        },
+        "4807572": {
+            "version": "9K | Vincus' Normal",
+            "sr": 0.83,
+            "keys": 9.0,
+            "mapper id": 16124906,
+            "status": 1,
+            "updated": 102924234844,
+            "url": "https://osu.ppy.sh/beatmaps/4807572",
+            "drain": 7.0,
+            "rice": 15,
+            "ln": 52,
+            "players": [],
+            "scores": {},
+            "total plays": 506,
+            "total passes": 118,
+            "play history": {
+                "051125060602": 506
+            },
+            "pass history": {
+                "051125060602": 118
+            }
+        }
+    }
+}

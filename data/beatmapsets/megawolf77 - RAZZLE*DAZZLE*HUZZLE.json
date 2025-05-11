@@ -1,0 +1,126 @@
+{
+    "id": 2101796,
+    "title": "RAZZLE*DAZZLE*HUZZLE",
+    "artist": "megawolf77",
+    "titleu": "RAZZLE★DAZZLE★HUZZLE",
+    "artistu": "megawolf77",
+    "favs": 21,
+    "desc": null,
+    "source": "",
+    "tags": "electronic instrumental the hustle van mccoy the soul city symphony remix mw77 smoll traxx bootleg vaporave rave speed upbeat hardcore n+2 10k2s 10k+2 10+2k scratch special style dp double play ly_tou",
+    "host id": 19306399,
+    "submitted": "121123002821",
+    "ranked": "020725234637",
+    "beatmaps": {
+        "4454357": {
+            "version": "[12K] 10K2S LY_TOU'S HUSTLE!",
+            "sr": 3.63,
+            "keys": 12.0,
+            "mapper id": 24234724,
+            "status": 1,
+            "updated": 13125043651,
+            "url": "https://osu.ppy.sh/beatmaps/4454357",
+            "drain": 7.5,
+            "rice": 702,
+            "ln": 10,
+            "players": [],
+            "scores": {},
+            "total plays": 345,
+            "total passes": 110,
+            "play history": {
+                "051125060602": 345
+            },
+            "pass history": {
+                "051125060602": 110
+            }
+        },
+        "4455071": {
+            "version": "[12K] 10K2S BASIC!",
+            "sr": 1.36,
+            "keys": 12.0,
+            "mapper id": 19306399,
+            "status": 1,
+            "updated": 13125043651,
+            "url": "https://osu.ppy.sh/beatmaps/4455071",
+            "drain": 6.0,
+            "rice": 230,
+            "ln": 1,
+            "players": [],
+            "scores": {},
+            "total plays": 162,
+            "total passes": 74,
+            "play history": {
+                "051125060602": 162
+            },
+            "pass history": {
+                "051125060602": 74
+            }
+        },
+        "4455072": {
+            "version": "[12K] 10K2S STARTER!",
+            "sr": 0.82,
+            "keys": 12.0,
+            "mapper id": 19306399,
+            "status": 1,
+            "updated": 13125043652,
+            "url": "https://osu.ppy.sh/beatmaps/4455072",
+            "drain": 5.5,
+            "rice": 71,
+            "ln": 24,
+            "players": [],
+            "scores": {},
+            "total plays": 712,
+            "total passes": 111,
+            "play history": {
+                "051125060602": 712
+            },
+            "pass history": {
+                "051125060602": 111
+            }
+        },
+        "4498756": {
+            "version": "[12K] 10K2S LY_TOU'S HYPER!",
+            "sr": 2.7,
+            "keys": 12.0,
+            "mapper id": 24234724,
+            "status": 1,
+            "updated": 13125043652,
+            "url": "https://osu.ppy.sh/beatmaps/4498756",
+            "drain": 7.0,
+            "rice": 556,
+            "ln": 2,
+            "players": [],
+            "scores": {},
+            "total plays": 37,
+            "total passes": 25,
+            "play history": {
+                "051125060602": 37
+            },
+            "pass history": {
+                "051125060602": 25
+            }
+        },
+        "4498996": {
+            "version": "[12K] 10K2S ADVANCED!",
+            "sr": 1.99,
+            "keys": 12.0,
+            "mapper id": 19306399,
+            "status": 1,
+            "updated": 13125043653,
+            "url": "https://osu.ppy.sh/beatmaps/4498996",
+            "drain": 6.5,
+            "rice": 399,
+            "ln": 4,
+            "players": [],
+            "scores": {},
+            "total plays": 80,
+            "total passes": 31,
+            "play history": {
+                "051125060602": 80
+            },
+            "pass history": {
+                "051125060602": 31
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "id": 23685062,
+    "name": "-Mig-",
+    "avater url": "https://a.ppy.sh/23685062?1746146614.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "23685062022725215755": {
+            "uid": 23685062,
+            "bid": 4206519,
+            "time": "022725215755",
+            "mods": [
+                "DT",
+                "HD",
+                "CL"
+            ],
+            "combo": 44,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.721947194719472,
+            "grade": "C",
+            "score": 434413,
+            "320": 72,
+            "300": 60,
+            "200": 15,
+            "100": 7,
+            "50": 9,
+            "0": 39
+        }
+    }
+}

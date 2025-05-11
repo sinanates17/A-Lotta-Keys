@@ -1,0 +1,32 @@
+{
+    "id": 37580109,
+    "name": "Stepmania5",
+    "avater url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "37580109033125180953": {
+            "uid": 37580109,
+            "bid": 4284362,
+            "time": "033125180953",
+            "mods": [
+                "CL"
+            ],
+            "combo": 185,
+            "passed": true,
+            "pp": 18.8566,
+            "acc": 0.9200726612170754,
+            "grade": "A",
+            "score": 645235,
+            "320": 336,
+            "300": 285,
+            "200": 74,
+            "100": 15,
+            "50": 0,
+            "0": 24
+        }
+    }
+}

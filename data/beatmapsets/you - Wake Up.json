@@ -1,0 +1,126 @@
+{
+    "id": 2193006,
+    "title": "Wake Up",
+    "artist": "you",
+    "titleu": "Wake Up",
+    "artistu": "you",
+    "favs": 74,
+    "desc": null,
+    "source": "",
+    "tags": "diamond smile j-neration fa featured artist happy hardcore electronic instrumental jneration jnex-0001 track 1 one jcore j-core mappers' guild mg mpg pms rice",
+    "host id": 24526335,
+    "submitted": "060624104749",
+    "ranked": "072424060212",
+    "beatmaps": {
+        "4639252": {
+            "version": "[9K] Easy",
+            "sr": 1.24,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 71624075931,
+            "url": "https://osu.ppy.sh/beatmaps/4639252",
+            "drain": 6.0,
+            "rice": 116,
+            "ln": 6,
+            "players": [],
+            "scores": {},
+            "total plays": 3061,
+            "total passes": 1019,
+            "play history": {
+                "051125060602": 3061
+            },
+            "pass history": {
+                "051125060602": 1019
+            }
+        },
+        "4639253": {
+            "version": "[9K] Another",
+            "sr": 4.15,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 71624075931,
+            "url": "https://osu.ppy.sh/beatmaps/4639253",
+            "drain": 8.0,
+            "rice": 509,
+            "ln": 35,
+            "players": [],
+            "scores": {},
+            "total plays": 1018,
+            "total passes": 531,
+            "play history": {
+                "051125060602": 1018
+            },
+            "pass history": {
+                "051125060602": 531
+            }
+        },
+        "4639254": {
+            "version": "[9K] Hard",
+            "sr": 2.47,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 71624075932,
+            "url": "https://osu.ppy.sh/beatmaps/4639254",
+            "drain": 7.0,
+            "rice": 260,
+            "ln": 22,
+            "players": [],
+            "scores": {},
+            "total plays": 1117,
+            "total passes": 563,
+            "play history": {
+                "051125060602": 1117
+            },
+            "pass history": {
+                "051125060602": 563
+            }
+        },
+        "4639255": {
+            "version": "[9K] Insane",
+            "sr": 3.43,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 71624075932,
+            "url": "https://osu.ppy.sh/beatmaps/4639255",
+            "drain": 7.5,
+            "rice": 399,
+            "ln": 25,
+            "players": [],
+            "scores": {},
+            "total plays": 915,
+            "total passes": 452,
+            "play history": {
+                "051125060602": 915
+            },
+            "pass history": {
+                "051125060602": 452
+            }
+        },
+        "4639256": {
+            "version": "[9K] Normal",
+            "sr": 1.89,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 71624075933,
+            "url": "https://osu.ppy.sh/beatmaps/4639256",
+            "drain": 6.5,
+            "rice": 203,
+            "ln": 11,
+            "players": [],
+            "scores": {},
+            "total plays": 1459,
+            "total passes": 664,
+            "play history": {
+                "051125060602": 1459
+            },
+            "pass history": {
+                "051125060602": 664
+            }
+        }
+    }
+}

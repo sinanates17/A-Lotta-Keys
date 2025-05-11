@@ -1,0 +1,82 @@
+{
+    "id": 2314567,
+    "title": "frogflockfrogflockfrogflockfrogflock",
+    "artist": "r e y s a",
+    "titleu": "frogflockfrogflockfrogflockfrogflock",
+    "artistu": "r e y s a",
+    "favs": 23,
+    "desc": null,
+    "source": "",
+    "tags": "reysa uzawa reisa 宇沢レイサ nemoto miyari 根本京里 blue archive ブルーアーカイブ karut accelerator axel f crazy frog ace aura bootleg touhou 東方project 東方風神録　～ mountain of faith. silver forest kero ⑨ destiny (9) ケロ⑨destiny mashup mashcore japanese instrumental electronic video game n+2 10k2s 10k+2 10+2k scratch special style dp double play",
+    "host id": 3427638,
+    "submitted": "012725104320",
+    "ranked": "022425120425",
+    "beatmaps": {
+        "4953289": {
+            "version": "[12K] 10k2s hard",
+            "sr": 2.73,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 21725224944,
+            "url": "https://osu.ppy.sh/beatmaps/4953289",
+            "drain": 7.0,
+            "rice": 992,
+            "ln": 20,
+            "players": [],
+            "scores": {},
+            "total plays": 70,
+            "total passes": 30,
+            "play history": {
+                "051125060602": 70
+            },
+            "pass history": {
+                "051125060602": 30
+            }
+        },
+        "4953290": {
+            "version": "[12K] 10k2s normal",
+            "sr": 1.85,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 21725224944,
+            "url": "https://osu.ppy.sh/beatmaps/4953290",
+            "drain": 6.0,
+            "rice": 565,
+            "ln": 12,
+            "players": [],
+            "scores": {},
+            "total plays": 401,
+            "total passes": 92,
+            "play history": {
+                "051125060602": 401
+            },
+            "pass history": {
+                "051125060602": 92
+            }
+        },
+        "4953461": {
+            "version": "[12K] 10k2s oh god",
+            "sr": 3.71,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": 21725224945,
+            "url": "https://osu.ppy.sh/beatmaps/4953461",
+            "drain": 7.5,
+            "rice": 1572,
+            "ln": 24,
+            "players": [],
+            "scores": {},
+            "total plays": 134,
+            "total passes": 54,
+            "play history": {
+                "051125060602": 134
+            },
+            "pass history": {
+                "051125060602": 54
+            }
+        }
+    }
+}

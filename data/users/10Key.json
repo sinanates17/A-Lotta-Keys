@@ -1,0 +1,32 @@
+{
+    "id": 37555623,
+    "name": "10Key",
+    "avater url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "37555623030225215435": {
+            "uid": 37555623,
+            "bid": 4971712,
+            "time": "030225215435",
+            "mods": [
+                "CL"
+            ],
+            "combo": 403,
+            "passed": true,
+            "pp": 8.01251,
+            "acc": 0.8850837138508372,
+            "grade": "B",
+            "score": 605898,
+            "320": 367,
+            "300": 611,
+            "200": 252,
+            "100": 48,
+            "50": 6,
+            "0": 30
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": 2335280,
+    "title": "''Platinum Mukatsuku''",
+    "artist": "Kousaki Satoru",
+    "titleu": "「プラチナむかつく」",
+    "artistu": "神前暁",
+    "favs": 20,
+    "desc": null,
+    "source": "偽物語",
+    "tags": "nisemonogatari platinum mad アニメ anime ost incidental music collection iv 劇伴音楽集 其ノ肆 あとがたり atogatari monogatari series 物語シリーズ 阿良々木月火 araragi tsukihi instrumental 邦楽 ピアノ piano アニプレックス aniplex j pop japanese j-pop original soundtrack 9k9k 9+9k 9k+9k dp double play",
+    "host id": 14769563,
+    "submitted": "030725123037",
+    "ranked": "042625042331",
+    "beatmaps": {
+        "5012665": {
+            "version": "[18K] [9K9K] Easy",
+            "sr": 0.94,
+            "keys": 18.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": 41925021748,
+            "url": "https://osu.ppy.sh/beatmaps/5012665",
+            "drain": 7.0,
+            "rice": 157,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 133,
+            "total passes": 43,
+            "play history": {
+                "051125060602": 133
+            },
+            "pass history": {
+                "051125060602": 43
+            }
+        },
+        "5012666": {
+            "version": "[18K] [9K9K] Newcomer",
+            "sr": 0.59,
+            "keys": 18.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": 41925021748,
+            "url": "https://osu.ppy.sh/beatmaps/5012666",
+            "drain": 6.5,
+            "rice": 57,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 412,
+            "total passes": 97,
+            "play history": {
+                "051125060602": 412
+            },
+            "pass history": {
+                "051125060602": 97
+            }
+        },
+        "5012667": {
+            "version": "[18K] [9K9K] Advanced",
+            "sr": 1.5,
+            "keys": 18.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": 41925021749,
+            "url": "https://osu.ppy.sh/beatmaps/5012667",
+            "drain": 8.0,
+            "rice": 301,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 175,
+            "total passes": 33,
+            "play history": {
+                "051125060602": 175
+            },
+            "pass history": {
+                "051125060602": 33
+            }
+        },
+        "5014064": {
+            "version": "[18K] [9K9K] Intermediate",
+            "sr": 1.13,
+            "keys": 18.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": 41925021749,
+            "url": "https://osu.ppy.sh/beatmaps/5014064",
+            "drain": 7.5,
+            "rice": 219,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 81,
+            "total passes": 42,
+            "play history": {
+                "051125060602": 81
+            },
+            "pass history": {
+                "051125060602": 42
+            }
+        }
+    }
+}

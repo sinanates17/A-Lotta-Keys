@@ -1,0 +1,34 @@
+{
+    "id": 10209378,
+    "name": "Noowz",
+    "avater url": "https://a.ppy.sh/10209378?1721412279.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "10209378020525181003": {
+            "uid": 10209378,
+            "bid": 4299905,
+            "time": "020525181003",
+            "mods": [
+                "DT",
+                "NF",
+                "CL"
+            ],
+            "combo": 5,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.09882747068676717,
+            "grade": "D",
+            "score": 25707,
+            "320": 13,
+            "300": 14,
+            "200": 14,
+            "100": 8,
+            "50": 2,
+            "0": 347
+        }
+    }
+}

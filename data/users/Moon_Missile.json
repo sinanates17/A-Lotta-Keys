@@ -1,0 +1,32 @@
+{
+    "id": 36513620,
+    "name": "Moon_Missile",
+    "avater url": "https://a.ppy.sh/36513620?1724030139.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "36513620021325232822": {
+            "uid": 36513620,
+            "bid": 4283890,
+            "time": "021325232822",
+            "mods": [
+                "NF"
+            ],
+            "combo": 4,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.18076644974692696,
+            "grade": "D",
+            "score": 9054,
+            "320": 129,
+            "300": 85,
+            "200": 44,
+            "100": 16,
+            "50": 8,
+            "0": 1101
+        }
+    }
+}

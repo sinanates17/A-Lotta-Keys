@@ -1,0 +1,33 @@
+{
+    "id": 33726182,
+    "name": "frist23",
+    "avater url": "https://a.ppy.sh/33726182?1745194229.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "33726182030225073537": {
+            "uid": 33726182,
+            "bid": 4283890,
+            "time": "030225073537",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 9,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.17495467495467495,
+            "grade": "D",
+            "score": 44655,
+            "320": 42,
+            "300": 93,
+            "200": 84,
+            "100": 82,
+            "50": 41,
+            "0": 945
+        }
+    }
+}

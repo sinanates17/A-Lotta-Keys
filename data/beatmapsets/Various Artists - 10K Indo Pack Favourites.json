@@ -1,0 +1,786 @@
+{
+    "id": 2328927,
+    "title": "10K Indo Pack Favourites",
+    "artist": "Various Artists",
+    "titleu": "10K Indo Pack Favourites",
+    "artistu": "Various Artists",
+    "favs": 29,
+    "desc": null,
+    "source": "",
+    "tags": "huzair zenfire ezmmr synere horang pungryuga narae plastic love mariya takeuchi arcana idola momijitsuki nagiha oddloop frederic strong 280 katagiri predawn nicode & m2u the safari lion musashi tari ubur ubur (hendro engkeng remix) (cut ver.) lbdjs alea jacta est! blacky fused with waikuro kakushigoto yuikonnu wakusei*lollipop sound holic feat. nana takahashi myosotis darling dance kairiki bear bring it on giga endless tears... ayane exit this earth's atomosphere camellia co5m1c r4ilr0ad kanone h.o.w.ling koi kou enishi kotoko raikou -3rd desire- tatshmusiccircle last remote - type gamma γ dark phoenix end mark ni kibou to namida wo soete cosmo@bousou-p vanessa suzaku queen aluett leaf censored!! t+pazolite new york back raise saaa + kei_iwata + stuv + *wakadori kawaikute gomen chuu-tan (cv: hayami saori) cho*cho*kou*soku*de*mae*sai*soku!!! speed*star*kanade nanahira jinsei matatabi chikuwa versus! hysteric night girl such (android52 edit) psyqui shiawase (vip) dion timmer",
+    "host id": 7326238,
+    "submitted": "022325124038",
+    "ranked": "040325171845",
+    "beatmaps": {
+        "4993901": {
+            "version": "[10K] metadata",
+            "sr": 0.25,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": -2,
+            "updated": 40225180946,
+            "url": "https://osu.ppy.sh/beatmaps/4993901",
+            "drain": 10.0,
+            "rice": 4,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 43,
+            "total passes": 2,
+            "play history": {
+                "051125060602": 43
+            },
+            "pass history": {
+                "051125060602": 2
+            }
+        },
+        "4993903": {
+            "version": "[10K] Camellia - Exit This Earth's Atomosphere [For Huzair]",
+            "sr": 5.27,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180947,
+            "url": "https://osu.ppy.sh/beatmaps/4993903",
+            "drain": 8.0,
+            "rice": 3482,
+            "ln": 930,
+            "players": [],
+            "scores": {},
+            "total plays": 61,
+            "total passes": 21,
+            "play history": {
+                "051125060602": 61
+            },
+            "pass history": {
+                "051125060602": 21
+            }
+        },
+        "4993904": {
+            "version": "[10K] Ayane - Endless Tears... [Akai Yoru]",
+            "sr": 4.99,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180947,
+            "url": "https://osu.ppy.sh/beatmaps/4993904",
+            "drain": 8.0,
+            "rice": 3214,
+            "ln": 955,
+            "players": [],
+            "scores": {},
+            "total plays": 24,
+            "total passes": 12,
+            "play history": {
+                "051125060602": 24
+            },
+            "pass history": {
+                "051125060602": 12
+            }
+        },
+        "4993905": {
+            "version": "[10K] BlackY fused with WAiKURO - Alea jacta est! [Expert!]",
+            "sr": 4.05,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180948,
+            "url": "https://osu.ppy.sh/beatmaps/4993905",
+            "drain": 7.5,
+            "rice": 1755,
+            "ln": 117,
+            "players": [],
+            "scores": {},
+            "total plays": 68,
+            "total passes": 38,
+            "play history": {
+                "051125060602": 68
+            },
+            "pass history": {
+                "051125060602": 38
+            }
+        },
+        "4993906": {
+            "version": "[10K] Camellia feat. Nanahira - Cho*Cho*Kou*Soku*De*Mae*Sai*Soku!!!...",
+            "sr": 6.19,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180948,
+            "url": "https://osu.ppy.sh/beatmaps/4993906",
+            "drain": 5.0,
+            "rice": 1988,
+            "ln": 178,
+            "players": [],
+            "scores": {},
+            "total plays": 89,
+            "total passes": 50,
+            "play history": {
+                "051125060602": 89
+            },
+            "pass history": {
+                "051125060602": 50
+            }
+        },
+        "4993907": {
+            "version": "[10K] cosMo@Bousou-P - End Mark ni Kibou to Namida wo soete [MASTER]",
+            "sr": 6.07,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180949,
+            "url": "https://osu.ppy.sh/beatmaps/4993907",
+            "drain": 8.8,
+            "rice": 3604,
+            "ln": 72,
+            "players": [],
+            "scores": {},
+            "total plays": 36,
+            "total passes": 15,
+            "play history": {
+                "051125060602": 36
+            },
+            "pass history": {
+                "051125060602": 15
+            }
+        },
+        "4993908": {
+            "version": "[10K] Dark PHOENiX - Last Remote - Type gamma [Y]",
+            "sr": 5.97,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180950,
+            "url": "https://osu.ppy.sh/beatmaps/4993908",
+            "drain": 8.0,
+            "rice": 3041,
+            "ln": 1183,
+            "players": [],
+            "scores": {},
+            "total plays": 45,
+            "total passes": 10,
+            "play history": {
+                "051125060602": 45
+            },
+            "pass history": {
+                "051125060602": 10
+            }
+        },
+        "4993909": {
+            "version": "[10K] Frederic - oddloop [evenloop]",
+            "sr": 3.4,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180950,
+            "url": "https://osu.ppy.sh/beatmaps/4993909",
+            "drain": 9.0,
+            "rice": 2746,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 120,
+            "total passes": 33,
+            "play history": {
+                "051125060602": 120
+            },
+            "pass history": {
+                "051125060602": 33
+            }
+        },
+        "4993910": {
+            "version": "[10K] Giga - BRING IT ON [For ZenFire]",
+            "sr": 4.89,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180951,
+            "url": "https://osu.ppy.sh/beatmaps/4993910",
+            "drain": 7.5,
+            "rice": 3182,
+            "ln": 589,
+            "players": [],
+            "scores": {},
+            "total plays": 56,
+            "total passes": 27,
+            "play history": {
+                "051125060602": 56
+            },
+            "pass history": {
+                "051125060602": 27
+            }
+        },
+        "4993912": {
+            "version": "[10K] Kairiki Bear - Darling Dance [ZenFire's Darlin']",
+            "sr": 4.72,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180952,
+            "url": "https://osu.ppy.sh/beatmaps/4993912",
+            "drain": 7.5,
+            "rice": 2847,
+            "ln": 639,
+            "players": [],
+            "scores": {},
+            "total plays": 57,
+            "total passes": 26,
+            "play history": {
+                "051125060602": 57
+            },
+            "pass history": {
+                "051125060602": 26
+            }
+        },
+        "4993913": {
+            "version": "[10K] kanone - CO5M1C R4ILR0AD [lv.12 [Choo Choo]]",
+            "sr": 5.32,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180952,
+            "url": "https://osu.ppy.sh/beatmaps/4993913",
+            "drain": 8.0,
+            "rice": 2154,
+            "ln": 11,
+            "players": [],
+            "scores": {},
+            "total plays": 46,
+            "total passes": 28,
+            "play history": {
+                "051125060602": 46
+            },
+            "pass history": {
+                "051125060602": 28
+            }
+        },
+        "4993914": {
+            "version": "[10K] Katagiri - STRONG 280 [Drunk]",
+            "sr": 3.71,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180953,
+            "url": "https://osu.ppy.sh/beatmaps/4993914",
+            "drain": 7.0,
+            "rice": 3221,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 202,
+            "total passes": 98,
+            "play history": {
+                "051125060602": 202
+            },
+            "pass history": {
+                "051125060602": 98
+            }
+        },
+        "4993915": {
+            "version": "[10K] KOTOKO - Koi Kou Enishi [eZmmR's Murasame]",
+            "sr": 5.5,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 4,
+            "updated": 40225180953,
+            "url": "https://osu.ppy.sh/beatmaps/4993915",
+            "drain": 8.0,
+            "rice": 1422,
+            "ln": 305,
+            "players": [],
+            "scores": {},
+            "total plays": 67,
+            "total passes": 38,
+            "play history": {
+                "051125060602": 67
+            },
+            "pass history": {
+                "051125060602": 38
+            }
+        },
+        "4993916": {
+            "version": "[10K] LBDJS - Tari Ubur Ubur (Hendro Engkeng Remix) (Cut Ver.) [Indihome]",
+            "sr": 4.0,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180954,
+            "url": "https://osu.ppy.sh/beatmaps/4993916",
+            "drain": 5.0,
+            "rice": 826,
+            "ln": 179,
+            "players": [],
+            "scores": {},
+            "total plays": 183,
+            "total passes": 83,
+            "play history": {
+                "051125060602": 183
+            },
+            "pass history": {
+                "051125060602": 83
+            }
+        },
+        "4993917": {
+            "version": "[10K] LeaF - Queen Aluett [ZenFire Vs. Derby: House of Cards]",
+            "sr": 6.98,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180954,
+            "url": "https://osu.ppy.sh/beatmaps/4993917",
+            "drain": 8.0,
+            "rice": 3422,
+            "ln": 43,
+            "players": [],
+            "scores": {},
+            "total plays": 46,
+            "total passes": 23,
+            "play history": {
+                "051125060602": 46
+            },
+            "pass history": {
+                "051125060602": 23
+            }
+        },
+        "4993918": {
+            "version": "[10K] Lion Musashi - THE SAFARI [Huzair's Cursed 7dan]",
+            "sr": 3.9,
+            "keys": 10.0,
+            "mapper id": 4197838,
+            "status": 4,
+            "updated": 40225180955,
+            "url": "https://osu.ppy.sh/beatmaps/4993918",
+            "drain": 9.0,
+            "rice": 1002,
+            "ln": 72,
+            "players": [],
+            "scores": {},
+            "total plays": 90,
+            "total passes": 40,
+            "play history": {
+                "051125060602": 90
+            },
+            "pass history": {
+                "051125060602": 40
+            }
+        },
+        "4993919": {
+            "version": "[10K] M2U - H.O.W.Ling [Stygian Anther]",
+            "sr": 5.5,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180956,
+            "url": "https://osu.ppy.sh/beatmaps/4993919",
+            "drain": 8.8,
+            "rice": 1196,
+            "ln": 811,
+            "players": [],
+            "scores": {},
+            "total plays": 30,
+            "total passes": 14,
+            "play history": {
+                "051125060602": 30
+            },
+            "pass history": {
+                "051125060602": 14
+            }
+        },
+        "4993920": {
+            "version": "[10K] M2U - Myosotis [Proxy]",
+            "sr": 4.19,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180956,
+            "url": "https://osu.ppy.sh/beatmaps/4993920",
+            "drain": 8.5,
+            "rice": 1378,
+            "ln": 318,
+            "players": [],
+            "scores": {},
+            "total plays": 64,
+            "total passes": 25,
+            "play history": {
+                "051125060602": 64
+            },
+            "pass history": {
+                "051125060602": 25
+            }
+        },
+        "4993921": {
+            "version": "[10K] NICODE & M2U - Predawn [Unseen Mist]",
+            "sr": 3.85,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180957,
+            "url": "https://osu.ppy.sh/beatmaps/4993921",
+            "drain": 8.5,
+            "rice": 1317,
+            "ln": 278,
+            "players": [],
+            "scores": {},
+            "total plays": 60,
+            "total passes": 29,
+            "play history": {
+                "051125060602": 60
+            },
+            "pass history": {
+                "051125060602": 29
+            }
+        },
+        "4993922": {
+            "version": "[10K] Mariya Takeuchi - Plastic Love (Cut Ver.) [syn's CITY POP]",
+            "sr": 3.02,
+            "keys": 10.0,
+            "mapper id": 8374472,
+            "status": 4,
+            "updated": 40225180957,
+            "url": "https://osu.ppy.sh/beatmaps/4993922",
+            "drain": 8.0,
+            "rice": 404,
+            "ln": 615,
+            "players": [],
+            "scores": {},
+            "total plays": 210,
+            "total passes": 77,
+            "play history": {
+                "051125060602": 210
+            },
+            "pass history": {
+                "051125060602": 77
+            }
+        },
+        "4993923": {
+            "version": "[10K] Momijitsuki Nagiha - Arcana Idola [ZenFire's Static]",
+            "sr": 3.13,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180958,
+            "url": "https://osu.ppy.sh/beatmaps/4993923",
+            "drain": 7.5,
+            "rice": 900,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 114,
+            "total passes": 73,
+            "play history": {
+                "051125060602": 114
+            },
+            "pass history": {
+                "051125060602": 73
+            }
+        },
+        "4993924": {
+            "version": "[10K] Narae - Horang Pungryuga [ZenFire's Fierce Tiger]",
+            "sr": 2.79,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180958,
+            "url": "https://osu.ppy.sh/beatmaps/4993924",
+            "drain": 7.0,
+            "rice": 868,
+            "ln": 94,
+            "players": [],
+            "scores": {},
+            "total plays": 124,
+            "total passes": 71,
+            "play history": {
+                "051125060602": 124
+            },
+            "pass history": {
+                "051125060602": 71
+            }
+        },
+        "4993926": {
+            "version": "SOUND HOLIC feat. Nana Takahashi - Wakusei*Lollipop [ZenFire's 10K Sleep]",
+            "sr": 4.15,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180959,
+            "url": "https://osu.ppy.sh/beatmaps/4993926",
+            "drain": 7.0,
+            "rice": 1274,
+            "ln": 169,
+            "players": [],
+            "scores": {},
+            "total plays": 70,
+            "total passes": 37,
+            "play history": {
+                "051125060602": 70
+            },
+            "pass history": {
+                "051125060602": 37
+            }
+        },
+        "4993927": {
+            "version": "[10K] Suzaku - VANESSA [Threat]",
+            "sr": 6.1,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225180959,
+            "url": "https://osu.ppy.sh/beatmaps/4993927",
+            "drain": 8.0,
+            "rice": 1974,
+            "ln": 26,
+            "players": [],
+            "scores": {},
+            "total plays": 115,
+            "total passes": 31,
+            "play history": {
+                "051125060602": 115
+            },
+            "pass history": {
+                "051125060602": 31
+            }
+        },
+        "4993928": {
+            "version": "[10K] TatshMusicCircle - Raikou -3rd Desire- [X]",
+            "sr": 5.52,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181000,
+            "url": "https://osu.ppy.sh/beatmaps/4993928",
+            "drain": 8.0,
+            "rice": 2123,
+            "ln": 872,
+            "players": [],
+            "scores": {},
+            "total plays": 49,
+            "total passes": 25,
+            "play history": {
+                "051125060602": 49
+            },
+            "pass history": {
+                "051125060602": 25
+            }
+        },
+        "4993929": {
+            "version": "[10K] yuikonnu - Kakushigoto [For ZenFire (ZERO LN)]",
+            "sr": 4.07,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181001,
+            "url": "https://osu.ppy.sh/beatmaps/4993929",
+            "drain": 7.0,
+            "rice": 2968,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 57,
+            "total passes": 27,
+            "play history": {
+                "051125060602": 57
+            },
+            "pass history": {
+                "051125060602": 27
+            }
+        },
+        "4994253": {
+            "version": "[10K] t+pazolite - CENSORED!! [For ZenFire]",
+            "sr": 4.51,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181001,
+            "url": "https://osu.ppy.sh/beatmaps/4994253",
+            "drain": 7.0,
+            "rice": 1632,
+            "ln": 195,
+            "players": [],
+            "scores": {},
+            "total plays": 70,
+            "total passes": 31,
+            "play history": {
+                "051125060602": 70
+            },
+            "pass history": {
+                "051125060602": 31
+            }
+        },
+        "4994254": {
+            "version": "[10K] HoneyWorks - Kawaikute Gomen feat. Chuu-tan [ZenFire's Chuuuuuu*]",
+            "sr": 5.35,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181002,
+            "url": "https://osu.ppy.sh/beatmaps/4994254",
+            "drain": 7.0,
+            "rice": 2385,
+            "ln": 477,
+            "players": [],
+            "scores": {},
+            "total plays": 65,
+            "total passes": 36,
+            "play history": {
+                "051125060602": 65
+            },
+            "pass history": {
+                "051125060602": 36
+            }
+        },
+        "4994255": {
+            "version": "[10K] saaa + kei_iwata + stuv + *wakadori - New York Back Raise...",
+            "sr": 4.21,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181002,
+            "url": "https://osu.ppy.sh/beatmaps/4994255",
+            "drain": 5.0,
+            "rice": 1633,
+            "ln": 80,
+            "players": [],
+            "scores": {},
+            "total plays": 63,
+            "total passes": 36,
+            "play history": {
+                "051125060602": 63
+            },
+            "pass history": {
+                "051125060602": 36
+            }
+        },
+        "4995926": {
+            "version": "[10K] Camellia feat. Nanahira - Versus! [ZenFire's Full Showdown!]",
+            "sr": 4.25,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181003,
+            "url": "https://osu.ppy.sh/beatmaps/4995926",
+            "drain": 7.0,
+            "rice": 2855,
+            "ln": 1144,
+            "players": [],
+            "scores": {},
+            "total plays": 51,
+            "total passes": 26,
+            "play history": {
+                "051125060602": 51
+            },
+            "pass history": {
+                "051125060602": 26
+            }
+        },
+        "4995927": {
+            "version": "[10K] Chikuwa - Jinsei Matatabi [ZenFire's Full Invasion Nya!]",
+            "sr": 3.79,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181004,
+            "url": "https://osu.ppy.sh/beatmaps/4995927",
+            "drain": 7.0,
+            "rice": 2024,
+            "ln": 652,
+            "players": [],
+            "scores": {},
+            "total plays": 53,
+            "total passes": 34,
+            "play history": {
+                "051125060602": 53
+            },
+            "pass history": {
+                "051125060602": 34
+            }
+        },
+        "4995929": {
+            "version": "[10K] Dion Timmer - Shiawase (VIP) [<<< TIDAL <<< _ >>> DUMP >>>]",
+            "sr": 6.99,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181004,
+            "url": "https://osu.ppy.sh/beatmaps/4995929",
+            "drain": 8.0,
+            "rice": 3448,
+            "ln": 191,
+            "players": [],
+            "scores": {},
+            "total plays": 104,
+            "total passes": 34,
+            "play history": {
+                "051125060602": 104
+            },
+            "pass history": {
+                "051125060602": 34
+            }
+        },
+        "4995930": {
+            "version": "[10K] Dion Timmer - Shiawase (VIP) [eZmmR's Tidal Wave]",
+            "sr": 3.81,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 4,
+            "updated": 40225181005,
+            "url": "https://osu.ppy.sh/beatmaps/4995930",
+            "drain": 8.0,
+            "rice": 1558,
+            "ln": 17,
+            "players": [],
+            "scores": {},
+            "total plays": 136,
+            "total passes": 73,
+            "play history": {
+                "051125060602": 136
+            },
+            "pass history": {
+                "051125060602": 73
+            }
+        },
+        "4995931": {
+            "version": "[10K] Narae - Horang Pungryuga [ZenFire's Cute Tiger]",
+            "sr": 2.16,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181005,
+            "url": "https://osu.ppy.sh/beatmaps/4995931",
+            "drain": 5.0,
+            "rice": 568,
+            "ln": 91,
+            "players": [],
+            "scores": {},
+            "total plays": 268,
+            "total passes": 100,
+            "play history": {
+                "051125060602": 268
+            },
+            "pass history": {
+                "051125060602": 100
+            }
+        },
+        "4995932": {
+            "version": "[10K] PSYQUI - Hysteric Night Girl feat. Such (android52 Edit) [\"v\"]",
+            "sr": 6.49,
+            "keys": 10.0,
+            "mapper id": 7326238,
+            "status": 4,
+            "updated": 40225181006,
+            "url": "https://osu.ppy.sh/beatmaps/4995932",
+            "drain": 8.0,
+            "rice": 5494,
+            "ln": 884,
+            "players": [],
+            "scores": {},
+            "total plays": 67,
+            "total passes": 23,
+            "play history": {
+                "051125060602": 67
+            },
+            "pass history": {
+                "051125060602": 23
+            }
+        }
+    }
+}

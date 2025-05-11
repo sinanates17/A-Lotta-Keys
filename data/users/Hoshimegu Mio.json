@@ -1,0 +1,32 @@
+{
+    "id": 17753835,
+    "name": "Hoshimegu Mio",
+    "avater url": "https://a.ppy.sh/17753835?1743696739.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "17753835081724132044": {
+            "uid": 17753835,
+            "bid": 4206519,
+            "time": "081724132044",
+            "mods": [
+                "CL"
+            ],
+            "combo": 121,
+            "passed": true,
+            "pp": 2.45365,
+            "acc": 0.8976897689768977,
+            "grade": "B",
+            "score": 626452,
+            "320": 137,
+            "300": 43,
+            "200": 1,
+            "100": 0,
+            "50": 4,
+            "0": 17
+        }
+    }
+}

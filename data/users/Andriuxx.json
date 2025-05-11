@@ -1,0 +1,32 @@
+{
+    "id": 18606972,
+    "name": "Andriuxx",
+    "avater url": "https://a.ppy.sh/18606972?1746404743.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "18606972050125214829": {
+            "uid": 18606972,
+            "bid": 4974665,
+            "time": "050125214829",
+            "mods": [
+                "CL"
+            ],
+            "combo": 275,
+            "passed": true,
+            "pp": 4.26347,
+            "acc": 1.0,
+            "grade": "X",
+            "score": 998182,
+            "320": 259,
+            "300": 16,
+            "200": 0,
+            "100": 0,
+            "50": 0,
+            "0": 0
+        }
+    }
+}

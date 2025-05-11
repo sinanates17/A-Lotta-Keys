@@ -1,0 +1,214 @@
+{
+    "id": 2248490,
+    "title": "Campanella",
+    "artist": "Lime",
+    "titleu": "Campanella",
+    "artistu": "Lime",
+    "favs": 42,
+    "desc": null,
+    "source": "osu!mania 7K World Cup 2024",
+    "tags": "andreychomik mwc 2024 world cup mwc2024 mwc7k2024 finals featured artist fa mappers' guild mpg vocals dramatical night on the galactic railroad kenji miyazaki kankitsu kanki2 electronic english osu! original pms chordstream",
+    "host id": 24526335,
+    "submitted": "091324030545",
+    "ranked": "030125150344",
+    "beatmaps": {
+        "4780943": {
+            "version": "[9K] Extra",
+            "sr": 5.52,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132148,
+            "url": "https://osu.ppy.sh/beatmaps/4780943",
+            "drain": 8.2,
+            "rice": 2254,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 214,
+            "total passes": 101,
+            "play history": {
+                "051125060602": 214
+            },
+            "pass history": {
+                "051125060602": 101
+            }
+        },
+        "4780944": {
+            "version": "[9K] Fantasia",
+            "sr": 6.58,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132149,
+            "url": "https://osu.ppy.sh/beatmaps/4780944",
+            "drain": 8.5,
+            "rice": 2727,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 323,
+            "total passes": 84,
+            "play history": {
+                "051125060602": 323
+            },
+            "pass history": {
+                "051125060602": 84
+            }
+        },
+        "4780945": {
+            "version": "[9K] Hyper",
+            "sr": 3.75,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132149,
+            "url": "https://osu.ppy.sh/beatmaps/4780945",
+            "drain": 7.8,
+            "rice": 1498,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 270,
+            "total passes": 119,
+            "play history": {
+                "051125060602": 270
+            },
+            "pass history": {
+                "051125060602": 119
+            }
+        },
+        "4780946": {
+            "version": "[9K] Another",
+            "sr": 4.39,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132150,
+            "url": "https://osu.ppy.sh/beatmaps/4780946",
+            "drain": 8.0,
+            "rice": 1810,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 194,
+            "total passes": 109,
+            "play history": {
+                "051125060602": 194
+            },
+            "pass history": {
+                "051125060602": 109
+            }
+        },
+        "4780947": {
+            "version": "[9K] Advanced",
+            "sr": 2.55,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132150,
+            "url": "https://osu.ppy.sh/beatmaps/4780947",
+            "drain": 7.2,
+            "rice": 893,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 447,
+            "total passes": 168,
+            "play history": {
+                "051125060602": 447
+            },
+            "pass history": {
+                "051125060602": 168
+            }
+        },
+        "4877253": {
+            "version": "[9K] AndreyChomik's Beginner",
+            "sr": 1.13,
+            "keys": 9.0,
+            "mapper id": 31346265,
+            "status": 1,
+            "updated": 22225132151,
+            "url": "https://osu.ppy.sh/beatmaps/4877253",
+            "drain": 6.0,
+            "rice": 294,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 773,
+            "total passes": 289,
+            "play history": {
+                "051125060602": 773
+            },
+            "pass history": {
+                "051125060602": 289
+            }
+        },
+        "4886025": {
+            "version": "[9K] Hard",
+            "sr": 3.19,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132151,
+            "url": "https://osu.ppy.sh/beatmaps/4886025",
+            "drain": 7.5,
+            "rice": 1220,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 363,
+            "total passes": 167,
+            "play history": {
+                "051125060602": 363
+            },
+            "pass history": {
+                "051125060602": 167
+            }
+        },
+        "4898595": {
+            "version": "[9K] Normal",
+            "sr": 1.94,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132152,
+            "url": "https://osu.ppy.sh/beatmaps/4898595",
+            "drain": 7.0,
+            "rice": 683,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 400,
+            "total passes": 152,
+            "play history": {
+                "051125060602": 400
+            },
+            "pass history": {
+                "051125060602": 152
+            }
+        },
+        "4899819": {
+            "version": "[9K] Easy",
+            "sr": 1.47,
+            "keys": 9.0,
+            "mapper id": 24526335,
+            "status": 1,
+            "updated": 22225132152,
+            "url": "https://osu.ppy.sh/beatmaps/4899819",
+            "drain": 6.5,
+            "rice": 424,
+            "ln": 0,
+            "players": [],
+            "scores": {},
+            "total plays": 432,
+            "total passes": 161,
+            "play history": {
+                "051125060602": 432
+            },
+            "pass history": {
+                "051125060602": 161
+            }
+        }
+    }
+}

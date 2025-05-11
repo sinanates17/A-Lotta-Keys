@@ -1,0 +1,33 @@
+{
+    "id": 27227461,
+    "name": "MaxBro735",
+    "avater url": "https://a.ppy.sh/27227461?1707672527.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "27227461083024135825": {
+            "uid": 27227461,
+            "bid": 4206404,
+            "time": "083024135825",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 9,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.2789029535864979,
+            "grade": "D",
+            "score": 72966,
+            "320": 74,
+            "300": 79,
+            "200": 74,
+            "100": 49,
+            "50": 10,
+            "0": 504
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "id": 36118171,
+    "name": "Nyzova",
+    "avater url": "https://a.ppy.sh/36118171?1739816881.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "36118171032825004437": {
+            "uid": 36118171,
+            "bid": 4974665,
+            "time": "032825004437",
+            "mods": [
+                "CL"
+            ],
+            "combo": 32,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8084848484848485,
+            "grade": "B",
+            "score": 474165,
+            "320": 84,
+            "300": 110,
+            "200": 39,
+            "100": 6,
+            "50": 2,
+            "0": 34
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "id": 2032159,
+    "title": "This Will Be the Day (TV Size)",
+    "artist": "Jeff Williams feat. Casey Lee Williams",
+    "titleu": "This Will Be the Day (TV Size)",
+    "artistu": "Jeff Williams feat. Casey Lee Williams",
+    "favs": 53,
+    "desc": null,
+    "source": "RWBY",
+    "tags": "alternative rock rooster teeth productions monty oum ruby rose weiss schnee blake belladonna yang xiao long red white black yellow theme song opening songs part one anime english volume 1 soundtrack",
+    "host id": 4584427,
+    "submitted": "072423062022",
+    "ranked": "041125040438",
+    "beatmaps": {
+        "4235818": {
+            "version": "10K Expert",
+            "sr": 4.32,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 32925000032,
+            "url": "https://osu.ppy.sh/beatmaps/4235818",
+            "drain": 8.5,
+            "rice": 854,
+            "ln": 17,
+            "players": [],
+            "scores": {},
+            "total plays": 277,
+            "total passes": 114,
+            "play history": {
+                "051125060602": 277
+            },
+            "pass history": {
+                "051125060602": 114
+            }
+        },
+        "4236851": {
+            "version": "10K Hard",
+            "sr": 2.72,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 32925000033,
+            "url": "https://osu.ppy.sh/beatmaps/4236851",
+            "drain": 7.5,
+            "rice": 546,
+            "ln": 23,
+            "players": [],
+            "scores": {},
+            "total plays": 198,
+            "total passes": 110,
+            "play history": {
+                "051125060602": 198
+            },
+            "pass history": {
+                "051125060602": 110
+            }
+        },
+        "4955641": {
+            "version": "10K Insane",
+            "sr": 3.6,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 32925000034,
+            "url": "https://osu.ppy.sh/beatmaps/4955641",
+            "drain": 8.0,
+            "rice": 717,
+            "ln": 23,
+            "players": [],
+            "scores": {},
+            "total plays": 136,
+            "total passes": 80,
+            "play history": {
+                "051125060602": 136
+            },
+            "pass history": {
+                "051125060602": 80
+            }
+        },
+        "4955642": {
+            "version": "10K Normal",
+            "sr": 2.07,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 32925000035,
+            "url": "https://osu.ppy.sh/beatmaps/4955642",
+            "drain": 7.0,
+            "rice": 405,
+            "ln": 21,
+            "players": [],
+            "scores": {},
+            "total plays": 400,
+            "total passes": 145,
+            "play history": {
+                "051125060602": 400
+            },
+            "pass history": {
+                "051125060602": 145
+            }
+        }
+    }
+}

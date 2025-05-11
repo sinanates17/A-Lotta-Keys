@@ -1,0 +1,32 @@
+{
+    "id": 4903343,
+    "name": "Pokololoa",
+    "avater url": "https://a.ppy.sh/4903343?1451629419.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "4903343082324022331": {
+            "uid": 4903343,
+            "bid": 4206519,
+            "time": "082324022331",
+            "mods": [
+                "CL"
+            ],
+            "combo": 170,
+            "passed": true,
+            "pp": 0.161829,
+            "acc": 0.8325082508250825,
+            "grade": "B",
+            "score": 497169,
+            "320": 81,
+            "300": 67,
+            "200": 24,
+            "100": 11,
+            "50": 3,
+            "0": 16
+        }
+    }
+}

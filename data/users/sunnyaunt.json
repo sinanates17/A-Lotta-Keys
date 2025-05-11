@@ -1,0 +1,32 @@
+{
+    "id": 34942616,
+    "name": "sunnyaunt",
+    "avater url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "34942616022025085853": {
+            "uid": 34942616,
+            "bid": 4974665,
+            "time": "022025085853",
+            "mods": [
+                "CL"
+            ],
+            "combo": 47,
+            "passed": true,
+            "pp": 0.182579,
+            "acc": 0.8363636363636363,
+            "grade": "B",
+            "score": 535226,
+            "320": 107,
+            "300": 102,
+            "200": 29,
+            "100": 5,
+            "50": 0,
+            "0": 32
+        }
+    }
+}

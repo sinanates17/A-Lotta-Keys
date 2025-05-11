@@ -1,0 +1,32 @@
+{
+    "id": 13809491,
+    "name": "FakeKyzek",
+    "avater url": "https://a.ppy.sh/13809491?1732834634.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "13809491030325001555": {
+            "uid": 13809491,
+            "bid": 4974665,
+            "time": "030325001555",
+            "mods": [
+                "CL"
+            ],
+            "combo": 86,
+            "passed": true,
+            "pp": 2.3834,
+            "acc": 0.936969696969697,
+            "grade": "A",
+            "score": 667017,
+            "320": 138,
+            "300": 109,
+            "200": 16,
+            "100": 0,
+            "50": 0,
+            "0": 12
+        }
+    }
+}

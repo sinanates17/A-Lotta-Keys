@@ -1,0 +1,32 @@
+{
+    "id": 33525452,
+    "name": "- NovA -",
+    "avater url": "https://a.ppy.sh/33525452?1733850453.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "33525452031025195034": {
+            "uid": 33525452,
+            "bid": 4971711,
+            "time": "031025195034",
+            "mods": [
+                "CL"
+            ],
+            "combo": 112,
+            "passed": true,
+            "pp": 7.91119,
+            "acc": 0.9627391742195368,
+            "grade": "S",
+            "score": 791430,
+            "320": 495,
+            "300": 137,
+            "200": 8,
+            "100": 0,
+            "50": 0,
+            "0": 22
+        }
+    }
+}

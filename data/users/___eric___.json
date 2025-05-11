@@ -1,0 +1,32 @@
+{
+    "id": 16054558,
+    "name": "___eric___",
+    "avater url": "https://a.ppy.sh/16054558?1716221655.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "16054558022325092142": {
+            "uid": 16054558,
+            "bid": 4971712,
+            "time": "022325092142",
+            "mods": [
+                "CL"
+            ],
+            "combo": 138,
+            "passed": true,
+            "pp": 15.728,
+            "acc": 0.9167935058346017,
+            "grade": "A",
+            "score": 669459,
+            "320": 698,
+            "300": 440,
+            "200": 87,
+            "100": 22,
+            "50": 8,
+            "0": 59
+        }
+    }
+}

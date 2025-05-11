@@ -1,0 +1,33 @@
+{
+    "id": 673542,
+    "name": "b006089010",
+    "avater url": "https://a.ppy.sh/673542?1323945410.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "673542083124182923": {
+            "uid": 673542,
+            "bid": 4206519,
+            "time": "083124182923",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 94,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.5024752475247525,
+            "grade": "D",
+            "score": 148747,
+            "320": 35,
+            "300": 49,
+            "200": 17,
+            "100": 9,
+            "50": 19,
+            "0": 73
+        }
+    }
+}

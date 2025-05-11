@@ -1,0 +1,32 @@
+{
+    "id": 11557554,
+    "name": "Cytusine",
+    "avater url": "https://a.ppy.sh/11557554?1664746960.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "11557554112224042144": {
+            "uid": 11557554,
+            "bid": 4206519,
+            "time": "112224042144",
+            "mods": [
+                "CL"
+            ],
+            "combo": 94,
+            "passed": true,
+            "pp": 1.91121,
+            "acc": 0.8861386138613861,
+            "grade": "B",
+            "score": 615875,
+            "320": 112,
+            "300": 60,
+            "200": 8,
+            "100": 3,
+            "50": 4,
+            "0": 15
+        }
+    }
+}

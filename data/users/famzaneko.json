@@ -1,0 +1,32 @@
+{
+    "id": 10994117,
+    "name": "famzaneko",
+    "avater url": "https://a.ppy.sh/10994117?1746367282.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "10994117022025092003": {
+            "uid": 10994117,
+            "bid": 4971711,
+            "time": "022025092003",
+            "mods": [
+                "CL"
+            ],
+            "combo": 31,
+            "passed": true,
+            "pp": 1.36772,
+            "acc": 0.850453172205438,
+            "grade": "B",
+            "score": 528157,
+            "320": 302,
+            "300": 226,
+            "200": 46,
+            "100": 13,
+            "50": 0,
+            "0": 75
+        }
+    }
+}

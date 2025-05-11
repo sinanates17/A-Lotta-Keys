@@ -1,0 +1,33 @@
+{
+    "id": 36839353,
+    "name": "bananarat123",
+    "avater url": "https://a.ppy.sh/36839353?1735674797.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "36839353111424155820": {
+            "uid": 36839353,
+            "bid": 4206404,
+            "time": "111424155820",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 4,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.14578059071729957,
+            "grade": "D",
+            "score": 38831,
+            "320": 46,
+            "300": 42,
+            "200": 25,
+            "100": 24,
+            "50": 15,
+            "0": 638
+        }
+    }
+}

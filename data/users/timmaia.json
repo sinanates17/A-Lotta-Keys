@@ -1,0 +1,32 @@
+{
+    "id": 36421139,
+    "name": "timmaia",
+    "avater url": "https://a.ppy.sh/36421139?1732245580.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "36421139092924132432": {
+            "uid": 36421139,
+            "bid": 4206404,
+            "time": "092924132432",
+            "mods": [
+                "NF"
+            ],
+            "combo": 8,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.24133811230585425,
+            "grade": "D",
+            "score": 14688,
+            "320": 60,
+            "300": 83,
+            "200": 63,
+            "100": 38,
+            "50": 26,
+            "0": 567
+        }
+    }
+}

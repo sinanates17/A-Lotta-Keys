@@ -1,0 +1,32 @@
+{
+    "id": 8852426,
+    "name": "Tapses",
+    "avater url": "https://a.ppy.sh/8852426?1742804529.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "8852426112124170609": {
+            "uid": 8852426,
+            "bid": 4206519,
+            "time": "112124170609",
+            "mods": [
+                "CL"
+            ],
+            "combo": 58,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.6996699669966997,
+            "grade": "D",
+            "score": 431199,
+            "320": 63,
+            "300": 58,
+            "200": 22,
+            "100": 11,
+            "50": 12,
+            "0": 36
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "id": 27636484,
+    "name": "Usabi2005",
+    "avater url": "https://a.ppy.sh/27636484?1721371342.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "27636484080824153746": {
+            "uid": 27636484,
+            "bid": 4206519,
+            "time": "080824153746",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 43,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.34983498349834985,
+            "grade": "D",
+            "score": 95918,
+            "320": 24,
+            "300": 27,
+            "200": 22,
+            "100": 10,
+            "50": 10,
+            "0": 109
+        }
+    }
+}

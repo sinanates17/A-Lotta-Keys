@@ -1,0 +1,33 @@
+{
+    "id": 35142079,
+    "name": "sn4wqr",
+    "avater url": "https://a.ppy.sh/35142079?1723844739.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "35142079100224144856": {
+            "uid": 35142079,
+            "bid": 4206519,
+            "time": "100224144856",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 32,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.3457095709570957,
+            "grade": "D",
+            "score": 93888,
+            "320": 30,
+            "300": 36,
+            "200": 3,
+            "100": 5,
+            "50": 1,
+            "0": 127
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "id": 31786261,
+    "name": "txqheh",
+    "avater url": "https://a.ppy.sh/31786261?1740539751.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "31786261032125123656": {
+            "uid": 31786261,
+            "bid": 4299905,
+            "time": "032125123656",
+            "mods": [
+                "HT",
+                "NF",
+                "CL"
+            ],
+            "combo": 146,
+            "passed": true,
+            "pp": 0.0293541,
+            "acc": 0.8195142378559463,
+            "grade": "B",
+            "score": 131762,
+            "320": 208,
+            "300": 104,
+            "200": 18,
+            "100": 4,
+            "50": 5,
+            "0": 59
+        }
+    }
+}

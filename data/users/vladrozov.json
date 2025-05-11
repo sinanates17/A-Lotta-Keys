@@ -1,0 +1,30 @@
+{
+    "id": 9550678,
+    "name": "vladrozov",
+    "avater url": "https://a.ppy.sh/9550678?1622317755.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "9550678042925204526": {
+            "uid": 9550678,
+            "bid": 4971712,
+            "time": "042925204526",
+            "mods": [],
+            "combo": 63,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8242424242424242,
+            "grade": "B",
+            "score": 455431,
+            "320": 666,
+            "300": 489,
+            "200": 133,
+            "100": 55,
+            "50": 44,
+            "0": 153
+        }
+    }
+}

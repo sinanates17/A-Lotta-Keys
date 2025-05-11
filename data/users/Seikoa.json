@@ -1,0 +1,30 @@
+{
+    "id": 13873068,
+    "name": "Seikoa",
+    "avater url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "13873068032425074507": {
+            "uid": 13873068,
+            "bid": 4974665,
+            "time": "032425074507",
+            "mods": [],
+            "combo": 185,
+            "passed": true,
+            "pp": 3.8539,
+            "acc": 0.9939393939393939,
+            "grade": "S",
+            "score": 944553,
+            "320": 201,
+            "300": 71,
+            "200": 2,
+            "100": 0,
+            "50": 0,
+            "0": 1
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "id": 8875339,
+    "name": "Angela",
+    "avater url": "https://a.ppy.sh/8875339?1705112359.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "8875339092124211007": {
+            "uid": 8875339,
+            "bid": 4206519,
+            "time": "092124211007",
+            "mods": [
+                "PF",
+                "CL"
+            ],
+            "combo": 497,
+            "passed": true,
+            "pp": 5.49134,
+            "acc": 1.0,
+            "grade": "X",
+            "score": 993967,
+            "320": 163,
+            "300": 39,
+            "200": 0,
+            "100": 0,
+            "50": 0,
+            "0": 0
+        }
+    }
+}

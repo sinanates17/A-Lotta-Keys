@@ -1,0 +1,32 @@
+{
+    "id": 5527957,
+    "name": "Meiju",
+    "avater url": "https://a.ppy.sh/5527957?1739020760.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "5527957050625171301": {
+            "uid": 5527957,
+            "bid": 4972673,
+            "time": "050625171301",
+            "mods": [
+                "CL"
+            ],
+            "combo": 335,
+            "passed": true,
+            "pp": 49.3861,
+            "acc": 0.954230973922299,
+            "grade": "S",
+            "score": 746138,
+            "320": 1053,
+            "300": 675,
+            "200": 87,
+            "100": 17,
+            "50": 8,
+            "0": 39
+        }
+    }
+}

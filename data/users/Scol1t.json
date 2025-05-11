@@ -1,0 +1,32 @@
+{
+    "id": 16265710,
+    "name": "Scol1t",
+    "avater url": "https://a.ppy.sh/16265710?1649010002.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "16265710030325012140": {
+            "uid": 16265710,
+            "bid": 4974665,
+            "time": "030325012140",
+            "mods": [
+                "CL"
+            ],
+            "combo": 22,
+            "passed": true,
+            "pp": 0.626691,
+            "acc": 0.8533333333333334,
+            "grade": "B",
+            "score": 535849,
+            "320": 127,
+            "300": 92,
+            "200": 23,
+            "100": 1,
+            "50": 0,
+            "0": 32
+        }
+    }
+}

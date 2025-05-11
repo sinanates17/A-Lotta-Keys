@@ -1,0 +1,32 @@
+{
+    "id": 10007480,
+    "name": "Ferio Ng",
+    "avater url": "https://a.ppy.sh/10007480?1728738694.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "10007480022325125530": {
+            "uid": 10007480,
+            "bid": 4971712,
+            "time": "022325125530",
+            "mods": [
+                "CL"
+            ],
+            "combo": 162,
+            "passed": true,
+            "pp": 3.83596,
+            "acc": 0.8529934043632674,
+            "grade": "B",
+            "score": 532036,
+            "320": 482,
+            "300": 493,
+            "200": 188,
+            "100": 52,
+            "50": 19,
+            "0": 80
+        }
+    }
+}

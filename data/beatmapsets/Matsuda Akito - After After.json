@@ -1,0 +1,82 @@
+{
+    "id": 2212097,
+    "title": "After After",
+    "artist": "Matsuda Akito",
+    "titleu": "アフターアフター",
+    "artistu": "松田彬人",
+    "favs": 17,
+    "desc": null,
+    "source": "ディーふらぐ！",
+    "tags": "ゲーム製作部cd（仮）～サントラ② game seisakubu cd (kari) ~ sound track soundtrack (2) d-fragments d-frag! bgm anime instrumental",
+    "host id": 4584427,
+    "submitted": "071124030834",
+    "ranked": "030625010440",
+    "beatmaps": {
+        "4984214": {
+            "version": "[10K] Insane wo Tsukurimashita !",
+            "sr": 4.13,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 22525003007,
+            "url": "https://osu.ppy.sh/beatmaps/4984214",
+            "drain": 8.5,
+            "rice": 1140,
+            "ln": 28,
+            "players": [],
+            "scores": {},
+            "total plays": 195,
+            "total passes": 93,
+            "play history": {
+                "051125060602": 195
+            },
+            "pass history": {
+                "051125060602": 93
+            }
+        },
+        "4984355": {
+            "version": "[10K] Hard wo Tsukurimashita !",
+            "sr": 3.15,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 22525003008,
+            "url": "https://osu.ppy.sh/beatmaps/4984355",
+            "drain": 8.0,
+            "rice": 884,
+            "ln": 27,
+            "players": [],
+            "scores": {},
+            "total plays": 207,
+            "total passes": 94,
+            "play history": {
+                "051125060602": 207
+            },
+            "pass history": {
+                "051125060602": 94
+            }
+        },
+        "4984408": {
+            "version": "[10K] Normal wo Tsukurimashita !",
+            "sr": 2.22,
+            "keys": 10.0,
+            "mapper id": 4584427,
+            "status": 1,
+            "updated": 22525003008,
+            "url": "https://osu.ppy.sh/beatmaps/4984408",
+            "drain": 7.5,
+            "rice": 645,
+            "ln": 21,
+            "players": [],
+            "scores": {},
+            "total plays": 517,
+            "total passes": 178,
+            "play history": {
+                "051125060602": 517
+            },
+            "pass history": {
+                "051125060602": 178
+            }
+        }
+    }
+}

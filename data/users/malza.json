@@ -1,0 +1,32 @@
+{
+    "id": 19141228,
+    "name": "malza",
+    "avater url": "https://a.ppy.sh/19141228?1734223558.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "19141228043025182214": {
+            "uid": 19141228,
+            "bid": 4972673,
+            "time": "043025182214",
+            "mods": [
+                "CL"
+            ],
+            "combo": 128,
+            "passed": true,
+            "pp": 21.6945,
+            "acc": 0.8800780557033884,
+            "grade": "B",
+            "score": 592482,
+            "320": 958,
+            "300": 593,
+            "200": 134,
+            "100": 31,
+            "50": 18,
+            "0": 145
+        }
+    }
+}

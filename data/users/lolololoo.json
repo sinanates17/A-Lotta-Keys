@@ -1,0 +1,32 @@
+{
+    "id": 37325183,
+    "name": "lolololoo",
+    "avater url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "37325183021625182638": {
+            "uid": 37325183,
+            "bid": 4299905,
+            "time": "021625182638",
+            "mods": [
+                "CL"
+            ],
+            "combo": 84,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7370184254606366,
+            "grade": "C",
+            "score": 405781,
+            "320": 90,
+            "300": 146,
+            "200": 74,
+            "100": 22,
+            "50": 4,
+            "0": 62
+        }
+    }
+}

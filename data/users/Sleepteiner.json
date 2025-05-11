@@ -1,0 +1,33 @@
+{
+    "id": 4781004,
+    "name": "Sleepteiner",
+    "avater url": "https://a.ppy.sh/4781004?1456341398.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "4781004030725165721": {
+            "uid": 4781004,
+            "bid": 4974665,
+            "time": "030725165721",
+            "mods": [
+                "PF",
+                "CL"
+            ],
+            "combo": 275,
+            "passed": true,
+            "pp": 4.14011,
+            "acc": 1.0,
+            "grade": "X",
+            "score": 995341,
+            "320": 234,
+            "300": 41,
+            "200": 0,
+            "100": 0,
+            "50": 0,
+            "0": 0
+        }
+    }
+}

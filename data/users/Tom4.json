@@ -1,0 +1,33 @@
+{
+    "id": 14614114,
+    "name": "Tom4",
+    "avater url": "https://a.ppy.sh/14614114?1723496339.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "14614114022025155717": {
+            "uid": 14614114,
+            "bid": 4971711,
+            "time": "022025155717",
+            "mods": [
+                "NC",
+                "CL"
+            ],
+            "combo": 87,
+            "passed": true,
+            "pp": 13.6869,
+            "acc": 0.9602215508559919,
+            "grade": "S",
+            "score": 777273,
+            "320": 524,
+            "300": 109,
+            "200": 3,
+            "100": 2,
+            "50": 0,
+            "0": 24
+        }
+    }
+}

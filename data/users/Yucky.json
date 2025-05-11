@@ -1,0 +1,32 @@
+{
+    "id": 7842506,
+    "name": "Yucky",
+    "avater url": "https://a.ppy.sh/7842506?1712012460.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "7842506082924162155": {
+            "uid": 7842506,
+            "bid": 4206519,
+            "time": "082924162155",
+            "mods": [
+                "CL"
+            ],
+            "combo": 268,
+            "passed": true,
+            "pp": 4.2618,
+            "acc": 0.9570957095709571,
+            "grade": "S",
+            "score": 803850,
+            "320": 157,
+            "300": 35,
+            "200": 1,
+            "100": 1,
+            "50": 2,
+            "0": 6
+        }
+    }
+}

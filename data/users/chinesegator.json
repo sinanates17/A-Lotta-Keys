@@ -1,0 +1,32 @@
+{
+    "id": 15128298,
+    "name": "chinesegator",
+    "avater url": "https://a.ppy.sh/15128298?1745882917.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "15128298050925234716": {
+            "uid": 15128298,
+            "bid": 4299905,
+            "time": "050925234716",
+            "mods": [
+                "CL"
+            ],
+            "combo": 154,
+            "passed": true,
+            "pp": 9.4276,
+            "acc": 0.9715242881072027,
+            "grade": "S",
+            "score": 850902,
+            "320": 288,
+            "300": 93,
+            "200": 7,
+            "100": 2,
+            "50": 2,
+            "0": 6
+        }
+    }
+}

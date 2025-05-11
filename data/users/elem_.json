@@ -1,0 +1,32 @@
+{
+    "id": 15901483,
+    "name": "elem_",
+    "avater url": "https://a.ppy.sh/15901483?1708134556.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "lb beatmap plays history": {},
+    "scores": {
+        "15901483050525083332": {
+            "uid": 15901483,
+            "bid": 4971712,
+            "time": "050525083332",
+            "mods": [
+                "CL"
+            ],
+            "combo": 446,
+            "passed": true,
+            "pp": 29.2907,
+            "acc": 0.9856671740233384,
+            "grade": "S",
+            "score": 899620,
+            "320": 1021,
+            "300": 266,
+            "200": 10,
+            "100": 3,
+            "50": 3,
+            "0": 11
+        }
+    }
+}
