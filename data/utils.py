@@ -118,7 +118,6 @@ class Helper:
             'tracking': True,
             'beatmapsets': {},
             'beatmap plays history': {},
-            'lb beatmap plays history': {},
             'scores': {},
         }
 

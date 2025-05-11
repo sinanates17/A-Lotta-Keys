@@ -33,7 +33,7 @@ def main():
                 diffs = list(mapset_dict["beatmaps"].keys())
                 diffs_old = list(mapset_dict_old["beatmaps"].keys())
 
-                new_diffs = [id for id in diffs if id not in diffs_old]
+                #new_diffs = [id for id in diffs if id not in diffs_old]
                 same_diffs = [id for id in diffs if id in diffs_old]
                 del_diffs = [id for id in diffs_old if id not in diffs]
 
@@ -50,7 +50,7 @@ def main():
                         diff["deleted"] = now
                         mapset_dict["beatmaps"][bid] = diff
 
-            filename = f"{mapset.artist} - {mapset.title}.json".translate(str.maketrans("", "", "/\\"))
+            filename = f"{mapset_dict_old["artist"]} - {mapset_dict_old["title"]}.json".translate(str.maketrans("", "", "/\\"))
             with open(f"{PATH_BEATMAPSETS}/{filename}", "w", encoding='utf-8') as f:
                 json.dump(mapset_dict, f, ensure_ascii=False, indent=4)
 
