@@ -24,7 +24,7 @@ class Helper:
             'tags': beatmapset.tags,
             'host id': beatmapset.user_id,
             'submitted': beatmapset.submitted_date.strftime("%y%m%d%H%M%S"),
-            'ranked' : beatmapset.ranked_date.strftime("%y%m%d%H%M%S"),
+            'ranked' : beatmapset.ranked_date.strftime("%y%m%d%H%M%S") if isinstance(beatmapset.ranked_date, datetime) else 'unranked',
             'beatmaps': {beatmap.id:Helper.beatmap_to_dict(beatmap) for beatmap in beatmapset.beatmaps},
         }
 
@@ -90,7 +90,7 @@ class Helper:
         score_dict = {
             'uid': score.user_id,
             'bid': int(score.beatmap_id) if isinstance(score.beatmap_id, str) else int(score.beatmap.id),
-            'time': score.ended_at.strftime("%%y%m%d%H%M%S"),
+            'time': score.ended_at.strftime("%y%m%d%H%M%S"),
             'mods': [mod.acronym for mod in score.mods],
             'combo': score.max_combo,
             'passed': score.passed,
@@ -113,7 +113,7 @@ class Helper:
         user_dict = {
             'id': user.id,
             'name': user.username,
-            'avater url': user.avatar_url,
+            'avatar url': user.avatar_url,
             'days ago': 0,
             'tracking': True,
             'beatmapsets': {},
@@ -130,7 +130,7 @@ class Helper:
         page = 1
         print(f'Page {page}') #Temporary until I implement a logger
 
-        while False:#result.cursor is not None:
+        while result.cursor is not None:
             sleep(REQUEST_INTERVAL)
             page += 1
             print(f'Page {page}') #Temporary until I implement a logger
@@ -146,7 +146,7 @@ class Helper:
         sleep(REQUEST_INTERVAL)
         mapsets = self.osu_api.search_beatmapsets(
             query="keys>8", 
-            explicit_content="show")[0:limit]
+            explicit_content="show").beatmapsets[0:limit]
         
         bids = []
 

@@ -20,7 +20,7 @@ def main():
         mapset.beatmaps = [beatmap for i, beatmap in enumerate(mapset.beatmaps) if i not in dels]
         
         mapset_dict = Helper.beatmapset_to_dict(mapset)
-        filename = f"{mapset.artist} - {mapset.title}.json".translate(str.maketrans("", "", "/\\"))
+        filename = f"{mapset.id}.json".translate(str.maketrans("", "", "/\\"))
         with open(f"{PATH_BEATMAPSETS}/{filename}", "w", encoding='utf-8') as f:
             json.dump(mapset_dict, f, ensure_ascii=False, indent=4)
 

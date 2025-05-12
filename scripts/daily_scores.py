@@ -13,7 +13,7 @@ def main():
     output = f"scores_{now}.json"
     cum_scores = { "timestamp": now }
 
-    for file in listdir(PATH_USERS):
+    for file in listdir(PATH_USERS)[0:50]:
         if not file.endswith(".json"): continue
         with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
             user = json.load(f)
@@ -21,9 +21,10 @@ def main():
         if user['tracking']:
             scores = helper.user_scores_recent(user_id=user["id"])
             for score in scores:
-                score_dict = Helper.score_to_dict(score)
-                id = f"{score_dict['uid']}{score_dict['time']}"
-                cum_scores[id] = score_dict
+                if score.beatmap.cs > 8 and score.beatmap.mode.value == "mania":
+                    score_dict = Helper.score_to_dict(score)
+                    id = f"{score_dict['uid']}{score_dict['time']}"
+                    cum_scores[id] = score_dict
     
     with open(f"{PATH_SCORES}/{output}", "w", encoding='utf-8') as f:
         json.dump(cum_scores, f, ensure_ascii=False, indent=4)

@@ -13,15 +13,16 @@ def main():
         with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
             scores = json.load(f)
         
-        for score in scores.values():
+        for id, score in scores.items():
+            if id == "timestamp": continue
             users.append(score.get('uid'))
 
     users = list(set(users))
     users = helper.users(users)
     for user in users:
         user_dict = Helper.user_to_dict(user)
-        name = user.username
-        output = f"{PATH_USERS}/{name}.json"
+        id = user.id
+        output = f"{PATH_USERS}/{id}.json"
 
         with open (output, "w", encoding='utf-8') as f:
             json.dump(user_dict, f, ensure_ascii=False, indent=4)

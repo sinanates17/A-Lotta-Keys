@@ -15,7 +15,7 @@ def main():
     cum_scores = { "timestamp": now }
 
     def _build_player_maps_update_beatmapset_jsons(): #My goal is to make my code as unreadable as humanly possible
-        for file in listdir(PATH_BEATMAPSETS)[0:3]:
+        for file in listdir(PATH_BEATMAPSETS)[0:30]:
             if not file.endswith(".json"): continue
             path = f"{PATH_BEATMAPSETS}/{file}"
             lb_diffs = []
@@ -39,8 +39,14 @@ def main():
                     json.dump(mapset, f, ensure_ascii=False, indent=4)
 
     def _get_and_dump_scores():
+        reqs = 0
+        for maps in player_maps.values():
+            reqs += len(maps)
+        i = 0
         for player, maps in player_maps.items():
             scores = helper.user_scores_many_beatmaps(user_id=player, beatmap_ids=maps)
+            i += len(maps)
+            print(f"{i} requests done of {reqs} | {i*100/reqs}%")
             for score in scores:
                 score_dict = Helper.score_to_dict(score=score)
                 int_id = f"{score_dict['uid']}{score_dict['time']}"

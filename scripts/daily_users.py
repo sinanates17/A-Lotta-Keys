@@ -19,11 +19,7 @@ def main():
         for uid in uids:
             c = False
             for file in listdir(PATH_USERS):
-                if not file.endswith(".json"): continue
-                with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
-                    user = json.load(f)
-                
-                if user["id"] == uid:
+                if uid in file and file.endswith(".json"): 
                     c = True
                     break
 
@@ -34,8 +30,8 @@ def main():
 
         for user in new_users:
             user_dict = Helper.user_to_dict(user)
-            name = user.username
-            output = f"{PATH_USERS}/{name}.json"
+            id = user.id
+            output = f"{PATH_USERS}/{id}.json"
 
             with open (output, "w", encoding='utf-8') as f:
                 json.dump(user_dict, f, ensure_ascii=False, indent=4)
@@ -61,13 +57,11 @@ def main():
 
         for uid, scores in uids_scores.items():
             for file in listdir(PATH_USERS):
-                if not file.endswith(".json"): continue
-                with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
-                    user = json.load(f)
-                
-                if uid == user["id"]:
+                if uid in file and file.endswith(".json"):
+                    with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
+                        user = json.load(f)
+                    
                     user["scores"] |= scores
-
                     with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
                         json.dump(user, f, ensure_ascii=False, indent=4)
 
@@ -102,16 +96,12 @@ def main():
             user["beatmapsets"] = uid_mapsets.get(uid, {}) #This should accordingly update difficulty owner changes
             if user["beatmapsets"] == {}: continue
 
-            for bfile in listdir(PATH_BEATMAPSETS):
-                if not bfile.endswith(".json"): continue
-                with open(f"{PATH_BEATMAPSETS}/{bfile}", "r", encoding='utf-8') as f:
+            for msid in user["beatmapsets"].keys():
+                with open(f"{PATH_BEATMAPSETS}/{msid}.json", "r", encoding='utf-8') as f:
                     mapset_json = json.load(f)
-                
-                msid = mapset_json["id"]
-                if msid in uid_mapsets[uid].keys():
-                    for bid, diff in mapset_json["beatmaps"].items():
-                        if bid in uid_mapsets[uid][msid]:
-                            total_plays += mapset_json["beatmaps"][bid]["total plays"]
+                    
+                for bid, in user["beatmapsets"][msid].keys():
+                    total_plays += mapset_json["beatmaps"][bid]["total plays"]
 
             user["beatmap plays history"][now] = total_plays
 
@@ -139,7 +129,7 @@ def main():
 
     helper = Helper()
     now = datetime.now(timezone.utc)
-    now = now.strftime("%y%m%dH%M%S")
+    now = now.strftime("%y%m%d%H%M%S")
     uids = []
     
     _initialize_new_users()
