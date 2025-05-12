@@ -156,9 +156,15 @@ ScoresMMDDYYhhmmss.json layout, each JSON containing a dump of scores:
 """
 
 import subprocess
+import sys
+from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import PYTHON_PATH
 
 def main():
-    pass
+    subprocess.run([PYTHON_PATH, "scripts/initialize_beatmaps.py"])
+    subprocess.run([PYTHON_PATH, "scripts/initialize_scores.py"])
+    subprocess.run([PYTHON_PATH, "scripts/initialize_users.py"])
+    subprocess.run([PYTHON_PATH, "scripts/initialize_network.py"])
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()

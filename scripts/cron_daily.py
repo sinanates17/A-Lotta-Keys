@@ -44,9 +44,14 @@ Child script 3: daily_users.py
 """
 
 import subprocess
+import sys
+from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import PYTHON_PATH
 
 def main():
-    pass
+    subprocess.run([PYTHON_PATH, "scripts/daily_scores.py"])
+    subprocess.run([PYTHON_PATH, "scripts/daily_beatmaps.py"])
+    subprocess.run([PYTHON_PATH, "scripts/daily_users.py"])
 
 if __name__ == "main":
     main()

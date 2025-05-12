@@ -7,17 +7,6 @@ from os import listdir
 import json
 
 def main():
-
-    def _old_version(id: int) -> dict:
-        for file in listdir(PATH_USERS):
-            with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
-                result = json.load(f)
-            
-            if result["id"] == id:
-                return result
-        
-        return None
-
     def _initialize_new_users():
         bids = helper.recent_beatmap_ids()
         uids = []
@@ -30,6 +19,7 @@ def main():
         for uid in uids:
             c = False
             for file in listdir(PATH_USERS):
+                if not file.endswith(".json"): continue
                 with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                     user = json.load(f)
                 
@@ -81,10 +71,11 @@ def main():
 
                     break
 
-    def _update_play_history():
+    def _update_mapsets_playhistory():
         uid_mapsets = {}
 
         for file in listdir(PATH_BEATMAPSETS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
                 mapset = json.load(f)
             msid = mapset["id"]
@@ -99,16 +90,18 @@ def main():
                 uid_mapsets[uid] = uid_mapset
 
         for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
 
             uid = user["id"]
             uids.append(uid)
             total_plays = 0
-            user["beatmapsets"] = uid_mapsets.get(uid, {})
+            user["beatmapsets"] = uid_mapsets.get(uid, {}) #This should accordingly update difficulty owner changes
             if user["beatmapsets"] == {}: continue
 
             for bfile in listdir(PATH_BEATMAPSETS):
+                if not bfile.endswith(".json"): continue
                 with open(f"{PATH_BEATMAPSETS}/{bfile}", "r", encoding='utf-8') as f:
                     mapset_json = json.load(f)
                 
@@ -127,6 +120,7 @@ def main():
         users = helper.users(uids)
 
         for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user_dict = json.load(f)
             
@@ -138,6 +132,9 @@ def main():
                     user_dict["name"] = user_dict_new["name"]
                     user_dict["avatar url"] = user_dict_new["avatar url"]
 
+                    with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
+                        json.dump(user_dict, f, ensure_ascii=False, indent=4)
+
     helper = Helper()
     now = datetime.now(timezone.utc)
     now = now.strftime("%y%m%dH%M%S")
@@ -145,7 +142,8 @@ def main():
     
     _initialize_new_users()
     _update_scores()
-    _update_play_history
+    _update_mapsets_playhistory()
+    _update_name_url()
 
 if __name__ == '__main__':
     main()

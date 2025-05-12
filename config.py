@@ -12,4 +12,5 @@ PATH_SCORES = os.getenv("PATH_SCORES")
 
 REQUEST_INTERVAL = float(os.getenv("REQUEST_INTERVAL"))
 
+PYTHON_PATH = os.getenv("PYTHON_PATH")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")
