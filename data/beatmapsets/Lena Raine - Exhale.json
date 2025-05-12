@@ -1,0 +1,85 @@
+{
+    "id": 2200489,
+    "title": "Exhale",
+    "artist": "Lena Raine",
+    "titleu": "Exhale",
+    "artistu": "Lena Raine",
+    "favs": 20,
+    "desc": null,
+    "source": "Celeste",
+    "tags": "kuraine video game videogame instrumental keysound original soundtrack ost music vgm action adventure platformer indie epilogue piano",
+    "host id": 14141683,
+    "submitted": "240619194248",
+    "ranked": "241122180306",
+    "beatmaps": {
+        "4657011": {
+            "version": "[9K] Breathe...",
+            "sr": 2.17,
+            "keys": 9.0,
+            "mapper id": 14141683,
+            "status": 1,
+            "updated": "241111202112",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4657011",
+            "drain": 7.0,
+            "rice": 509,
+            "ln": 103,
+            "players": [],
+            "total plays": 336,
+            "total passes": 85,
+            "play history": {
+                "250512002532": 336
+            },
+            "pass history": {
+                "250512002532": 85
+            },
+            "scores": {}
+        },
+        "4670388": {
+            "version": "[9K] Easy",
+            "sr": 0.94,
+            "keys": 9.0,
+            "mapper id": 14141683,
+            "status": 1,
+            "updated": "241111202112",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4670388",
+            "drain": 6.0,
+            "rice": 222,
+            "ln": 92,
+            "players": [],
+            "total plays": 753,
+            "total passes": 171,
+            "play history": {
+                "250512002532": 753
+            },
+            "pass history": {
+                "250512002532": 171
+            },
+            "scores": {}
+        },
+        "4835458": {
+            "version": "[9K] Normal",
+            "sr": 1.44,
+            "keys": 9.0,
+            "mapper id": 14141683,
+            "status": 1,
+            "updated": "241111202113",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4835458",
+            "drain": 6.5,
+            "rice": 453,
+            "ln": 47,
+            "players": [],
+            "total plays": 287,
+            "total passes": 73,
+            "play history": {
+                "250512002532": 287
+            },
+            "pass history": {
+                "250512002532": 73
+            },
+            "scores": {}
+        }
+    }
+}

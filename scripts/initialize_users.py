@@ -9,6 +9,7 @@ def main():
     users = []
     helper = Helper()
     for file in listdir(PATH_SCORES):
+        if not file.endswith(".json"): continue
         with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
             scores = json.load(f)
         

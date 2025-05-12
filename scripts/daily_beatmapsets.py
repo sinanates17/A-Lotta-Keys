@@ -9,6 +9,7 @@ import json
 def main():
     def _old_version(id: int) -> dict:
         for file in listdir(PATH_BEATMAPSETS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
                 result = json.load(f)
             
@@ -62,6 +63,7 @@ def main():
         bids_scores = {}
 
         for file in listdir(PATH_SCORES):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
                 scores = json.load(f)
 
@@ -76,6 +78,7 @@ def main():
 
         for bid, scores in bids_scores.items():
             for file in listdir(PATH_BEATMAPSETS):
+                if not file.endswith(".json"): continue
                 with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
                     mapset = json.load(f)
                 

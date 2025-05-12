@@ -12,6 +12,7 @@ def main():
     helper = Helper()
 
     for sfile in listdir(PATH_SCORES):
+        if not sfile.endswith(".json"): continue
         uid_scores = {}
         bid_scores = {}
         uid_mapsets = {}
@@ -31,6 +32,7 @@ def main():
             bid_scores[bid][id] = score
 
         for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
 
@@ -41,6 +43,7 @@ def main():
                 json.dump(user, f, ensure_ascii=False, indent=4)
 
         for file in listdir(PATH_BEATMAPSETS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
                 mapset = json.load(f)
 
@@ -59,6 +62,7 @@ def main():
                 json.dump(mapset, f, ensure_ascii=False, indent=4)
 
         for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
 
@@ -68,6 +72,7 @@ def main():
             if user["beatmapsets"] == {}: continue
 
             for bfile in listdir(PATH_BEATMAPSETS):
+                if not bfile.endswith(".json"): continue
                 with open(f"{PATH_BEATMAPSETS}/{bfile}", "r", encoding='utf-8') as f:
                     mapset_json = json.load(f)
                 

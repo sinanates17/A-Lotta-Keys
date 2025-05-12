@@ -161,7 +161,7 @@ from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent
 from config import PYTHON_PATH
 
 def main():
-    subprocess.run([PYTHON_PATH, "scripts/initialize_beatmaps.py"])
+    subprocess.run([PYTHON_PATH, "scripts/initialize_beatmapsets.py"])
     subprocess.run([PYTHON_PATH, "scripts/initialize_scores.py"])
     subprocess.run([PYTHON_PATH, "scripts/initialize_users.py"])
     subprocess.run([PYTHON_PATH, "scripts/initialize_network.py"])

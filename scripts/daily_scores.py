@@ -14,6 +14,7 @@ def main():
     cum_scores = { "timestamp": now }
 
     for file in listdir(PATH_USERS):
+        if not file.endswith(".json"): continue
         with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
             user = json.load(f)
         

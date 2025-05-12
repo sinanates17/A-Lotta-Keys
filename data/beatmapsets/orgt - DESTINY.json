@@ -1,0 +1,131 @@
+{
+    "id": 2318046,
+    "title": "DESTINY",
+    "artist": "orgt",
+    "titleu": "DESTINY",
+    "artistu": "orgt",
+    "favs": 14,
+    "desc": null,
+    "source": "THE BMS OF FIGHTERS 2011 - Intersection of conflict -",
+    "tags": "electronic video game instrumental electric fusion orangentle yu_asahina yu asahina アサヒナユウ デスティニーサーモン bms bof2011 salmon",
+    "host id": 23528688,
+    "submitted": "250203011936",
+    "ranked": "250319044502",
+    "beatmaps": {
+        "4964602": {
+            "version": "[10K] EASY",
+            "sr": 1.26,
+            "keys": 10.0,
+            "mapper id": 23528688,
+            "status": 1,
+            "updated": "250309020751",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4964602",
+            "drain": 6.0,
+            "rice": 351,
+            "ln": 0,
+            "players": [],
+            "total plays": 325,
+            "total passes": 85,
+            "play history": {
+                "250512002532": 325
+            },
+            "pass history": {
+                "250512002532": 85
+            },
+            "scores": {}
+        },
+        "4964603": {
+            "version": "[10K] HARD",
+            "sr": 2.76,
+            "keys": 10.0,
+            "mapper id": 23528688,
+            "status": 1,
+            "updated": "250309020751",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4964603",
+            "drain": 7.0,
+            "rice": 1219,
+            "ln": 2,
+            "players": [],
+            "total plays": 148,
+            "total passes": 83,
+            "play history": {
+                "250512002532": 148
+            },
+            "pass history": {
+                "250512002532": 83
+            },
+            "scores": {}
+        },
+        "4964604": {
+            "version": "[10K] NORMAL",
+            "sr": 1.92,
+            "keys": 10.0,
+            "mapper id": 23528688,
+            "status": 1,
+            "updated": "250309020752",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4964604",
+            "drain": 6.5,
+            "rice": 695,
+            "ln": 0,
+            "players": [],
+            "total plays": 221,
+            "total passes": 73,
+            "play history": {
+                "250512002532": 221
+            },
+            "pass history": {
+                "250512002532": 73
+            },
+            "scores": {}
+        },
+        "4964678": {
+            "version": "[10K] EXPERT",
+            "sr": 4.57,
+            "keys": 10.0,
+            "mapper id": 23528688,
+            "status": 1,
+            "updated": "250309020752",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4964678",
+            "drain": 8.0,
+            "rice": 2224,
+            "ln": 4,
+            "players": [],
+            "total plays": 173,
+            "total passes": 63,
+            "play history": {
+                "250512002532": 173
+            },
+            "pass history": {
+                "250512002532": 63
+            },
+            "scores": {}
+        },
+        "4964679": {
+            "version": "[10K] INSANE",
+            "sr": 3.67,
+            "keys": 10.0,
+            "mapper id": 23528688,
+            "status": 1,
+            "updated": "250309020753",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4964679",
+            "drain": 7.5,
+            "rice": 1736,
+            "ln": 3,
+            "players": [],
+            "total plays": 137,
+            "total passes": 72,
+            "play history": {
+                "250512002532": 137
+            },
+            "pass history": {
+                "250512002532": 72
+            },
+            "scores": {}
+        }
+    }
+}

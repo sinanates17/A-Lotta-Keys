@@ -1,0 +1,614 @@
+{
+    "id": 1331811,
+    "title": "frjmol jnok (part a)",
+    "artist": "Various Artists",
+    "titleu": "frjmol jnok (part a)",
+    "artistu": "Various Artists",
+    "favs": 26,
+    "desc": null,
+    "source": "",
+    "tags": "u_e deskurisu madeon vs. f(x) all my friends (j.e.b mashup) jeb m2u gypsytronic cysmix babaroque 2mb healing vision angelic mix 양정화 케로로 행진곡 keololo haengjingok yang jeong-hwa keroro march kero! to march ユニ (cv: 小原好美)、チエル (cv: 佐倉綾音)、クロエ (cv: 種崎敦美) なかよしセンセーション yuni (cv: kohara konomi) chieru (cv: sakura ayane) chloe (cv: tanezaki atsumi) nakayoshi sensation chico with honeyworks アイのシナリオ (tv size) ai no scenario tsunku♂ つんく♂ dreams of our generation mind vortex alive jun with tahirih happy☆angel masayuki ito boss 3 audio magnetics ghetto blasta deluxe bill kiley boss of nova 歌/マコト (cv: 小松未可子)、カスミ (cv: 水瀬いのり) 未解決な想い makoto komatsu mikako kasumi minase inori mikaiketsu na omoi 柳田ethnica for you the bellz toll yanagida ethnica bobby prince at doom's gate doom e1m1 ツユ あの世行きのバスに乗ってさらば。 tuyu anoyo-iki no bus ni notte saraba. i'm getting on the bus to the other world see ya! meganeko 2009 2k9 battle jam 진선주 恋はスリル、ショック、サスペンス jin seon-joo love is thrill shock suspense max i want u you",
+    "host id": 11220019,
+    "submitted": "201225083312",
+    "ranked": "241009094617",
+    "beatmaps": {
+        "2759238": {
+            "version": "[10K] metadata",
+            "sr": 0.05,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": -2,
+            "updated": "241006194304",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759238",
+            "drain": 0.0,
+            "rice": 2,
+            "ln": 0,
+            "players": [],
+            "total plays": 88,
+            "total passes": 6,
+            "play history": {
+                "250512002532": 88
+            },
+            "pass history": {
+                "250512002532": 6
+            },
+            "scores": {}
+        },
+        "2759250": {
+            "version": "[10K] 2MB - Healing Vision ~Angelic mix~ [Arrhythmia]",
+            "sr": 4.21,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194304",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759250",
+            "drain": 8.0,
+            "rice": 1579,
+            "ln": 17,
+            "players": [],
+            "total plays": 130,
+            "total passes": 48,
+            "play history": {
+                "250512002532": 130
+            },
+            "pass history": {
+                "250512002532": 48
+            },
+            "scores": {}
+        },
+        "2759251": {
+            "version": "[10K] 2MB - Healing Vision ~Angelic mix~ [Asystole]",
+            "sr": 5.32,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194305",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759251",
+            "drain": 8.0,
+            "rice": 1787,
+            "ln": 17,
+            "players": [],
+            "total plays": 72,
+            "total passes": 23,
+            "play history": {
+                "250512002532": 72
+            },
+            "pass history": {
+                "250512002532": 23
+            },
+            "scores": {}
+        },
+        "2759252": {
+            "version": "[10K] Audio Magnetics - Ghetto Blasta Deluxe [Box Warp]",
+            "sr": 4.85,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194305",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759252",
+            "drain": 8.0,
+            "rice": 1662,
+            "ln": 0,
+            "players": [],
+            "total plays": 55,
+            "total passes": 32,
+            "play history": {
+                "250512002532": 55
+            },
+            "pass history": {
+                "250512002532": 32
+            },
+            "scores": {}
+        },
+        "2759253": {
+            "version": "[10K] Bill Kiley - Boss of Nova [PAME GAUSED]",
+            "sr": 4.95,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194306",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759253",
+            "drain": 8.0,
+            "rice": 1913,
+            "ln": 163,
+            "players": [],
+            "total plays": 44,
+            "total passes": 19,
+            "play history": {
+                "250512002532": 44
+            },
+            "pass history": {
+                "250512002532": 19
+            },
+            "scores": {}
+        },
+        "2759254": {
+            "version": "[10K] Bobby Prince - At Doom's Gate [pew pew]",
+            "sr": 5.38,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194306",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759254",
+            "drain": 8.0,
+            "rice": 1911,
+            "ln": 4,
+            "players": [],
+            "total plays": 84,
+            "total passes": 35,
+            "play history": {
+                "250512002532": 84
+            },
+            "pass history": {
+                "250512002532": 35
+            },
+            "scores": {}
+        },
+        "2759255": {
+            "version": "CHiCO with HoneyWorks - Ai no Scenario (TV Size) [u_e's 10K]",
+            "sr": 4.35,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194307",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759255",
+            "drain": 9.0,
+            "rice": 946,
+            "ln": 252,
+            "players": [],
+            "total plays": 110,
+            "total passes": 32,
+            "play history": {
+                "250512002532": 110
+            },
+            "pass history": {
+                "250512002532": 32
+            },
+            "scores": {}
+        },
+        "2759256": {
+            "version": "Yuni, Chieru, Chloe - Nakayoshi Sensation [u_e's 10K]",
+            "sr": 4.27,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194308",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759256",
+            "drain": 8.0,
+            "rice": 1000,
+            "ln": 155,
+            "players": [],
+            "total plays": 107,
+            "total passes": 56,
+            "play history": {
+                "250512002532": 107
+            },
+            "pass history": {
+                "250512002532": 56
+            },
+            "scores": {}
+        },
+        "2759257": {
+            "version": "[10K] Yuni, Chieru, Chloe - Nakayoshi Sensation [u_e's Very Hard]",
+            "sr": 5.99,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194308",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759257",
+            "drain": 9.0,
+            "rice": 1379,
+            "ln": 170,
+            "players": [],
+            "total plays": 66,
+            "total passes": 19,
+            "play history": {
+                "250512002532": 66
+            },
+            "pass history": {
+                "250512002532": 19
+            },
+            "scores": {}
+        },
+        "2759258": {
+            "version": "[10K] cYsmix - Babaroque (Short Ver.) [Autonomous Mechanism]",
+            "sr": 4.17,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194308",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759258",
+            "drain": 8.0,
+            "rice": 1965,
+            "ln": 58,
+            "players": [],
+            "total plays": 118,
+            "total passes": 63,
+            "play history": {
+                "250512002532": 118
+            },
+            "pass history": {
+                "250512002532": 63
+            },
+            "scores": {}
+        },
+        "2759259": {
+            "version": "HAG - Colorful [u_e's 10K]",
+            "sr": 4.94,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194309",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759259",
+            "drain": 8.0,
+            "rice": 1603,
+            "ln": 312,
+            "players": [],
+            "total plays": 54,
+            "total passes": 21,
+            "play history": {
+                "250512002532": 54
+            },
+            "pass history": {
+                "250512002532": 21
+            },
+            "scores": {}
+        },
+        "2759260": {
+            "version": "Jin Seon-Joo - Love is Thrill, Shock, Suspense (Korean Ver.) [u_e's 10K]",
+            "sr": 6.07,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194310",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759260",
+            "drain": 9.0,
+            "rice": 1837,
+            "ln": 6,
+            "players": [],
+            "total plays": 37,
+            "total passes": 14,
+            "play history": {
+                "250512002532": 37
+            },
+            "pass history": {
+                "250512002532": 14
+            },
+            "scores": {}
+        },
+        "2759261": {
+            "version": "[10K] jun with TAHIRIH - HAPPY ANGEL [SHINING HEAVEN HAPPINESS BLUE]",
+            "sr": 4.7,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194310",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759261",
+            "drain": 8.0,
+            "rice": 1615,
+            "ln": 21,
+            "players": [],
+            "total plays": 76,
+            "total passes": 44,
+            "play history": {
+                "250512002532": 76
+            },
+            "pass history": {
+                "250512002532": 44
+            },
+            "scores": {}
+        },
+        "2759262": {
+            "version": "[10K] Junk - Goodbye My Life [u_e's Thanks you]",
+            "sr": 3.73,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194311",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759262",
+            "drain": 8.0,
+            "rice": 896,
+            "ln": 44,
+            "players": [],
+            "total plays": 103,
+            "total passes": 59,
+            "play history": {
+                "250512002532": 103
+            },
+            "pass history": {
+                "250512002532": 59
+            },
+            "scores": {}
+        },
+        "2759263": {
+            "version": "[10K] M2U - Gypsy Tronic [Strange Contraption]",
+            "sr": 3.49,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194311",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759263",
+            "drain": 8.0,
+            "rice": 1476,
+            "ln": 425,
+            "players": [],
+            "total plays": 199,
+            "total passes": 101,
+            "play history": {
+                "250512002532": 199
+            },
+            "pass history": {
+                "250512002532": 101
+            },
+            "scores": {}
+        },
+        "2759264": {
+            "version": "Madeon vs. f(x) - All My Friends (J.E.B Mashup) [u_e's 10K Friend]",
+            "sr": 3.42,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194312",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759264",
+            "drain": 8.0,
+            "rice": 1148,
+            "ln": 498,
+            "players": [],
+            "total plays": 184,
+            "total passes": 76,
+            "play history": {
+                "250512002532": 184
+            },
+            "pass history": {
+                "250512002532": 76
+            },
+            "scores": {}
+        },
+        "2759265": {
+            "version": "Komatsu Mikako, Minase Inori - Mikaiketsu na Omoi [u_e's 10K]",
+            "sr": 5.16,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194312",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759265",
+            "drain": 9.0,
+            "rice": 1092,
+            "ln": 221,
+            "players": [],
+            "total plays": 80,
+            "total passes": 29,
+            "play history": {
+                "250512002532": 80
+            },
+            "pass history": {
+                "250512002532": 29
+            },
+            "scores": {}
+        },
+        "2759266": {
+            "version": "[10K] Masayuki Ito - Boss 3 [BARRAGE]",
+            "sr": 4.78,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194313",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759266",
+            "drain": 8.0,
+            "rice": 2442,
+            "ln": 104,
+            "players": [],
+            "total plays": 48,
+            "total passes": 26,
+            "play history": {
+                "250512002532": 48
+            },
+            "pass history": {
+                "250512002532": 26
+            },
+            "scores": {}
+        },
+        "2759267": {
+            "version": "[10K] MAX - I Want U [DesKurisu's I Want Deathstream]",
+            "sr": 6.6,
+            "keys": 10.0,
+            "mapper id": 1014938,
+            "status": 4,
+            "updated": "241006194313",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759267",
+            "drain": 8.0,
+            "rice": 2463,
+            "ln": 94,
+            "players": [],
+            "total plays": 188,
+            "total passes": 74,
+            "play history": {
+                "250512002532": 188
+            },
+            "pass history": {
+                "250512002532": 74
+            },
+            "scores": {}
+        },
+        "2759268": {
+            "version": "[10K] meganeko - 2k9 battle jam [Critical Hit]",
+            "sr": 5.47,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194314",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759268",
+            "drain": 8.0,
+            "rice": 3227,
+            "ln": 71,
+            "players": [],
+            "total plays": 78,
+            "total passes": 26,
+            "play history": {
+                "250512002532": 78
+            },
+            "pass history": {
+                "250512002532": 26
+            },
+            "scores": {}
+        },
+        "2759269": {
+            "version": "[10K] Mind Vortex - Alive [The Way Out]",
+            "sr": 4.52,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194314",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759269",
+            "drain": 8.0,
+            "rice": 2632,
+            "ln": 76,
+            "players": [],
+            "total plays": 131,
+            "total passes": 53,
+            "play history": {
+                "250512002532": 131
+            },
+            "pass history": {
+                "250512002532": 53
+            },
+            "scores": {}
+        },
+        "2759270": {
+            "version": "[10K] Tsunku - Dreams of Our Generation [A Hop, Skip and a Jump]",
+            "sr": 5.13,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194315",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759270",
+            "drain": 8.0,
+            "rice": 1965,
+            "ln": 0,
+            "players": [],
+            "total plays": 66,
+            "total passes": 45,
+            "play history": {
+                "250512002532": 66
+            },
+            "pass history": {
+                "250512002532": 45
+            },
+            "scores": {}
+        },
+        "2759271": {
+            "version": "[10K] Tsunku - Dreams of Our Generation [Stroll]",
+            "sr": 4.4,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194315",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759271",
+            "drain": 8.0,
+            "rice": 1676,
+            "ln": 0,
+            "players": [],
+            "total plays": 80,
+            "total passes": 63,
+            "play history": {
+                "250512002532": 80
+            },
+            "pass history": {
+                "250512002532": 63
+            },
+            "scores": {}
+        },
+        "2759272": {
+            "version": "[10K] TUYU - Anoyo-iki no Bus ni Notte Saraba. [u_e's other world]",
+            "sr": 5.4,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194316",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759272",
+            "drain": 8.0,
+            "rice": 2171,
+            "ln": 845,
+            "players": [],
+            "total plays": 114,
+            "total passes": 35,
+            "play history": {
+                "250512002532": 114
+            },
+            "pass history": {
+                "250512002532": 35
+            },
+            "scores": {}
+        },
+        "2759273": {
+            "version": "[10K] Yanagida Ethnica - For You the Bellz Toll [Second Snow]",
+            "sr": 5.3,
+            "keys": 10.0,
+            "mapper id": 11220019,
+            "status": 4,
+            "updated": "241006194316",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759273",
+            "drain": 8.0,
+            "rice": 2524,
+            "ln": 36,
+            "players": [],
+            "total plays": 54,
+            "total passes": 23,
+            "play history": {
+                "250512002532": 54
+            },
+            "pass history": {
+                "250512002532": 23
+            },
+            "scores": {}
+        },
+        "2759274": {
+            "version": "Yang Jeong-hwa - Keroro March [u_e's 10K]",
+            "sr": 4.23,
+            "keys": 10.0,
+            "mapper id": 2594421,
+            "status": 4,
+            "updated": "241006194317",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/2759274",
+            "drain": 8.0,
+            "rice": 654,
+            "ln": 345,
+            "players": [],
+            "total plays": 88,
+            "total passes": 50,
+            "play history": {
+                "250512002532": 88
+            },
+            "pass history": {
+                "250512002532": 50
+            },
+            "scores": {}
+        }
+    }
+}

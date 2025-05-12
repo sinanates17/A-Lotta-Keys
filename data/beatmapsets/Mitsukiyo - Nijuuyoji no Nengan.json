@@ -1,0 +1,85 @@
+{
+    "id": 2318316,
+    "title": "Nijuuyoji no Nengan",
+    "artist": "Mitsukiyo",
+    "titleu": "24時の念願",
+    "artistu": "ミツキヨ",
+    "favs": 5,
+    "desc": null,
+    "source": "",
+    "tags": "二十四時の念願 夢箱 yumebako classical jazz instrumental bgm background music wish at 12am",
+    "host id": 32074763,
+    "submitted": "250203143651",
+    "ranked": "250503042456",
+    "beatmaps": {
+        "4965408": {
+            "version": "10K Normal",
+            "sr": 1.15,
+            "keys": 10.0,
+            "mapper id": 32074763,
+            "status": 1,
+            "updated": "250426002959",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4965408",
+            "drain": 7.0,
+            "rice": 307,
+            "ln": 23,
+            "players": [],
+            "total plays": 57,
+            "total passes": 11,
+            "play history": {
+                "250512002532": 57
+            },
+            "pass history": {
+                "250512002532": 11
+            },
+            "scores": {}
+        },
+        "4965409": {
+            "version": "10K Pengharapan di Tengah Malam",
+            "sr": 1.55,
+            "keys": 10.0,
+            "mapper id": 32074763,
+            "status": 1,
+            "updated": "250426003000",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4965409",
+            "drain": 7.8,
+            "rice": 519,
+            "ln": 4,
+            "players": [],
+            "total plays": 70,
+            "total passes": 25,
+            "play history": {
+                "250512002532": 70
+            },
+            "pass history": {
+                "250512002532": 25
+            },
+            "scores": {}
+        },
+        "4966781": {
+            "version": "10K Easy",
+            "sr": 0.86,
+            "keys": 10.0,
+            "mapper id": 32074763,
+            "status": 1,
+            "updated": "250426003001",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4966781",
+            "drain": 6.2,
+            "rice": 133,
+            "ln": 25,
+            "players": [],
+            "total plays": 96,
+            "total passes": 38,
+            "play history": {
+                "250512002532": 96
+            },
+            "pass history": {
+                "250512002532": 38
+            },
+            "scores": {}
+        }
+    }
+}

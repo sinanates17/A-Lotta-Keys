@@ -1,0 +1,269 @@
+{
+    "id": 748726,
+    "title": "la's Anime 10K Pack",
+    "artist": "Various Artists",
+    "titleu": "la's Anime 10K Pack",
+    "artistu": "Various Artists",
+    "favs": 36,
+    "desc": null,
+    "source": "",
+    "tags": "anime japanese motto to love-ru 青い空に出逢えた meeting in the blue sky chuuka ichiban! 辻尾有紗 master cooking boy アルドノア・ゼロ aldnoah zero shuffle! seikon no qwaser the qwaser of stigmata 藤村 歩",
+    "host id": 6601796,
+    "submitted": "180314074739",
+    "ranked": "241224180040",
+    "beatmaps": {
+        "1577244": {
+            "version": "[10K] Ayumi Fujimura - Passionate squall (TV Size)//SHD",
+            "sr": 5.43,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104942",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1577244",
+            "drain": 8.0,
+            "rice": 1609,
+            "ln": 102,
+            "players": [],
+            "total plays": 103,
+            "total passes": 49,
+            "play history": {
+                "250512002532": 103
+            },
+            "pass history": {
+                "250512002532": 49
+            },
+            "scores": {}
+        },
+        "1577245": {
+            "version": "[10K] KOTOKO - Loop-the-loop (TV Size)//SC",
+            "sr": 4.64,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104943",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1577245",
+            "drain": 8.0,
+            "rice": 1168,
+            "ln": 141,
+            "players": [],
+            "total plays": 65,
+            "total passes": 29,
+            "play history": {
+                "250512002532": 65
+            },
+            "pass history": {
+                "250512002532": 29
+            },
+            "scores": {}
+        },
+        "1577246": {
+            "version": "[10K] SawanoHiroyuki[nZk]mizuki - AZ (TV size)//MX",
+            "sr": 4.13,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104943",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1577246",
+            "drain": 7.0,
+            "rice": 914,
+            "ln": 131,
+            "players": [],
+            "total plays": 75,
+            "total passes": 52,
+            "play history": {
+                "250512002532": 75
+            },
+            "pass history": {
+                "250512002532": 52
+            },
+            "scores": {}
+        },
+        "1577247": {
+            "version": "[10K] Tsujio Arisa - Aoi Sora ni Deaeta (TV Size)//HD",
+            "sr": 2.97,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104944",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1577247",
+            "drain": 7.0,
+            "rice": 673,
+            "ln": 83,
+            "players": [],
+            "total plays": 78,
+            "total passes": 45,
+            "play history": {
+                "250512002532": 78
+            },
+            "pass history": {
+                "250512002532": 45
+            },
+            "scores": {}
+        },
+        "1577248": {
+            "version": "[10K] Yuria - You (TV Size)//SHD",
+            "sr": 4.77,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104944",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1577248",
+            "drain": 8.0,
+            "rice": 1352,
+            "ln": 78,
+            "players": [],
+            "total plays": 80,
+            "total passes": 37,
+            "play history": {
+                "250512002532": 80
+            },
+            "pass history": {
+                "250512002532": 37
+            },
+            "scores": {}
+        },
+        "1683798": {
+            "version": "[10K] KOTOKO - Loop-the-loop (TV Size)//EZ",
+            "sr": 2.15,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104945",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1683798",
+            "drain": 5.0,
+            "rice": 505,
+            "ln": 58,
+            "players": [],
+            "total plays": 483,
+            "total passes": 205,
+            "play history": {
+                "250512002532": 483
+            },
+            "pass history": {
+                "250512002532": 205
+            },
+            "scores": {}
+        },
+        "1683799": {
+            "version": "[10K] KOTOKO - Loop-the-loop (TV Size)//HD",
+            "sr": 2.71,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104945",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1683799",
+            "drain": 7.0,
+            "rice": 664,
+            "ln": 80,
+            "players": [],
+            "total plays": 126,
+            "total passes": 66,
+            "play history": {
+                "250512002532": 126
+            },
+            "pass history": {
+                "250512002532": 66
+            },
+            "scores": {}
+        },
+        "1683800": {
+            "version": "[10K] KOTOKO - Loop-the-loop (TV Size)//MX",
+            "sr": 3.76,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104946",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1683800",
+            "drain": 8.0,
+            "rice": 947,
+            "ln": 153,
+            "players": [],
+            "total plays": 72,
+            "total passes": 48,
+            "play history": {
+                "250512002532": 72
+            },
+            "pass history": {
+                "250512002532": 48
+            },
+            "scores": {}
+        },
+        "1683801": {
+            "version": "[10K] Tsujio Arisa - Aoi Sora ni Deaeta (TV Size)//EZ",
+            "sr": 2.2,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104946",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1683801",
+            "drain": 5.0,
+            "rice": 430,
+            "ln": 71,
+            "players": [],
+            "total plays": 238,
+            "total passes": 114,
+            "play history": {
+                "250512002532": 238
+            },
+            "pass history": {
+                "250512002532": 114
+            },
+            "scores": {}
+        },
+        "1690742": {
+            "version": "[10K] SawanoHiroyuki[nZk]mizuki - AZ (TV size)//HD",
+            "sr": 3.38,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104947",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1690742",
+            "drain": 7.0,
+            "rice": 797,
+            "ln": 89,
+            "players": [],
+            "total plays": 108,
+            "total passes": 62,
+            "play history": {
+                "250512002532": 108
+            },
+            "pass history": {
+                "250512002532": 62
+            },
+            "scores": {}
+        },
+        "1691793": {
+            "version": "[10K] Yuria - You (TV Size)//MX",
+            "sr": 3.61,
+            "keys": 10.0,
+            "mapper id": 6601796,
+            "status": 4,
+            "updated": "241213104947",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/1691793",
+            "drain": 8.0,
+            "rice": 1017,
+            "ln": 100,
+            "players": [],
+            "total plays": 190,
+            "total passes": 107,
+            "play history": {
+                "250512002532": 190
+            },
+            "pass history": {
+                "250512002532": 107
+            },
+            "scores": {}
+        }
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "id": 2180540,
+    "title": "lit(var)",
+    "artist": "kensuke ushio",
+    "titleu": "lit(var)",
+    "artistu": "牛尾憲輔",
+    "favs": 26,
+    "desc": null,
+    "source": "聲の形",
+    "tags": "koe no katachi shouko nishimiya 西宮 硝子 shouya ishida 石田 将也 the shape of voice piano a shape of light ost soundtrack ending theme light original sound track extended full version a silent voice anime instrumental litvar ruleblazing",
+    "host id": 13360768,
+    "submitted": "240513015145",
+    "ranked": "250323090515",
+    "beatmaps": {
+        "4606010": {
+            "version": "[10K] clarity",
+            "sr": 1.95,
+            "keys": 10.0,
+            "mapper id": 13360768,
+            "status": 1,
+            "updated": "250316024930",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4606010",
+            "drain": 8.0,
+            "rice": 97,
+            "ln": 312,
+            "players": [],
+            "total plays": 176,
+            "total passes": 63,
+            "play history": {
+                "250512002532": 176
+            },
+            "pass history": {
+                "250512002532": 63
+            },
+            "scores": {}
+        },
+        "4606985": {
+            "version": "[10K] Easy",
+            "sr": 1.0,
+            "keys": 10.0,
+            "mapper id": 13360768,
+            "status": 1,
+            "updated": "250316024931",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4606985",
+            "drain": 7.0,
+            "rice": 75,
+            "ln": 95,
+            "players": [],
+            "total plays": 541,
+            "total passes": 104,
+            "play history": {
+                "250512002532": 541
+            },
+            "pass history": {
+                "250512002532": 104
+            },
+            "scores": {}
+        },
+        "4607013": {
+            "version": "[10K] Normal",
+            "sr": 1.49,
+            "keys": 10.0,
+            "mapper id": 13360768,
+            "status": 1,
+            "updated": "250316024931",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4607013",
+            "drain": 7.5,
+            "rice": 106,
+            "ln": 211,
+            "players": [],
+            "total plays": 105,
+            "total passes": 29,
+            "play history": {
+                "250512002532": 105
+            },
+            "pass history": {
+                "250512002532": 29
+            },
+            "scores": {}
+        }
+    }
+}

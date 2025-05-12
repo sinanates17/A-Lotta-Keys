@@ -1,0 +1,154 @@
+{
+    "id": 2340628,
+    "title": "furioso melodia (2017 VIP)",
+    "artist": "gmtn. (witch's slave)",
+    "titleu": "furioso melodia (2017 VIP)",
+    "artistu": "gmtn. (witch's slave)",
+    "favs": 56,
+    "desc": null,
+    "source": "THE BMS OF FIGHTERS 2010 - 場外乱闘編 -",
+    "tags": "electronic instrumental gothic hardcore hardstyle bof bof2010 xredyratyx -ryu- ryu7w7 menphiss melodicheart purplrat",
+    "host id": 34587251,
+    "submitted": "250317142057",
+    "ranked": "250428002534",
+    "beatmaps": {
+        "5029128": {
+            "version": "[10K]  XRedyRatyX's Advanced // Discordia",
+            "sr": 2.47,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234837",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5029128",
+            "drain": 6.8,
+            "rice": 876,
+            "ln": 115,
+            "players": [],
+            "total plays": 95,
+            "total passes": 42,
+            "play history": {
+                "250512002532": 95
+            },
+            "pass history": {
+                "250512002532": 42
+            },
+            "scores": {}
+        },
+        "5029129": {
+            "version": "[10K] XRedyRatyX's Easy // Primordium",
+            "sr": 1.28,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234837",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5029129",
+            "drain": 6.2,
+            "rice": 384,
+            "ln": 22,
+            "players": [],
+            "total plays": 194,
+            "total passes": 51,
+            "play history": {
+                "250512002532": 194
+            },
+            "pass history": {
+                "250512002532": 51
+            },
+            "scores": {}
+        },
+        "5029130": {
+            "version": "[10K]  Normal Collab // Initium",
+            "sr": 1.86,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234837",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5029130",
+            "drain": 6.6,
+            "rice": 629,
+            "ln": 45,
+            "players": [],
+            "total plays": 71,
+            "total passes": 25,
+            "play history": {
+                "250512002532": 71
+            },
+            "pass history": {
+                "250512002532": 25
+            },
+            "scores": {}
+        },
+        "5029350": {
+            "version": "[10K]  XRedyRatyX's Hard // Cataclysmus",
+            "sr": 3.34,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234838",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5029350",
+            "drain": 7.1,
+            "rice": 1596,
+            "ln": 54,
+            "players": [],
+            "total plays": 83,
+            "total passes": 56,
+            "play history": {
+                "250512002532": 83
+            },
+            "pass history": {
+                "250512002532": 56
+            },
+            "scores": {}
+        },
+        "5030803": {
+            "version": "[10K]  XRedyRatyX's Expert // Fractured chains",
+            "sr": 5.38,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234840",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5030803",
+            "drain": 8.0,
+            "rice": 2251,
+            "ln": 447,
+            "players": [],
+            "total plays": 98,
+            "total passes": 52,
+            "play history": {
+                "250512002532": 98
+            },
+            "pass history": {
+                "250512002532": 52
+            },
+            "scores": {}
+        },
+        "5030804": {
+            "version": "[10K]  XRedyRatyX's Insane // Aeternum Bellum",
+            "sr": 4.59,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250420234840",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5030804",
+            "drain": 7.5,
+            "rice": 1754,
+            "ln": 350,
+            "players": [],
+            "total plays": 80,
+            "total passes": 50,
+            "play history": {
+                "250512002532": 80
+            },
+            "pass history": {
+                "250512002532": 50
+            },
+            "scores": {}
+        }
+    }
+}

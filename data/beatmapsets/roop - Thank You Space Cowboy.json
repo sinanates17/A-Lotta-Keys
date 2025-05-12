@@ -1,0 +1,131 @@
+{
+    "id": 2334681,
+    "title": "Thank You Space Cowboy",
+    "artist": "roop",
+    "titleu": "Thank You Space Cowboy",
+    "artistu": "roop",
+    "favs": 32,
+    "desc": null,
+    "source": "VERSUS",
+    "tags": "acid jazz instrumental bms strlabel n+2 14k2s 14k+2 14k maniac space mix scratch special style",
+    "host id": 1014938,
+    "submitted": "250305224011",
+    "ranked": "250409154431",
+    "beatmaps": {
+        "5010982": {
+            "version": "[16K] [EZ2AC] One Small Step",
+            "sr": 2.86,
+            "keys": 16.0,
+            "mapper id": 1014938,
+            "status": 1,
+            "updated": "250402151137",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5010982",
+            "drain": 7.0,
+            "rice": 544,
+            "ln": 0,
+            "players": [],
+            "total plays": 227,
+            "total passes": 29,
+            "play history": {
+                "250512002532": 227
+            },
+            "pass history": {
+                "250512002532": 29
+            },
+            "scores": {}
+        },
+        "5011484": {
+            "version": "[16K] [EZ2AC] Hard",
+            "sr": 2.25,
+            "keys": 16.0,
+            "mapper id": 1014938,
+            "status": 1,
+            "updated": "250402151137",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5011484",
+            "drain": 6.0,
+            "rice": 388,
+            "ln": 0,
+            "players": [],
+            "total plays": 95,
+            "total passes": 44,
+            "play history": {
+                "250512002532": 95
+            },
+            "pass history": {
+                "250512002532": 44
+            },
+            "scores": {}
+        },
+        "5011862": {
+            "version": "[16K] [EZ2AC] Beginner",
+            "sr": 0.64,
+            "keys": 16.0,
+            "mapper id": 1014938,
+            "status": 1,
+            "updated": "250402151138",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5011862",
+            "drain": 4.0,
+            "rice": 59,
+            "ln": 0,
+            "players": [],
+            "total plays": 518,
+            "total passes": 80,
+            "play history": {
+                "250512002532": 518
+            },
+            "pass history": {
+                "250512002532": 80
+            },
+            "scores": {}
+        },
+        "5013551": {
+            "version": "[16K] [EZ2AC] Normal",
+            "sr": 1.39,
+            "keys": 16.0,
+            "mapper id": 1014938,
+            "status": 1,
+            "updated": "250402151138",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5013551",
+            "drain": 5.0,
+            "rice": 241,
+            "ln": 0,
+            "players": [],
+            "total plays": 63,
+            "total passes": 28,
+            "play history": {
+                "250512002532": 63
+            },
+            "pass history": {
+                "250512002532": 28
+            },
+            "scores": {}
+        },
+        "5013557": {
+            "version": "[16K] [EZ2AC] Easy",
+            "sr": 0.88,
+            "keys": 16.0,
+            "mapper id": 1014938,
+            "status": 1,
+            "updated": "250402151139",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5013557",
+            "drain": 4.5,
+            "rice": 112,
+            "ln": 0,
+            "players": [],
+            "total plays": 80,
+            "total passes": 17,
+            "play history": {
+                "250512002532": 80
+            },
+            "pass history": {
+                "250512002532": 17
+            },
+            "scores": {}
+        }
+    }
+}

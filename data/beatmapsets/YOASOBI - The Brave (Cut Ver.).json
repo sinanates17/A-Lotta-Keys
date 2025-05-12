@@ -1,0 +1,108 @@
+{
+    "id": 2324876,
+    "title": "The Brave (Cut Ver.)",
+    "artist": "YOASOBI",
+    "titleu": "The Brave (Cut Ver.)",
+    "artistu": "YOASOBI",
+    "favs": 91,
+    "desc": null,
+    "source": "葬送のフリーレン",
+    "tags": "勇者 yuusha sousou no frieren at the funeral beyond journey's end japanese pop jpop j-pop anime op opening english ver. version female vocals ayase ikura lilas ikuta 幾田りら electronic n+2 10k2s 10k+2 10+2k dp double play scratch special style",
+    "host id": 14769563,
+    "submitted": "250216075105",
+    "ranked": "250404042416",
+    "beatmaps": {
+        "4983210": {
+            "version": "[12K] 10K2S Easy",
+            "sr": 1.25,
+            "keys": 12.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "250327171007",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4983210",
+            "drain": 6.5,
+            "rice": 267,
+            "ln": 1,
+            "players": [],
+            "total plays": 575,
+            "total passes": 133,
+            "play history": {
+                "250512002532": 575
+            },
+            "pass history": {
+                "250512002532": 133
+            },
+            "scores": {}
+        },
+        "4983211": {
+            "version": "[12K] 10K2S Hard",
+            "sr": 2.23,
+            "keys": 12.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "250327171007",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4983211",
+            "drain": 7.5,
+            "rice": 638,
+            "ln": 12,
+            "players": [],
+            "total plays": 49,
+            "total passes": 21,
+            "play history": {
+                "250512002532": 49
+            },
+            "pass history": {
+                "250512002532": 21
+            },
+            "scores": {}
+        },
+        "4983213": {
+            "version": "[12K] 10K2S Insane",
+            "sr": 2.92,
+            "keys": 12.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "250327171008",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4983213",
+            "drain": 8.0,
+            "rice": 798,
+            "ln": 96,
+            "players": [],
+            "total plays": 119,
+            "total passes": 44,
+            "play history": {
+                "250512002532": 119
+            },
+            "pass history": {
+                "250512002532": 44
+            },
+            "scores": {}
+        },
+        "4983214": {
+            "version": "[12K] 10K2S Normal",
+            "sr": 1.68,
+            "keys": 12.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "250327171008",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4983214",
+            "drain": 7.0,
+            "rice": 408,
+            "ln": 7,
+            "players": [],
+            "total plays": 88,
+            "total passes": 23,
+            "play history": {
+                "250512002532": 88
+            },
+            "pass history": {
+                "250512002532": 23
+            },
+            "scores": {}
+        }
+    }
+}

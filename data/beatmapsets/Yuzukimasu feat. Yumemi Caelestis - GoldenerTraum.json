@@ -1,0 +1,200 @@
+{
+    "id": 2217959,
+    "title": "GoldenerTraum",
+    "artist": "Yuzukimasu feat. Yumemi Caelestis",
+    "titleu": "GoldenerTraum",
+    "artistu": "Yuzukimasu feat. Yumemi Caelestis",
+    "favs": 28,
+    "desc": null,
+    "source": "ポケットミラー～黄金の夢",
+    "tags": "video game music videogame vgm japanese opening ost original soundtrack pocket mirror ~ goldenertraum astralshift visustella komodo geiky yuichiro tsukagoshi 塚越 雄一朗 n+2 double play 14k2s 14k+2 scratch xderbyx ihram-san ihram initial_d initial d",
+    "host id": 8647138,
+    "submitted": "240720175500",
+    "ranked": "240920034427",
+    "beatmaps": {
+        "4701245": {
+            "version": "10K // Easy",
+            "sr": 1.18,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 1,
+            "updated": "240912060030",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701245",
+            "drain": 6.5,
+            "rice": 271,
+            "ln": 26,
+            "players": [],
+            "total plays": 735,
+            "total passes": 195,
+            "play history": {
+                "250512002532": 735
+            },
+            "pass history": {
+                "250512002532": 195
+            },
+            "scores": {}
+        },
+        "4701246": {
+            "version": "10K // Hard",
+            "sr": 2.2,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 1,
+            "updated": "240912060031",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701246",
+            "drain": 7.5,
+            "rice": 648,
+            "ln": 82,
+            "players": [],
+            "total plays": 417,
+            "total passes": 185,
+            "play history": {
+                "250512002532": 417
+            },
+            "pass history": {
+                "250512002532": 185
+            },
+            "scores": {}
+        },
+        "4701247": {
+            "version": "10K // Normal",
+            "sr": 1.6,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 1,
+            "updated": "240912060031",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701247",
+            "drain": 7.0,
+            "rice": 438,
+            "ln": 40,
+            "players": [],
+            "total plays": 345,
+            "total passes": 159,
+            "play history": {
+                "250512002532": 345
+            },
+            "pass history": {
+                "250512002532": 159
+            },
+            "scores": {}
+        },
+        "4701248": {
+            "version": "10K // Schizophrenia",
+            "sr": 3.11,
+            "keys": 10.0,
+            "mapper id": 8647138,
+            "status": 1,
+            "updated": "240912060032",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701248",
+            "drain": 8.0,
+            "rice": 916,
+            "ln": 129,
+            "players": [],
+            "total plays": 606,
+            "total passes": 228,
+            "play history": {
+                "250512002532": 606
+            },
+            "pass history": {
+                "250512002532": 228
+            },
+            "scores": {}
+        },
+        "4701249": {
+            "version": "[16K] 14K2S // Derby's DP Easy",
+            "sr": 1.13,
+            "keys": 16.0,
+            "mapper id": 7326238,
+            "status": 1,
+            "updated": "240912060032",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701249",
+            "drain": 4.0,
+            "rice": 247,
+            "ln": 19,
+            "players": [],
+            "total plays": 476,
+            "total passes": 105,
+            "play history": {
+                "250512002532": 476
+            },
+            "pass history": {
+                "250512002532": 105
+            },
+            "scores": {}
+        },
+        "4701250": {
+            "version": "[16K] 14K2S // Derby's DP Hard",
+            "sr": 2.23,
+            "keys": 16.0,
+            "mapper id": 7326238,
+            "status": 1,
+            "updated": "240912060033",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701250",
+            "drain": 6.0,
+            "rice": 696,
+            "ln": 26,
+            "players": [],
+            "total plays": 254,
+            "total passes": 110,
+            "play history": {
+                "250512002532": 254
+            },
+            "pass history": {
+                "250512002532": 110
+            },
+            "scores": {}
+        },
+        "4701251": {
+            "version": "[16K] 14K2S // Derby's DP Normal",
+            "sr": 1.56,
+            "keys": 16.0,
+            "mapper id": 7326238,
+            "status": 1,
+            "updated": "240912060033",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701251",
+            "drain": 5.0,
+            "rice": 401,
+            "ln": 21,
+            "players": [],
+            "total plays": 133,
+            "total passes": 55,
+            "play history": {
+                "250512002532": 133
+            },
+            "pass history": {
+                "250512002532": 55
+            },
+            "scores": {}
+        },
+        "4701252": {
+            "version": "[16K] 14K2S // Derby's DP Zerschmettert",
+            "sr": 3.2,
+            "keys": 16.0,
+            "mapper id": 7326238,
+            "status": 1,
+            "updated": "240912060034",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4701252",
+            "drain": 7.0,
+            "rice": 958,
+            "ln": 51,
+            "players": [],
+            "total plays": 207,
+            "total passes": 89,
+            "play history": {
+                "250512002532": 207
+            },
+            "pass history": {
+                "250512002532": 89
+            },
+            "scores": {}
+        }
+    }
+}

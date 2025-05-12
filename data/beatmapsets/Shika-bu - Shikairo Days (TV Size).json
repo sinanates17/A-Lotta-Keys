@@ -1,0 +1,108 @@
+{
+    "id": 2219704,
+    "title": "Shikairo Days (TV Size)",
+    "artist": "Shika-bu",
+    "titleu": "シカ色デイズ (TV Size)",
+    "artistu": "シカ部",
+    "favs": 241,
+    "desc": null,
+    "source": "しかのこのこのここしたんたん",
+    "tags": "anime opening theme op deer club deer-colored days colored shikanoko nokonoko koshitantan my deer friend nokotan vocals やぎぬまかな yaginuma kana 和賀裕希 yuxuki yuuki waga japanese pop jpop j-pop 鹿乃子のこ 潘めぐみ 虎視虎子 藤田咲 虎視餡子 田辺留依 馬車芽めめ 和泉風花 shika noko han megumi koshi torako fujita saki koshi anko tanabe rui bashame meme izumi fuka",
+    "host id": 14769563,
+    "submitted": "240723153753",
+    "ranked": "240926152652",
+    "beatmaps": {
+        "4705175": {
+            "version": "[10K] Hyper",
+            "sr": 2.94,
+            "keys": 10.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "240919001140",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4705175",
+            "drain": 7.5,
+            "rice": 776,
+            "ln": 142,
+            "players": [],
+            "total plays": 790,
+            "total passes": 333,
+            "play history": {
+                "250512002532": 790
+            },
+            "pass history": {
+                "250512002532": 333
+            },
+            "scores": {}
+        },
+        "4705176": {
+            "version": "[10K] Intermediate",
+            "sr": 1.59,
+            "keys": 10.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "240919001141",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4705176",
+            "drain": 6.5,
+            "rice": 353,
+            "ln": 43,
+            "players": [],
+            "total plays": 2377,
+            "total passes": 394,
+            "play history": {
+                "250512002532": 2377
+            },
+            "pass history": {
+                "250512002532": 394
+            },
+            "scores": {}
+        },
+        "4705177": {
+            "version": "[10K] Another",
+            "sr": 3.93,
+            "keys": 10.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "240919001141",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4705177",
+            "drain": 8.0,
+            "rice": 980,
+            "ln": 272,
+            "players": [],
+            "total plays": 1180,
+            "total passes": 395,
+            "play history": {
+                "250512002532": 1180
+            },
+            "pass history": {
+                "250512002532": 395
+            },
+            "scores": {}
+        },
+        "4705178": {
+            "version": "[10K] Advanced",
+            "sr": 2.21,
+            "keys": 10.0,
+            "mapper id": 14769563,
+            "status": 1,
+            "updated": "240919001142",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4705178",
+            "drain": 7.0,
+            "rice": 558,
+            "ln": 103,
+            "players": [],
+            "total plays": 1486,
+            "total passes": 614,
+            "play history": {
+                "250512002532": 1486
+            },
+            "pass history": {
+                "250512002532": 614
+            },
+            "scores": {}
+        }
+    }
+}

@@ -1,0 +1,131 @@
+{
+    "id": 2305046,
+    "title": "TSLove",
+    "artist": "O2i3",
+    "titleu": "TSLove",
+    "artistu": "O2i3",
+    "favs": 95,
+    "desc": null,
+    "source": "",
+    "tags": "featured artist fa mappers' guild mg mpg electronic instrumental kirara records happy hardcore n+2 10k2s 10k+2 10+2k scratch dp double play special style",
+    "host id": 18525126,
+    "submitted": "250107201825",
+    "ranked": "250207220612",
+    "beatmaps": {
+        "4928040": {
+            "version": "[12K] 10K2S 34SY",
+            "sr": 1.39,
+            "keys": 12.0,
+            "mapper id": 18525126,
+            "status": 1,
+            "updated": "250131151026",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4928040",
+            "drain": 5.5,
+            "rice": 279,
+            "ln": 23,
+            "players": [],
+            "total plays": 283,
+            "total passes": 95,
+            "play history": {
+                "250512002532": 283
+            },
+            "pass history": {
+                "250512002532": 95
+            },
+            "scores": {}
+        },
+        "4928041": {
+            "version": "[12K] 10K2S B3G1NN3R",
+            "sr": 0.82,
+            "keys": 12.0,
+            "mapper id": 18525126,
+            "status": 1,
+            "updated": "250131151026",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4928041",
+            "drain": 5.0,
+            "rice": 81,
+            "ln": 20,
+            "players": [],
+            "total plays": 849,
+            "total passes": 178,
+            "play history": {
+                "250512002532": 849
+            },
+            "pass history": {
+                "250512002532": 178
+            },
+            "scores": {}
+        },
+        "4928042": {
+            "version": "[12K] 10K2S H4RD",
+            "sr": 2.84,
+            "keys": 12.0,
+            "mapper id": 18525126,
+            "status": 1,
+            "updated": "250131151027",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4928042",
+            "drain": 6.5,
+            "rice": 862,
+            "ln": 21,
+            "players": [],
+            "total plays": 81,
+            "total passes": 51,
+            "play history": {
+                "250512002532": 81
+            },
+            "pass history": {
+                "250512002532": 51
+            },
+            "scores": {}
+        },
+        "4928682": {
+            "version": "[12K] 10K2S 1NS4N3",
+            "sr": 3.68,
+            "keys": 12.0,
+            "mapper id": 18525126,
+            "status": 1,
+            "updated": "250131151027",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4928682",
+            "drain": 7.0,
+            "rice": 1031,
+            "ln": 101,
+            "players": [],
+            "total plays": 227,
+            "total passes": 84,
+            "play history": {
+                "250512002532": 227
+            },
+            "pass history": {
+                "250512002532": 84
+            },
+            "scores": {}
+        },
+        "4942220": {
+            "version": "[12K] 10K2S N0RM4L",
+            "sr": 2.07,
+            "keys": 12.0,
+            "mapper id": 18525126,
+            "status": 1,
+            "updated": "250131151028",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4942220",
+            "drain": 6.0,
+            "rice": 524,
+            "ln": 71,
+            "players": [],
+            "total plays": 117,
+            "total passes": 48,
+            "play history": {
+                "250512002532": 117
+            },
+            "pass history": {
+                "250512002532": 48
+            },
+            "scores": {}
+        }
+    }
+}

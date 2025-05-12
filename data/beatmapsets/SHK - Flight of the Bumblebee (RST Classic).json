@@ -1,0 +1,108 @@
+{
+    "id": 2316077,
+    "title": "Flight of the Bumblebee (RST Classic)",
+    "artist": "SHK",
+    "titleu": "왕벌의 비행 (RST Classic)",
+    "artistu": "SHK",
+    "favs": 23,
+    "desc": null,
+    "source": "리듬스타",
+    "tags": "video game electronic classical instrumental Римский-Корсаков Николай Андреевич nikolai andreyevich rimsky-korsakov rimskiy-korsakov Полёт шмеля polyot shmelya nikolay rhythmstar: music adventure classic mix vol.1 soundholick anbgames 2011 release chordstream rice",
+    "host id": 18338179,
+    "submitted": "250130151111",
+    "ranked": "250424164811",
+    "beatmaps": {
+        "4958241": {
+            "version": "[9K] Expert",
+            "sr": 5.13,
+            "keys": 9.0,
+            "mapper id": 18338179,
+            "status": 1,
+            "updated": "250417162332",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4958241",
+            "drain": 7.4,
+            "rice": 1585,
+            "ln": 5,
+            "players": [],
+            "total plays": 104,
+            "total passes": 45,
+            "play history": {
+                "250512002532": 104
+            },
+            "pass history": {
+                "250512002532": 45
+            },
+            "scores": {}
+        },
+        "4958242": {
+            "version": "[9K] Insane",
+            "sr": 4.3,
+            "keys": 9.0,
+            "mapper id": 18338179,
+            "status": 1,
+            "updated": "250417162332",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4958242",
+            "drain": 7.3,
+            "rice": 1212,
+            "ln": 5,
+            "players": [],
+            "total plays": 166,
+            "total passes": 60,
+            "play history": {
+                "250512002532": 166
+            },
+            "pass history": {
+                "250512002532": 60
+            },
+            "scores": {}
+        },
+        "4958243": {
+            "version": "[9K] Virtuoso perficientur excellens",
+            "sr": 6.09,
+            "keys": 9.0,
+            "mapper id": 18338179,
+            "status": 1,
+            "updated": "250417162333",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4958243",
+            "drain": 7.5,
+            "rice": 1814,
+            "ln": 7,
+            "players": [],
+            "total plays": 165,
+            "total passes": 44,
+            "play history": {
+                "250512002532": 165
+            },
+            "pass history": {
+                "250512002532": 44
+            },
+            "scores": {}
+        },
+        "5045034": {
+            "version": "[9K] Hard",
+            "sr": 3.28,
+            "keys": 9.0,
+            "mapper id": 18338179,
+            "status": 1,
+            "updated": "250417162333",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/5045034",
+            "drain": 7.1,
+            "rice": 888,
+            "ln": 3,
+            "players": [],
+            "total plays": 514,
+            "total passes": 132,
+            "play history": {
+                "250512002532": 514
+            },
+            "pass history": {
+                "250512002532": 132
+            },
+            "scores": {}
+        }
+    }
+}

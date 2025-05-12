@@ -1,0 +1,108 @@
+{
+    "id": 2006987,
+    "title": "UNDERVEIL IS REAL!!!",
+    "artist": "AAAA + Silentroom",
+    "titleu": "UNDERVEIL IS REAL!!!",
+    "artistu": "ああああ + Silentroom",
+    "favs": 30,
+    "desc": null,
+    "source": "UNDERTALE",
+    "tags": "underveil the real special arrangement album underveil the extra toby fox once upon a time remix video game instrumental electronic",
+    "host id": 11544934,
+    "submitted": "230610071622",
+    "ranked": "250205000224",
+    "beatmaps": {
+        "4174562": {
+            "version": "[10K] EASY!!!",
+            "sr": 1.49,
+            "keys": 10.0,
+            "mapper id": 11544934,
+            "status": 1,
+            "updated": "250126172522",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4174562",
+            "drain": 6.5,
+            "rice": 107,
+            "ln": 5,
+            "players": [],
+            "total plays": 1135,
+            "total passes": 322,
+            "play history": {
+                "250512002532": 1135
+            },
+            "pass history": {
+                "250512002532": 322
+            },
+            "scores": {}
+        },
+        "4174563": {
+            "version": "[10K] HARD!!!",
+            "sr": 2.94,
+            "keys": 10.0,
+            "mapper id": 11544934,
+            "status": 1,
+            "updated": "250126172522",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4174563",
+            "drain": 7.5,
+            "rice": 283,
+            "ln": 80,
+            "players": [],
+            "total plays": 366,
+            "total passes": 135,
+            "play history": {
+                "250512002532": 366
+            },
+            "pass history": {
+                "250512002532": 135
+            },
+            "scores": {}
+        },
+        "4174564": {
+            "version": "[10K] HOP ON TEN KEY PLUS!!!",
+            "sr": 3.85,
+            "keys": 10.0,
+            "mapper id": 11544934,
+            "status": 1,
+            "updated": "250126172523",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4174564",
+            "drain": 8.0,
+            "rice": 383,
+            "ln": 115,
+            "players": [],
+            "total plays": 453,
+            "total passes": 187,
+            "play history": {
+                "250512002532": 453
+            },
+            "pass history": {
+                "250512002532": 187
+            },
+            "scores": {}
+        },
+        "4174565": {
+            "version": "[10K] NORMAL!!!",
+            "sr": 2.01,
+            "keys": 10.0,
+            "mapper id": 11544934,
+            "status": 1,
+            "updated": "250126172523",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4174565",
+            "drain": 7.0,
+            "rice": 246,
+            "ln": 5,
+            "players": [],
+            "total plays": 759,
+            "total passes": 288,
+            "play history": {
+                "250512002532": 759
+            },
+            "pass history": {
+                "250512002532": 288
+            },
+            "scores": {}
+        }
+    }
+}
