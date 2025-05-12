@@ -1,0 +1,29 @@
+{
+    "id": 8491893,
+    "name": "Jingburger_fan",
+    "avatar url": "https://a.ppy.sh/8491893?1659771324.gif",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8491893250318103152": {
+            "uid": 8491893,
+            "bid": 4174564,
+            "time": "250318103152",
+            "mods": [],
+            "combo": 109,
+            "passed": true,
+            "pp": 72.6175,
+            "acc": 0.924415443175639,
+            "grade": "A",
+            "score": 694520,
+            "320": 309,
+            "300": 215,
+            "200": 55,
+            "100": 15,
+            "50": 6,
+            "0": 13
+        }
+    }
+}

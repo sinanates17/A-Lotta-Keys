@@ -1,0 +1,32 @@
+{
+    "id": 28079622,
+    "name": "Awesomezebe",
+    "avatar url": "https://a.ppy.sh/28079622?1663371426.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "28079622250306015757": {
+            "uid": 28079622,
+            "bid": 4984214,
+            "time": "250306015757",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 7,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.4091038812785388,
+            "grade": "D",
+            "score": 114955,
+            "320": 283,
+            "300": 166,
+            "200": 40,
+            "100": 5,
+            "50": 3,
+            "0": 671
+        }
+    }
+}

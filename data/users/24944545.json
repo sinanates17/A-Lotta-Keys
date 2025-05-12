@@ -1,0 +1,31 @@
+{
+    "id": 24944545,
+    "name": "eltamber",
+    "avatar url": "https://a.ppy.sh/24944545?1668739961.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "24944545241212121228": {
+            "uid": 24944545,
+            "bid": 4705175,
+            "time": "241212121228",
+            "mods": [
+                "CL"
+            ],
+            "combo": 127,
+            "passed": true,
+            "pp": 46.4896,
+            "acc": 0.9350036310820624,
+            "grade": "A",
+            "score": 685167,
+            "320": 556,
+            "300": 275,
+            "200": 37,
+            "100": 6,
+            "50": 4,
+            "0": 40
+        }
+    }
+}

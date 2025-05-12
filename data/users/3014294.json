@@ -1,0 +1,29 @@
+{
+    "id": 3014294,
+    "name": "Kiligolo",
+    "avatar url": "https://a.ppy.sh/3014294?1527497678.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "3014294250324171356": {
+            "uid": 3014294,
+            "bid": 4862377,
+            "time": "250324171356",
+            "mods": [],
+            "combo": 93,
+            "passed": true,
+            "pp": 11.3226,
+            "acc": 0.9013961605584643,
+            "grade": "A",
+            "score": 628433,
+            "320": 294,
+            "300": 324,
+            "200": 91,
+            "100": 26,
+            "50": 8,
+            "0": 21
+        }
+    }
+}

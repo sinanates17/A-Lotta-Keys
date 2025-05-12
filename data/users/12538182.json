@@ -1,0 +1,31 @@
+{
+    "id": 12538182,
+    "name": "jiwon0527",
+    "avatar url": "https://a.ppy.sh/12538182?1713195592.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "12538182250323132643": {
+            "uid": 12538182,
+            "bid": 4981263,
+            "time": "250323132643",
+            "mods": [
+                "CL"
+            ],
+            "combo": 11,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.5515151515151515,
+            "grade": "D",
+            "score": 384956,
+            "320": 13,
+            "300": 14,
+            "200": 3,
+            "100": 4,
+            "50": 0,
+            "0": 21
+        }
+    }
+}

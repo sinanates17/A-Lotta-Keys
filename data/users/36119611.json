@@ -1,0 +1,51 @@
+{
+    "id": 36119611,
+    "name": "hong_desu",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36119611250425073522": {
+            "uid": 36119611,
+            "bid": 4174565,
+            "time": "250425073522",
+            "mods": [
+                "CL"
+            ],
+            "combo": 68,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8213811420982736,
+            "grade": "B",
+            "score": 527198,
+            "320": 102,
+            "300": 86,
+            "200": 24,
+            "100": 6,
+            "50": 1,
+            "0": 32
+        },
+        "36119611250316120138": {
+            "uid": 36119611,
+            "bid": 4174565,
+            "time": "250316120138",
+            "mods": [
+                "CL"
+            ],
+            "combo": 35,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7835325365205843,
+            "grade": "C",
+            "score": 454549,
+            "320": 67,
+            "300": 104,
+            "200": 33,
+            "100": 10,
+            "50": 2,
+            "0": 35
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "id": 7870503,
+    "name": "rladbtjs",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "7870503250104071711": {
+            "uid": 7870503,
+            "bid": 4862377,
+            "time": "250104071711",
+            "mods": [
+                "CL"
+            ],
+            "combo": 126,
+            "passed": true,
+            "pp": 5.89377,
+            "acc": 0.8631227529532615,
+            "grade": "B",
+            "score": 574846,
+            "320": 281,
+            "300": 233,
+            "200": 60,
+            "100": 17,
+            "50": 3,
+            "0": 55
+        },
+        "7870503241213143241": {
+            "uid": 7870503,
+            "bid": 4862377,
+            "time": "241213143241",
+            "mods": [
+                "CL"
+            ],
+            "combo": 119,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7991782229070364,
+            "grade": "C",
+            "score": 460475,
+            "320": 152,
+            "300": 274,
+            "200": 122,
+            "100": 31,
+            "50": 6,
+            "0": 64
+        }
+    }
+}

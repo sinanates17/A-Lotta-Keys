@@ -1,0 +1,33 @@
+{
+    "id": 26517738,
+    "name": "phuck11",
+    "avatar url": "https://a.ppy.sh/26517738?1727188730.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "26517738250220150807": {
+            "uid": 26517738,
+            "bid": 4971712,
+            "time": "250220150807",
+            "mods": [
+                "DT",
+                "NF",
+                "CL"
+            ],
+            "combo": 21,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.3310502283105023,
+            "grade": "D",
+            "score": 86554,
+            "320": 106,
+            "300": 181,
+            "200": 150,
+            "100": 103,
+            "50": 82,
+            "0": 692
+        }
+    }
+}

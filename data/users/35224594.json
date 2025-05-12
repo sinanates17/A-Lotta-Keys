@@ -1,0 +1,33 @@
+{
+    "id": 35224594,
+    "name": "FireEmperor",
+    "avatar url": "https://a.ppy.sh/35224594?1730674362.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35224594250504150151": {
+            "uid": 35224594,
+            "bid": 5042814,
+            "time": "250504150151",
+            "mods": [
+                "NC",
+                "NF",
+                "CL"
+            ],
+            "combo": 74,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.4924569435360802,
+            "grade": "D",
+            "score": 127912,
+            "320": 907,
+            "300": 1231,
+            "200": 1629,
+            "100": 1266,
+            "50": 713,
+            "0": 1899
+        }
+    }
+}

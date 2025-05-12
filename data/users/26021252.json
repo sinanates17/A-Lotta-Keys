@@ -1,0 +1,31 @@
+{
+    "id": 26021252,
+    "name": "tapthenotesman",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "26021252241224220352": {
+            "uid": 26021252,
+            "bid": 1683798,
+            "time": "241224220352",
+            "mods": [
+                "CL"
+            ],
+            "combo": 56,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8143872113676732,
+            "grade": "B",
+            "score": 491359,
+            "320": 223,
+            "300": 171,
+            "200": 79,
+            "100": 33,
+            "50": 5,
+            "0": 52
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 33216822,
+    "name": "ltyubjh",
+    "avatar url": "https://a.ppy.sh/33216822?1745756430.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "33216822241214151449": {
+            "uid": 33216822,
+            "bid": 4862376,
+            "time": "241214151449",
+            "mods": [
+                "CL"
+            ],
+            "combo": 165,
+            "passed": true,
+            "pp": 49.3592,
+            "acc": 0.8890234059725585,
+            "grade": "B",
+            "score": 592556,
+            "320": 660,
+            "300": 340,
+            "200": 129,
+            "100": 41,
+            "50": 11,
+            "0": 58
+        }
+    }
+}

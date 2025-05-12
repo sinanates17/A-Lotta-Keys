@@ -1,0 +1,91 @@
+{
+    "id": 2019856,
+    "title": "Koigokoro",
+    "artist": "Peaky P-key",
+    "titleu": "恋心",
+    "artistu": "Peaky P-key",
+    "favs": 25,
+    "desc": null,
+    "source": "D4DJ Groovy Mix",
+    "tags": "n+2 scratch 14k2s double play special s-key 14k+2 koi kokoro remix cover japanese video game electronic j-pop jpop 相川七瀬 aikawa nanase elements garden ピーキーピーキー 山手響子 yamate kyouko kyoko 愛美 aimi 犬寄しのぶ inuyose shinobu dj クノイチ dj kunoichi 高木美佑 takagi miyu 笹子・ジェニファー・由香 sasago jennifer yuka 小泉萌香 koizumi moeka 清水絵空 shimizu esora 倉知玲鳳 kurachi reo",
+    "host id": 3427638,
+    "submitted": "230703052951",
+    "ranked": "240802032125",
+    "beatmaps": {
+        "4206404": {
+            "version": "[16K] DP Hard",
+            "sr": 2.6,
+            "keys": 16.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "240725043658",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4206404",
+            "drain": 8.0,
+            "rice": 743,
+            "ln": 47,
+            "players": [],
+            "total plays": 307,
+            "total passes": 116,
+            "play history": {
+                "250512231919": 307,
+                "250512232357": 307
+            },
+            "pass history": {
+                "250512231919": 116,
+                "250512232357": 116
+            },
+            "scores": {}
+        },
+        "4206405": {
+            "version": "[16K] DP Normal",
+            "sr": 1.76,
+            "keys": 16.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "240725043659",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4206405",
+            "drain": 7.0,
+            "rice": 416,
+            "ln": 39,
+            "players": [],
+            "total plays": 280,
+            "total passes": 95,
+            "play history": {
+                "250512231919": 280,
+                "250512232357": 280
+            },
+            "pass history": {
+                "250512231919": 95,
+                "250512232357": 95
+            },
+            "scores": {}
+        },
+        "4206519": {
+            "version": "[16K] DP Easy",
+            "sr": 1.01,
+            "keys": 16.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "240725043659",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4206519",
+            "drain": 6.0,
+            "rice": 170,
+            "ln": 32,
+            "players": [],
+            "total plays": 516,
+            "total passes": 136,
+            "play history": {
+                "250512231919": 516,
+                "250512232357": 516
+            },
+            "pass history": {
+                "250512231919": 136,
+                "250512232357": 136
+            },
+            "scores": {}
+        }
+    }
+}

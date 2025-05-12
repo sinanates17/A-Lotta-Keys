@@ -1,0 +1,32 @@
+{
+    "id": 35527101,
+    "name": "Sso",
+    "avatar url": "https://a.ppy.sh/35527101?1745633032.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35527101250312032729": {
+            "uid": 35527101,
+            "bid": 4981289,
+            "time": "250312032729",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 75,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.20052083333333334,
+            "grade": "D",
+            "score": 58896,
+            "320": 4,
+            "300": 5,
+            "200": 4,
+            "100": 2,
+            "50": 3,
+            "0": 46
+        }
+    }
+}

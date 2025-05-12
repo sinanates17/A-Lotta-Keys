@@ -1,0 +1,31 @@
+{
+    "id": 5068537,
+    "name": "- gero -",
+    "avatar url": "https://a.ppy.sh/5068537?1599863726.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "5068537250419214451": {
+            "uid": 5068537,
+            "bid": 4984214,
+            "time": "250419214451",
+            "mods": [
+                "CL"
+            ],
+            "combo": 194,
+            "passed": true,
+            "pp": 140.69,
+            "acc": 0.9683219178082192,
+            "grade": "S",
+            "score": 825902,
+            "320": 907,
+            "300": 200,
+            "200": 35,
+            "100": 1,
+            "50": 2,
+            "0": 23
+        }
+    }
+}

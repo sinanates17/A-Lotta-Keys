@@ -1,0 +1,47 @@
+{
+    "id": 20600430,
+    "name": "JosephTG",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "20600430241228013540": {
+            "uid": 20600430,
+            "bid": 1683801,
+            "time": "241228013540",
+            "mods": [],
+            "combo": 43,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8301282051282052,
+            "grade": "B",
+            "score": 465811,
+            "320": 295,
+            "300": 157,
+            "200": 30,
+            "100": 5,
+            "50": 7,
+            "0": 78
+        },
+        "20600430241228013354": {
+            "uid": 20600430,
+            "bid": 1683801,
+            "time": "241228013354",
+            "mods": [],
+            "combo": 34,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8199300699300699,
+            "grade": "B",
+            "score": 444767,
+            "320": 292,
+            "300": 157,
+            "200": 25,
+            "100": 5,
+            "50": 10,
+            "0": 83
+        }
+    }
+}

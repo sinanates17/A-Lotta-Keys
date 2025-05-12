@@ -1,0 +1,31 @@
+{
+    "id": 25600460,
+    "name": "awzsrlgl",
+    "avatar url": "https://a.ppy.sh/25600460?1668660610.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "25600460250407005849": {
+            "uid": 25600460,
+            "bid": 4973962,
+            "time": "250407005849",
+            "mods": [
+                "CL"
+            ],
+            "combo": 238,
+            "passed": true,
+            "pp": 5.0292,
+            "acc": 0.9227848101265823,
+            "grade": "A",
+            "score": 660574,
+            "320": 225,
+            "300": 133,
+            "200": 6,
+            "100": 1,
+            "50": 13,
+            "0": 17
+        }
+    }
+}

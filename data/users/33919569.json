@@ -1,0 +1,32 @@
+{
+    "id": 33919569,
+    "name": "mioiq2",
+    "avatar url": "https://a.ppy.sh/33919569?1743860432.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "33919569250313093753": {
+            "uid": 33919569,
+            "bid": 4972663,
+            "time": "250313093753",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 20,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.4114583333333333,
+            "grade": "D",
+            "score": 114127,
+            "320": 8,
+            "300": 12,
+            "200": 7,
+            "100": 3,
+            "50": 4,
+            "0": 30
+        }
+    }
+}

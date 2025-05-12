@@ -1,0 +1,32 @@
+{
+    "id": 37451973,
+    "name": "FelkyXD",
+    "avatar url": "https://a.ppy.sh/37451973?1744920122.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37451973250224172205": {
+            "uid": 37451973,
+            "bid": 4826865,
+            "time": "250224172205",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 4,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.1483491632745364,
+            "grade": "D",
+            "score": 39082,
+            "320": 31,
+            "300": 34,
+            "200": 47,
+            "100": 29,
+            "50": 20,
+            "0": 576
+        }
+    }
+}

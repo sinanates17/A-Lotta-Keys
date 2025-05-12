@@ -1,0 +1,31 @@
+{
+    "id": 37041374,
+    "name": "sniperthing",
+    "avatar url": "https://a.ppy.sh/37041374?1732484800.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37041374250418170828": {
+            "uid": 37041374,
+            "bid": 4606985,
+            "time": "250418170828",
+            "mods": [
+                "CL"
+            ],
+            "combo": 239,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8176470588235294,
+            "grade": "B",
+            "score": 549763,
+            "320": 50,
+            "300": 75,
+            "200": 17,
+            "100": 2,
+            "50": 12,
+            "0": 14
+        }
+    }
+}

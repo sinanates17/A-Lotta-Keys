@@ -1,0 +1,31 @@
+{
+    "id": 9573836,
+    "name": "Barry Chopstick",
+    "avatar url": "https://a.ppy.sh/9573836?1744544186.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "9573836250225082723": {
+            "uid": 9573836,
+            "bid": 1683799,
+            "time": "250225082723",
+            "mods": [
+                "CL"
+            ],
+            "combo": 101,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8736559139784946,
+            "grade": "B",
+            "score": 587623,
+            "320": 329,
+            "300": 278,
+            "200": 56,
+            "100": 14,
+            "50": 6,
+            "0": 61
+        }
+    }
+}

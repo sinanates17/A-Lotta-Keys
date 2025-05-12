@@ -1,0 +1,31 @@
+{
+    "id": 20916986,
+    "name": "LGG_Z",
+    "avatar url": "https://a.ppy.sh/20916986?1634380158.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "20916986250316130532": {
+            "uid": 20916986,
+            "bid": 4984408,
+            "time": "250316130532",
+            "mods": [
+                "CL"
+            ],
+            "combo": 69,
+            "passed": true,
+            "pp": 9.87185,
+            "acc": 0.8746246246246246,
+            "grade": "B",
+            "score": 567473,
+            "320": 293,
+            "300": 248,
+            "200": 53,
+            "100": 17,
+            "50": 3,
+            "0": 52
+        }
+    }
+}

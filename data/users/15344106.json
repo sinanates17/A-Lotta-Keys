@@ -1,0 +1,32 @@
+{
+    "id": 15344106,
+    "name": "____im_a_taco",
+    "avatar url": "https://a.ppy.sh/15344106?1728919462.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "15344106250413164618": {
+            "uid": 15344106,
+            "bid": 5010957,
+            "time": "250413164618",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 9,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.15977011494252874,
+            "grade": "D",
+            "score": 40867,
+            "320": 84,
+            "300": 101,
+            "200": 138,
+            "100": 120,
+            "50": 44,
+            "0": 1543
+        }
+    }
+}

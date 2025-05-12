@@ -1,0 +1,31 @@
+{
+    "id": 13572493,
+    "name": "Stoom",
+    "avatar url": "https://a.ppy.sh/13572493?1675022001.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "13572493240928224936": {
+            "uid": 13572493,
+            "bid": 4705175,
+            "time": "240928224936",
+            "mods": [
+                "CL"
+            ],
+            "combo": 75,
+            "passed": true,
+            "pp": 24.2628,
+            "acc": 0.8785403050108932,
+            "grade": "B",
+            "score": 578259,
+            "320": 530,
+            "300": 230,
+            "200": 60,
+            "100": 13,
+            "50": 13,
+            "0": 72
+        }
+    }
+}

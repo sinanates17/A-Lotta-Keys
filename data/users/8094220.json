@@ -1,0 +1,33 @@
+{
+    "id": 8094220,
+    "name": "Blue Archive",
+    "avatar url": "https://a.ppy.sh/8094220?1746497365.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8094220250115163607": {
+            "uid": 8094220,
+            "bid": 4862374,
+            "time": "250115163607",
+            "mods": [
+                "NF",
+                "DT",
+                "FI"
+            ],
+            "combo": 10,
+            "passed": true,
+            "pp": null,
+            "acc": 0.31232876712328766,
+            "grade": "D",
+            "score": 24196,
+            "320": 29,
+            "300": 42,
+            "200": 37,
+            "100": 35,
+            "50": 40,
+            "0": 182
+        }
+    }
+}

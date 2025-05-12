@@ -1,0 +1,31 @@
+{
+    "id": 22795338,
+    "name": "Destroyer8808",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "22795338250317130041": {
+            "uid": 22795338,
+            "bid": 1683799,
+            "time": "250317130041",
+            "mods": [
+                "CL"
+            ],
+            "combo": 173,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8862007168458781,
+            "grade": "B",
+            "score": 584675,
+            "320": 239,
+            "300": 343,
+            "200": 104,
+            "100": 21,
+            "50": 6,
+            "0": 31
+        }
+    }
+}

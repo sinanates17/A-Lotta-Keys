@@ -1,0 +1,31 @@
+{
+    "id": 16263535,
+    "name": "notweeb888",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "16263535250428115313": {
+            "uid": 16263535,
+            "bid": 5029129,
+            "time": "250428115313",
+            "mods": [
+                "CL"
+            ],
+            "combo": 208,
+            "passed": true,
+            "pp": 7.14603,
+            "acc": 0.9577175697865353,
+            "grade": "S",
+            "score": 740032,
+            "320": 225,
+            "300": 162,
+            "200": 2,
+            "100": 1,
+            "50": 1,
+            "0": 15
+        }
+    }
+}

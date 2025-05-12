@@ -1,0 +1,31 @@
+{
+    "id": 17864429,
+    "name": "Karolek_246",
+    "avatar url": "https://a.ppy.sh/17864429?1645305626.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "17864429241207184918": {
+            "uid": 17864429,
+            "bid": 4870697,
+            "time": "241207184918",
+            "mods": [
+                "CL"
+            ],
+            "combo": 113,
+            "passed": true,
+            "pp": 9.16012,
+            "acc": 0.9367424242424243,
+            "grade": "A",
+            "score": 698017,
+            "320": 306,
+            "300": 98,
+            "200": 11,
+            "100": 1,
+            "50": 3,
+            "0": 21
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": 10564718,
+    "name": "Exetrev",
+    "avatar url": "https://a.ppy.sh/10564718?1693471464.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "10564718250217141722": {
+            "uid": 10564718,
+            "bid": 4174562,
+            "time": "250217141722",
+            "mods": [],
+            "combo": 31,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8205128205128205,
+            "grade": "B",
+            "score": 463371,
+            "320": 57,
+            "300": 35,
+            "200": 6,
+            "100": 0,
+            "50": 0,
+            "0": 19
+        }
+    }
+}

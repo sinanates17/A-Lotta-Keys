@@ -1,0 +1,29 @@
+{
+    "id": 8869735,
+    "name": "NekoTintin",
+    "avatar url": "https://a.ppy.sh/8869735?1745867982.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8869735250312220103": {
+            "uid": 8869735,
+            "bid": 4981263,
+            "time": "250312220103",
+            "mods": [],
+            "combo": 17,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7696969696969697,
+            "grade": "C",
+            "score": 389958,
+            "320": 15,
+            "300": 22,
+            "200": 6,
+            "100": 4,
+            "50": 0,
+            "0": 8
+        }
+    }
+}

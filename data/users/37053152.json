@@ -1,0 +1,32 @@
+{
+    "id": 37053152,
+    "name": "yuantux 23",
+    "avatar url": "https://a.ppy.sh/37053152?1746838959.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37053152250419170816": {
+            "uid": 37053152,
+            "bid": 5010957,
+            "time": "250419170816",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 6,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.26855500821018063,
+            "grade": "D",
+            "score": 70490,
+            "320": 172,
+            "300": 227,
+            "200": 170,
+            "100": 83,
+            "50": 31,
+            "0": 1347
+        }
+    }
+}

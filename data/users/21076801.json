@@ -1,0 +1,29 @@
+{
+    "id": 21076801,
+    "name": "Exposion_",
+    "avatar url": "https://a.ppy.sh/21076801?1742505442.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "21076801250501230029": {
+            "uid": 21076801,
+            "bid": 5029129,
+            "time": "250501230029",
+            "mods": [],
+            "combo": 150,
+            "passed": true,
+            "pp": 2.98604,
+            "acc": 0.8800623052959502,
+            "grade": "B",
+            "score": 587351,
+            "320": 207,
+            "300": 141,
+            "200": 32,
+            "100": 19,
+            "50": 6,
+            "0": 23
+        }
+    }
+}

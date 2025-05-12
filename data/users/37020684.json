@@ -1,0 +1,31 @@
+{
+    "id": 37020684,
+    "name": "GoldYiod",
+    "avatar url": "https://a.ppy.sh/37020684?1741430974.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37020684250512163417": {
+            "uid": 37020684,
+            "bid": 5029129,
+            "time": "250512163417",
+            "mods": [
+                "CL"
+            ],
+            "combo": 141,
+            "passed": true,
+            "pp": 5.41079,
+            "acc": 0.9289819376026273,
+            "grade": "A",
+            "score": 664298,
+            "320": 191,
+            "300": 173,
+            "200": 18,
+            "100": 3,
+            "50": 1,
+            "0": 20
+        }
+    }
+}

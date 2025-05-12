@@ -1,0 +1,31 @@
+{
+    "id": 14410101,
+    "name": "snomi",
+    "avatar url": "https://a.ppy.sh/14410101?1693169750.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "14410101250309234939": {
+            "uid": 14410101,
+            "bid": 4984408,
+            "time": "250309234939",
+            "mods": [
+                "CL"
+            ],
+            "combo": 71,
+            "passed": true,
+            "pp": 15.3085,
+            "acc": 0.8978978978978979,
+            "grade": "B",
+            "score": 614278,
+            "320": 339,
+            "300": 241,
+            "200": 24,
+            "100": 6,
+            "50": 0,
+            "0": 56
+        }
+    }
+}

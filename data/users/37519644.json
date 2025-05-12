@@ -1,0 +1,29 @@
+{
+    "id": 37519644,
+    "name": "dongzirui542",
+    "avatar url": "https://a.ppy.sh/37519644?1740302756.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37519644250425121336": {
+            "uid": 37519644,
+            "bid": 4974665,
+            "time": "250425121336",
+            "mods": [],
+            "combo": 130,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8181818181818182,
+            "grade": "B",
+            "score": 491899,
+            "320": 66,
+            "300": 89,
+            "200": 93,
+            "100": 23,
+            "50": 2,
+            "0": 2
+        }
+    }
+}

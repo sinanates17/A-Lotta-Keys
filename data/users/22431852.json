@@ -1,0 +1,31 @@
+{
+    "id": 22431852,
+    "name": "sinofcringe",
+    "avatar url": "https://a.ppy.sh/22431852?1737100636.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "22431852250109075313": {
+            "uid": 22431852,
+            "bid": 4870697,
+            "time": "250109075313",
+            "mods": [
+                "CL"
+            ],
+            "combo": 124,
+            "passed": true,
+            "pp": 2.4812,
+            "acc": 0.8681818181818182,
+            "grade": "B",
+            "score": 528281,
+            "320": 134,
+            "300": 202,
+            "200": 61,
+            "100": 14,
+            "50": 4,
+            "0": 25
+        }
+    }
+}

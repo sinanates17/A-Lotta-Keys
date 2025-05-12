@@ -1,0 +1,33 @@
+{
+    "id": 29991946,
+    "name": "samesushi_s",
+    "avatar url": "https://a.ppy.sh/29991946?1652796436.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "29991946250213121915": {
+            "uid": 29991946,
+            "bid": 4174565,
+            "time": "250213121915",
+            "mods": [
+                "EZ",
+                "NF",
+                "CL"
+            ],
+            "combo": 3,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.12084993359893759,
+            "grade": "D",
+            "score": 15473,
+            "320": 8,
+            "300": 9,
+            "200": 13,
+            "100": 9,
+            "50": 10,
+            "0": 202
+        }
+    }
+}

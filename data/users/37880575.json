@@ -1,0 +1,31 @@
+{
+    "id": 37880575,
+    "name": "maccha4dd1kut0",
+    "avatar url": "https://a.ppy.sh/37880575?1747027923.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37880575250512155950": {
+            "uid": 37880575,
+            "bid": 4974665,
+            "time": "250512155950",
+            "mods": [
+                "CL"
+            ],
+            "combo": 275,
+            "passed": true,
+            "pp": 3.55783,
+            "acc": 0.9878787878787879,
+            "grade": "S",
+            "score": 969641,
+            "320": 166,
+            "300": 99,
+            "200": 10,
+            "100": 0,
+            "50": 0,
+            "0": 0
+        }
+    }
+}

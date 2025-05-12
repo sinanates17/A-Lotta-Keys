@@ -1,0 +1,32 @@
+{
+    "id": 14881477,
+    "name": "Ralsei_Dream",
+    "avatar url": "https://a.ppy.sh/14881477?1685546720.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "14881477250411075634": {
+            "uid": 14881477,
+            "bid": 5010957,
+            "time": "250411075634",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 7,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.19014778325123152,
+            "grade": "D",
+            "score": 48248,
+            "320": 71,
+            "300": 137,
+            "200": 180,
+            "100": 145,
+            "50": 58,
+            "0": 1439
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 13846359,
+    "name": "x1mer",
+    "avatar url": "https://a.ppy.sh/13846359?1702238094.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "13846359241229130650": {
+            "uid": 13846359,
+            "bid": 1683798,
+            "time": "241229130650",
+            "mods": [
+                "CL"
+            ],
+            "combo": 119,
+            "passed": true,
+            "pp": null,
+            "acc": 0.9692125518058022,
+            "grade": "S",
+            "score": 801012,
+            "320": 402,
+            "300": 139,
+            "200": 5,
+            "100": 4,
+            "50": 0,
+            "0": 13
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 26702763,
+    "name": "riftoyu",
+    "avatar url": "https://a.ppy.sh/26702763?1740585779.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "26702763250117153240": {
+            "uid": 26702763,
+            "bid": 1577247,
+            "time": "250117153240",
+            "mods": [
+                "CL"
+            ],
+            "combo": 82,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8809523809523809,
+            "grade": "B",
+            "score": 601496,
+            "320": 460,
+            "300": 185,
+            "200": 25,
+            "100": 10,
+            "50": 6,
+            "0": 70
+        }
+    }
+}

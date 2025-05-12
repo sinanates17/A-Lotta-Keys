@@ -1,0 +1,33 @@
+{
+    "id": 32097633,
+    "name": "Axos",
+    "avatar url": "https://a.ppy.sh/32097633?1745863627.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "32097633250419141256": {
+            "uid": 32097633,
+            "bid": 4705177,
+            "time": "250419141256",
+            "mods": [
+                "HT",
+                "MR",
+                "CL"
+            ],
+            "combo": 174,
+            "passed": true,
+            "pp": 38.1023,
+            "acc": 0.902422790202343,
+            "grade": "A",
+            "score": 305459,
+            "320": 596,
+            "300": 435,
+            "200": 129,
+            "100": 26,
+            "50": 25,
+            "0": 41
+        }
+    }
+}

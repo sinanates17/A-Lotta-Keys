@@ -1,0 +1,31 @@
+{
+    "id": 34646363,
+    "name": "HyperHypoAllo",
+    "avatar url": "https://a.ppy.sh/34646363?1720177347.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "34646363250503080208": {
+            "uid": 34646363,
+            "bid": 5029129,
+            "time": "250503080208",
+            "mods": [
+                "MR"
+            ],
+            "combo": 36,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7799844236760125,
+            "grade": "C",
+            "score": 381261,
+            "320": 88,
+            "300": 202,
+            "200": 58,
+            "100": 12,
+            "50": 7,
+            "0": 61
+        }
+    }
+}

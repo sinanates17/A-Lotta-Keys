@@ -1,0 +1,31 @@
+{
+    "id": 16559804,
+    "name": "Nyu987",
+    "avatar url": "https://a.ppy.sh/16559804?1746329469.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "16559804250118175928": {
+            "uid": 16559804,
+            "bid": 4705176,
+            "time": "250118175928",
+            "mods": [
+                "CL"
+            ],
+            "combo": 124,
+            "passed": true,
+            "pp": 9.29591,
+            "acc": 0.9158249158249159,
+            "grade": "A",
+            "score": 675457,
+            "320": 272,
+            "300": 85,
+            "200": 6,
+            "100": 5,
+            "50": 0,
+            "0": 28
+        }
+    }
+}

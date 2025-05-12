@@ -1,0 +1,32 @@
+{
+    "id": 8548336,
+    "name": "Applena",
+    "avatar url": "https://a.ppy.sh/8548336?1484601801.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8548336250302004853": {
+            "uid": 8548336,
+            "bid": 4174565,
+            "time": "250302004853",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 8,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.40571049136786186,
+            "grade": "D",
+            "score": 111954,
+            "320": 56,
+            "300": 39,
+            "200": 6,
+            "100": 8,
+            "50": 1,
+            "0": 141
+        }
+    }
+}

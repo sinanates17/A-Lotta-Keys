@@ -1,0 +1,31 @@
+{
+    "id": 10370229,
+    "name": "Echoes",
+    "avatar url": "https://a.ppy.sh/10370229?1625566805.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "10370229250412131259": {
+            "uid": 10370229,
+            "bid": 4984355,
+            "time": "250412131259",
+            "mods": [
+                "CL"
+            ],
+            "combo": 170,
+            "passed": true,
+            "pp": 38.3629,
+            "acc": 0.9145627515550677,
+            "grade": "A",
+            "score": 631136,
+            "320": 340,
+            "300": 397,
+            "200": 134,
+            "100": 20,
+            "50": 1,
+            "0": 19
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 35946589,
+    "name": "holala13",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35946589250425102210": {
+            "uid": 35946589,
+            "bid": 4826863,
+            "time": "250425102210",
+            "mods": [
+                "NF"
+            ],
+            "combo": 8,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.3444940476190476,
+            "grade": "D",
+            "score": 28538,
+            "320": 27,
+            "300": 32,
+            "200": 20,
+            "100": 9,
+            "50": 11,
+            "0": 125
+        }
+    }
+}

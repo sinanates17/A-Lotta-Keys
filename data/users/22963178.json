@@ -1,0 +1,29 @@
+{
+    "id": 22963178,
+    "name": "Guanran928",
+    "avatar url": "https://a.ppy.sh/22963178?1679585256.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "22963178250222143137": {
+            "uid": 22963178,
+            "bid": 4174562,
+            "time": "250222143137",
+            "mods": [],
+            "combo": 28,
+            "passed": true,
+            "pp": 6.15239,
+            "acc": 0.9088319088319088,
+            "grade": "A",
+            "score": 646638,
+            "320": 53,
+            "300": 48,
+            "200": 7,
+            "100": 2,
+            "50": 0,
+            "0": 7
+        }
+    }
+}

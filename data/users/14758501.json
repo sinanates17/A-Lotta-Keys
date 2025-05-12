@@ -1,0 +1,31 @@
+{
+    "id": 14758501,
+    "name": "jellium",
+    "avatar url": "https://a.ppy.sh/14758501?1730507468.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "14758501250420215538": {
+            "uid": 14758501,
+            "bid": 4862376,
+            "time": "250420215538",
+            "mods": [
+                "CL"
+            ],
+            "combo": 351,
+            "passed": true,
+            "pp": 105.291,
+            "acc": 0.9596448748991122,
+            "grade": "S",
+            "score": 775921,
+            "320": 847,
+            "300": 303,
+            "200": 52,
+            "100": 8,
+            "50": 10,
+            "0": 19
+        }
+    }
+}

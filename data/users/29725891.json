@@ -1,0 +1,29 @@
+{
+    "id": 29725891,
+    "name": "NotYourLevel",
+    "avatar url": "https://a.ppy.sh/29725891?1746811615.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "29725891250505135501": {
+            "uid": 29725891,
+            "bid": 5029129,
+            "time": "250505135501",
+            "mods": [],
+            "combo": 80,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.82398753894081,
+            "grade": "B",
+            "score": 462942,
+            "320": 124,
+            "300": 158,
+            "200": 96,
+            "100": 17,
+            "50": 6,
+            "0": 27
+        }
+    }
+}

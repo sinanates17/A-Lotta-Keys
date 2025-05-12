@@ -1,0 +1,29 @@
+{
+    "id": 37126409,
+    "name": "MuffinBnnuy",
+    "avatar url": "https://a.ppy.sh/37126409?1734127659.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37126409250425230850": {
+            "uid": 37126409,
+            "bid": 4606985,
+            "time": "250425230850",
+            "mods": [],
+            "combo": 76,
+            "passed": true,
+            "pp": 3.95139,
+            "acc": 0.9584905660377359,
+            "grade": "S",
+            "score": 799210,
+            "320": 165,
+            "300": 85,
+            "200": 4,
+            "100": 3,
+            "50": 2,
+            "0": 6
+        }
+    }
+}

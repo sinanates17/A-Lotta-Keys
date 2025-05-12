@@ -1,0 +1,32 @@
+{
+    "id": 36611216,
+    "name": "DiaDiaDomDom",
+    "avatar url": "https://a.ppy.sh/36611216?1741237793.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36611216250310235341": {
+            "uid": 36611216,
+            "bid": 4984355,
+            "time": "250310235341",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 18,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.535492133186974,
+            "grade": "D",
+            "score": 143689,
+            "320": 175,
+            "300": 183,
+            "200": 146,
+            "100": 88,
+            "50": 19,
+            "0": 300
+        }
+    }
+}

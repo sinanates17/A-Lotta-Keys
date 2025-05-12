@@ -1,0 +1,91 @@
+{
+    "id": 2090299,
+    "title": "Summer with Littleroot Town",
+    "artist": "nie",
+    "titleu": "夏天与未白镇",
+    "artistu": "涅",
+    "favs": 35,
+    "desc": null,
+    "source": "ポケットモンスター ルビー・サファイア",
+    "tags": "pokémon pokemon pocket monster ruby sapphire omega alpha piano relax video game instrumental ミシロタウン mishiro town 一之瀬剛 ichinose go 景山将太 kageyama shouta shota オメガルビ アルファサファイアoriginal sound track soundtrack ost linkff001 marcialus",
+    "host id": 22172595,
+    "submitted": "231116225018",
+    "ranked": "240721144243",
+    "beatmaps": {
+        "4380978": {
+            "version": "[10K] World Without Lies",
+            "sr": 1.85,
+            "keys": 10.0,
+            "mapper id": 22172595,
+            "status": 1,
+            "updated": "240714070522",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4380978",
+            "drain": 8.0,
+            "rice": 378,
+            "ln": 224,
+            "players": [],
+            "total plays": 808,
+            "total passes": 183,
+            "play history": {
+                "250512231919": 808,
+                "250512232357": 808
+            },
+            "pass history": {
+                "250512231919": 183,
+                "250512232357": 183
+            },
+            "scores": {}
+        },
+        "4444140": {
+            "version": "[10K] Linkff's Normal",
+            "sr": 1.49,
+            "keys": 10.0,
+            "mapper id": 23322958,
+            "status": 1,
+            "updated": "240714070523",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4444140",
+            "drain": 7.0,
+            "rice": 336,
+            "ln": 151,
+            "players": [],
+            "total plays": 376,
+            "total passes": 116,
+            "play history": {
+                "250512231919": 376,
+                "250512232357": 376
+            },
+            "pass history": {
+                "250512231919": 116,
+                "250512232357": 116
+            },
+            "scores": {}
+        },
+        "4510047": {
+            "version": "[10K] Marcialus' Easy",
+            "sr": 0.97,
+            "keys": 10.0,
+            "mapper id": 19306399,
+            "status": 1,
+            "updated": "240714070523",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4510047",
+            "drain": 6.0,
+            "rice": 259,
+            "ln": 1,
+            "players": [],
+            "total plays": 900,
+            "total passes": 233,
+            "play history": {
+                "250512231919": 900,
+                "250512232357": 900
+            },
+            "pass history": {
+                "250512231919": 233,
+                "250512232357": 233
+            },
+            "scores": {}
+        }
+    }
+}

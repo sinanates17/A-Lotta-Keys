@@ -1,0 +1,31 @@
+{
+    "id": 11956830,
+    "name": "KSV_YoonRoot",
+    "avatar url": "https://a.ppy.sh/11956830?1521765756.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "11956830250421084258": {
+            "uid": 11956830,
+            "bid": 4174564,
+            "time": "250421084258",
+            "mods": [
+                "CL"
+            ],
+            "combo": 426,
+            "passed": true,
+            "pp": 119.976,
+            "acc": 0.9846050870147256,
+            "grade": "S",
+            "score": 904049,
+            "320": 321,
+            "300": 162,
+            "200": 10,
+            "100": 2,
+            "50": 0,
+            "0": 3
+        }
+    }
+}

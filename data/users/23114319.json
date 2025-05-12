@@ -1,0 +1,29 @@
+{
+    "id": 23114319,
+    "name": "T0x1cL",
+    "avatar url": "https://a.ppy.sh/23114319?1634496333.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "23114319241209121211": {
+            "uid": 23114319,
+            "bid": 4870697,
+            "time": "241209121211",
+            "mods": [],
+            "combo": 55,
+            "passed": true,
+            "pp": 0.673231,
+            "acc": 0.8367486338797814,
+            "grade": "B",
+            "score": 477858,
+            "320": 191,
+            "300": 193,
+            "200": 33,
+            "100": 3,
+            "50": 8,
+            "0": 60
+        }
+    }
+}

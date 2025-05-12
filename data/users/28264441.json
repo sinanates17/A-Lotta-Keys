@@ -1,0 +1,33 @@
+{
+    "id": 28264441,
+    "name": "vpoi",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "28264441250401010058": {
+            "uid": 28264441,
+            "bid": 1683798,
+            "time": "250401010058",
+            "mods": [
+                "HT",
+                "NF",
+                "CL"
+            ],
+            "combo": 17,
+            "passed": true,
+            "pp": null,
+            "acc": 0.4547069271758437,
+            "grade": "D",
+            "score": 62067,
+            "320": 94,
+            "300": 130,
+            "200": 35,
+            "100": 18,
+            "50": 16,
+            "0": 270
+        }
+    }
+}

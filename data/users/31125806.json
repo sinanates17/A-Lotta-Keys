@@ -1,0 +1,29 @@
+{
+    "id": 31125806,
+    "name": "Noxmir",
+    "avatar url": "https://a.ppy.sh/31125806?1746374994.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "31125806250223022005": {
+            "uid": 31125806,
+            "bid": 4705176,
+            "time": "250223022005",
+            "mods": [],
+            "combo": 71,
+            "passed": true,
+            "pp": 10.0181,
+            "acc": 0.9290053151100988,
+            "grade": "A",
+            "score": 701727,
+            "320": 268,
+            "300": 121,
+            "200": 24,
+            "100": 8,
+            "50": 1,
+            "0": 17
+        }
+    }
+}

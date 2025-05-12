@@ -1,0 +1,31 @@
+{
+    "id": 10678230,
+    "name": "Irone OSU",
+    "avatar url": "https://a.ppy.sh/10678230?1734328669.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "10678230250207051102": {
+            "uid": 10678230,
+            "bid": 4174563,
+            "time": "250207051102",
+            "mods": [
+                "CL"
+            ],
+            "combo": 210,
+            "passed": true,
+            "pp": 43.0199,
+            "acc": 0.9375573921028466,
+            "grade": "A",
+            "score": 779645,
+            "320": 179,
+            "300": 142,
+            "200": 27,
+            "100": 3,
+            "50": 2,
+            "0": 10
+        }
+    }
+}

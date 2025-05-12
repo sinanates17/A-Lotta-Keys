@@ -1,0 +1,31 @@
+{
+    "id": 35589564,
+    "name": "Crystalite",
+    "avatar url": "https://a.ppy.sh/35589564?1728461520.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35589564250321184621": {
+            "uid": 35589564,
+            "bid": 4862374,
+            "time": "250321184621",
+            "mods": [
+                "CL"
+            ],
+            "combo": 60,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7125527426160337,
+            "grade": "C",
+            "score": 388963,
+            "320": 39,
+            "300": 132,
+            "200": 69,
+            "100": 23,
+            "50": 3,
+            "0": 50
+        }
+    }
+}

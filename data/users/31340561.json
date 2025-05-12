@@ -1,0 +1,31 @@
+{
+    "id": 31340561,
+    "name": "ASDFCVBNHJKL",
+    "avatar url": "https://a.ppy.sh/31340561?1730013491.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "31340561250501132527": {
+            "uid": 31340561,
+            "bid": 4705176,
+            "time": "250501132527",
+            "mods": [
+                "CL"
+            ],
+            "combo": 70,
+            "passed": true,
+            "pp": 12.6489,
+            "acc": 0.9537037037037037,
+            "grade": "S",
+            "score": 706192,
+            "320": 279,
+            "300": 95,
+            "200": 5,
+            "100": 1,
+            "50": 0,
+            "0": 16
+        }
+    }
+}

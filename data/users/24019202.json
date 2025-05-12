@@ -1,0 +1,31 @@
+{
+    "id": 24019202,
+    "name": "Fox_mh321",
+    "avatar url": "https://a.ppy.sh/24019202?1741141262.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "24019202250117202135": {
+            "uid": 24019202,
+            "bid": 4705178,
+            "time": "250117202135",
+            "mods": [
+                "CL"
+            ],
+            "combo": 189,
+            "passed": true,
+            "pp": 28.3963,
+            "acc": 0.9548663640948059,
+            "grade": "S",
+            "score": 778475,
+            "320": 463,
+            "300": 155,
+            "200": 15,
+            "100": 8,
+            "50": 3,
+            "0": 17
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "id": 21138904,
+    "name": "fua",
+    "avatar url": "https://a.ppy.sh/21138904?1744876025.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "21138904250105124845": {
+            "uid": 21138904,
+            "bid": 4862377,
+            "time": "250105124845",
+            "mods": [],
+            "combo": 74,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.81282722513089,
+            "grade": "B",
+            "score": 436668,
+            "320": 324,
+            "300": 241,
+            "200": 67,
+            "100": 24,
+            "50": 20,
+            "0": 88
+        }
+    }
+}

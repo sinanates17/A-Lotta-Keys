@@ -1,0 +1,32 @@
+{
+    "id": 36535653,
+    "name": "Sass_0105",
+    "avatar url": "https://a.ppy.sh/36535653?1744289039.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36535653241024144051": {
+            "uid": 36535653,
+            "bid": 4533309,
+            "time": "241024144051",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 6,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.1553416383540959,
+            "grade": "D",
+            "score": 39580,
+            "320": 31,
+            "300": 43,
+            "200": 59,
+            "100": 57,
+            "50": 29,
+            "0": 664
+        }
+    }
+}

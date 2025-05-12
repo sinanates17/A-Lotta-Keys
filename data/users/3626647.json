@@ -1,0 +1,29 @@
+{
+    "id": 3626647,
+    "name": "Dragon of Death",
+    "avatar url": "https://a.ppy.sh/3626647?1479192813.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "3626647250205192857": {
+            "uid": 3626647,
+            "bid": 4862377,
+            "time": "250205192857",
+            "mods": [],
+            "combo": 87,
+            "passed": true,
+            "pp": 6.14913,
+            "acc": 0.8651832460732984,
+            "grade": "B",
+            "score": 541721,
+            "320": 323,
+            "300": 267,
+            "200": 88,
+            "100": 31,
+            "50": 12,
+            "0": 43
+        }
+    }
+}

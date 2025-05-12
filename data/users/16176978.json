@@ -1,0 +1,33 @@
+{
+    "id": 16176978,
+    "name": "Kada-",
+    "avatar url": "https://a.ppy.sh/16176978?1744940393.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "16176978240929121206": {
+            "uid": 16176978,
+            "bid": 4533309,
+            "time": "240929121206",
+            "mods": [
+                "DT",
+                "NF",
+                "CL"
+            ],
+            "combo": 10,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.30653076632691584,
+            "grade": "D",
+            "score": 79352,
+            "320": 72,
+            "300": 87,
+            "200": 120,
+            "100": 71,
+            "50": 48,
+            "0": 485
+        }
+    }
+}

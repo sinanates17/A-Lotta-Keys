@@ -1,0 +1,31 @@
+{
+    "id": 33704953,
+    "name": "0FSnow",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "33704953250408133746": {
+            "uid": 33704953,
+            "bid": 4174562,
+            "time": "250408133746",
+            "mods": [
+                "10K"
+            ],
+            "combo": 25,
+            "passed": true,
+            "pp": null,
+            "acc": 0.8703703703703703,
+            "grade": "B",
+            "score": 557002,
+            "320": 63,
+            "300": 34,
+            "200": 7,
+            "100": 0,
+            "50": 1,
+            "0": 12
+        }
+    }
+}

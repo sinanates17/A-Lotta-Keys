@@ -1,0 +1,32 @@
+{
+    "id": 24140109,
+    "name": "- Kopi -",
+    "avatar url": "https://a.ppy.sh/24140109?1746869794.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "24140109250404034919": {
+            "uid": 24140109,
+            "bid": 4174564,
+            "time": "250404034919",
+            "mods": [
+                "MR",
+                "CL"
+            ],
+            "combo": 137,
+            "passed": true,
+            "pp": 57.7572,
+            "acc": 0.9136546184738956,
+            "grade": "A",
+            "score": 620907,
+            "320": 176,
+            "300": 240,
+            "200": 53,
+            "100": 9,
+            "50": 4,
+            "0": 16
+        }
+    }
+}

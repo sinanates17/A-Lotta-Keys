@@ -1,0 +1,29 @@
+{
+    "id": 11621250,
+    "name": "LacoPT",
+    "avatar url": "https://a.ppy.sh/11621250?1585893182.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "11621250250323163305": {
+            "uid": 11621250,
+            "bid": 4972663,
+            "time": "250323163305",
+            "mods": [],
+            "combo": 20,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.5281385281385281,
+            "grade": "D",
+            "score": 155260,
+            "320": 13,
+            "300": 15,
+            "200": 12,
+            "100": 12,
+            "50": 4,
+            "0": 21
+        }
+    }
+}

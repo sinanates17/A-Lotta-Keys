@@ -1,0 +1,29 @@
+{
+    "id": 15018844,
+    "name": "nick235711",
+    "avatar url": "https://a.ppy.sh/15018844?1592645345.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "15018844250226131237": {
+            "uid": 15018844,
+            "bid": 4174562,
+            "time": "250226131237",
+            "mods": [],
+            "combo": 26,
+            "passed": true,
+            "pp": 1.26402,
+            "acc": 0.8361823361823362,
+            "grade": "B",
+            "score": 496037,
+            "320": 61,
+            "300": 34,
+            "200": 3,
+            "100": 2,
+            "50": 1,
+            "0": 16
+        }
+    }
+}

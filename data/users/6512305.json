@@ -1,0 +1,31 @@
+{
+    "id": 6512305,
+    "name": "- yaya",
+    "avatar url": "https://a.ppy.sh/6512305?1733349727.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "6512305250221225102": {
+            "uid": 6512305,
+            "bid": 4174565,
+            "time": "250221225102",
+            "mods": [
+                "CL"
+            ],
+            "combo": 106,
+            "passed": true,
+            "pp": 1.97366,
+            "acc": 0.8572377158034529,
+            "grade": "B",
+            "score": 544397,
+            "320": 35,
+            "300": 131,
+            "200": 71,
+            "100": 5,
+            "50": 1,
+            "0": 8
+        }
+    }
+}

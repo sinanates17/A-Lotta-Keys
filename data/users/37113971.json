@@ -1,0 +1,32 @@
+{
+    "id": 37113971,
+    "name": "soyesssddy",
+    "avatar url": "https://a.ppy.sh/37113971?1741315830.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37113971250329041646": {
+            "uid": 37113971,
+            "bid": 4972842,
+            "time": "250329041646",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 98,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.12939297124600638,
+            "grade": "D",
+            "score": 34109,
+            "320": 9,
+            "300": 19,
+            "200": 14,
+            "100": 8,
+            "50": 3,
+            "0": 260
+        }
+    }
+}

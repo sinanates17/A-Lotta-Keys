@@ -1,0 +1,31 @@
+{
+    "id": 23606883,
+    "name": "victorica97",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "23606883250117094400": {
+            "uid": 23606883,
+            "bid": 4870697,
+            "time": "250117094400",
+            "mods": [
+                "CL"
+            ],
+            "combo": 71,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8185606060606061,
+            "grade": "B",
+            "score": 488231,
+            "320": 164,
+            "300": 160,
+            "200": 47,
+            "100": 12,
+            "50": 5,
+            "0": 52
+        }
+    }
+}

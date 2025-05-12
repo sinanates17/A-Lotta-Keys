@@ -1,0 +1,32 @@
+{
+    "id": 34745450,
+    "name": "Tor111",
+    "avatar url": "https://a.ppy.sh/34745450?1743129286.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "34745450250425041745": {
+            "uid": 34745450,
+            "bid": 5014195,
+            "time": "250425041745",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 9,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.3277777777777778,
+            "grade": "D",
+            "score": 89542,
+            "320": 62,
+            "300": 89,
+            "200": 35,
+            "100": 30,
+            "50": 15,
+            "0": 339
+        }
+    }
+}

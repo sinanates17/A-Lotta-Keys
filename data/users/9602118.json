@@ -1,0 +1,32 @@
+{
+    "id": 9602118,
+    "name": "Banekan",
+    "avatar url": "https://a.ppy.sh/9602118?1739132817.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "9602118250408131352": {
+            "uid": 9602118,
+            "bid": 2759264,
+            "time": "250408131352",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 9,
+            "passed": true,
+            "pp": null,
+            "acc": 0.041109761036857026,
+            "grade": "D",
+            "score": 10339,
+            "320": 13,
+            "300": 19,
+            "200": 34,
+            "100": 26,
+            "50": 26,
+            "0": 1528
+        }
+    }
+}

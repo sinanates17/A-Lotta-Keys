@@ -1,0 +1,32 @@
+{
+    "id": 37233554,
+    "name": "kirby 5",
+    "avatar url": "https://a.ppy.sh/37233554?1741805752.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37233554250320001813": {
+            "uid": 37233554,
+            "bid": 4174564,
+            "time": "250320001813",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 17,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.3785140562248996,
+            "grade": "D",
+            "score": 99991,
+            "320": 44,
+            "300": 81,
+            "200": 65,
+            "100": 38,
+            "50": 45,
+            "0": 225
+        }
+    }
+}

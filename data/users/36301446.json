@@ -1,0 +1,31 @@
+{
+    "id": 36301446,
+    "name": "tapperruiii",
+    "avatar url": "https://a.ppy.sh/36301446?1746516193.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36301446250412073720": {
+            "uid": 36301446,
+            "bid": 4981289,
+            "time": "250412073720",
+            "mods": [
+                "CL"
+            ],
+            "combo": 83,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.5,
+            "grade": "D",
+            "score": 348566,
+            "320": 10,
+            "300": 18,
+            "200": 3,
+            "100": 4,
+            "50": 4,
+            "0": 25
+        }
+    }
+}

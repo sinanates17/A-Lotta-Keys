@@ -1,0 +1,32 @@
+{
+    "id": 37056439,
+    "name": "kireyato",
+    "avatar url": "https://a.ppy.sh/37056439?1742890585.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "37056439250331122821": {
+            "uid": 37056439,
+            "bid": 4972842,
+            "time": "250331122821",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 96,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.23961661341853036,
+            "grade": "D",
+            "score": 61614,
+            "320": 12,
+            "300": 26,
+            "200": 41,
+            "100": 28,
+            "50": 2,
+            "0": 204
+        }
+    }
+}

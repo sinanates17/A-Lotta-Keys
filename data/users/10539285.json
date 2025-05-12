@@ -1,0 +1,31 @@
+{
+    "id": 10539285,
+    "name": "FR4-",
+    "avatar url": "https://a.ppy.sh/10539285?1638970313.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "10539285250416093148": {
+            "uid": 10539285,
+            "bid": 4984408,
+            "time": "250416093148",
+            "mods": [
+                "CL"
+            ],
+            "combo": 228,
+            "passed": true,
+            "pp": 32.0576,
+            "acc": 0.974974974974975,
+            "grade": "S",
+            "score": 856981,
+            "320": 427,
+            "300": 206,
+            "200": 23,
+            "100": 3,
+            "50": 0,
+            "0": 7
+        }
+    }
+}

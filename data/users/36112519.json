@@ -1,0 +1,29 @@
+{
+    "id": 36112519,
+    "name": "Zeniths",
+    "avatar url": "https://a.ppy.sh/36112519?1717952843.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36112519250401044713": {
+            "uid": 36112519,
+            "bid": 4981263,
+            "time": "250401044713",
+            "mods": [],
+            "combo": 7,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.6060606060606061,
+            "grade": "D",
+            "score": 196318,
+            "320": 21,
+            "300": 11,
+            "200": 1,
+            "100": 2,
+            "50": 0,
+            "0": 20
+        }
+    }
+}

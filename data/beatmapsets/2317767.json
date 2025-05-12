@@ -1,0 +1,66 @@
+{
+    "id": 2317767,
+    "title": "Omoi de no Konpeito",
+    "artist": "Chroma",
+    "titleu": "想いでの金平糖",
+    "artistu": "黒魔",
+    "favs": 32,
+    "desc": null,
+    "source": "",
+    "tags": "electronic house chiptune 8-bit 8 bit instrumental 愛を喜ぶ街 ai wo yorokobu machi a city that rejoices in love not records not-0021 n+2 10k2s 10+2k 10k+2 scratch special style dp double play",
+    "host id": 32074763,
+    "submitted": "250202154053",
+    "ranked": "250216172335",
+    "beatmaps": {
+        "4963548": {
+            "version": "[12K] 10K2S Hard",
+            "sr": 1.38,
+            "keys": 12.0,
+            "mapper id": 32074763,
+            "status": 1,
+            "updated": "250209170711",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4963548",
+            "drain": 7.3,
+            "rice": 512,
+            "ln": 0,
+            "players": [],
+            "total plays": 66,
+            "total passes": 20,
+            "play history": {
+                "250512231919": 66,
+                "250512232357": 66
+            },
+            "pass history": {
+                "250512231919": 20,
+                "250512232357": 20
+            },
+            "scores": {}
+        },
+        "4963549": {
+            "version": "[12K] 10K2S Normal",
+            "sr": 1.05,
+            "keys": 12.0,
+            "mapper id": 32074763,
+            "status": 1,
+            "updated": "250209170711",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4963549",
+            "drain": 6.8,
+            "rice": 312,
+            "ln": 16,
+            "players": [],
+            "total plays": 294,
+            "total passes": 57,
+            "play history": {
+                "250512231919": 294,
+                "250512232357": 294
+            },
+            "pass history": {
+                "250512231919": 57,
+                "250512232357": 57
+            },
+            "scores": {}
+        }
+    }
+}

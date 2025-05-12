@@ -19,7 +19,7 @@ def main():
         for uid in uids:
             c = False
             for file in listdir(PATH_USERS):
-                if uid in file and file.endswith(".json"): 
+                if str(uid) in file and file.endswith(".json"): 
                     c = True
                     break
 
@@ -57,7 +57,7 @@ def main():
 
         for uid, scores in uids_scores.items():
             for file in listdir(PATH_USERS):
-                if uid in file and file.endswith(".json"):
+                if str(uid) in file and file.endswith(".json"):
                     with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                         user = json.load(f)
                     
@@ -68,7 +68,7 @@ def main():
                     break
 
     def _update_mapsets_playhistory():
-        uid_mapsets = {}
+        uids_mapsets = {}
 
         for file in listdir(PATH_BEATMAPSETS):
             if not file.endswith(".json"): continue
@@ -79,11 +79,11 @@ def main():
             for bid in mapset["beatmaps"].keys():
 
                 uid = mapset["beatmaps"][bid]["mapper id"]
-                uid_mapset = uid_mapsets.get(uid, {})
+                uid_mapsets = uids_mapsets.get(uid, {})
 
-                uid_mapset[msid] = uid_mapset.get(msid, [])
-                uid_mapset[msid].append(bid)
-                uid_mapsets[uid] = uid_mapset
+                uid_mapsets[msid] = uid_mapsets.get(msid, [])
+                uid_mapsets[msid].append(bid)
+                uids_mapsets[uid] = uid_mapsets
 
         for file in listdir(PATH_USERS):
             if not file.endswith(".json"): continue
@@ -93,14 +93,14 @@ def main():
             uid = user["id"]
             uids.append(uid)
             total_plays = 0
-            user["beatmapsets"] = uid_mapsets.get(uid, {}) #This should accordingly update difficulty owner changes
+            user["beatmapsets"] = uids_mapsets.get(uid, {}) #This should accordingly update difficulty owner changes
             if user["beatmapsets"] == {}: continue
 
             for msid in user["beatmapsets"].keys():
                 with open(f"{PATH_BEATMAPSETS}/{msid}.json", "r", encoding='utf-8') as f:
                     mapset_json = json.load(f)
                     
-                for bid, in user["beatmapsets"][msid].keys():
+                for bid in user["beatmapsets"][msid]:
                     total_plays += mapset_json["beatmaps"][bid]["total plays"]
 
             user["beatmap plays history"][now] = total_plays

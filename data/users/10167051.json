@@ -1,0 +1,31 @@
+{
+    "id": 10167051,
+    "name": "Nameless_GX",
+    "avatar url": "https://a.ppy.sh/10167051?1688104191.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "10167051250315205123": {
+            "uid": 10167051,
+            "bid": 4174562,
+            "time": "250315205123",
+            "mods": [
+                "RD"
+            ],
+            "combo": 58,
+            "passed": true,
+            "pp": null,
+            "acc": 0.9658119658119658,
+            "grade": "S",
+            "score": 827667,
+            "320": 57,
+            "300": 52,
+            "200": 6,
+            "100": 0,
+            "50": 0,
+            "0": 2
+        }
+    }
+}

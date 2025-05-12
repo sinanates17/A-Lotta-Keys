@@ -1,0 +1,33 @@
+{
+    "id": 26771034,
+    "name": "PointAziz",
+    "avatar url": "https://a.ppy.sh/26771034?1718553222.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "26771034241208022313": {
+            "uid": 26771034,
+            "bid": 4862374,
+            "time": "241208022313",
+            "mods": [
+                "HD",
+                "MR",
+                "CL"
+            ],
+            "combo": 64,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7457805907172996,
+            "grade": "C",
+            "score": 450825,
+            "320": 117,
+            "300": 101,
+            "200": 18,
+            "100": 13,
+            "50": 8,
+            "0": 59
+        }
+    }
+}

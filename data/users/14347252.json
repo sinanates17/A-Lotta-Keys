@@ -1,0 +1,31 @@
+{
+    "id": 14347252,
+    "name": "Hikigaya_pzc",
+    "avatar url": "https://a.ppy.sh/14347252?1604830953.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "14347252250320085833": {
+            "uid": 14347252,
+            "bid": 4968846,
+            "time": "250320085833",
+            "mods": [
+                "NF"
+            ],
+            "combo": 3,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.34959349593495936,
+            "grade": "D",
+            "score": 29842,
+            "320": 9,
+            "300": 17,
+            "200": 3,
+            "100": 1,
+            "50": 2,
+            "0": 50
+        }
+    }
+}

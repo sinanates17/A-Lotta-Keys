@@ -9,7 +9,7 @@ import json
 def main():
     def _update_mapsets():
         for mapset in mapsets:
-            filename = f"{id}.json".translate(str.maketrans("", "", "/\\"))
+            filename = f"{mapset.id}.json".translate(str.maketrans("", "", "/\\"))
             mapset_dict_old = None
             if filename in listdir(PATH_BEATMAPSETS):
                 with open(f"{PATH_BEATMAPSETS}/{filename}", "r", encoding='utf-8') as f:

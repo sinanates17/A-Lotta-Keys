@@ -1,0 +1,33 @@
+{
+    "id": 8886581,
+    "name": "elHorass",
+    "avatar url": "https://a.ppy.sh/8886581?1681684558.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8886581250312022640": {
+            "uid": 8886581,
+            "bid": 4968846,
+            "time": "250312022640",
+            "mods": [
+                "DT",
+                "NF",
+                "CL"
+            ],
+            "combo": 6,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.16911764705882354,
+            "grade": "D",
+            "score": 45061,
+            "320": 5,
+            "300": 2,
+            "200": 2,
+            "100": 8,
+            "50": 3,
+            "0": 48
+        }
+    }
+}

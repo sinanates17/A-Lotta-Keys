@@ -1,0 +1,31 @@
+{
+    "id": 25447606,
+    "name": "idk ETHER",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "25447606250112231116": {
+            "uid": 25447606,
+            "bid": 4862377,
+            "time": "250112231116",
+            "mods": [
+                "CL"
+            ],
+            "combo": 60,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8248587570621468,
+            "grade": "B",
+            "score": 486192,
+            "320": 204,
+            "300": 257,
+            "200": 99,
+            "100": 23,
+            "50": 4,
+            "0": 62
+        }
+    }
+}

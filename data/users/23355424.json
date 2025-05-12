@@ -1,0 +1,32 @@
+{
+    "id": 23355424,
+    "name": "plappackung",
+    "avatar url": "https://a.ppy.sh/23355424?1746486661.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "23355424250312030114": {
+            "uid": 23355424,
+            "bid": 4972662,
+            "time": "250312030114",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 11,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.22461928934010153,
+            "grade": "D",
+            "score": 57468,
+            "320": 23,
+            "300": 22,
+            "200": 41,
+            "100": 33,
+            "50": 31,
+            "0": 244
+        }
+    }
+}

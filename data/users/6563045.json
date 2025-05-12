@@ -1,0 +1,31 @@
+{
+    "id": 6563045,
+    "name": "Jup1013",
+    "avatar url": "https://a.ppy.sh/6563045?1745708360.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "6563045241001201757": {
+            "uid": 6563045,
+            "bid": 4705177,
+            "time": "241001201757",
+            "mods": [
+                "CL"
+            ],
+            "combo": 190,
+            "passed": true,
+            "pp": 71.7091,
+            "acc": 0.9148029818956337,
+            "grade": "A",
+            "score": 647575,
+            "320": 619,
+            "300": 445,
+            "200": 101,
+            "100": 38,
+            "50": 8,
+            "0": 41
+        }
+    }
+}

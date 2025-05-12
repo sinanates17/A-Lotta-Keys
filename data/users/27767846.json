@@ -1,0 +1,32 @@
+{
+    "id": 27767846,
+    "name": "Oort6",
+    "avatar url": "https://a.ppy.sh/27767846?1746450191.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "27767846241213133857": {
+            "uid": 27767846,
+            "bid": 4879164,
+            "time": "241213133857",
+            "mods": [
+                "DT",
+                "CL"
+            ],
+            "combo": 363,
+            "passed": true,
+            "pp": 126.675,
+            "acc": 0.9827335514358415,
+            "grade": "S",
+            "score": 897252,
+            "320": 734,
+            "300": 156,
+            "200": 14,
+            "100": 5,
+            "50": 1,
+            "0": 7
+        }
+    }
+}

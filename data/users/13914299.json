@@ -1,0 +1,31 @@
+{
+    "id": 13914299,
+    "name": "Andrics",
+    "avatar url": "https://a.ppy.sh/13914299?1740040037.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "13914299250412144234": {
+            "uid": 13914299,
+            "bid": 4606985,
+            "time": "250412144234",
+            "mods": [
+                "CL"
+            ],
+            "combo": 406,
+            "passed": true,
+            "pp": 2.9346,
+            "acc": 0.9323529411764706,
+            "grade": "A",
+            "score": 643212,
+            "320": 78,
+            "300": 71,
+            "200": 14,
+            "100": 0,
+            "50": 1,
+            "0": 6
+        }
+    }
+}

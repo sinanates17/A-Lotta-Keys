@@ -1,0 +1,31 @@
+{
+    "id": 5602705,
+    "name": "Zepro",
+    "avatar url": "https://a.ppy.sh/5602705?1735309749.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "5602705250121163459": {
+            "uid": 5602705,
+            "bid": 4870697,
+            "time": "250121163459",
+            "mods": [
+                "CL"
+            ],
+            "combo": 518,
+            "passed": true,
+            "pp": 13.4541,
+            "acc": 0.9924242424242424,
+            "grade": "S",
+            "score": 940360,
+            "320": 340,
+            "300": 95,
+            "200": 2,
+            "100": 1,
+            "50": 0,
+            "0": 2
+        }
+    }
+}

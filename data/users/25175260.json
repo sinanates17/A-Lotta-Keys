@@ -1,0 +1,32 @@
+{
+    "id": 25175260,
+    "name": "drammitphantom",
+    "avatar url": "https://a.ppy.sh/25175260?1729686377.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "25175260241020033713": {
+            "uid": 25175260,
+            "bid": 4533309,
+            "time": "241020033713",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 7,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.21177802944507362,
+            "grade": "D",
+            "score": 54619,
+            "320": 44,
+            "300": 71,
+            "200": 87,
+            "100": 35,
+            "50": 14,
+            "0": 632
+        }
+    }
+}

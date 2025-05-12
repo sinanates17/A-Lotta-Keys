@@ -1,0 +1,31 @@
+{
+    "id": 33724732,
+    "name": "yinya",
+    "avatar url": "https://a.ppy.sh/33724732?1690077644.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "33724732250206084722": {
+            "uid": 33724732,
+            "bid": 4174562,
+            "time": "250206084722",
+            "mods": [
+                "CL"
+            ],
+            "combo": 89,
+            "passed": true,
+            "pp": 5.78414,
+            "acc": 0.8988095238095238,
+            "grade": "B",
+            "score": 660780,
+            "320": 59,
+            "300": 35,
+            "200": 9,
+            "100": 2,
+            "50": 0,
+            "0": 7
+        }
+    }
+}

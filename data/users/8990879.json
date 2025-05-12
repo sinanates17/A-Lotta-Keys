@@ -1,0 +1,31 @@
+{
+    "id": 8990879,
+    "name": "Bifecito",
+    "avatar url": "https://a.ppy.sh/8990879?1581232579.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8990879250504214451": {
+            "uid": 8990879,
+            "bid": 4606985,
+            "time": "250504214451",
+            "mods": [
+                "CL"
+            ],
+            "combo": 332,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8147058823529412,
+            "grade": "B",
+            "score": 543107,
+            "320": 50,
+            "300": 69,
+            "200": 27,
+            "100": 2,
+            "50": 5,
+            "0": 17
+        }
+    }
+}

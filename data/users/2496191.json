@@ -1,0 +1,29 @@
+{
+    "id": 2496191,
+    "name": "Ayupe",
+    "avatar url": "https://a.ppy.sh/2496191?1510930923.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "2496191250105082420": {
+            "uid": 2496191,
+            "bid": 4705175,
+            "time": "250105082420",
+            "mods": [],
+            "combo": 61,
+            "passed": true,
+            "pp": 30.1285,
+            "acc": 0.8922955974842768,
+            "grade": "B",
+            "score": 598565,
+            "320": 627,
+            "300": 258,
+            "200": 77,
+            "100": 21,
+            "50": 15,
+            "0": 62
+        }
+    }
+}

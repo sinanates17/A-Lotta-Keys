@@ -1,0 +1,31 @@
+{
+    "id": 8961612,
+    "name": "Sakura lili666",
+    "avatar url": "https://a.ppy.sh/8961612?1505652113.jpg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "8961612250507123517": {
+            "uid": 8961612,
+            "bid": 5029350,
+            "time": "250507123517",
+            "mods": [
+                "CL"
+            ],
+            "combo": 128,
+            "passed": true,
+            "pp": 66.5886,
+            "acc": 0.9397979797979797,
+            "grade": "A",
+            "score": 711884,
+            "320": 981,
+            "300": 502,
+            "200": 90,
+            "100": 18,
+            "50": 10,
+            "0": 49
+        }
+    }
+}

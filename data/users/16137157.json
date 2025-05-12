@@ -1,0 +1,29 @@
+{
+    "id": 16137157,
+    "name": "Endfield",
+    "avatar url": "https://a.ppy.sh/16137157?1745509533.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "16137157250417110402": {
+            "uid": 16137157,
+            "bid": 4862374,
+            "time": "250417110402",
+            "mods": [],
+            "combo": 41,
+            "passed": true,
+            "pp": 2.49166,
+            "acc": 0.8844748858447489,
+            "grade": "B",
+            "score": 580605,
+            "320": 156,
+            "300": 147,
+            "200": 25,
+            "100": 8,
+            "50": 3,
+            "0": 26
+        }
+    }
+}

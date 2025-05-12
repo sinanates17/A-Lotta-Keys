@@ -1,0 +1,32 @@
+{
+    "id": 28691630,
+    "name": "Dogetastic",
+    "avatar url": "https://a.ppy.sh/28691630?1721195212.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "28691630250130144244": {
+            "uid": 28691630,
+            "bid": 2759255,
+            "time": "250130144244",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 28,
+            "passed": true,
+            "pp": null,
+            "acc": 0.46048970506399556,
+            "grade": "D",
+            "score": 119228,
+            "320": 127,
+            "300": 179,
+            "200": 248,
+            "100": 175,
+            "50": 132,
+            "0": 337
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 13860014,
+    "name": "kjh2623jh",
+    "avatar url": "https://a.ppy.sh/13860014?1738273339.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "13860014250129115555": {
+            "uid": 13860014,
+            "bid": 4879164,
+            "time": "250129115555",
+            "mods": [
+                "CL"
+            ],
+            "combo": 109,
+            "passed": true,
+            "pp": 13.0644,
+            "acc": 0.8738640494365685,
+            "grade": "B",
+            "score": 565522,
+            "320": 219,
+            "300": 492,
+            "200": 122,
+            "100": 21,
+            "50": 12,
+            "0": 51
+        }
+    }
+}

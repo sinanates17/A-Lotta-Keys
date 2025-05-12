@@ -1,0 +1,191 @@
+{
+    "id": 2285533,
+    "title": "Speedcore Sonata",
+    "artist": "Fvrwvrd",
+    "titleu": "Speedcore Sonata",
+    "artistu": "Fvrwvrd",
+    "favs": 36,
+    "desc": null,
+    "source": "",
+    "tags": "moonlight sonata 3rd movement speedcore instrumental electronic chiptune classical orchestral piano sonata third movement ludwig van beethoven 8bit 8-bit piano",
+    "host id": 10099934,
+    "submitted": "241126175354",
+    "ranked": "250301060336",
+    "beatmaps": {
+        "4875319": {
+            "version": "[10K] Hard",
+            "sr": 2.86,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011328",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4875319",
+            "drain": 7.0,
+            "rice": 1489,
+            "ln": 2,
+            "players": [],
+            "total plays": 304,
+            "total passes": 140,
+            "play history": {
+                "250512231919": 304,
+                "250512232357": 304
+            },
+            "pass history": {
+                "250512231919": 140,
+                "250512232357": 140
+            },
+            "scores": {}
+        },
+        "4875320": {
+            "version": "[10K] Insane",
+            "sr": 4.83,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011329",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4875320",
+            "drain": 7.6,
+            "rice": 3029,
+            "ln": 0,
+            "players": [],
+            "total plays": 219,
+            "total passes": 90,
+            "play history": {
+                "250512231919": 219,
+                "250512232357": 219
+            },
+            "pass history": {
+                "250512231919": 90,
+                "250512232357": 90
+            },
+            "scores": {}
+        },
+        "4875548": {
+            "version": "[10K] The Last Sonata",
+            "sr": 5.83,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011330",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4875548",
+            "drain": 8.0,
+            "rice": 3876,
+            "ln": 0,
+            "players": [],
+            "total plays": 371,
+            "total passes": 88,
+            "play history": {
+                "250512231919": 371,
+                "250512232357": 371
+            },
+            "pass history": {
+                "250512231919": 88,
+                "250512232357": 88
+            },
+            "scores": {}
+        },
+        "4890664": {
+            "version": "[10K] Hyper",
+            "sr": 3.94,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011330",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4890664",
+            "drain": 7.3,
+            "rice": 2237,
+            "ln": 0,
+            "players": [],
+            "total plays": 296,
+            "total passes": 115,
+            "play history": {
+                "250512231919": 296,
+                "250512232357": 296
+            },
+            "pass history": {
+                "250512231919": 115,
+                "250512232357": 115
+            },
+            "scores": {}
+        },
+        "4893688": {
+            "version": "[10K] Easy",
+            "sr": 1.07,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011331",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4893688",
+            "drain": 6.0,
+            "rice": 296,
+            "ln": 23,
+            "players": [],
+            "total plays": 753,
+            "total passes": 161,
+            "play history": {
+                "250512231919": 753,
+                "250512232357": 753
+            },
+            "pass history": {
+                "250512231919": 161,
+                "250512232357": 161
+            },
+            "scores": {}
+        },
+        "4894075": {
+            "version": "[10K] Advanced",
+            "sr": 2.01,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011331",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4894075",
+            "drain": 6.6,
+            "rice": 988,
+            "ln": 16,
+            "players": [],
+            "total plays": 409,
+            "total passes": 157,
+            "play history": {
+                "250512231919": 409,
+                "250512232357": 409
+            },
+            "pass history": {
+                "250512231919": 157,
+                "250512232357": 157
+            },
+            "scores": {}
+        },
+        "4894076": {
+            "version": "[10K] Normal",
+            "sr": 1.5,
+            "keys": 10.0,
+            "mapper id": 10099934,
+            "status": 1,
+            "updated": "250222011331",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4894076",
+            "drain": 6.3,
+            "rice": 599,
+            "ln": 32,
+            "players": [],
+            "total plays": 370,
+            "total passes": 106,
+            "play history": {
+                "250512231919": 370,
+                "250512232357": 370
+            },
+            "pass history": {
+                "250512231919": 106,
+                "250512232357": 106
+            },
+            "scores": {}
+        }
+    }
+}

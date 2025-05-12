@@ -1,0 +1,31 @@
+{
+    "id": 31063883,
+    "name": "D4Y2",
+    "avatar url": "https://a.ppy.sh/31063883?1725377811.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "31063883240927155211": {
+            "uid": 31063883,
+            "bid": 4705176,
+            "time": "240927155211",
+            "mods": [
+                "9K"
+            ],
+            "combo": 314,
+            "passed": true,
+            "pp": 14.0251,
+            "acc": 0.9787395596051632,
+            "grade": "S",
+            "score": 887193,
+            "320": 247,
+            "300": 175,
+            "200": 10,
+            "100": 3,
+            "50": 0,
+            "0": 4
+        }
+    }
+}

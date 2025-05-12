@@ -1,0 +1,29 @@
+{
+    "id": 36201588,
+    "name": "Gg471",
+    "avatar url": "https://a.ppy.sh/36201588?1740774710.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "36201588250324171356": {
+            "uid": 36201588,
+            "bid": 4862377,
+            "time": "250324171356",
+            "mods": [],
+            "combo": 88,
+            "passed": true,
+            "pp": 18.2316,
+            "acc": 0.9330279232111692,
+            "grade": "A",
+            "score": 705729,
+            "320": 447,
+            "300": 240,
+            "200": 32,
+            "100": 12,
+            "50": 3,
+            "0": 30
+        }
+    }
+}

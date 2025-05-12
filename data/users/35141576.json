@@ -1,0 +1,57 @@
+{
+    "id": 35141576,
+    "name": "5rep",
+    "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35141576241012115152": {
+            "uid": 35141576,
+            "bid": 2759264,
+            "time": "241012115152",
+            "mods": [
+                "EZ",
+                "HT",
+                "NF",
+                "CL"
+            ],
+            "combo": 3,
+            "passed": true,
+            "pp": null,
+            "acc": 0.005366545159983799,
+            "grade": "D",
+            "score": 361,
+            "320": 4,
+            "300": 4,
+            "200": 1,
+            "100": 0,
+            "50": 1,
+            "0": 1636
+        },
+        "35141576241020130135": {
+            "uid": 35141576,
+            "bid": 2759274,
+            "time": "241020130135",
+            "mods": [
+                "EZ",
+                "HT",
+                "NF",
+                "CL"
+            ],
+            "combo": 1,
+            "passed": true,
+            "pp": null,
+            "acc": 0.0001668335001668335,
+            "grade": "D",
+            "score": 16,
+            "320": 0,
+            "300": 0,
+            "200": 0,
+            "100": 0,
+            "50": 1,
+            "0": 998
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "id": 19263308,
+    "name": "Thiago134",
+    "avatar url": "https://a.ppy.sh/19263308?1674417458.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "19263308250128012428": {
+            "uid": 19263308,
+            "bid": 4862374,
+            "time": "250128012428",
+            "mods": [
+                "CL"
+            ],
+            "combo": 106,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7716244725738397,
+            "grade": "C",
+            "score": 426639,
+            "320": 34,
+            "300": 148,
+            "200": 84,
+            "100": 15,
+            "50": 5,
+            "0": 30
+        }
+    }
+}

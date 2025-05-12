@@ -1,0 +1,32 @@
+{
+    "id": 35278782,
+    "name": "cooldude7064",
+    "avatar url": "https://a.ppy.sh/35278782?1740342365.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "35278782250306025741": {
+            "uid": 35278782,
+            "bid": 4984408,
+            "time": "250306025741",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 5,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.22497497497497498,
+            "grade": "D",
+            "score": 57782,
+            "320": 33,
+            "300": 61,
+            "200": 64,
+            "100": 35,
+            "50": 9,
+            "0": 464
+        }
+    }
+}

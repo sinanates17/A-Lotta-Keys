@@ -1,0 +1,116 @@
+{
+    "id": 2051390,
+    "title": "Pico Pico Ondo",
+    "artist": "UniChOrd",
+    "titleu": "ピコピコ音頭",
+    "artistu": "UniChØrd",
+    "favs": 40,
+    "desc": null,
+    "source": "D4DJ Groovy Mix",
+    "tags": "piko piko ondo dig delight direct drive dj japanese electronic pop jpop j-pop video mobile game vgm ユニコード 海原ミチル kaibara michiru 小岩井ことり koiwai kotori 一星ルミナ ichihoshi lumina 高橋花林 takahashi karin 四ノ宮心愛 shinomiya kokoa 由良朱合 yura akari 天堂はやて tendo hayate 天麻ゆうき tenma yuuki pandaboy bushiroad donuts 2023 summer campaign 10k2s 10+2k 10k+2 n+2 special style scratch dp double play",
+    "host id": 3427638,
+    "submitted": "230827030731",
+    "ranked": "250205180146",
+    "beatmaps": {
+        "4283889": {
+            "version": "[12K] 10K2S Insane",
+            "sr": 2.89,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "250129012659",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4283889",
+            "drain": 7.5,
+            "rice": 1005,
+            "ln": 31,
+            "players": [],
+            "total plays": 43,
+            "total passes": 27,
+            "play history": {
+                "250512231919": 43,
+                "250512232357": 43
+            },
+            "pass history": {
+                "250512231919": 27,
+                "250512232357": 27
+            },
+            "scores": {}
+        },
+        "4283890": {
+            "version": "[12K] 10K2S R-nother",
+            "sr": 3.3,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "250129012659",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4283890",
+            "drain": 8.0,
+            "rice": 1191,
+            "ln": 96,
+            "players": [],
+            "total plays": 204,
+            "total passes": 79,
+            "play history": {
+                "250512231919": 204,
+                "250512232357": 204
+            },
+            "pass history": {
+                "250512231919": 79,
+                "250512232357": 79
+            },
+            "scores": {}
+        },
+        "4284362": {
+            "version": "[12K] 10K2S Hard",
+            "sr": 2.21,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "250129012700",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4284362",
+            "drain": 7.0,
+            "rice": 710,
+            "ln": 24,
+            "players": [],
+            "total plays": 56,
+            "total passes": 27,
+            "play history": {
+                "250512231919": 56,
+                "250512232357": 56
+            },
+            "pass history": {
+                "250512231919": 27,
+                "250512232357": 27
+            },
+            "scores": {}
+        },
+        "4299905": {
+            "version": "[12K] 10K2S Normal",
+            "sr": 1.34,
+            "keys": 12.0,
+            "mapper id": 3427638,
+            "status": 1,
+            "updated": "250129012700",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4299905",
+            "drain": 6.5,
+            "rice": 361,
+            "ln": 37,
+            "players": [],
+            "total plays": 364,
+            "total passes": 78,
+            "play history": {
+                "250512231919": 364,
+                "250512232357": 364
+            },
+            "pass history": {
+                "250512231919": 78,
+                "250512232357": 78
+            },
+            "scores": {}
+        }
+    }
+}

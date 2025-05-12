@@ -1,0 +1,31 @@
+{
+    "id": 22565345,
+    "name": "ImReli",
+    "avatar url": "https://a.ppy.sh/22565345?1673672184.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "22565345250503191123": {
+            "uid": 22565345,
+            "bid": 4862377,
+            "time": "250503191123",
+            "mods": [
+                "CL"
+            ],
+            "combo": 323,
+            "passed": true,
+            "pp": 20.7966,
+            "acc": 0.957883923985619,
+            "grade": "S",
+            "score": 774414,
+            "320": 310,
+            "300": 294,
+            "200": 22,
+            "100": 7,
+            "50": 4,
+            "0": 12
+        }
+    }
+}

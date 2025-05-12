@@ -1,0 +1,31 @@
+{
+    "id": 22328335,
+    "name": "Brofriendfnf",
+    "avatar url": "https://a.ppy.sh/22328335?1722262999.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "22328335240929164052": {
+            "uid": 22328335,
+            "bid": 4705178,
+            "time": "240929164052",
+            "mods": [
+                "CL"
+            ],
+            "combo": 514,
+            "passed": true,
+            "pp": 25.9425,
+            "acc": 0.9508320726172466,
+            "grade": "S",
+            "score": 774569,
+            "320": 376,
+            "300": 215,
+            "200": 50,
+            "100": 12,
+            "50": 1,
+            "0": 7
+        }
+    }
+}

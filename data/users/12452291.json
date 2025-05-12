@@ -1,0 +1,31 @@
+{
+    "id": 12452291,
+    "name": "Krn_",
+    "avatar url": "https://a.ppy.sh/12452291?1690530873.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "12452291250226140559": {
+            "uid": 12452291,
+            "bid": 4174564,
+            "time": "250226140559",
+            "mods": [
+                "CL"
+            ],
+            "combo": 468,
+            "passed": true,
+            "pp": 95.6875,
+            "acc": 0.9534805890227577,
+            "grade": "S",
+            "score": 788256,
+            "320": 290,
+            "300": 161,
+            "200": 33,
+            "100": 5,
+            "50": 1,
+            "0": 8
+        }
+    }
+}

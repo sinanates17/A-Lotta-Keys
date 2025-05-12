@@ -1,0 +1,31 @@
+{
+    "id": 24258627,
+    "name": "tomnasjj",
+    "avatar url": "https://a.ppy.sh/24258627?1745259586.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "24258627250419233321": {
+            "uid": 24258627,
+            "bid": 4606985,
+            "time": "250419233321",
+            "mods": [
+                "CL"
+            ],
+            "combo": 222,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.5774509803921568,
+            "grade": "D",
+            "score": 298973,
+            "320": 18,
+            "300": 45,
+            "200": 36,
+            "100": 25,
+            "50": 17,
+            "0": 29
+        }
+    }
+}

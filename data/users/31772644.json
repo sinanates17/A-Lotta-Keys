@@ -1,0 +1,31 @@
+{
+    "id": 31772644,
+    "name": "[ Yuracawaii ]",
+    "avatar url": "https://a.ppy.sh/31772644?1746359652.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "31772644250512081551": {
+            "uid": 31772644,
+            "bid": 4862374,
+            "time": "250512081551",
+            "mods": [
+                "CL"
+            ],
+            "combo": 157,
+            "passed": true,
+            "pp": 7.44407,
+            "acc": 0.979957805907173,
+            "grade": "S",
+            "score": 855569,
+            "320": 247,
+            "300": 61,
+            "200": 2,
+            "100": 1,
+            "50": 0,
+            "0": 5
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "id": 2009596,
+    "title": "BONErr",
+    "artist": "SEBii",
+    "titleu": "BONErr",
+    "artistu": "SEBii",
+    "favs": 15,
+    "desc": null,
+    "source": "",
+    "tags": "cirnoulja boy fa featured artist mg mappers' guild mpg english hip hop hiphop hip-hop trap pop rap hyperpop experimental male vocalist freestyle vvss vvspipes youngkimj kimj 10k2s n+2 10k+2 10+2k dp double play scratch special style",
+    "host id": 18478864,
+    "submitted": "230614203106",
+    "ranked": "250301060513",
+    "beatmaps": {
+        "4180824": {
+            "version": "[12K] Im EASyy (10k2s)",
+            "sr": 1.31,
+            "keys": 12.0,
+            "mapper id": 18478864,
+            "status": 1,
+            "updated": "250221181858",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4180824",
+            "drain": 6.0,
+            "rice": 395,
+            "ln": 0,
+            "players": [],
+            "total plays": 126,
+            "total passes": 66,
+            "play history": {
+                "250512231919": 126,
+                "250512232357": 126
+            },
+            "pass history": {
+                "250512231919": 66,
+                "250512232357": 66
+            },
+            "scores": {}
+        },
+        "4180825": {
+            "version": "[12K] Im HARdd (10k2s)",
+            "sr": 2.69,
+            "keys": 12.0,
+            "mapper id": 18478864,
+            "status": 1,
+            "updated": "250221181858",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4180825",
+            "drain": 8.0,
+            "rice": 873,
+            "ln": 0,
+            "players": [],
+            "total plays": 221,
+            "total passes": 49,
+            "play history": {
+                "250512231919": 221,
+                "250512232357": 221
+            },
+            "pass history": {
+                "250512231919": 49,
+                "250512232357": 49
+            },
+            "scores": {}
+        },
+        "4180826": {
+            "version": "[12K] Im NORMAll (10k2s)",
+            "sr": 1.93,
+            "keys": 12.0,
+            "mapper id": 18478864,
+            "status": 1,
+            "updated": "250221181859",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4180826",
+            "drain": 7.0,
+            "rice": 641,
+            "ln": 0,
+            "players": [],
+            "total plays": 56,
+            "total passes": 29,
+            "play history": {
+                "250512231919": 56,
+                "250512232357": 56
+            },
+            "pass history": {
+                "250512231919": 29,
+                "250512232357": 29
+            },
+            "scores": {}
+        },
+        "4205853": {
+            "version": "[12K] Cirno's SOFtt (10k2s)",
+            "sr": 1.03,
+            "keys": 12.0,
+            "mapper id": 20316975,
+            "status": 1,
+            "updated": "250221181859",
+            "deleted": null,
+            "url": "https://osu.ppy.sh/beatmaps/4205853",
+            "drain": 6.0,
+            "rice": 178,
+            "ln": 0,
+            "players": [],
+            "total plays": 252,
+            "total passes": 66,
+            "play history": {
+                "250512231919": 252,
+                "250512232357": 252
+            },
+            "pass history": {
+                "250512231919": 66,
+                "250512232357": 66
+            },
+            "scores": {}
+        }
+    }
+}

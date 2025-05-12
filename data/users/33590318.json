@@ -1,0 +1,29 @@
+{
+    "id": 33590318,
+    "name": "FBIOverlor",
+    "avatar url": "https://a.ppy.sh/33590318?1731581643.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "33590318250226140930": {
+            "uid": 33590318,
+            "bid": 4974665,
+            "time": "250226140930",
+            "mods": [],
+            "combo": 97,
+            "passed": true,
+            "pp": 3.02983,
+            "acc": 0.9636363636363636,
+            "grade": "S",
+            "score": 817753,
+            "320": 159,
+            "300": 100,
+            "200": 9,
+            "100": 0,
+            "50": 0,
+            "0": 7
+        }
+    }
+}

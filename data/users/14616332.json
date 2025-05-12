@@ -1,0 +1,31 @@
+{
+    "id": 14616332,
+    "name": "uSPINE",
+    "avatar url": "https://a.ppy.sh/14616332?1735135512.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "14616332241226002730": {
+            "uid": 14616332,
+            "bid": 4862374,
+            "time": "241226002730",
+            "mods": [
+                "CL"
+            ],
+            "combo": 109,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.7816455696202531,
+            "grade": "C",
+            "score": 472824,
+            "320": 88,
+            "300": 123,
+            "200": 47,
+            "100": 13,
+            "50": 2,
+            "0": 43
+        }
+    }
+}

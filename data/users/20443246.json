@@ -1,0 +1,29 @@
+{
+    "id": 20443246,
+    "name": "Deu07",
+    "avatar url": "https://a.ppy.sh/20443246?1714585544.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "20443246250416164913": {
+            "uid": 20443246,
+            "bid": 4606985,
+            "time": "250416164913",
+            "mods": [],
+            "combo": 43,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.8314465408805032,
+            "grade": "B",
+            "score": 476624,
+            "320": 80,
+            "300": 122,
+            "200": 25,
+            "100": 1,
+            "50": 8,
+            "0": 29
+        }
+    }
+}

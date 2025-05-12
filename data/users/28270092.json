@@ -1,0 +1,32 @@
+{
+    "id": 28270092,
+    "name": "NessieSolos",
+    "avatar url": "https://a.ppy.sh/28270092?1731818151.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "28270092241207193243": {
+            "uid": 28270092,
+            "bid": 4862376,
+            "time": "241207193243",
+            "mods": [
+                "NF",
+                "DT"
+            ],
+            "combo": 53,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.36495293265749457,
+            "grade": "D",
+            "score": 32154,
+            "320": 100,
+            "300": 178,
+            "200": 200,
+            "100": 170,
+            "50": 216,
+            "0": 517
+        }
+    }
+}

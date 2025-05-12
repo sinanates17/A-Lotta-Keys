@@ -1,0 +1,29 @@
+{
+    "id": 29286649,
+    "name": "XYYX",
+    "avatar url": "https://a.ppy.sh/29286649?1746820447.png",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "29286649250512163156": {
+            "uid": 29286649,
+            "bid": 5029129,
+            "time": "250512163156",
+            "mods": [],
+            "combo": 92,
+            "passed": true,
+            "pp": 3.72742,
+            "acc": 0.8948598130841121,
+            "grade": "B",
+            "score": 614775,
+            "320": 206,
+            "300": 150,
+            "200": 38,
+            "100": 3,
+            "50": 4,
+            "0": 27
+        }
+    }
+}

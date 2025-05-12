@@ -1,0 +1,32 @@
+{
+    "id": 16817377,
+    "name": "WhereYourHeadAt",
+    "avatar url": "https://a.ppy.sh/16817377?1741787634.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "16817377241004134305": {
+            "uid": 16817377,
+            "bid": 4705177,
+            "time": "241004134305",
+            "mods": [
+                "NF",
+                "CL"
+            ],
+            "combo": 8,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.29512779552715657,
+            "grade": "D",
+            "score": 73480,
+            "320": 22,
+            "300": 146,
+            "200": 228,
+            "100": 128,
+            "50": 41,
+            "0": 687
+        }
+    }
+}

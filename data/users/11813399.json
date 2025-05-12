@@ -1,0 +1,31 @@
+{
+    "id": 11813399,
+    "name": "mangans",
+    "avatar url": "https://a.ppy.sh/11813399?1737722488.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "11813399250206062931": {
+            "uid": 11813399,
+            "bid": 4705178,
+            "time": "250206062931",
+            "mods": [
+                "CL"
+            ],
+            "combo": 165,
+            "passed": true,
+            "pp": 21.3054,
+            "acc": 0.93267776096823,
+            "grade": "A",
+            "score": 694071,
+            "320": 316,
+            "300": 279,
+            "200": 29,
+            "100": 5,
+            "50": 3,
+            "0": 29
+        }
+    }
+}

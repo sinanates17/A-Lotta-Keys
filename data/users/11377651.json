@@ -1,0 +1,31 @@
+{
+    "id": 11377651,
+    "name": "Balance Maker",
+    "avatar url": "https://a.ppy.sh/11377651?1745914891.jpeg",
+    "days ago": 0,
+    "tracking": true,
+    "beatmapsets": {},
+    "beatmap plays history": {},
+    "scores": {
+        "11377651250320200638": {
+            "uid": 11377651,
+            "bid": 4981263,
+            "time": "250320200638",
+            "mods": [
+                "CL"
+            ],
+            "combo": 8,
+            "passed": true,
+            "pp": 0.0,
+            "acc": 0.4818181818181818,
+            "grade": "D",
+            "score": 287524,
+            "320": 8,
+            "300": 13,
+            "200": 7,
+            "100": 2,
+            "50": 1,
+            "0": 24
+        }
+    }
+}
