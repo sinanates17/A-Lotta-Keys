@@ -43,7 +43,7 @@ class Helper:
             'updated': beatmap.last_updated.strftime("%y%m%d%H%M%S"),
             'deleted': None,
             'url': beatmap.url,
-            'drain': beatmap.drain,
+            'length': beatmap.total_length,
             'rice': beatmap.count_circles,
             'ln': beatmap.count_sliders,
             'players': [],
@@ -123,22 +123,36 @@ class Helper:
 
         return user_dict
 
-    def cum_search_beatmapsets(self,**kwargs) -> list[Ossapi.beatmapset]:
+    def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)
         result = self.osu_api.search_beatmapsets(**kwargs)
         total = result.beatmapsets
         page = 1
         print(f'Page {page}') #Temporary until I implement a logger
 
-        while False:#result.cursor is not None:
+        while result.cursor is not None:
             sleep(REQUEST_INTERVAL)
             page += 1
             print(f'Page {page}') #Temporary until I implement a logger
             result = self.osu_api.search_beatmapsets(**kwargs, cursor=result.cursor)
 
             for beatmapset in result.beatmapsets:
-                #print(beatmapset.title) #Temporary until I implement a logger
+                if isinstance(end_date, datetime):
+                    if beatmapset.ranked.value in [1,4]:
+                        if beatmapset.ranked_date > end_date: continue
+                    else:
+                        if beatmapset.last_updated > end_date: continue
+
+                if isinstance(start_date, datetime):
+                    if beatmapset.ranked.value in [1,4]:
+                        if beatmapset.ranked_date < start_date: 
+                            result.cursor = None; break
+                    else:
+                        if beatmapset.last_updated < start_date: 
+                            result.cursor = None; break
+
                 total.append(beatmapset)
+
 
         return total
     
