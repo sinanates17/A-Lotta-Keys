@@ -4,8 +4,15 @@
     "avatar url": "https://osu.ppy.sh/images/layout/avatar-guest@2x.png",
     "days ago": 0,
     "tracking": true,
-    "beatmapsets": {},
-    "beatmap plays history": {},
+    "beatmapsets": {
+        "2337445": [
+            "5018871"
+        ]
+    },
+    "beatmap plays history": {
+        "250514025049": 0,
+        "250515152111": 0
+    },
     "scores": {
         "17292484250220095451": {
             "uid": 17292484,

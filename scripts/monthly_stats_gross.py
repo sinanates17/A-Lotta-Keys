@@ -1,15 +1,14 @@
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from dateutil.relativedelta import relativedelta
 from data.utils import Helper
-from config import PATH_DATA
+from config import PATH_DATA, PATH_USERS
 from os import listdir
-import pandas as pd
 import json
 
 def main():
-    def _generate(mapsets):
+    def _generate_gross(mapsets, legacy=False):
         cum_stats = {
             k: {"plays":0, 
                 "passes":0, 
@@ -23,6 +22,7 @@ def main():
         cum_stats["top beatmaps"] = None
         cum_stats["top players"] = None
         cum_stats["new beatmaps"] = {}
+        cum_stats["legacy"] = legacy
 
         for mapset in mapsets:
             msid = mapset.id
@@ -52,6 +52,15 @@ def main():
         
         return cum_stats
     
+    def _generate_fine(cum_stats):
+        
+        for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
+            with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
+                user = json.load(f)
+        
+        return cum_stats
+
     helper = Helper()
     output = "cumulative_stats_timeline.json"
     now = datetime.now(timezone.utc)
@@ -69,7 +78,8 @@ def main():
             query="keys>3",
             explicit_content="show")
         
-        stats = _generate(mapsets=mapsets)
+        stats = _generate_gross(mapsets=mapsets)
+        stats = _generate_fine(stats=stats)
         cum_stats_timeline[str_now] = stats
         
     else:
@@ -85,7 +95,7 @@ def main():
         while start > birth:
             str_time = end.strftime("%y%m%d%H%M%S")
             target_mapsets = [mapset for mapset in mapsets if mapset.ranked_date > start and mapset.ranked_date < end]
-            stats =  _generate(target_mapsets)
+            stats =  _generate_gross(target_mapsets, legacy=True)
             temp_timeline.append((str_time, stats))
             end = start
             start = start - relativedelta(months=1)

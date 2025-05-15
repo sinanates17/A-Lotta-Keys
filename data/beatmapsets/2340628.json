@@ -4,7 +4,7 @@
     "artist": "gmtn. (witch's slave)",
     "titleu": "furioso melodia (2017 VIP)",
     "artistu": "gmtn. (witch's slave)",
-    "favs": 56,
+    "favs": 57,
     "desc": null,
     "source": "THE BMS OF FIGHTERS 2010 - 場外乱闘編 -",
     "tags": "electronic instrumental gothic hardcore hardstyle bof bof2010 xredyratyx -ryu- ryu7w7 menphiss melodicheart purplrat",
@@ -21,19 +21,23 @@
             "updated": "250420234837",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5029128",
-            "drain": 6.8,
+            "length": 142,
             "rice": 876,
             "ln": 115,
             "players": [],
-            "total plays": 99,
-            "total passes": 44,
+            "total plays": 109,
+            "total passes": 51,
             "play history": {
                 "250512231919": 99,
-                "250512232357": 99
+                "250512232357": 99,
+                "250514025017": 104,
+                "250515152056": 109
             },
             "pass history": {
                 "250512231919": 44,
-                "250512232357": 44
+                "250512232357": 44,
+                "250514025017": 47,
+                "250515152056": 51
             },
             "scores": {
                 "6660735250509053700": {
@@ -760,19 +764,23 @@
             "updated": "250420234837",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5029129",
-            "drain": 6.2,
+            "length": 142,
             "rice": 384,
             "ln": 22,
             "players": [],
-            "total plays": 197,
-            "total passes": 53,
+            "total plays": 209,
+            "total passes": 54,
             "play history": {
                 "250512231919": 197,
-                "250512232357": 197
+                "250512232357": 197,
+                "250514025017": 206,
+                "250515152056": 209
             },
             "pass history": {
                 "250512231919": 53,
-                "250512232357": 53
+                "250512232357": 53,
+                "250514025017": 54,
+                "250515152056": 54
             },
             "scores": {
                 "6660735250506101806": {
@@ -1773,19 +1781,23 @@
             "updated": "250420234837",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5029130",
-            "drain": 6.6,
+            "length": 142,
             "rice": 629,
             "ln": 45,
             "players": [],
-            "total plays": 72,
-            "total passes": 26,
+            "total plays": 77,
+            "total passes": 30,
             "play history": {
                 "250512231919": 72,
-                "250512232357": 72
+                "250512232357": 72,
+                "250514025017": 74,
+                "250515152056": 77
             },
             "pass history": {
                 "250512231919": 26,
-                "250512232357": 26
+                "250512232357": 26,
+                "250514025017": 27,
+                "250515152056": 30
             },
             "scores": {
                 "6660735250508013250": {
@@ -2292,19 +2304,23 @@
             "updated": "250420234838",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5029350",
-            "drain": 7.1,
+            "length": 142,
             "rice": 1596,
             "ln": 54,
             "players": [],
-            "total plays": 85,
-            "total passes": 57,
+            "total plays": 99,
+            "total passes": 63,
             "play history": {
                 "250512231919": 85,
-                "250512232357": 85
+                "250512232357": 85,
+                "250514025017": 95,
+                "250515152056": 99
             },
             "pass history": {
                 "250512231919": 57,
-                "250512232357": 57
+                "250512232357": 57,
+                "250514025017": 61,
+                "250515152056": 63
             },
             "scores": {
                 "6660735250511041617": {
@@ -3231,19 +3247,23 @@
             "updated": "250420234840",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5030803",
-            "drain": 8.0,
+            "length": 142,
             "rice": 2251,
             "ln": 447,
             "players": [],
-            "total plays": 104,
-            "total passes": 53,
+            "total plays": 114,
+            "total passes": 56,
             "play history": {
                 "250512231919": 104,
-                "250512232357": 104
+                "250512232357": 104,
+                "250514025017": 111,
+                "250515152056": 114
             },
             "pass history": {
                 "250512231919": 53,
-                "250512232357": 53
+                "250512232357": 53,
+                "250514025017": 54,
+                "250515152056": 56
             },
             "scores": {
                 "4101254250506234630": {
@@ -3985,19 +4005,23 @@
             "updated": "250420234840",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5030804",
-            "drain": 7.5,
+            "length": 142,
             "rice": 1754,
             "ln": 350,
             "players": [],
-            "total plays": 84,
-            "total passes": 53,
+            "total plays": 89,
+            "total passes": 57,
             "play history": {
                 "250512231919": 84,
-                "250512232357": 84
+                "250512232357": 84,
+                "250514025017": 87,
+                "250515152056": 89
             },
             "pass history": {
                 "250512231919": 53,
-                "250512232357": 53
+                "250512232357": 53,
+                "250514025017": 55,
+                "250515152056": 57
             },
             "scores": {
                 "6660735250512125957": {

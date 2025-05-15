@@ -4,7 +4,7 @@
     "artist": "Shika-bu",
     "titleu": "シカ色デイズ (TV Size)",
     "artistu": "シカ部",
-    "favs": 241,
+    "favs": 243,
     "desc": null,
     "source": "しかのこのこのここしたんたん",
     "tags": "anime opening theme op deer club deer-colored days colored shikanoko nokonoko koshitantan my deer friend nokotan vocals やぎぬまかな yaginuma kana 和賀裕希 yuxuki yuuki waga japanese pop jpop j-pop 鹿乃子のこ 潘めぐみ 虎視虎子 藤田咲 虎視餡子 田辺留依 馬車芽めめ 和泉風花 shika noko han megumi koshi torako fujita saki koshi anko tanabe rui bashame meme izumi fuka",
@@ -21,19 +21,23 @@
             "updated": "240919001140",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4705175",
-            "drain": 7.5,
+            "length": 88,
             "rice": 776,
             "ln": 142,
             "players": [],
-            "total plays": 790,
-            "total passes": 333,
+            "total plays": 799,
+            "total passes": 338,
             "play history": {
                 "250512231919": 790,
-                "250512232357": 790
+                "250512232357": 790,
+                "250514025017": 793,
+                "250515152056": 799
             },
             "pass history": {
                 "250512231919": 333,
-                "250512232357": 333
+                "250512232357": 333,
+                "250514025017": 335,
+                "250515152056": 338
             },
             "scores": {
                 "6660735250510083258": {
@@ -5576,19 +5580,23 @@
             "updated": "240919001141",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4705176",
-            "drain": 6.5,
+            "length": 88,
             "rice": 353,
             "ln": 43,
             "players": [],
-            "total plays": 2377,
+            "total plays": 2386,
             "total passes": 394,
             "play history": {
                 "250512231919": 2377,
-                "250512232357": 2377
+                "250512232357": 2377,
+                "250514025017": 2377,
+                "250515152056": 2386
             },
             "pass history": {
                 "250512231919": 394,
-                "250512232357": 394
+                "250512232357": 394,
+                "250514025017": 394,
+                "250515152056": 394
             },
             "scores": {
                 "6660735250507100114": {
@@ -10473,7 +10481,7 @@
             "updated": "240919001141",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4705177",
-            "drain": 8.0,
+            "length": 88,
             "rice": 980,
             "ln": 272,
             "players": [],
@@ -10481,11 +10489,15 @@
             "total passes": 395,
             "play history": {
                 "250512231919": 1189,
-                "250512232357": 1189
+                "250512232357": 1189,
+                "250514025017": 1189,
+                "250515152056": 1189
             },
             "pass history": {
                 "250512231919": 395,
-                "250512232357": 395
+                "250512232357": 395,
+                "250514025017": 395,
+                "250515152056": 395
             },
             "scores": {
                 "6660735250511123407": {
@@ -17212,7 +17224,7 @@
             "updated": "240919001142",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4705178",
-            "drain": 7.0,
+            "length": 88,
             "rice": 558,
             "ln": 103,
             "players": [],
@@ -17220,11 +17232,15 @@
             "total passes": 614,
             "play history": {
                 "250512231919": 1495,
-                "250512232357": 1495
+                "250512232357": 1495,
+                "250514025017": 1495,
+                "250515152056": 1495
             },
             "pass history": {
                 "250512231919": 614,
-                "250512232357": 614
+                "250512232357": 614,
+                "250514025017": 614,
+                "250515152056": 614
             },
             "scores": {
                 "6660735250508102618": {

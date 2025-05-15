@@ -4,7 +4,7 @@
     "artist": "Kurokotei",
     "titleu": "Galaxy Collapse",
     "artistu": "黒皇帝",
-    "favs": 38,
+    "favs": 39,
     "desc": null,
     "source": "東方星蓮船　～ Undefined Fantastic Object.",
     "tags": "-enma- chordstream somebody scream electronic instrumental video game speedcore remix arrangement terrorcore marathon 東方project touhou project 太田顺也 oota jun'ya team 上海アリス幻樂団 team shanghai alice zun 2hu seirensen 12 th12 封獣ぬえ houjuu nue extra stage boss 平安のエイリアン heian no eirian alien yuuyake ゆうやけ pump it up m ufo",
@@ -21,19 +21,23 @@
             "updated": "250423180933",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5042814",
-            "drain": 8.3,
+            "length": 401,
             "rice": 7182,
             "ln": 463,
             "players": [],
-            "total plays": 295,
-            "total passes": 115,
+            "total plays": 314,
+            "total passes": 123,
             "play history": {
                 "250512231919": 295,
-                "250512232357": 295
+                "250512232357": 295,
+                "250514025017": 303,
+                "250515152056": 314
             },
             "pass history": {
                 "250512231919": 115,
-                "250512232357": 115
+                "250512232357": 115,
+                "250514025017": 118,
+                "250515152056": 123
             },
             "scores": {
                 "6660735250510095527": {

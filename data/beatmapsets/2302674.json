@@ -4,7 +4,7 @@
     "artist": "UNDEAD CORPORATION",
     "titleu": "ゆめ",
     "artistu": "UNDEAD CORPORATION",
-    "favs": 13,
+    "favs": 14,
     "desc": null,
     "source": "",
     "tags": "鬼ーoniー toho complete box dream パインツリー pinetree japanese featured artist fa 東方 touhou mg mpg mappers' guild piano instrumental japanese video game",
@@ -21,19 +21,23 @@
             "updated": "250423154544",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4921676",
-            "drain": 7.0,
+            "length": 39,
             "rice": 175,
             "ln": 1,
             "players": [],
-            "total plays": 198,
-            "total passes": 73,
+            "total plays": 203,
+            "total passes": 74,
             "play history": {
                 "250512231919": 198,
-                "250512232357": 198
+                "250512232357": 198,
+                "250514025017": 200,
+                "250515152056": 203
             },
             "pass history": {
                 "250512231919": 73,
-                "250512232357": 73
+                "250512232357": 73,
+                "250514025017": 73,
+                "250515152056": 74
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250423154544",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4922563",
-            "drain": 6.0,
+            "length": 39,
             "rice": 52,
             "ln": 2,
             "players": [],
-            "total plays": 224,
-            "total passes": 114,
+            "total plays": 228,
+            "total passes": 115,
             "play history": {
                 "250512231919": 224,
-                "250512232357": 224
+                "250512232357": 224,
+                "250514025017": 226,
+                "250515152056": 228
             },
             "pass history": {
                 "250512231919": 114,
-                "250512232357": 114
+                "250512232357": 114,
+                "250514025017": 114,
+                "250515152056": 115
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250423154545",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4922564",
-            "drain": 6.5,
+            "length": 39,
             "rice": 107,
             "ln": 2,
             "players": [],
-            "total plays": 137,
-            "total passes": 39,
+            "total plays": 142,
+            "total passes": 40,
             "play history": {
                 "250512231919": 137,
-                "250512232357": 137
+                "250512232357": 137,
+                "250514025017": 138,
+                "250515152056": 142
             },
             "pass history": {
                 "250512231919": 39,
-                "250512232357": 39
+                "250512232357": 39,
+                "250514025017": 39,
+                "250515152056": 40
             },
             "scores": {}
         }

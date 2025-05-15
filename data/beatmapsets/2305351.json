@@ -4,7 +4,7 @@
     "artist": "C418",
     "titleu": "Key",
     "artistu": "C418",
-    "favs": 94,
+    "favs": 95,
     "desc": null,
     "source": "Minecraft",
     "tags": "piano calm ambient volume alpha videogame daniel rosenfeld instrumental video game music vgm soundtrack ost original",
@@ -21,19 +21,23 @@
             "updated": "250216191359",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4928843",
-            "drain": 7.0,
+            "length": 61,
             "rice": 1,
             "ln": 74,
             "players": [],
-            "total plays": 982,
-            "total passes": 296,
+            "total plays": 995,
+            "total passes": 298,
             "play history": {
                 "250512231919": 982,
-                "250512232357": 982
+                "250512232357": 982,
+                "250514025017": 993,
+                "250515152056": 995
             },
             "pass history": {
                 "250512231919": 296,
-                "250512232357": 296
+                "250512232357": 296,
+                "250514025017": 298,
+                "250515152056": 298
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250216191400",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4952911",
-            "drain": 6.0,
+            "length": 61,
             "rice": 36,
             "ln": 21,
             "players": [],
-            "total plays": 1693,
+            "total plays": 1702,
             "total passes": 416,
             "play history": {
                 "250512231919": 1693,
-                "250512232357": 1693
+                "250512232357": 1693,
+                "250514025017": 1702,
+                "250515152056": 1702
             },
             "pass history": {
                 "250512231919": 416,
-                "250512232357": 416
+                "250512232357": 416,
+                "250514025017": 416,
+                "250515152056": 416
             },
             "scores": {}
         }

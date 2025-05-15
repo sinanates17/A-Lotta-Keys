@@ -4,7 +4,7 @@
     "artist": "roop",
     "titleu": "Thank You Space Cowboy",
     "artistu": "roop",
-    "favs": 32,
+    "favs": 31,
     "desc": null,
     "source": "VERSUS",
     "tags": "acid jazz instrumental bms strlabel n+2 14k2s 14k+2 14k maniac space mix scratch special style",
@@ -21,7 +21,7 @@
             "updated": "250402151137",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5010982",
-            "drain": 7.0,
+            "length": 79,
             "rice": 544,
             "ln": 0,
             "players": [],
@@ -29,11 +29,15 @@
             "total passes": 29,
             "play history": {
                 "250512231919": 227,
-                "250512232357": 227
+                "250512232357": 227,
+                "250514025017": 227,
+                "250515152056": 227
             },
             "pass history": {
                 "250512231919": 29,
-                "250512232357": 29
+                "250512232357": 29,
+                "250514025017": 29,
+                "250515152056": 29
             },
             "scores": {}
         },
@@ -46,7 +50,7 @@
             "updated": "250402151137",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5011484",
-            "drain": 6.0,
+            "length": 79,
             "rice": 388,
             "ln": 0,
             "players": [],
@@ -54,11 +58,15 @@
             "total passes": 44,
             "play history": {
                 "250512231919": 95,
-                "250512232357": 95
+                "250512232357": 95,
+                "250514025017": 95,
+                "250515152056": 95
             },
             "pass history": {
                 "250512231919": 44,
-                "250512232357": 44
+                "250512232357": 44,
+                "250514025017": 44,
+                "250515152056": 44
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250402151138",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5011862",
-            "drain": 4.0,
+            "length": 79,
             "rice": 59,
             "ln": 0,
             "players": [],
-            "total plays": 524,
-            "total passes": 82,
+            "total plays": 647,
+            "total passes": 99,
             "play history": {
                 "250512231919": 524,
-                "250512232357": 524
+                "250512232357": 524,
+                "250514025017": 527,
+                "250515152056": 647
             },
             "pass history": {
                 "250512231919": 82,
-                "250512232357": 82
+                "250512232357": 82,
+                "250514025017": 83,
+                "250515152056": 99
             },
             "scores": {}
         },
@@ -96,7 +108,7 @@
             "updated": "250402151138",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5013551",
-            "drain": 5.0,
+            "length": 79,
             "rice": 241,
             "ln": 0,
             "players": [],
@@ -104,11 +116,15 @@
             "total passes": 28,
             "play history": {
                 "250512231919": 63,
-                "250512232357": 63
+                "250512232357": 63,
+                "250514025017": 63,
+                "250515152056": 63
             },
             "pass history": {
                 "250512231919": 28,
-                "250512232357": 28
+                "250512232357": 28,
+                "250514025017": 28,
+                "250515152056": 28
             },
             "scores": {}
         },
@@ -121,19 +137,23 @@
             "updated": "250402151139",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5013557",
-            "drain": 4.5,
+            "length": 79,
             "rice": 112,
             "ln": 0,
             "players": [],
-            "total plays": 81,
-            "total passes": 18,
+            "total plays": 96,
+            "total passes": 23,
             "play history": {
                 "250512231919": 81,
-                "250512232357": 81
+                "250512232357": 81,
+                "250514025017": 84,
+                "250515152056": 96
             },
             "pass history": {
                 "250512231919": 18,
-                "250512232357": 18
+                "250512232357": 18,
+                "250514025017": 18,
+                "250515152056": 23
             },
             "scores": {}
         }

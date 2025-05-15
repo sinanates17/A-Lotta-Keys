@@ -4,7 +4,7 @@
     "artist": "Noisestorm",
     "titleu": "Crab Rave",
     "artistu": "Noisestorm",
-    "favs": 89,
+    "favs": 95,
     "desc": null,
     "source": "",
     "tags": "monstercat featured artist fa mappers' guild mg mpg is gone meme electronic instrumental house dance 10+8k 8k10k 8+10k 4k10k4k 4+10+4k",
@@ -21,19 +21,23 @@
             "updated": "250413190740",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5013742",
-            "drain": 7.5,
+            "length": 153,
             "rice": 538,
             "ln": 262,
             "players": [],
-            "total plays": 158,
+            "total plays": 159,
             "total passes": 47,
             "play history": {
                 "250512231919": 158,
-                "250512232357": 158
+                "250512232357": 158,
+                "250514025017": 159,
+                "250515152056": 159
             },
             "pass history": {
                 "250512231919": 47,
-                "250512232357": 47
+                "250512232357": 47,
+                "250514025017": 47,
+                "250515152056": 47
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250413190740",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5013743",
-            "drain": 5.0,
+            "length": 152,
             "rice": 157,
             "ln": 69,
             "players": [],
-            "total plays": 369,
-            "total passes": 64,
+            "total plays": 382,
+            "total passes": 66,
             "play history": {
                 "250512231919": 369,
-                "250512232357": 369
+                "250512232357": 369,
+                "250514025017": 374,
+                "250515152056": 382
             },
             "pass history": {
                 "250512231919": 64,
-                "250512232357": 64
+                "250512232357": 64,
+                "250514025017": 65,
+                "250515152056": 66
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250413190741",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5013843",
-            "drain": 6.0,
+            "length": 153,
             "rice": 386,
             "ln": 28,
             "players": [],
-            "total plays": 68,
-            "total passes": 21,
+            "total plays": 79,
+            "total passes": 27,
             "play history": {
                 "250512231919": 68,
-                "250512232357": 68
+                "250512232357": 68,
+                "250514025017": 77,
+                "250515152056": 79
             },
             "pass history": {
                 "250512231919": 21,
-                "250512232357": 21
+                "250512232357": 21,
+                "250514025017": 26,
+                "250515152056": 27
             },
             "scores": {}
         },
@@ -96,19 +108,23 @@
             "updated": "250413190741",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5014468",
-            "drain": 7.0,
+            "length": 153,
             "rice": 562,
             "ln": 46,
             "players": [],
-            "total plays": 54,
+            "total plays": 55,
             "total passes": 23,
             "play history": {
                 "250512231919": 54,
-                "250512232357": 54
+                "250512232357": 54,
+                "250514025017": 54,
+                "250515152056": 55
             },
             "pass history": {
                 "250512231919": 23,
-                "250512232357": 23
+                "250512232357": 23,
+                "250514025017": 23,
+                "250515152056": 23
             },
             "scores": {}
         }

@@ -4,7 +4,7 @@
     "artist": "YOASOBI",
     "titleu": "アイドル",
     "artistu": "YOASOBI",
-    "favs": 232,
+    "favs": 240,
     "desc": null,
     "source": "【推しの子】",
     "tags": "lung_p lungp - minato aqua - muses emida upan timbergling anime japanese onta_bekasi -_inaba_meguru oshi no ko my star idol ln longnote",
@@ -21,19 +21,23 @@
             "updated": "250502041919",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4099236",
-            "drain": 7.0,
+            "length": 210,
             "rice": 2531,
             "ln": 1233,
             "players": [],
-            "total plays": 53,
-            "total passes": 24,
+            "total plays": 66,
+            "total passes": 25,
             "play history": {
                 "250512231919": 53,
-                "250512232357": 53
+                "250512232357": 53,
+                "250514025017": 59,
+                "250515152056": 66
             },
             "pass history": {
                 "250512231919": 24,
-                "250512232357": 24
+                "250512232357": 24,
+                "250514025017": 25,
+                "250515152056": 25
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250502041925",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4108041",
-            "drain": 7.0,
+            "length": 210,
             "rice": 1286,
             "ln": 882,
             "players": [],
-            "total plays": 44,
-            "total passes": 25,
+            "total plays": 55,
+            "total passes": 31,
             "play history": {
                 "250512231919": 44,
-                "250512232357": 44
+                "250512232357": 44,
+                "250514025017": 52,
+                "250515152056": 55
             },
             "pass history": {
                 "250512231919": 25,
-                "250512232357": 25
+                "250512232357": 25,
+                "250514025017": 30,
+                "250515152056": 31
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250502041925",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4108042",
-            "drain": 7.0,
+            "length": 210,
             "rice": 785,
             "ln": 628,
             "players": [],
-            "total plays": 74,
-            "total passes": 29,
+            "total plays": 97,
+            "total passes": 34,
             "play history": {
                 "250512231919": 74,
-                "250512232357": 74
+                "250512232357": 74,
+                "250514025017": 80,
+                "250515152056": 97
             },
             "pass history": {
                 "250512231919": 29,
-                "250512232357": 29
+                "250512232357": 29,
+                "250514025017": 31,
+                "250515152056": 34
             },
             "scores": {}
         }

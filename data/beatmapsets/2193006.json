@@ -4,7 +4,7 @@
     "artist": "you",
     "titleu": "Wake Up",
     "artistu": "you",
-    "favs": 75,
+    "favs": 76,
     "desc": null,
     "source": "",
     "tags": "diamond smile j-neration fa featured artist happy hardcore electronic instrumental jneration jnex-0001 track 1 one jcore j-core mappers' guild mg mpg pms rice",
@@ -21,7 +21,7 @@
             "updated": "240716075931",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4639252",
-            "drain": 6.0,
+            "length": 37,
             "rice": 116,
             "ln": 6,
             "players": [],
@@ -29,11 +29,15 @@
             "total passes": 1019,
             "play history": {
                 "250512231919": 3061,
-                "250512232357": 3061
+                "250512232357": 3061,
+                "250514025017": 3061,
+                "250515152056": 3061
             },
             "pass history": {
                 "250512231919": 1019,
-                "250512232357": 1019
+                "250512232357": 1019,
+                "250514025017": 1019,
+                "250515152056": 1019
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "240716075931",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4639253",
-            "drain": 8.0,
+            "length": 37,
             "rice": 509,
             "ln": 35,
             "players": [],
-            "total plays": 1018,
-            "total passes": 531,
+            "total plays": 1027,
+            "total passes": 540,
             "play history": {
                 "250512231919": 1018,
-                "250512232357": 1018
+                "250512232357": 1018,
+                "250514025017": 1018,
+                "250515152056": 1027
             },
             "pass history": {
                 "250512231919": 531,
-                "250512232357": 531
+                "250512232357": 531,
+                "250514025017": 531,
+                "250515152056": 540
             },
             "scores": {}
         },
@@ -71,7 +79,7 @@
             "updated": "240716075932",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4639254",
-            "drain": 7.0,
+            "length": 37,
             "rice": 260,
             "ln": 22,
             "players": [],
@@ -79,11 +87,15 @@
             "total passes": 563,
             "play history": {
                 "250512231919": 1117,
-                "250512232357": 1117
+                "250512232357": 1117,
+                "250514025017": 1117,
+                "250515152056": 1117
             },
             "pass history": {
                 "250512231919": 563,
-                "250512232357": 563
+                "250512232357": 563,
+                "250514025017": 563,
+                "250515152056": 563
             },
             "scores": {}
         },
@@ -96,19 +108,23 @@
             "updated": "240716075932",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4639255",
-            "drain": 7.5,
+            "length": 37,
             "rice": 399,
             "ln": 25,
             "players": [],
-            "total plays": 932,
-            "total passes": 462,
+            "total plays": 936,
+            "total passes": 465,
             "play history": {
                 "250512231919": 932,
-                "250512232357": 932
+                "250512232357": 932,
+                "250514025017": 933,
+                "250515152056": 936
             },
             "pass history": {
                 "250512231919": 462,
-                "250512232357": 462
+                "250512232357": 462,
+                "250514025017": 463,
+                "250515152056": 465
             },
             "scores": {}
         },
@@ -121,19 +137,23 @@
             "updated": "240716075933",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4639256",
-            "drain": 6.5,
+            "length": 37,
             "rice": 203,
             "ln": 11,
             "players": [],
-            "total plays": 1504,
+            "total plays": 1513,
             "total passes": 709,
             "play history": {
                 "250512231919": 1504,
-                "250512232357": 1504
+                "250512232357": 1504,
+                "250514025017": 1513,
+                "250515152056": 1513
             },
             "pass history": {
                 "250512231919": 709,
-                "250512232357": 709
+                "250512232357": 709,
+                "250514025017": 709,
+                "250515152056": 709
             },
             "scores": {}
         }

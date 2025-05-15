@@ -4,8 +4,15 @@
     "avatar url": "https://a.ppy.sh/21581065?1730162371.png",
     "days ago": 0,
     "tracking": true,
-    "beatmapsets": {},
-    "beatmap plays history": {},
+    "beatmapsets": {
+        "2304670": [
+            "4926769"
+        ]
+    },
+    "beatmap plays history": {
+        "250514025049": 42,
+        "250515152111": 42
+    },
     "scores": {
         "21581065241114071335": {
             "uid": 21581065,

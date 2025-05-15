@@ -4,7 +4,7 @@
     "artist": "Matsuda Akito",
     "titleu": "アフターアフター",
     "artistu": "松田彬人",
-    "favs": 17,
+    "favs": 16,
     "desc": null,
     "source": "ディーふらぐ！",
     "tags": "ゲーム製作部cd（仮）～サントラ② game seisakubu cd (kari) ~ sound track soundtrack (2) d-fragments d-frag! bgm anime instrumental",
@@ -21,19 +21,23 @@
             "updated": "250225003007",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4984214",
-            "drain": 8.5,
+            "length": 85,
             "rice": 1140,
             "ln": 28,
             "players": [],
-            "total plays": 202,
-            "total passes": 95,
+            "total plays": 206,
+            "total passes": 99,
             "play history": {
                 "250512231919": 202,
-                "250512232357": 202
+                "250512232357": 202,
+                "250514025017": 204,
+                "250515152056": 206
             },
             "pass history": {
                 "250512231919": 95,
-                "250512232357": 95
+                "250512232357": 95,
+                "250514025017": 97,
+                "250515152056": 99
             },
             "scores": {
                 "6660735250512065753": {
@@ -1963,19 +1967,23 @@
             "updated": "250225003008",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4984355",
-            "drain": 8.0,
+            "length": 85,
             "rice": 884,
             "ln": 27,
             "players": [],
-            "total plays": 214,
-            "total passes": 99,
+            "total plays": 225,
+            "total passes": 106,
             "play history": {
                 "250512231919": 214,
-                "250512232357": 214
+                "250512232357": 214,
+                "250514025017": 220,
+                "250515152056": 225
             },
             "pass history": {
                 "250512231919": 99,
-                "250512232357": 99
+                "250512232357": 99,
+                "250514025017": 102,
+                "250515152056": 106
             },
             "scores": {
                 "6660735250510124717": {
@@ -3919,19 +3927,23 @@
             "updated": "250225003008",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4984408",
-            "drain": 7.5,
+            "length": 85,
             "rice": 645,
             "ln": 21,
             "players": [],
-            "total plays": 521,
-            "total passes": 179,
+            "total plays": 524,
+            "total passes": 181,
             "play history": {
                 "250512231919": 521,
-                "250512232357": 521
+                "250512232357": 521,
+                "250514025017": 524,
+                "250515152056": 524
             },
             "pass history": {
                 "250512231919": 179,
-                "250512232357": 179
+                "250512232357": 179,
+                "250514025017": 181,
+                "250515152056": 181
             },
             "scores": {
                 "6660735250508103325": {

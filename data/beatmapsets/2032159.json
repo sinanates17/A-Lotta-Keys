@@ -4,7 +4,7 @@
     "artist": "Jeff Williams feat. Casey Lee Williams",
     "titleu": "This Will Be the Day (TV Size)",
     "artistu": "Jeff Williams feat. Casey Lee Williams",
-    "favs": 54,
+    "favs": 56,
     "desc": null,
     "source": "RWBY",
     "tags": "alternative rock rooster teeth productions monty oum ruby rose weiss schnee blake belladonna yang xiao long red white black yellow theme song opening songs part one anime english volume 1 soundtrack",
@@ -21,19 +21,23 @@
             "updated": "250329000032",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4235818",
-            "drain": 8.5,
+            "length": 63,
             "rice": 854,
             "ln": 17,
             "players": [],
-            "total plays": 297,
-            "total passes": 125,
+            "total plays": 307,
+            "total passes": 132,
             "play history": {
                 "250512231919": 297,
-                "250512232357": 297
+                "250512232357": 297,
+                "250514025017": 306,
+                "250515152056": 307
             },
             "pass history": {
                 "250512231919": 125,
-                "250512232357": 125
+                "250512232357": 125,
+                "250514025017": 131,
+                "250515152056": 132
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250329000033",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4236851",
-            "drain": 7.5,
+            "length": 63,
             "rice": 546,
             "ln": 23,
             "players": [],
-            "total plays": 201,
-            "total passes": 111,
+            "total plays": 202,
+            "total passes": 112,
             "play history": {
                 "250512231919": 201,
-                "250512232357": 201
+                "250512232357": 201,
+                "250514025017": 202,
+                "250515152056": 202
             },
             "pass history": {
                 "250512231919": 111,
-                "250512232357": 111
+                "250512232357": 111,
+                "250514025017": 112,
+                "250515152056": 112
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250329000034",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4955641",
-            "drain": 8.0,
+            "length": 63,
             "rice": 717,
             "ln": 23,
             "players": [],
-            "total plays": 140,
-            "total passes": 82,
+            "total plays": 142,
+            "total passes": 83,
             "play history": {
                 "250512231919": 140,
-                "250512232357": 140
+                "250512232357": 140,
+                "250514025017": 141,
+                "250515152056": 142
             },
             "pass history": {
                 "250512231919": 82,
-                "250512232357": 82
+                "250512232357": 82,
+                "250514025017": 83,
+                "250515152056": 83
             },
             "scores": {}
         },
@@ -96,19 +108,23 @@
             "updated": "250329000035",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/4955642",
-            "drain": 7.0,
+            "length": 63,
             "rice": 405,
             "ln": 21,
             "players": [],
-            "total plays": 405,
-            "total passes": 146,
+            "total plays": 410,
+            "total passes": 147,
             "play history": {
                 "250512231919": 405,
-                "250512232357": 405
+                "250512232357": 405,
+                "250514025017": 407,
+                "250515152056": 410
             },
             "pass history": {
                 "250512231919": 146,
-                "250512232357": 146
+                "250512232357": 146,
+                "250514025017": 146,
+                "250515152056": 147
             },
             "scores": {}
         }

@@ -4,7 +4,7 @@
     "artist": "Dvwnpour & Mediy0",
     "titleu": "Starpop",
     "artistu": "Dvwnpour & Mediy0",
-    "favs": 7,
+    "favs": 10,
     "desc": null,
     "source": "",
     "tags": "electronic instrumental chiptune pop future funk drum & n bass drumnbass dnb chill out downtempo garage trance house dance rice",
@@ -21,19 +21,23 @@
             "updated": "250505162956",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5095857",
-            "drain": 7.0,
+            "length": 180,
             "rice": 511,
             "ln": 0,
             "players": [],
-            "total plays": 76,
-            "total passes": 10,
+            "total plays": 152,
+            "total passes": 21,
             "play history": {
                 "250512231919": 74,
-                "250512232357": 76
+                "250512232357": 76,
+                "250514025017": 126,
+                "250515152056": 152
             },
             "pass history": {
                 "250512231919": 10,
-                "250512232357": 10
+                "250512232357": 10,
+                "250514025017": 19,
+                "250515152056": 21
             },
             "scores": {}
         },
@@ -46,19 +50,23 @@
             "updated": "250505162956",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5095858",
-            "drain": 7.8,
+            "length": 180,
             "rice": 1665,
             "ln": 0,
             "players": [],
-            "total plays": 28,
-            "total passes": 16,
+            "total plays": 48,
+            "total passes": 25,
             "play history": {
                 "250512231919": 28,
-                "250512232357": 28
+                "250512232357": 28,
+                "250514025017": 36,
+                "250515152056": 48
             },
             "pass history": {
                 "250512231919": 16,
-                "250512232357": 16
+                "250512232357": 16,
+                "250514025017": 23,
+                "250515152056": 25
             },
             "scores": {}
         },
@@ -71,19 +79,23 @@
             "updated": "250505162957",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5095859",
-            "drain": 7.5,
+            "length": 180,
             "rice": 1094,
             "ln": 0,
             "players": [],
-            "total plays": 37,
-            "total passes": 8,
+            "total plays": 82,
+            "total passes": 21,
             "play history": {
                 "250512231919": 37,
-                "250512232357": 37
+                "250512232357": 37,
+                "250514025017": 66,
+                "250515152056": 82
             },
             "pass history": {
                 "250512231919": 8,
-                "250512232357": 8
+                "250512232357": 8,
+                "250514025017": 19,
+                "250515152056": 21
             },
             "scores": {}
         },
@@ -96,19 +108,23 @@
             "updated": "250505162957",
             "deleted": null,
             "url": "https://osu.ppy.sh/beatmaps/5095860",
-            "drain": 8.0,
+            "length": 180,
             "rice": 2154,
             "ln": 0,
             "players": [],
-            "total plays": 45,
-            "total passes": 30,
+            "total plays": 76,
+            "total passes": 44,
             "play history": {
                 "250512231919": 45,
-                "250512232357": 45
+                "250512232357": 45,
+                "250514025017": 69,
+                "250515152056": 76
             },
             "pass history": {
                 "250512231919": 30,
-                "250512232357": 30
+                "250512232357": 30,
+                "250514025017": 41,
+                "250515152056": 44
             },
             "scores": {}
         }
