@@ -7,18 +7,18 @@ import json
 
 def main():
     def _latest_cumstats_key():
-        latest_date = None
+        latest_dates = []
         for key, stats in cum_stats.items():
             if stats["legacy"]: continue
             date = datetime.strptime(key, "%y%m%d%H%M%S")
-            if latest_date is None:
-                latest_date = date
 
-            elif date > latest_date:
-                latest_date = date
+            latest_dates.append(date)
 
-        if latest_date is not None:
-            latest_date = latest_date.strftime("%y%m%d%H%M%S")
+        latest_dates.sort()
+        latest_dates.reverse()
+
+        if latest_dates:
+            latest_date = latest_dates[1].strftime("%y%m%d%H%M%S")
 
         return latest_date
     
@@ -81,7 +81,7 @@ def main():
 
     output = "cumulative_stats_timeline.json"
     latest_key = _latest_cumstats_key()
-    if latest_key is None: return
+    if not latest_key: return
     latest_date = datetime.strptime(latest_key, "%y%m%d%H%M%S")
     tracker = {
         "top mappers": [], # [uid, plays]
