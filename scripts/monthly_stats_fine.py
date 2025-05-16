@@ -20,6 +20,9 @@ def main():
         if latest_dates:
             latest_date = latest_dates[1].strftime("%y%m%d%H%M%S")
 
+        else:
+            latest_date = None
+
         return latest_date
     
     def _stats_users():
@@ -30,13 +33,13 @@ def main():
             uid = user["id"]
 
             no_scores = 0
-            for score in user["scores"]:
+            for sid, score in user["scores"].items():
                 time = datetime.strptime(score["time"], "%y%m%d%H%M%S")
                 if time > latest_date:
                     no_scores += 1
 
             plays = []
-            for key, count in user["total beatmap plays"].items():
+            for key, count in user["beatmap plays history"].items():
                 time = datetime.strptime(key, "%y%m%d%H%M%S")
                 if time > latest_date:
                     plays.append(count)
@@ -48,8 +51,8 @@ def main():
             tracker["top mappers"].append([uid, plays])
             tracker["top players"].append([uid, no_scores])
 
-        tracker["top mappers"].sort(lambda x: x[1])
-        tracker["top players"].sort(lambda x: x[1])
+        tracker["top mappers"].sort(key=lambda x: x[1])
+        tracker["top players"].sort(key=lambda x: x[1])
         tracker["top mappers"] = tracker["top mappers"][0:50]
         tracker["top players"] = tracker["top players"][0:50]
 
@@ -62,7 +65,7 @@ def main():
 
             for bmid, beatmap in mapset["beatmaps"].items():
                 plays = []
-                for key, count in beatmap["plays over time"].items():
+                for key, count in beatmap["play history"].items():
                     time = datetime.strptime(key, "%y%m%d%H%M%S")
                     if time > latest_date:
                         plays.append(count)
@@ -73,15 +76,15 @@ def main():
                 
                 tracker["top maps"].append([msid, bmid, plays])
 
-        tracker["top maps"].sort(lambda x: x[2])
+        tracker["top maps"].sort(key=lambda x: x[2])
         tracker["top maps"]= tracker["top maps"][0:50]
 
+    output = "cumulative_stats_timeline.json"
     with open(f"{PATH_DATA}/{output}", "r", encoding='utf-8') as f:
         cum_stats = json.load(f)
 
-    output = "cumulative_stats_timeline.json"
     latest_key = _latest_cumstats_key()
-    if not latest_key: return
+    if latest_key is None: return
     latest_date = datetime.strptime(latest_key, "%y%m%d%H%M%S")
     tracker = {
         "top mappers": [], # [uid, plays]

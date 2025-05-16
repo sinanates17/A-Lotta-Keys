@@ -20,11 +20,16 @@ Child script 2: monthly_stats_fine.py
     - Go through every user.json to create lists of:
         - Most popular mappers by playcount
         - Most active players by # of new scores
-
 """
 
+import subprocess
+import sys
+from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import PATH_PYTHON
+
 def main():
-    pass
+    subprocess.run([PATH_PYTHON, "scripts/monthly_stats_gross.py"])
+    subprocess.run([PATH_PYTHON, "scripts/monthly_stats_fine.py"])
 
 if __name__ == "__main__":
     main()
