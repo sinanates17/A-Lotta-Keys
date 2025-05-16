@@ -1,6 +1,6 @@
-workspace/
-data/
-data_backup/
+/workspace/
+/data/
+/data_backup/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
