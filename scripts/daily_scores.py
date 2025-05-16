@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from datetime import datetime, timezone
-from data.utils import Helper
+from utils import Helper
 from config import PATH_SCORES, PATH_USERS
 from os import listdir
 import json
