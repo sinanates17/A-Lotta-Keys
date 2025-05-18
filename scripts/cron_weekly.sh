@@ -1,4 +1,7 @@
 #!/bin/bash
+
+umask 000
+
 PATH_THIS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$PATH_THIS"
@@ -10,6 +13,5 @@ set +o allexport
 
 source "$PATH_VENV/bin/activate"
 
-python3 cron_daily.py
-
+pip list
 python3 cron_weekly.py

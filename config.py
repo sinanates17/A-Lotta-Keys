@@ -16,4 +16,5 @@ PATH_DATA_BACKUP = os.getenv("PATH_DATA_BACKUP")
 REQUEST_INTERVAL = float(os.getenv("REQUEST_INTERVAL"))
 
 PATH_PYTHON = f"{os.getenv("PATH_VENV")}/bin/python"
+PATH_ROOT = os.getenv("PATH_ROOT")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")

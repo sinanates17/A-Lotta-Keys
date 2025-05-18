@@ -46,12 +46,12 @@ Child script 3: daily_users.py
 import subprocess
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import PATH_PYTHON
+from config import PATH_PYTHON, PATH_ROOT
 
 def main():
-    subprocess.run([PATH_PYTHON, "scripts/daily_scores.py"])
-    subprocess.run([PATH_PYTHON, "scripts/daily_beatmapsets.py"])
-    subprocess.run([PATH_PYTHON, "scripts/daily_users.py"])
+    subprocess.run([PATH_PYTHON, "scripts/daily_scores.py"], cwd=PATH_ROOT)
+    subprocess.run([PATH_PYTHON, "scripts/daily_beatmapsets.py"], cwd=PATH_ROOT)
+    subprocess.run([PATH_PYTHON, "scripts/daily_users.py"], cwd=PATH_ROOT)
 
 if __name__ == "__main__":
     main()
