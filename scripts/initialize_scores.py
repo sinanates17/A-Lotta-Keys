@@ -15,7 +15,7 @@ def main():
     cum_scores = { "timestamp": now }
 
     def _build_player_maps_update_beatmapset_jsons(): #My goal is to make my code as unreadable as humanly possible
-        for file in listdir(PATH_BEATMAPSETS)[0:15]:
+        for file in listdir(PATH_BEATMAPSETS):
             if not file.endswith(".json"): continue
             path = f"{PATH_BEATMAPSETS}/{file}"
             lb_diffs = []
