@@ -1,6 +1,7 @@
 workspace/
 data/
 data_backup/
+logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
