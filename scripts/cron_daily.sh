@@ -14,4 +14,4 @@ set +o allexport
 source "$PATH_VENV/bin/activate"
 
 pip list
-python3 cron_daily.py
+python3 scripts/cron_daily.py
