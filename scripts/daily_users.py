@@ -90,9 +90,10 @@ def main():
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
 
-            recent = datetime(year=2013, month=1, day=1, timezone=timezone.utc)
+            recent = datetime(year=2013, month=1, day=1, tzinfo=timezone.utc)
             for score in user["scores"].values():
                 t = datetime.strptime(score["time"], "%y%m%d%H%M%S")
+                t = t.replace(tzinfo=timezone.utc)
                 if t > recent:
                     recent = t
             difference = (now - recent).days
