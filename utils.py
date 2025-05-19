@@ -3,8 +3,6 @@ from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL
 from datetime import datetime, timezone
 from time import sleep
 
-OSU_API_VERSION = 20220704
-
 class Helper:
     def __init__(self, prefix="[Helper] "):
         self.prefix = prefix

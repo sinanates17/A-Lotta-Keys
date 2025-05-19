@@ -37,7 +37,7 @@ def main():
                 json.dump(user_dict, f, ensure_ascii=False, indent=4)
 
     def _update_scores():
-        cutoff = datetime.now(timezone.utc) - timedelta(days=2)
+        cutoff = now - timedelta(days=2)
         cutoff = cutoff.strftime("%y%m%d%H%M%S")
         uids_scores = {}
 
@@ -90,6 +90,14 @@ def main():
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
 
+            recent = datetime(year=2013, month=1, day=1, timezone=timezone.utc)
+            for score in user["scores"].values():
+                t = datetime.strptime(score["time"], "%y%m%d%H%M%S")
+                if t > recent:
+                    recent = t
+            difference = (now - recent).days
+            user["days ago"] = difference
+
             uid = user["id"]
             uids.append(uid)
             total_plays = 0
@@ -103,7 +111,7 @@ def main():
                 for bid in user["beatmapsets"][msid]:
                     total_plays += mapset_json["beatmaps"][bid]["total plays"]
 
-            user["beatmap plays history"][now] = total_plays
+            user["beatmap plays history"][now_str] = total_plays
 
             with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
                 json.dump(user, f, ensure_ascii=False, indent=4)
@@ -129,7 +137,7 @@ def main():
 
     helper = Helper()
     now = datetime.now(timezone.utc)
-    now = now.strftime("%y%m%d%H%M%S")
+    now_str = now.strftime("%y%m%d%H%M%S")
     uids = []
     
     _initialize_new_users()
