@@ -31,11 +31,15 @@ html, body {
 
 .p {
     font-size: 18px;
-    color: #bcb0c0;
+    color: #c2aec9;
     font-family: Ubuntu;
     width: 60vw;
     text-wrap: pre-wrap;
     text-align: justify;
+}
+
+.hlink {
+    color: #efe5f3;
 }
 
 .homeButton {
@@ -53,11 +57,35 @@ html, body {
     background-color: rgba(255, 255, 255, .1);
 }
 
+.homeButtonSmall {
+    font-size: 20px;
+    color: #bcb0c0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-family: Ubuntu;
+}
+
+.homeButtonSmall:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
 .menuContainer {
-    width: 100vw;
     align-content: stretch;
     display: flex;
     justify-content: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    z-index: 2;
+}
+
+.subMenuContainer {
+    width: 875px;
+    align-content: stretch;
+    display: flex;
+    justify-content: right;
     gap: 25px;
     z-index: 2;
 }
