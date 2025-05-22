@@ -3,7 +3,7 @@ html, body {
     margin: 0;
 }
 
-.background{
+.backgroundHome{
     background-image: url("../images/background.png");
     background-position: center center;
     background-size: cover;
@@ -14,6 +14,21 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.background{
+    background-image: url("../images/background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 25px;
+    overflow: hidden;
 }
 
 .h1 {
@@ -93,5 +108,45 @@ html, body {
 .spacer1 {
     height:400px;
     background: transparent;
+}
+
+.table {
+    font-family: Ubuntu;
+    color: #efe5f3;
+}
+
+th, td {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    text-align: center;
+}
+
+.tableMenu {
+    width: 875px;
+    align-content: stretch;
+    display: flex;
+    justify-content: left;
+    gap: 25px;
+    z-index: 2;
+}
+
+.search {
+    font-size: 20px;
+    color: #bcb0c0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 25px;
+    width: 250px;
+    height: 50px;
+    border: none;
+    font-family: Ubuntu;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.search:focus {
+    border: none;
+    outline: none;
 }
 
