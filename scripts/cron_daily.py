@@ -52,6 +52,8 @@ def main():
     subprocess.run([PATH_PYTHON, "scripts/daily_scores.py"], cwd=PATH_ROOT)
     subprocess.run([PATH_PYTHON, "scripts/daily_beatmapsets.py"], cwd=PATH_ROOT)
     subprocess.run([PATH_PYTHON, "scripts/daily_users.py"], cwd=PATH_ROOT)
+    subprocess.run([PATH_PYTHON, "scripts/daily_beatmaps_compact.py"], cwd=PATH_ROOT)
+    subprocess.run([PATH_PYTHON, "scripts/daily_users_compact.py"], cwd=PATH_ROOT)
 
 if __name__ == "__main__":
     main()

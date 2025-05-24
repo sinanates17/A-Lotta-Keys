@@ -132,6 +132,7 @@ def main():
                     user_dict_new = Helper.user_to_dict(user)
                     user_dict["name"] = user_dict_new["name"]
                     user_dict["avatar url"] = user_dict_new["avatar url"]
+                    user_dict["country"] = user_dict_new["country"]
 
                     with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
                         json.dump(user_dict, f, ensure_ascii=False, indent=4)

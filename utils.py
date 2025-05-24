@@ -1,7 +1,9 @@
 from ossapi import Ossapi, Beatmapset, Beatmap, Score, User, Statistics
-from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL
+from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS
 from datetime import datetime, timezone
 from time import sleep
+from os import listdir
+import json
 
 class Helper:
     def __init__(self, prefix="[Helper] "):
@@ -113,6 +115,7 @@ class Helper:
             'name': user.username,
             'avatar url': user.avatar_url,
             'days ago': 0,
+            'country': user.country.name,
             'tracking': True,
             'beatmapsets': {},
             'beatmap plays history': {},
@@ -120,6 +123,16 @@ class Helper:
         }
 
         return user_dict
+    
+    @staticmethod
+    def name_from_uid(uid: int):
+        file = f"{uid}.json"
+        if file in listdir(PATH_USERS):
+            with open(f"{PATH_USERS}/{file}", "r", encoding="utf8") as f:
+                user = json.load(f)
+            name = user["name"]
+            return name
+        return None
 
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)
