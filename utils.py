@@ -90,6 +90,7 @@ class Helper:
         score_dict = {
             'uid': score.user_id,
             'bid': int(score.beatmap_id) if isinstance(score.beatmap_id, str) else int(score.beatmap.id),
+            'msid': score.beatmapset.id,
             'time': score.ended_at.strftime("%y%m%d%H%M%S"),
             'mods': [mod.acronym for mod in score.mods],
             'combo': score.max_combo,

@@ -7,9 +7,9 @@ import json
 def main():
     output = f"{PATH_DATA}/users_compact.json"
     users_compact = {}
-    users_compact["users"]
     users_compact["total"] = 0
     users_compact["active"] = 0
+    users_compact["users"] = {}
 
     max_ranked_score = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
     max_score = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
@@ -20,7 +20,9 @@ def main():
             mapset = json.load(f)
 
         for beatmap in mapset["beatmaps"].values():
-            k = str(beatmap["keys"])
+            k = str(int(beatmap["keys"]))
+            if k in ["11", "13", "15", "17"]: continue
+
             max_score[k] += 1000000
 
             if beatmap["status"] in [1, 4]:
@@ -41,7 +43,7 @@ def main():
         total_score = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
         beatmap_plays = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
 
-        for score in user[num_scores].values():
+        for score in user["scores"].values():
             bid = score["bid"]
             for file in listdir(PATH_BEATMAPSETS):
                 if not file.endswith(".json"): continue
@@ -49,24 +51,27 @@ def main():
                     mapset = json.load(f)
 
                 if bid in mapset["beatmaps"].keys():
-                    k = str(mapset["beatmaps"][bid])
+                    k = str(int(mapset["beatmaps"][bid]["keys"]))
+                    if k in ["11", "13", "15", "17"]: continue
                     num_scores[k] += 1
                     break
 
         for msid in user["beatmapsets"].keys():
             file = f"{msid}.json"
             if file in listdir(PATH_BEATMAPSETS):
-                with open(file, "r", encoding="utf-8") as f:
+                with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding="utf-8") as f:
                     mapset = json.load(f)
 
-                for bmid, beatmap in user["beatmapsets"][msid].values():
-                    if bmid in mapset["beatmaps"].keys():
-                        k = str(beatmap["keys"])
-                        beatmap_plays["keys"] += beatmap["total plays"]
+                for bmid in user["beatmapsets"][msid]:
+                    beatmap = mapset["beatmaps"][bmid]
+                    k = str(int(beatmap["keys"]))
+                    if k in ["11", "13", "15", "17"]: continue
+                    beatmap_plays[k] += beatmap["total plays"]
 
         ranked_perc = { k:100*ranked_score[k]/max_ranked_score[k] for k in ["9", "10", "12", "14", "16", "18"]}
         total_perc = { k:100*total_score[k]/max_score[k] for k in ["9", "10", "12", "14", "16", "18"]}
 
+        users_compact["users"][id] = {}
         users_compact["users"][id]["name"] = name
         users_compact["users"][id]["last score"] = last_score
         users_compact["users"][id]["num scores"] = num_scores
@@ -83,7 +88,7 @@ def main():
             users_compact["active"] += 1
 
     with open(output, "w", encoding="utf-8") as f:
-        json.dump(users_compact, f)
+        json.dump(users_compact, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     main()

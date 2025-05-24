@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import PATH_USERS, PATH_BEATMAPSETS, PATH_DATA
+from config import PATH_BEATMAPSETS, PATH_DATA
 from utils import Helper
 from os import listdir
 import json
@@ -8,10 +8,10 @@ import json
 def main():
     output = f"{PATH_DATA}/beatmaps_compact.json"
     beatmaps_compact = {}
-    beatmaps_compact["beatmaps"] = {}
-    beatmaps_compact["total"] = {}
+    beatmaps_compact["unranked"] = {}
     beatmaps_compact["ranked"] = {}
     beatmaps_compact["loved"] = {}
+    beatmaps_compact["beatmaps"] = {}
 
     unranked = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
     ranked = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
@@ -23,7 +23,8 @@ def main():
             mapset = json.load(f)
 
         for bid, beatmap in mapset["beatmaps"].items():
-            k = str(beatmap["keys"])
+            k = str(int(beatmap["keys"]))
+            if k in ["11", "13", "15", "17"]: continue
             if beatmap["status"] == 1:
                 ranked[k] += 1
                 status = "Ranked"
@@ -34,15 +35,16 @@ def main():
                 unranked[k] += 1
                 status = "Unranked"
 
-            name = f"{mapset["artist"]} - {mapset["title"] [{beatmap["version"]}]}"
+            name = f"{mapset["artist"]} - {mapset["title"]} [{beatmap["version"]}]"
             keys = beatmap["keys"]
             sr = beatmap["sr"]
             mapper = Helper.name_from_uid(beatmap["mapper id"])
             plays = beatmap["total plays"]
             passes = beatmap["total passes"]
             length = beatmap["length"]
-            ln_perc = beatmap["ln"] / (beatmap["rice"] + beatmap["ln"])
+            ln_perc = 100 * beatmap["ln"] / (beatmap["rice"] + beatmap["ln"]) if beatmap["rice"] + beatmap["ln"] != 0 else 0
 
+            beatmaps_compact["beatmaps"][bid] = {}
             beatmaps_compact["beatmaps"][bid]["name"] = name
             beatmaps_compact["beatmaps"][bid]["keys"] = keys
             beatmaps_compact["beatmaps"][bid]["sr"] = sr
@@ -58,7 +60,7 @@ def main():
     beatmaps_compact["loved"] = loved
 
     with open(output, "w", encoding="utf-8") as f:
-        json.dump(beatmaps_compact, f)
+        json.dump(beatmaps_compact, f, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     main()
