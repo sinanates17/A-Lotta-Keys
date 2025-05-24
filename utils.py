@@ -202,6 +202,7 @@ class Helper:
     
     def beatmap_user_scores(self, beatmap_id: int, user_id: int, **kwargs) -> list[Score]:
         sleep(REQUEST_INTERVAL)
+        print(beatmap_id, user_id)
         scores = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id, **kwargs)
 
         for score in scores: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
