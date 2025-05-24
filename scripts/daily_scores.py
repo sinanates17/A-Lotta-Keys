@@ -2,7 +2,7 @@ import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from datetime import datetime, timezone
 from utils import Helper
-from config import PATH_SCORES, PATH_USERS
+from config import PATH_SCORES, PATH_USERS, PATH_DATA
 from os import listdir
 import json
 
@@ -12,8 +12,10 @@ def main():
     now = now.strftime("%y%m%d%H%M%S")
     output = f"scores_{now}.json"
     cum_scores = { "timestamp": now }
+    with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
+            beatmap_links = json.load(f)
 
-    for file in listdir(PATH_USERS):
+    for file in listdir(PATH_USERS)[0:50]:
         if not file.endswith(".json"): continue
         with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
             user = json.load(f)
@@ -23,6 +25,7 @@ def main():
             for score in scores:
                 if score.beatmap.cs > 8 and score.beatmap.mode.value == "mania":
                     score_dict = Helper.score_to_dict(score)
+                    score_dict["msid"] = beatmap_links[str(score_dict["bid"])] if str(score_dict["bid"]) in beatmap_links.keys() else None
                     id = f"{score_dict['uid']}{score_dict['time']}"
                     cum_scores[id] = score_dict
     

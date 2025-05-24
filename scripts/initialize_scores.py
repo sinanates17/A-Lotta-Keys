@@ -52,7 +52,7 @@ def main():
             print(f"{i} requests done of {reqs} | {i*100/reqs}%")
             for score in scores:
                 score_dict = Helper.score_to_dict(score=score)
-                score_dict["msid"] = beatmap_links[str(score_dict["bid"])] if str(score_dict["bid"]) in beatmap_links.keys() else 0
+                score_dict["msid"] = beatmap_links[str(score_dict["bid"])] if str(score_dict["bid"]) in beatmap_links.keys() else None
                 int_id = f"{score_dict['uid']}{score_dict['time']}"
                 cum_scores[int_id] = score_dict
 

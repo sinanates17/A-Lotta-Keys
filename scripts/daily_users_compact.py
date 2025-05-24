@@ -5,6 +5,8 @@ from os import listdir
 import json
 
 def main():
+    with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
+        beatmap_links = json.load(f)
     output = f"{PATH_DATA}/users_compact.json"
     users_compact = {}
     users_compact["total"] = 0
@@ -44,17 +46,17 @@ def main():
         beatmap_plays = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
 
         for score in user["scores"].values():
-            bid = score["bid"]
-            for file in listdir(PATH_BEATMAPSETS):
-                if not file.endswith(".json"): continue
-                with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
+            bid = str(score["bid"])
+            msid = score["msid"]
+            mfile = f"{msid}.json"
+            if mfile in listdir(PATH_BEATMAPSETS):
+                with open(f"{PATH_BEATMAPSETS}/{mfile}", "r", encoding='utf-8') as f:
                     mapset = json.load(f)
 
                 if bid in mapset["beatmaps"].keys():
                     k = str(int(mapset["beatmaps"][bid]["keys"]))
                     if k in ["11", "13", "15", "17"]: continue
                     num_scores[k] += 1
-                    break
 
         for msid in user["beatmapsets"].keys():
             file = f"{msid}.json"
