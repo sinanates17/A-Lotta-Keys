@@ -15,7 +15,7 @@ def main():
     with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
             beatmap_links = json.load(f)
 
-    for file in listdir(PATH_USERS)[0:50]:
+    for file in listdir(PATH_USERS):
         if not file.endswith(".json"): continue
         with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
             user = json.load(f)

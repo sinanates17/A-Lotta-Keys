@@ -142,7 +142,7 @@ class Helper:
         page = 1
         print(f'Page {page}') #Temporary until I implement a logger
 
-        while False: #result.cursor is not None:
+        while result.cursor is not None:
             sleep(REQUEST_INTERVAL)
             page += 1
             print(f'Page {page}') #Temporary until I implement a logger
