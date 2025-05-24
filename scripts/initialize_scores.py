@@ -2,7 +2,7 @@ import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from datetime import datetime, timezone
 from utils import Helper
-from config import PATH_SCORES, PATH_BEATMAPSETS
+from config import PATH_SCORES, PATH_BEATMAPSETS, PATH_DATA
 from os import listdir
 import json
 
@@ -14,8 +14,8 @@ def main():
     player_maps = {}
     cum_scores = { "timestamp": now }
 
-    def _build_player_maps_update_beatmapset_jsons(): #My goal is to make my code as unreadable as humanly possible
-        for file in listdir(PATH_BEATMAPSETS):
+    def _build_player_maps_update_beatmapset_jsons():
+        for file in listdir(PATH_BEATMAPSETS)[0:2]:
             if not file.endswith(".json"): continue
             path = f"{PATH_BEATMAPSETS}/{file}"
             lb_diffs = []
@@ -39,6 +39,9 @@ def main():
                     json.dump(mapset, f, ensure_ascii=False, indent=4)
 
     def _get_and_dump_scores():
+        with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
+            beatmap_links = json.load(f)
+
         reqs = 0
         for maps in player_maps.values():
             reqs += len(maps)
@@ -49,6 +52,7 @@ def main():
             print(f"{i} requests done of {reqs} | {i*100/reqs}%")
             for score in scores:
                 score_dict = Helper.score_to_dict(score=score)
+                score_dict["msid"] = beatmap_links[str(score_dict["bid"])] if str(score_dict["bid"]) in beatmap_links.keys() else 0
                 int_id = f"{score_dict['uid']}{score_dict['time']}"
                 cum_scores[int_id] = score_dict
 

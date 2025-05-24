@@ -2,7 +2,7 @@ import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from datetime import datetime, timezone, timedelta
 from utils import Helper
-from config import PATH_SCORES, PATH_BEATMAPSETS
+from config import PATH_SCORES, PATH_BEATMAPSETS, PATH_DATA
 from os import listdir
 import json
 
@@ -47,8 +47,18 @@ def main():
                         diff["deleted"] = now
                         mapset_dict["beatmaps"][bid] = diff
 
+            with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding='utf-8') as f:
+                beatmap_links = json.load(f)
+
+            msid = mapset_dict["id"]
+            for bmid in mapset_dict["beatmaps"].keys():
+                beatmap_links[bmid] = msid
+
             with open(f"{PATH_BEATMAPSETS}/{filename}", "w", encoding='utf-8') as f:
                 json.dump(mapset_dict, f, ensure_ascii=False, indent=4)
+        
+        with open(f"{PATH_DATA}/beatmap_links.json", "w", encoding='utf-8') as f:
+            json.dump(beatmap_links, f, ensure_ascii=False, indent=4)
 
     def _update_scores():
         bids_scores = {}

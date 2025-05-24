@@ -90,7 +90,7 @@ class Helper:
         score_dict = {
             'uid': score.user_id,
             'bid': int(score.beatmap_id) if isinstance(score.beatmap_id, str) else int(score.beatmap.id),
-            'msid': score.beatmapset.id,
+            'msid': None,
             'time': score.ended_at.strftime("%y%m%d%H%M%S"),
             'mods': [mod.acronym for mod in score.mods],
             'combo': score.max_combo,
@@ -142,7 +142,7 @@ class Helper:
         page = 1
         print(f'Page {page}') #Temporary until I implement a logger
 
-        while result.cursor is not None:
+        while False: #result.cursor is not None:
             sleep(REQUEST_INTERVAL)
             page += 1
             print(f'Page {page}') #Temporary until I implement a logger
