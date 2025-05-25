@@ -15,7 +15,7 @@ def main():
     cum_scores = { "timestamp": now }
 
     def _build_player_maps_update_beatmapset_jsons():
-        for file in listdir(PATH_BEATMAPSETS)[0:7]:
+        for file in listdir(PATH_BEATMAPSETS):
             if not file.endswith(".json"): continue
             path = f"{PATH_BEATMAPSETS}/{file}"
             lb_diffs = []
