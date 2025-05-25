@@ -230,9 +230,9 @@ class Helper:
         sublists = [user_ids[i*50:(i+1)*50] for i in range(size//50)]
         sublists.append(user_ids[50*(size//50):size])
 
-        sleep(REQUEST_INTERVAL)
         users = []
         for sublist in sublists:
+            sleep(REQUEST_INTERVAL)
             users += self.osu_api.users(user_ids=sublist)
         return users
     

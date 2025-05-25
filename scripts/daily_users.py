@@ -69,7 +69,7 @@ def main():
 
     def _update_mapsets_playhistory():
         uids_mapsets = {}
-
+        
         for file in listdir(PATH_BEATMAPSETS):
             if not file.endswith(".json"): continue
             with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
@@ -98,6 +98,9 @@ def main():
                     recent = t
             difference = (now - recent).days
             user["days ago"] = difference
+
+            if user["days ago"] > 60:
+                user["tracking"] = False
 
             uid = user["id"]
             uids.append(uid)

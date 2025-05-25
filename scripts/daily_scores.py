@@ -13,7 +13,7 @@ def main():
     output = f"scores_{now}.json"
     cum_scores = { "timestamp": now }
     with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
-            beatmap_links = json.load(f)
+        beatmap_links = json.load(f)
 
     for file in listdir(PATH_USERS):
         if not file.endswith(".json"): continue
