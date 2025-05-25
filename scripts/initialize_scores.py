@@ -43,8 +43,16 @@ def main():
             beatmap_links = json.load(f)
 
         reqs = 0
-        for maps in player_maps.values():
+        dels = []
+        for player, maps in player_maps.items():
+            if len(maps) < 25:
+                dels.append(player)
+                continue
             reqs += len(maps)
+
+        for name in dels:
+            del player_maps[name]
+
         i = 0
         for player, maps in player_maps.items():
             scores = helper.user_scores_many_beatmaps(user_id=player, beatmap_ids=maps)
