@@ -60,16 +60,16 @@ async function applyFilter() {
   for (const row of rows) {
     const tr = document.createElement('tr')
     tr.innerHTML = `
-      <td>${row["pos"]}</td>
-      <td>${row["name"]}</td>
-      <td>${row["rscore"]}</td>
-      <td>${row["rperc"]}</td>
-      <td>${row["tscore"]}</td>
-      <td>${row["tperc"]}</td>
-      <td>${row["numscores"]}</td>
-      <td>${row["beatmap plays"]}</td>
-      <td>${row["last score"]}d</td>
-      <td>${row["country"]}</td>
+      <td style="width: 4%;">${row["pos"]}</td>
+      <td style="width: 15%;">${row["name"]}</td>
+      <td style="width: 11%;">${row["rscore"]}</td>
+      <td style="width: 7%;">${row["rperc"]}%</td>
+      <td style="width: 11%;">${row["tscore"]}</td>
+      <td style="width: 7%;">${row["tperc"]}%</td>
+      <td style="width: 10%;">${row["numscores"]}</td>
+      <td style="width: 10%;">${row["beatmap plays"]}</td>
+      <td style="width: 10%;">${row["last score"]} d</td>
+      <td style="width: 15%;">${row["country"]}</td>
     `;
     body.appendChild(tr)
   }

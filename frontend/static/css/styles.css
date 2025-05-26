@@ -113,14 +113,25 @@ html, body {
 .table {
     font-family: Ubuntu;
     color: #efe5f3;
+    width: 1000px;
+    table-layout: fixed;
 }
 
-th, td {
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+.table thead { 
+    top: 0px; 
+    z-index: 1; 
+    text-align: right;}
 
-    text-align: center;
+.tableCont {
+    max-height: calc(100vh - 430px);
+    overflow-y: auto;
+}
+
+.table th, td {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: right;
 }
 
 .searchMenu {

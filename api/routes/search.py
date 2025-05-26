@@ -44,11 +44,11 @@ def get_users():
             "tperc": tperc,
             "numscores": sum([user["num scores"][k] for k in filters]),
             "beatmap plays": sum([user["beatmap plays"][k] for k in filters]),
-            "last score": user["last score"] if user["last score"] < 60 else "60+",
+            "last score": user["last score"] if user["last score"] < 60 else ">60",
             "country": user["country"]}
         
         response.append(row)
-        response.sort(key=lambda x: x[sort])
+        response.sort(key=lambda x: x[sort], reverse=True)
         i = 1
         for row in response:
             row["pos"] = i
