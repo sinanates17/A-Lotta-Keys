@@ -135,6 +135,7 @@ th, td {
     width: 875px;
     height: 50px;
     padding-top: 25px;
+    padding-bottom: 25px;
     align-content: stretch;
     display: flex;
     justify-content: left;
@@ -174,7 +175,7 @@ th, td {
     color: #bcb0c0;
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 25px;
-    width: 100px;
+    width: 150px;
     height: 50px;
     border: none;
     font-family: Ubuntu;
@@ -196,12 +197,15 @@ th, td {
     background-color: #342738;
     padding: 25px;
     border-radius: 25px;
-    width: 100px;
+    width: 150px;
+}
+
+.hidden {
+    display: none !important;
 }
 
 .keymodesCheckbox {
     font-family: Ubuntu;
-    font-size: 72px;
     height: 25px;
     width: 25px;
     accent-color: #66516d;
@@ -209,4 +213,35 @@ th, td {
 
 .keymodesHover:hover {
     background-color: rgba(255, 255, 255, .1);
+}
+
+.header:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.sortName {
+    font-family: Ubuntu;
+    border: none;
+    font-size: 18px;
+    color: #bcb0c0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.sortName:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.sortContent {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #342738;
+    border-radius: 25px;
+    width: 200px;
+    padding: 0;
+    overflow: hidden;
 }

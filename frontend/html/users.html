@@ -34,42 +34,44 @@
             </form>
         </div>
         <div class="filterMenu">
-            <div class="keymodes">
-                <div class="keymodesHover" id="keymodesHover">Keymodes
+            <div class="keymodes" id="keymodesParent">
+                <div class="keymodesHover" id="keymodesButton">Keymodes</div>
+                <div class="keymodesContent hidden" id="keymodesDropdown">
+                    <label><input class="keymodesCheckbox" type="checkbox" value="9" name="key" onclick="applyFilter()"> 9K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="10" name="key" onclick="applyFilter()" checked> 10K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="12" name="key" onclick="applyFilter()"> 12K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="14" name="key" onclick="applyFilter()"> 14K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="16" name="key" onclick="applyFilter()"> 16K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="18" name="key" onclick="applyFilter()"> 18K </label>
                 </div>
-                <div class = keymodesContent>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="9K"> 9K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="10K"> 10K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="12K"> 12K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="14K"> 14K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="16K"> 16K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="18K"> 18K </label>
+            </div>
+            <div class="keymodes" id="sortParent">
+                <div class="keymodesHover" id="sortButton">Sort by</div>
+                <div class="sortContent hidden" id="sortDropdown" data-value="rscore">
+                    <button class="sortName" onclick="updateSort('rscore')"> Ranked Score</button>
+                    <button class="sortName" onclick="updateSort('tscore')"> Total Score</button>
+                    <button class="sortName" onclick="updateSort('numscores')"> No. of Scores</button>
+                    <button class="sortName" onclick="updateSort('beatmap plays')"> Beatmap plays</button>
                 </div>
             </div>
         </div>
         <table class="table">
-            <tr>
+            <thead>
                 <th>#</th>
                 <th>Player</th>
-                <th>pp</th>
                 <th>Ranked Score</th>
                 <th>%</th>
                 <th>Total Score</th>
                 <th>%</th>
                 <th>Tracked Scores</th>
-                <th>Beatamp plays</th>
-                <th>Tracking</th>
+                <th>Beatmap Plays</th>
+                <th>Last Active</th>
                 <th>Country</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Test User</td>
-                <td>123</td>
-                <td>456</td>
-                <td>69%</td>
-            </tr>
+            </thead>
+            <tbody id="leaderboard">
+
+            </tbody>
         </table>
-        
-        <script src="" async defer></script>
+        <script src="events.js"></script>
     </body>
 </html>
