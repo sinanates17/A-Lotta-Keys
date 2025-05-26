@@ -30,7 +30,7 @@ def get_users():
     del beatmaps #Look at me I'm manually managing memory in python!
 
     response = []
-    for user in users:
+    for user in users.values():
         rscore = sum([user["ranked score"][k] for k in filters])
         tscore = sum([user["ranked score"][k] for k in filters])
         rperc = round(100 * rscore/(num_ranked*1000000), 2)
@@ -48,7 +48,7 @@ def get_users():
             "country": user["country"]}
         
         response.append(row)
-        response.sort(lambda x: x[sort])
+        response.sort(key=lambda x: x[sort])
         i = 1
         for row in response:
             row["pos"] = i
