@@ -12,8 +12,8 @@
     </head>
     <body class="background">
         <div class="menuContainer">
+            <button class="homeButton" onclick="window.location.href='users.html'">Users</button>
             <button class="homeButton" onclick="window.location.href='index.html'">Home</button>
-            <button class="homeButton" onclick="window.location.href='beatmaps.html'">Beatmaps</button>
             <button class="homeButton" onclick="window.location.href='index.html'">Monthly</button>
             <button class="homeButton" onclick="window.location.href='index.html'">About</button>
         </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="searchMenu">
             <form>
-                <input type="text" placeholder="Search user" class="search"></input>
+                <input type="text" placeholder="Search beatmap" class="search"></input>
             </form>
         </div>
         <div class="filterMenu">
@@ -47,26 +47,35 @@
             </div>
             <div class="keymodes" id="sortParent">
                 <div class="keymodesHover" id="sortButton">Sort by</div>
-                <div class="sortContent hidden" id="sortDropdown" data-value="rperc">
-                    <button class="sortName" onclick="updateSort('rperc')"> Ranked Score</button>
-                    <button class="sortName" onclick="updateSort('tperc')"> Total Score</button>
-                    <button class="sortName" onclick="updateSort('numscores')"> No. of Scores</button>
-                    <button class="sortName" onclick="updateSort('beatmap plays')"> Beatmap plays</button>
+                <div class="sortContent hidden" id="sortDropdown" data-value="plays">
+                    <button class="sortName" onclick="updateSort('sr')"> SR </button>
+                    <button class="sortName" onclick="updateSort('plays')"> Plays </button>
+                    <button class="sortName" onclick="updateSort('passes')"> Passes </button>
+                    <button class="sortName" onclick="updateSort('length')"> Length </button>
+                    <button class="sortName" onclick="updateSort('ln perc')"> LN% </button>
+                </div>
+            </div>
+            <div class="keymodes" id="statusParent">
+                <div class="keymodesHover" id="statusButton">Status</div>
+                <div class="keymodesContent hidden" id="statusDropdown">
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Ranked" name="status" onclick="applyFilter()" checked> Ranked </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Loved" name="status" onclick="applyFilter()" checked> Loved </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Unranked" name="status" onclick="applyFilter()"> Unranked </label>
                 </div>
             </div>
         </div>
             <table class="table">
                 <thead>
                     <th style="width: 4%; text-align: left;">#</th>
-                    <th style="width: 15%;">Player</th>
-                    <th style="width: 11%;">Ranked Score</th>
-                    <th style="width: 7%;">%</th>
-                    <th style="width: 11%;">Total Score</th>
-                    <th style="width: 7%;">%</th>
-                    <th style="width: 10%;">Tracked Scores</th>
-                    <th style="width: 10%;">Beatmap Plays</th>
-                    <th style="width: 10%;">Last Active</th>
-                    <th style="width: 15%;">Country</th>
+                    <th style="width: 41%;">Beatmap</th>
+                    <th style="width: 13%;">Mapper</th>
+                    <th style="width: 5%;">Keys</th>
+                    <th style="width: 5%;">SR</th>
+                    <th style="width: 5%;">Plays</th>
+                    <th style="width: 5%;">Passes</th>
+                    <th style="width: 7%;">Length</th>
+                    <th style="width: 7%;">LN%</th>
+                    <th style="width: 7%;">Status</th>
                 </thead>
             </table>
         <div class="tableCont">
@@ -76,6 +85,6 @@
                 </tbody>
             </table>
         </div>
-        <script src="users.js"></script>
+        <script src="beatmaps.js"></script>
     </body>
 </html>

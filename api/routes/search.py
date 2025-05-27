@@ -18,7 +18,6 @@ def load_beatmap_compact():
 
 @search_bp.route("/users", methods=["GET"])
 def get_users():
-    print("Searching users")
     filters = request.args.getlist("key")
     sort = request.args.get("sort")
     users = load_user_compact()
@@ -32,9 +31,12 @@ def get_users():
     response = []
     for user in users.values():
         rscore = sum([user["ranked score"][k] for k in filters])
-        tscore = sum([user["ranked score"][k] for k in filters])
+        tscore = sum([user["total score"][k] for k in filters])
         rperc = round(100 * rscore/(num_ranked*1000000), 2)
         tperc = round(100 * tscore/((num_ranked+num_unranked)*1000000), 2)
+
+        rscore = f"{str(round(rscore/1000000, 1))} M"
+        tscore = f"{str(round(tscore/1000000, 1))} M"
 
         row = {
             "name": user["name"],
@@ -48,15 +50,45 @@ def get_users():
             "country": user["country"]}
         
         response.append(row)
-        response.sort(key=lambda x: x[sort], reverse=True)
-        i = 1
-        for row in response:
-            row["pos"] = i
-            i += 1
+
+    response.sort(key=lambda x: x[sort], reverse=True)
+    i = 1
+    for row in response:
+        row["pos"] = i
+        i += 1
 
     return jsonify(response)
 
 @search_bp.route("/beatmaps", methods=["GET"])
 def get_beatmaps():
-    filters = request.args.getlist("option")
+    filters = request.args.getlist("key")
+    sort = request.args.get("sort")
+    states = request.args.getlist("status")
     beatmaps = load_beatmap_compact()
+    beatmaps = beatmaps["beatmaps"]
+
+    response = []
+    for beatmap in beatmaps.values():
+        if str(int(beatmap["keys"])) not in filters: continue
+        if beatmap["status"] not in states: continue
+        lnperc = round(beatmap["ln perc"], 2)
+        row = {
+            "name":beatmap["name"],
+            "mapper":beatmap["mapper"],
+            "keys":beatmap["keys"],
+            "sr":beatmap["sr"],
+            "plays":beatmap["plays"],
+            "passes":beatmap["passes"],
+            "length":beatmap["length"],
+            "ln perc":lnperc,
+            "status":beatmap["status"]}
+
+        response.append(row)
+
+    response.sort(key=lambda x: x[sort], reverse=True)
+    i = 1
+    for row in response:
+        row["pos"] = i
+        i += 1
+
+    return jsonify(response)
