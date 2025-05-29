@@ -135,6 +135,11 @@ html, body {
     text-align: right;
 }
 
+.table tr:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
 .searchMenu {
     width: 875px;
     align-content: stretch;

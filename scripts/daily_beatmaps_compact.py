@@ -24,7 +24,12 @@ def main():
 
         for bid, beatmap in mapset["beatmaps"].items():
             k = str(int(beatmap["keys"]))
+            sr = beatmap["sr"]
+            passes = beatmap["total passes"]
             if k in ["11", "13", "15", "17"]: continue
+            if sr > 15: continue
+            if passes == 0: continue
+
             if beatmap["status"] == 1:
                 ranked[k] += 1
                 status = "Ranked"
@@ -37,10 +42,8 @@ def main():
 
             name = f"{mapset["artist"]} - {mapset["title"]} [{beatmap["version"]}]"
             keys = beatmap["keys"]
-            sr = beatmap["sr"]
             mapper = Helper.name_from_uid(beatmap["mapper id"])
             plays = beatmap["total plays"]
-            passes = beatmap["total passes"]
             length = beatmap["length"]
             ln_perc = 100 * beatmap["ln"] / (beatmap["rice"] + beatmap["ln"]) if beatmap["rice"] + beatmap["ln"] != 0 else 0
 

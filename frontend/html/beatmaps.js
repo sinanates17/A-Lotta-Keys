@@ -77,6 +77,8 @@ async function applyFilter() {
   
   for (const row of rows) {
     const tr = document.createElement('tr');
+    const time = `${Math.floor(row["length"]/60)}:${(row["length"]%60).toString().padStart(2, '0')}`
+
     tr.innerHTML = `
       <td style="width: 4%; text-align: left;">${row["pos"]}</td>
       <td style="width: 41%;">${row["name"]}</td>
@@ -85,7 +87,7 @@ async function applyFilter() {
       <td style="width: 5%;">${row["sr"]}</td>
       <td style="width: 5%;">${row["plays"]}</td>
       <td style="width: 5%;">${row["passes"]}</td>
-      <td style="width: 7%;">${row["length"]}</td>
+      <td style="width: 7%;">${time}</td>
       <td style="width: 7%;">${row["ln perc"]}%</td>
       <td style="width: 7%;">${row["status"]}</td>`;
     body.appendChild(tr);
