@@ -16,7 +16,7 @@ PATH_SCORES_ARCHIVE = f"{os.getenv("PATH_DATA")}/scores/archive"
 PATH_DATA_BACKUP = os.getenv("PATH_DATA_BACKUP")
 PATH_DISCORD_BOT = f"{os.getenv("PATH_ROOT")}/discord_bot"
 
-REQUEST_INTERVAL = float(os.getenv("REQUEST_INTERVAL"))
+REQUEST_INTERVAL = float(os.getenv("REQUEST_INTERVAL", 2.5))
 
 PATH_PYTHON = f"{os.getenv("PATH_VENV")}/bin/python"
 PATH_ROOT = os.getenv("PATH_ROOT")
