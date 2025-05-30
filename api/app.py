@@ -14,6 +14,7 @@ def print_routes(app):
     for rule in app.url_map.iter_rules():
         print(f"{rule.endpoint}: {rule}", file=sys.stderr)
 
+print_routes(app)
+
 if __name__ == '__main__':
-    print_routes(app)
     app.run(debug=True)
