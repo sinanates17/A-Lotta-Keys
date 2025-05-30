@@ -17,8 +17,17 @@ logger = logging.getLogger(__name__)
 def log_request():
     logger.debug(f"[REQUEST] {request.method} {request.path}")
 
+@app.route("/ping")
+def test():
+    return "Pong!"
+
 CORS(app)
 app.register_blueprint(search_bp, url_prefix='/api/search')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+if __name__ != '__main__':
+    print("=== REGISTERED ROUTES ===", file=sys.stderr)
+    for rule in app.url_map.iter_rules():
+        print(f"{rule}", file=sys.stderr)
