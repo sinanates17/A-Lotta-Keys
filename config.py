@@ -2,7 +2,9 @@ from dotenv import load_dotenv
 import os
 import sys
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+from pathlib import Path
+dotenv_path = Path(__file__).resolve().parent.parent / ".env"
+print("=== CONFIG IMPORTED ===", file=sys.stderr)
 load_dotenv(dotenv_path)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
