@@ -6,10 +6,6 @@ import json
 
 search_bp = Blueprint("search", __name__)
 
-@search_bp.route('/ping')
-def ping():
-    return jsonify({"message": "Pong!"})
-
 def load_user_compact():
     with open(f"{PATH_DATA}/users_compact.json", "r", encoding="utf-8") as f:
         compact = json.load(f)
