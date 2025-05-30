@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
 print("=== CONFIG IMPORTED ===", file=sys.stderr)
+print(f"DEBUG: dotenv_path used = {dotenv_path}", file=sys.stderr)
 load_dotenv(dotenv_path)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
