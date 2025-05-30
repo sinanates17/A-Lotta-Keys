@@ -1,12 +1,12 @@
 import sys
 import os
 
-api_path = os.path.dirname(__file__)
-sys.path.insert(0, api_path)
+project_root = os.path.dirname(os.path.dirname(__file__))  # one level above /api
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 import logging
 logging.basicConfig(stream=sys.stderr)
 
-from app import app
-
-application = app 
+from api.app import app  # note: import from full path
+application = app
