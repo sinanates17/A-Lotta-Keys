@@ -5,5 +5,6 @@ def application(environ, start_response):
     
     start_response('200 OK', [('Content-Type', 'text/plain')])
     return [b"WSGI environment dumped.\n"]
+application()
 
 from app import app as application
