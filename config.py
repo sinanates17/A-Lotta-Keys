@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
-load_dotenv()
+env_path = Path(__file__).resolve().parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
 OSU_API_SECRET = os.getenv("OSU_API_SECRET")

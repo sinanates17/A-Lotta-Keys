@@ -7,7 +7,7 @@ from api.routes.search import search_bp
 
 app = Flask(__name__)
 CORS(app)
-app.register_blueprint(search_bp, url_prefix='api/search')
+app.register_blueprint(search_bp, url_prefix='/api/search')
 
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)
