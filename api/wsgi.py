@@ -1,8 +1,11 @@
 import sys
 import os
 
-project_home = os.path.dirname(__file__)
-sys.path.insert(0, project_home)
+api_path = os.path.dirname(__file__)
+sys.path.insert(0, api_path)
+
+import logging
+logging.basicConfig(stream=sys.stderr)
 
 from app import app
 
