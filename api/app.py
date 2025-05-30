@@ -9,5 +9,11 @@ app = Flask(__name__)
 CORS(app)
 app.register_blueprint(search_bp, url_prefix='/api/search')
 
+def print_routes(app):
+    print(">>> Registered routes:", file=sys.stderr)
+    for rule in app.url_map.iter_rules():
+        print(f"{rule.endpoint}: {rule}", file=sys.stderr)
+
 if __name__ == '__main__':
+    print_routes(app)
     app.run(debug=True)
