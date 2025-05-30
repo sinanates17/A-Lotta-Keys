@@ -3,9 +3,7 @@ import os
 import sys
 from pathlib import Path
 
-env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)
-print(env_path, file=sys.stderr)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
 OSU_API_SECRET = os.getenv("OSU_API_SECRET")
