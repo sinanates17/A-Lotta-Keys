@@ -1,7 +1,9 @@
 from dotenv import load_dotenv
 import os
+import sys
 
-load_dotenv()
+dotenv_path = os.path.join(os.path.dirname(__file__), '../.env')
+load_dotenv(dotenv_path)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
 OSU_API_SECRET = os.getenv("OSU_API_SECRET")
@@ -21,3 +23,5 @@ REQUEST_INTERVAL = float(os.getenv("REQUEST_INTERVAL", "2.5"))
 PATH_PYTHON = f"{os.getenv("PATH_VENV")}/bin/python"
 PATH_ROOT = os.getenv("PATH_ROOT")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")
+
+print("DEBUG: ENV VALUE =", PATH_ROOT, file=sys.stderr)
