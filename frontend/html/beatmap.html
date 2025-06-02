@@ -39,6 +39,6 @@
         const beatmapData = {{ beatmap|tojson|safe }};
         const userLinksData = {{ userLinks|tojson|safe }};
     </script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/plotly-basic-3.0.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/beatmap.js') }}"></script>
 </html>

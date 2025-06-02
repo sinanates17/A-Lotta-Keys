@@ -35,5 +35,6 @@
     <script>
         const userData = {{ user|tojson|safe }};
     </script>
-    <script src="user.js"></script>
+    <script src="{{ url_for('static', filename='js/plotly-basic-3.0.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/user.js') }}"></script>
 </html>
