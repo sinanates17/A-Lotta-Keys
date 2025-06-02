@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-    <body class="background">
+    <body class="backgroundP">
         <div class="menuContainer">
             <button class="homeButton" onclick="window.location.href='/index.html'">Home</button>
             <button class="homeButton" onclick="window.location.href='/beatmaps.html'">Beatmaps</button>
@@ -34,6 +34,7 @@
         <div class="hdiff">{{ beatmap.version }}</div>
         <div id="plotAccScore" class="plot"></div>
         <div id="plotTimeScore" class="plot"></div>
+        <div id="plotTimePlays" class="plot"></div>
     </body>
     <script>
         const beatmapData = {{ beatmap|tojson|safe }};

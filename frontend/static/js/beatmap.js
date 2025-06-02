@@ -1,17 +1,24 @@
 /** @type {typeof import("plotly.js-dist-min")} */
 const Plotly = window.Plotly;
 const scoreData = Object.values(beatmapData.scores);
+const playData = Object.values(beatmapData["play history"])
+const passData = Object.values(beatmapData["pass history"])
+const timeData = Object.keys(beatmapData["play history"])
 
 const accs = scoreData.map(score => score["acc"]);
 const scores = scoreData.map(score => score["score"]);
 const users = scoreData.map(score => userLinksData[score["uid"]]);
-const times = scoreData.map(score => dateFromTimestamp(score["time"]))
+const timesScores = scoreData.map(score => dateFromTimestamp(score["time"]))
 const colors = scoreData.map(score => colorFromSeed(score["uid"]))
+
+const plays = Array.from(playData.values())
+const passes = Array.from(passData.values())
+const timesPlays = timeData.map(ts => dateFromTimestamp(ts))
 
 const customdata = users.map((u, i) => [u, 
                                         scores[i], 
                                         `${Math.round(accs[i]*10000)/100}%`, 
-                                        formatDate(times[i])])
+                                        formatDate(timesScores[i])])
 const templateStr = 'Player: %{customdata[0]}<br>Score: %{customdata[1]}<br>Accuracy: %{customdata[2]}<br>Date: %{customdata[3]}';
 
 const traceAccScore = {
@@ -29,16 +36,16 @@ const traceAccScore = {
 };
 
 const layoutAccScore = {
-    title: 'Acc vs Score',
-    xaxis: { title: 'Accuracy' },
-    yaxis: { title: 'Score' },
+    title: { text: 'Acc vs Score'},
+    xaxis: { title: { text: 'Accuracy' } },
+    yaxis: { title: { text: 'Score' } },
     hovermode: "closest"
 };
 
-Plotly.newPlot("plotAccScore", [traceAccScore], layoutAccScore)
+Plotly.newPlot("plotAccScore", [traceAccScore], layoutAccScore);
 
 const traceTimeScore = {
-    x: times,
+    x: timesScores,
     y: scores,
     customdata: customdata,
     mode: "markers",
@@ -51,13 +58,38 @@ const traceTimeScore = {
 };
 
 const layoutTimeScore = {
-    title: 'Time vs Score',
-    xaxis: { title: 'Time' },
-    yaxis: { title: 'Score' },
+    title: { text: 'Time vs Score' },
+    xaxis: { title: { text: 'Time' } },
+    yaxis: { title: { text: 'Score' } },
     hovermode: "closest"
 };
 
-Plotly.newPlot("plotTimeScore", [traceTimeScore], layoutTimeScore)
+Plotly.newPlot("plotTimeScore", [traceTimeScore], layoutTimeScore);
+
+const traceTimePlays = {
+    x: timesPlays,
+    y: plays,
+    mode: "lines",
+    type: "scatter",
+    name: "plays"
+};
+console.log(timesPlays)
+
+const traceTimePasses = {
+    x: timesPlays,
+    y: passes,
+    mode: "lines",
+    type: "scatter",
+    name: "passes"
+}
+
+const layoutTimePlays = {
+    title: { text: 'Plays and Passes over Time' },
+    xaxis: { title: { text: 'Time' } },
+    hovermode: "closest"
+};
+
+Plotly.newPlot("plotTimePlays", [traceTimePlays, traceTimePasses], layoutTimePlays)
 
 function dateFromTimestamp(ts) {
     const year = 2000 + parseInt(ts.slice(0, 2));
