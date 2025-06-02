@@ -73,7 +73,6 @@ const traceTimePlays = {
     type: "scatter",
     name: "plays"
 };
-console.log(timesPlays)
 
 const traceTimePasses = {
     x: timesPlays,
@@ -86,6 +85,7 @@ const traceTimePasses = {
 const layoutTimePlays = {
     title: { text: 'Plays and Passes over Time' },
     xaxis: { title: { text: 'Time' } },
+    yaxis: { range: [0, null] },
     hovermode: "closest"
 };
 
