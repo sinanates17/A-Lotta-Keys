@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>A Lotta Keys</title>
+        <title>{{ artist }} - {{ title }}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/css/styles.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="http://127.0.0.1:5500/frontend/static/css/styles.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-    <body class="backgroundHome">
-        <h1 class="h1">A Lotta Keys</h1>
+    <body class="background">
         <div class="menuContainer">
-            <button class="homeButton" onclick="window.location.href='/users.html'">Users</button>
+            <button class="homeButton" onclick="window.location.href='/index.html'">Home</button>
             <button class="homeButton" onclick="window.location.href='/beatmaps.html'">Beatmaps</button>
             <button class="homeButton" onclick="window.location.href='/index.html'">Monthly</button>
             <button class="homeButton" onclick="window.location.href='/index.html'">About</button>
@@ -29,12 +30,15 @@
                 <i class="fa-solid fa-user"></i>
             </button>
         </div>
-        <div class="spacer1"></div>
-        <h2 class="h2">Welcome to my site!</h2>
-        <p class="p">My name is Sinan, but you likely know me as <a class="hlink" target="_blank" href="https://osu.ppy.sh/users/12589220">Hugged</a> from osu!mania. This is a personal site first and foremost. I want to use it as a platform to host my projects. If you're interested in the lore and design of this site and its backend in detail, check out the About page!
-                     <br><br>
-                     A Lotta Keys is essentially a project to archive the history of osu!mania's 10K+ subcommunity in data. I am making daily requests for recent 10K+ mania scores using the osu! API. Most of these scores get deleted from osu!'s database after 24 hours. I intend to preserve everything I can scrape, and to allow users of this site to view all those cool stats with the power of data visualization.
-        </p>
-        <script src="" async defer></script>
+        <div class="hUser">{{ artist }} - {{ title }}</div>
+        <div class="hdiff">{{ beatmap.version }}</div>
+        <div id="plotAccScore" class="plot"></div>
+        <div id="plotTimeScore" class="plot"></div>
     </body>
+    <script>
+        const beatmapData = {{ beatmap|tojson|safe }};
+        const userLinksData = {{ userLinks|tojson|safe }};
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='js/beatmap.js') }}"></script>
 </html>

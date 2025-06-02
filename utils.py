@@ -190,10 +190,13 @@ class Helper:
         for i, beatmap_id in enumerate(beatmap_ids):
             sleep(REQUEST_INTERVAL)
             print(f"Request {i+1} of {length}") #Temporary until I implement a logger
-            results = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
-            for result in results: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
-                result.beatmap_id = beatmap_id
-            scores += results
+            try:
+                results = self.osu_api.beatmap_user_scores(beatmap_id=beatmap_id, user_id=user_id)
+                for result in results: #This is a monkey patch since beatmap_user_scores() doesnt include a beatmap or beatmap id in the returned scores.
+                    result.beatmap_id = beatmap_id
+                scores += results
+            finally:
+                continue
 
         return scores
     

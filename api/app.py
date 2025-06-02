@@ -1,13 +1,19 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_cors import CORS
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
+from config import PATH_ROOT
 from api.routes.search import search_bp
 
-app = Flask(__name__)
+app = Flask(__name__, 
+            template_folder=f"{PATH_ROOT}/frontend/html",
+            static_folder=f"{PATH_ROOT}/frontend/static")
 CORS(app)
 app.register_blueprint(search_bp, url_prefix='/api/search')
+
+@app.route("/<file>")
+def file(file):
+    return render_template(file)
 
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)

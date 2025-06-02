@@ -262,3 +262,21 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
+
+.hUser {
+    padding-top: 25px;
+    font-size: 40px;
+    color: #efe5f3;
+    font-family: Ubuntu;
+}
+
+.hdiff {
+    padding-top: 25px;
+    font-size: 25px;
+    color: #bcb0c0;
+    font-family: Ubuntu;
+}
+
+.plot {
+    padding-top: 25px;
+}

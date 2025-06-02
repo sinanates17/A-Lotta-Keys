@@ -9,6 +9,8 @@ API_BASE = isDev
 const keymodesContainer = document.getElementById('keymodesParent');
 const keymodesButton = document.getElementById('keymodesButton');
 const keymodesDropdown = document.getElementById("keymodesDropdown");
+const searchBar = document.getElementById("search");
+const body = document.getElementById("leaderboard");
 
 function showDropdownKeymodes() {
   keymodesDropdown.classList.toggle('hidden', false);}
@@ -61,7 +63,7 @@ function updateSort(sortKey) {
 async function applyFilter() {
   const selectedKeys = Array.from(document.querySelectorAll('input[name="key"]:checked')).map(box => box.value);
   const selectedStates = Array.from(document.querySelectorAll('input[name="status"]:checked')).map(box => box.value);
-  const body = document.getElementById("leaderboard");
+  searchBar.value = '';
   body.innerHTML = '';
   if (selectedKeys.length === 0 || selectedStates.length === 0) {
     return;
@@ -77,6 +79,8 @@ async function applyFilter() {
   
   for (const row of rows) {
     const tr = document.createElement('tr');
+    tr.id = row["id"];
+    tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
     const time = `${Math.floor(row["length"]/60)}:${(row["length"]%60).toString().padStart(2, '0')}`
 
     tr.innerHTML = `
@@ -93,5 +97,35 @@ async function applyFilter() {
     body.appendChild(tr);
   }
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+searchBar.addEventListener("input", function() {
+  const rows = body.getElementsByTagName("tr")
+  const subString = searchBar.value.toLowerCase()
+
+  if (searchBar.value === '') {
+    for (const row of rows) {
+      row.style.display = "table-row"
+    }
+    return;
+  }
+
+  for (const row of rows) {
+    var cells = row.getElementsByTagName("td");
+    var name = cells[1].textContent.toLowerCase()
+
+    if (name.includes(subString)) {
+      row.style.display = "table-row"
+    }
+    else {
+      row.style.display = "none"
+    }
+
+  }
+})
+
+/////////////////////////////////////////////////////////////////////////
+
 
 applyFilter();

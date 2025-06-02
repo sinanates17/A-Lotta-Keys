@@ -2,7 +2,7 @@ import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from datetime import datetime, timezone, timedelta
 from utils import Helper
-from config import PATH_SCORES, PATH_USERS, PATH_BEATMAPSETS
+from config import PATH_SCORES, PATH_USERS, PATH_BEATMAPSETS, PATH_DATA
 from os import listdir
 import json
 
@@ -122,6 +122,7 @@ def main():
 
     def _update_name_url():
         users = helper.users(uids)
+        user_links = {}
 
         for file in listdir(PATH_USERS):
             if not file.endswith(".json"): continue
@@ -137,8 +138,13 @@ def main():
                     user_dict["avatar url"] = user_dict_new["avatar url"]
                     user_dict["country"] = user_dict_new["country"]
 
+                    user_links[uid] = user_dict["name"]
+
                     with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
                         json.dump(user_dict, f, ensure_ascii=False, indent=4)
+
+        with open(f"{PATH_DATA}/user_links.json", "w", encoding='utf-8') as f:
+            json.dump(user_links, f, ensure_ascii=False, indent=4)
 
     helper = Helper()
     now = datetime.now(timezone.utc)

@@ -9,6 +9,8 @@ API_BASE = isDev
 const keymodesContainer = document.getElementById('keymodesParent');
 const keymodesButton = document.getElementById('keymodesButton');
 const keymodesDropdown = document.getElementById("keymodesDropdown");
+const searchBar = document.getElementById("search")
+const body = document.getElementById("leaderboard");
 
 function showDropdownKeymodes() {
   keymodesDropdown.classList.toggle('hidden', false);}
@@ -46,22 +48,25 @@ function updateSort(sortKey) {
 async function applyFilter() {
   const selectedKeys = Array.from(document.querySelectorAll('input[name="key"]:checked')).map(box => box.value);
   const sort = document.getElementById("sortDropdown").dataset.value;
+  searchBar.value = '';
+  body.innerHTML = '';
+  if (selectedKeys.length === 0) {
+    return;
+  }
+
   let query = selectedKeys.map(key => 'key=' + encodeURIComponent(key)).join('&');
   query = query + '&sort=' + encodeURIComponent(sort);
   const url = API_BASE + 'api/search/users?' + query;
-  console.log(url);
-  
-
   const response = await fetch(url);
   const rows = await response.json();
-
-  const body = document.getElementById("leaderboard");
-  body.innerHTML = '';
+  
   for (const row of rows) {
-    const tr = document.createElement('tr')
+    const tr = document.createElement('tr');
+    tr.id = row["id"];
+    tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
     tr.innerHTML = `
       <td style="width: 4%; text-align: left;">${row["pos"]}</td>
-      <td style="width: 15%;">${row["name"]}</td>
+      <td style="width: 15%;" >${row["name"]}</td>
       <td style="width: 11%;">${row["rscore"]}</td>
       <td style="width: 7%;">${row["rperc"]}%</td>
       <td style="width: 11%;">${row["tscore"]}</td>
@@ -71,8 +76,37 @@ async function applyFilter() {
       <td style="width: 10%;">${row["last score"]} d</td>
       <td style="width: 15%;">${row["country"]}</td>
     `;
-    body.appendChild(tr)
+    body.appendChild(tr);
   }
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+searchBar.addEventListener("input", function() {
+  const rows = body.getElementsByTagName("tr")
+  const subString = searchBar.value.toLowerCase()
+
+  if (searchBar.value === '') {
+    for (const row of rows) {
+      row.style.display = "table-row"
+    }
+    return;
+  }
+
+  for (const row of rows) {
+    var cells = row.getElementsByTagName("td");
+    var name = cells[1].textContent.toLowerCase()
+
+    if (name.includes(subString)) {
+      row.style.display = "table-row"
+    }
+    else {
+      row.style.display = "none"
+    }
+
+  }
+})
+
+/////////////////////////////////////////////////////////////////////////
 
 applyFilter()
