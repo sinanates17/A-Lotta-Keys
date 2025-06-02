@@ -68,8 +68,8 @@ def main():
     previous_date = None
 
     if output in listdir(PATH_DATA):
-        with open(output, "r", encoding='utf-8') as f:
-            cum_stats_timeline = json.load(f"{PATH_DATA}/{output}")
+        with open(f"{PATH_DATA}/{output}", "r", encoding='utf-8') as f:
+            cum_stats_timeline = json.load(f)
         
         previous_date = list(cum_stats_timeline.keys())[-1].strptime("%y%m%d%H%M%S")
         mapsets = helper.cum_search_beatmapsets(
