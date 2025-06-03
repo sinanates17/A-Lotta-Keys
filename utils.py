@@ -107,6 +107,12 @@ class Helper:
             '0': score.statistics.miss if score.statistics.miss is not None else 0
         }
 
+        if score.pp is None:
+            try:
+                score_dict["pp"] = Helper.calculate_pp(score_dict)
+            finally:
+                pass
+
         return score_dict
     
     @staticmethod
