@@ -36,10 +36,24 @@ const traceAccScore = {
 };
 
 const layoutAccScore = {
+    font: {
+        family: "ubuntu",
+        color: "#efe5f3"
+    },
     title: { text: 'Acc vs Score'},
-    xaxis: { title: { text: 'Accuracy' } },
-    yaxis: { title: { text: 'Score' } },
-    hovermode: "closest"
+    xaxis: { 
+        title: { text: 'Accuracy' },
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3"
+    },
+    yaxis: { 
+        title: { text: 'Score' },
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3"
+    },
+    hovermode: "closest",
+    paper_bgcolor: "#18121b",
+    plot_bgcolor: "#18121b"
 };
 
 Plotly.newPlot("plotAccScore", [traceAccScore], layoutAccScore);
@@ -58,10 +72,24 @@ const traceTimeScore = {
 };
 
 const layoutTimeScore = {
-    title: { text: 'Time vs Score' },
-    xaxis: { title: { text: 'Time' } },
-    yaxis: { title: { text: 'Score' } },
-    hovermode: "closest"
+    font: {
+        family: "ubuntu",
+        color: "#efe5f3"
+    },
+    title: { text: 'Time vs Score'},
+    xaxis: { 
+        title: { text: 'Time' },
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3"
+    },
+    yaxis: { 
+        title: { text: 'Score' },
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3"
+    },
+    hovermode: "closest",
+    paper_bgcolor: "#18121b",
+    plot_bgcolor: "#18121b"
 };
 
 Plotly.newPlot("plotTimeScore", [traceTimeScore], layoutTimeScore);
@@ -83,10 +111,24 @@ const traceTimePasses = {
 }
 
 const layoutTimePlays = {
-    title: { text: 'Plays and Passes over Time' },
-    xaxis: { title: { text: 'Time' } },
-    yaxis: { range: [0, null] },
-    hovermode: "closest"
+    font: {
+        family: "ubuntu",
+        color: "#efe5f3"
+    },
+    title: { text: 'Plays and Passes over Time'},
+    xaxis: { 
+        title: { text: 'Time' },
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3"
+    },
+    yaxis: {
+        gridcolor: "#4e4950",
+        zerolinecolor: "#efe5f3",
+        range: [0, null]
+    },
+    hovermode: "closest",
+    paper_bgcolor: "#18121b",
+    plot_bgcolor: "#18121b"
 };
 
 Plotly.newPlot("plotTimePlays", [traceTimePlays, traceTimePasses], layoutTimePlays)
@@ -106,9 +148,9 @@ function dateFromTimestamp(ts) {
 
 function colorFromSeed(seed) {
     seed = parseFloat(seed);
-    const r =  Math.floor(128 * (Math.sin(seed) + 1));
-    const g =  Math.floor(128 * (Math.sin(seed/2) + 1));
-    const b =  Math.floor(128 * (Math.sin(seed/3) + 1));
+    const r =  Math.floor(96 * (Math.sin(seed) + 1)) + 64;
+    const g =  Math.floor(96 * (Math.sin(seed/2) + 1)) + 64;
+    const b =  Math.floor(96 * (Math.sin(seed/3) + 1)) + 64;
 
     const color = `rgb(${r}, ${g}, ${b})`
     return color;

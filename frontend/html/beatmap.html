@@ -32,9 +32,16 @@
         </div>
         <div class="hUser">{{ artist }} - {{ title }}</div>
         <div class="hdiff">{{ beatmap.version }}</div>
-        <div id="plotAccScore" class="plot"></div>
-        <div id="plotTimeScore" class="plot"></div>
-        <div id="plotTimePlays" class="plot"></div>
+        <div>
+            <div class="menuContainer">
+                <div id="plotTimePlays" class="plot"></div>
+                <div></div>
+            </div>
+            <div class="menuContainer">
+                <div id="plotAccScore" class="plot"></div>
+                <div id="plotTimeScore" class="plot"></div>
+            </div>
+        </div>
     </body>
     <script>
         const beatmapData = {{ beatmap|tojson|safe }};

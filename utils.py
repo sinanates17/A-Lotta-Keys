@@ -1,5 +1,5 @@
 from ossapi import Ossapi, Beatmapset, Beatmap, Score, User, Statistics
-from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS
+from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA
 from datetime import datetime, timezone
 from time import sleep
 from os import listdir
@@ -134,6 +134,38 @@ class Helper:
             name = user["name"]
             return name
         return None
+
+    @staticmethod
+    def calculate_pp(score_dict: dict, sr=None):
+        c320 = score_dict["320"]
+        c300 = score_dict["300"]
+        c200 = score_dict["200"]
+        c100 = score_dict["100"]
+        c50 = score_dict["50"]
+        c0 = score_dict["0"]
+        total_hits = c320 + c300 + c200 + c100 + c50 + c0
+        acc = (320 * c320 + 300 * c300 + 200 * c200 + 100 * c100 + 50 * c50) / (320 * total_hits)
+
+        if sr is None:
+            sr = Helper.get_sr_of_beatmap(score_dict["bmid"])
+
+        base_mult = 8
+        sr_mult = max(.05, (sr - .15)) ** 2.2
+        acc_mult = max(0, (5 * acc - 4))
+        length_mult = 1 + .1 * min(1, (total_hits / 1500))
+
+        pp = base_mult * sr_mult * acc_mult * length_mult
+
+        return pp
+
+    @staticmethod
+    def get_sr_of_beatmap(bmid):
+        with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
+            links = json.load(f)
+
+        msid = links[str(bmid)]
+        
+        return msid
 
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)
