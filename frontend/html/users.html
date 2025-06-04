@@ -35,7 +35,7 @@
         </div>
         <div class="filterMenu">
             <div class="keymodes" id="keymodesParent">
-                <div class="keymodesHover" id="keymodesButton">Keymodes</div>
+                <div class="keymodesHover" id="keymodesButton">Keymodes:</div>
                 <div class="keymodesContent hidden" id="keymodesDropdown">
                     <label><input class="keymodesCheckbox" type="checkbox" value="9" name="key" onclick="applyFilter()"> 9K </label>
                     <label><input class="keymodesCheckbox" type="checkbox" value="10" name="key" onclick="applyFilter()" checked> 10K </label>
@@ -46,26 +46,38 @@
                 </div>
             </div>
             <div class="keymodes" id="sortParent">
-                <div class="keymodesHover" id="sortButton">Sort by</div>
-                <div class="sortContent hidden" id="sortDropdown" data-value="rperc">
+                <div class="keymodesHover" id="sortButton">Sort by:</div>
+                <div class="sortContent hidden" id="sortDropdown" data-value="pp">
+                    <button class="sortName" onclick="updateSort('pp')"> PP</button>
                     <button class="sortName" onclick="updateSort('rperc')"> Ranked Score</button>
                     <button class="sortName" onclick="updateSort('tperc')"> Total Score</button>
                     <button class="sortName" onclick="updateSort('numscores')"> No. of Scores</button>
                     <button class="sortName" onclick="updateSort('beatmap plays')"> Beatmap plays</button>
                 </div>
             </div>
+            <div class="keymodes" id="ppParent">
+                <div class="keymodesHover" id="ppButton">PP For:</div>
+                <div class="sortContent hidden" id="ppDropdown" data-value="RL">
+                    <button class="sortName" onclick="updatePP('R')"> Ranked Only </button>
+                    <button class="sortName" onclick="updatePP('L')"> Loved Only </button>
+                    <button class="sortName" onclick="updatePP('U')"> Unranked Only </button>
+                    <button class="sortName" onclick="updatePP('RL')"> Ranked + Loved </button>
+                    <button class="sortName" onclick="updatePP('RLU')"> All Beatmaps </button>
+                </div>
+            </div>
         </div>
             <table class="table">
                 <thead>
                     <th style="width: 4%; text-align: left;">#</th>
-                    <th style="width: 15%;">Player</th>
+                    <th style="width: 12%;">Player</th>
+                    <th style="width: 7%;">PP</th>
                     <th style="width: 11%;">Ranked Score</th>
                     <th style="width: 7%;">%</th>
                     <th style="width: 11%;">Total Score</th>
                     <th style="width: 7%;">%</th>
                     <th style="width: 10%;">Tracked Scores</th>
                     <th style="width: 10%;">Beatmap Plays</th>
-                    <th style="width: 10%;">Last Active</th>
+                    <th style="width: 6%;">Last Active</th>
                     <th style="width: 15%;">Country</th>
                 </thead>
             </table>

@@ -36,13 +36,28 @@ def msid_from_bid(bid):
 def get_users():
     filters = request.args.getlist("key")
     sort = request.args.get("sort")
+    pp_state = request.args.get("pp")
+    pp_keys = None
     users = load_user_compact()
     users = users["users"]
     beatmaps = load_beatmap_compact()
     num_unranked = sum([beatmaps["unranked"][k] for k in filters])
     num_ranked = sum([beatmaps["ranked"][k] for k in filters] +
                      [beatmaps["loved"][k] for k in filters])
+    
     del beatmaps #Look at me I'm manually managing memory in python!
+
+    if len(filters) == 1:
+        pp_keys = filters[0]
+
+    if set(filters) == {"9", "10", "12", "14", "16", "18"}:
+        pp_keys = "9+"
+
+    if set(filters) == {"10", "12", "14", "16", "18"}:
+        pp_keys = "10+"
+
+    if set(filters) == {"12", "14", "16", "18"}:
+        pp_keys = "12+"
 
     response = []
     for id, user in users.items():
@@ -57,6 +72,7 @@ def get_users():
         row = {
             "id": id,
             "name": user["name"],
+            "pp": user["pps"][pp_state][pp_keys] if pp_keys is not None else "-",
             "rscore": rscore,
             "rperc": rperc,
             "tscore": tscore,

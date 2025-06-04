@@ -15,6 +15,10 @@ app.register_blueprint(search_bp, url_prefix='/api/search')
 def file(file):
     return render_template(file)
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)
     for rule in app.url_map.iter_rules():

@@ -40,14 +40,37 @@ sorts.forEach(child => child.addEventListener('click', hideDropdownSort));
 
 /////////////////////////////////////////////////////////////////////////
 
+const ppContainer = document.getElementById('ppParent');
+const ppButton = document.getElementById('ppButton');
+const ppDropdown = document.getElementById("ppDropdown");
+const pps = Array.from(ppDropdown.children);
+
+function showDropdownPP() {
+  ppDropdown.classList.toggle('hidden', false);}
+
+function hideDropdownPP() {
+  ppDropdown.classList.toggle('hidden', true);}
+
+ppButton.addEventListener('pointerenter', showDropdownPP);
+ppContainer.addEventListener('pointerleave', hideDropdownPP);
+pps.forEach(child => child.addEventListener('click', hideDropdownPP));
+
+/////////////////////////////////////////////////////////////////////////
+
 function updateSort(sortKey) {
   sortDropdown.dataset.value = sortKey;
+  applyFilter();
+}
+
+function updatePP(pp) {
+  ppDropdown.dataset.value = pp;
   applyFilter();
 }
 
 async function applyFilter() {
   const selectedKeys = Array.from(document.querySelectorAll('input[name="key"]:checked')).map(box => box.value);
   const sort = document.getElementById("sortDropdown").dataset.value;
+  const pp = document.getElementById("ppDropdown").dataset.value;
   searchBar.value = '';
   body.innerHTML = '';
   if (selectedKeys.length === 0) {
@@ -56,6 +79,7 @@ async function applyFilter() {
 
   let query = selectedKeys.map(key => 'key=' + encodeURIComponent(key)).join('&');
   query = query + '&sort=' + encodeURIComponent(sort);
+  query = query + '&pp=' + encodeURIComponent(pp);
   const url = API_BASE + 'api/search/users?' + query;
   const response = await fetch(url);
   const rows = await response.json();
@@ -66,14 +90,15 @@ async function applyFilter() {
     tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
     tr.innerHTML = `
       <td style="width: 4%; text-align: left;">${row["pos"]}</td>
-      <td style="width: 15%;" >${row["name"]}</td>
+      <td style="width: 12%;" >${row["name"]}</td>
+      <td style="width: 7%;" >${row["pp"]}</td>
       <td style="width: 11%;">${row["rscore"]}</td>
       <td style="width: 7%;">${row["rperc"]}%</td>
       <td style="width: 11%;">${row["tscore"]}</td>
       <td style="width: 7%;">${row["tperc"]}%</td>
       <td style="width: 10%;">${row["numscores"]}</td>
       <td style="width: 10%;">${row["beatmap plays"]}</td>
-      <td style="width: 10%;">${row["last score"]} d</td>
+      <td style="width: 6%;">${row["last score"]} d</td>
       <td style="width: 15%;">${row["country"]}</td>
     `;
     body.appendChild(tr);
