@@ -31,6 +31,16 @@
             </button>
         </div>
         <div class="hUser">{{ user.name }}</div>
+        <div>
+            <div class="menuContainer">
+                <div id="plotTimePP" class="plot"></div>
+                <div id="plotCumTimePP" class="plot"></div>
+            </div>
+            <div class="menuContainer">
+                <div id="plotTimePlays" class="plot"></div>
+                <div id="plotTimePlaysDelta" class="plot"></div>
+            </div>
+        </div>
     </body>
     <script>
         const userData = {{ user|tojson|safe }};

@@ -46,7 +46,7 @@ def main():
             with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
                 scores = json.load(f)
 
-            if int(scores["timestamp"]) > int(cutoff):
+            if True: #int(scores["timestamp"]) > int(cutoff):
                 for sid, score in scores.items():
                     if sid == "timestamp": continue
 

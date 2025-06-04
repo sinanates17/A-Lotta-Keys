@@ -2,6 +2,7 @@ import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import PATH_USERS, PATH_BEATMAPSETS, PATH_DATA
 from os import listdir
+from utils import Helper
 from multiprocessing import Pool
 from functools import partial
 import json
@@ -21,9 +22,15 @@ def _process_user_files(file, max_ranked_score, max_score):
     total_score = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
     beatmap_plays = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
 
+    states = ["R", "L", "U", "RL", "RLU"]
+    pps = { state: { k:None for k in ["9", "10", "12", "14", "16", "18", "9+", "10+", "12+"] } for state in states}
+    pps_lists = { state: { k:[] for k in ["9", "10", "12", "14", "16", "18", "9+", "10+", "12+"] } for state in states}
+
     bm_top_scores = {}
 
     for score in user["scores"].values():
+        pp = score["pp"]
+
         bid = str(score["bid"])
         msid = score["msid"]
         mfile = f"{msid}.json"
@@ -43,12 +50,43 @@ def _process_user_files(file, max_ranked_score, max_score):
                     bm_top_scores[bid] = {
                         "k":k,
                         "score": score["score"],
+                        "pp": score["pp"],
                         "status": mapset["beatmaps"][bid]["status"]}
 
     for bid, val in bm_top_scores.items():
-        total_score[val["k"]] += val["score"]
-        if val["status"] in [1, 4]:
-            ranked_score[val["k"]] += val["score"]
+        k = val["k"]
+        pp = val["pp"]
+        status = val["status"]
+        score = val["score"]
+
+        total_score[k] += score
+
+        state_groups = ["RLU"]
+        key_groups = ["9+", k]
+
+        if not k == "9":
+            key_groups.append("10+")
+
+        if not (k == "9" or k == "10"):
+            key_groups.append("12+")
+
+        if status in [1, 4]:
+            ranked_score[k] += score
+            state_groups.append("RL")
+
+            if status == 1:
+                state_groups.append("R")
+
+            else:
+                state_groups.append("L")
+
+        else:
+            state_groups.append("U")
+
+        for state in state_groups:
+            if pp is not None:
+                for key in key_groups:
+                    pps_lists[state][key].append(pp)
 
     for msid in user["beatmapsets"].keys():
         file = f"{msid}.json"
@@ -62,6 +100,12 @@ def _process_user_files(file, max_ranked_score, max_score):
                 if k in ["11", "13", "15", "17"]: continue
                 beatmap_plays[k] += beatmap["total plays"]
 
+    for state, pp_dict in pps_lists.items():
+        for k, pp_list in pp_dict.items():
+            total_pp = Helper.calculate_profile_pp(pp_list)
+            total_pp = round(total_pp, 2)
+            pps[state][k] = total_pp
+
     ranked_perc = { k:100*ranked_score[k]/max_ranked_score[k] for k in ["9", "10", "12", "14", "16", "18"]}
     total_perc = { k:100*total_score[k]/max_score[k] for k in ["9", "10", "12", "14", "16", "18"]}
 
@@ -73,6 +117,7 @@ def _process_user_files(file, max_ranked_score, max_score):
     user_compact["total score"] = total_score
     user_compact["ranked perc"] = ranked_perc
     user_compact["total perc"] = total_perc
+    user_compact["pps"] = pps
     user_compact["beatmap plays"] = beatmap_plays
     user_compact["tracking"] = tracking
     user_compact["country"] = country
@@ -80,8 +125,9 @@ def _process_user_files(file, max_ranked_score, max_score):
     return id, user_compact
 
 def main():
-    with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
-        beatmap_links = json.load(f)
+    #with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
+    #    beatmap_links = json.load(f)
+
     output = f"{PATH_DATA}/users_compact.json"
     users_compact = {}
     users_compact["total"] = 0

@@ -8,8 +8,10 @@ import json
 
 def main():
     def _update_mapsets():
+        beatmap_links = Helper.load_beatmap_links()
+
         for mapset in mapsets:
-            filename = f"{mapset.id}.json".translate(str.maketrans("", "", "/\\"))
+            filename = f"{mapset.id}.json"
             mapset_dict_old = None
             if filename in listdir(PATH_BEATMAPSETS):
                 with open(f"{PATH_BEATMAPSETS}/{filename}", "r", encoding='utf-8') as f:
@@ -47,9 +49,6 @@ def main():
                         diff["deleted"] = now
                         mapset_dict["beatmaps"][bid] = diff
 
-            with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding='utf-8') as f:
-                beatmap_links = json.load(f)
-
             msid = mapset_dict["id"]
             for bmid in mapset_dict["beatmaps"].keys():
                 beatmap_links[bmid] = msid
@@ -68,7 +67,7 @@ def main():
             with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
                 scores = json.load(f)
 
-            if int(scores["timestamp"]) > int(cutoff):
+            if True:#int(scores["timestamp"]) > int(cutoff):
                 for sid, score in scores.items():
                     if sid == "timestamp": continue
 
@@ -77,19 +76,21 @@ def main():
                     bid_scores[sid] = score
                     bids_scores[bid] = bid_scores
 
+        links = Helper.load_beatmap_links()
+
         for bid, scores in bids_scores.items():
-            for file in listdir(PATH_BEATMAPSETS):
-                if not file.endswith(".json"): continue
-                with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
-                    mapset = json.load(f)
-                
-                if bid in mapset["beatmaps"].keys():
-                    mapset["beatmaps"][bid]["scores"] |= scores
 
-                    with open(f"{PATH_BEATMAPSETS}/{file}", "w", encoding='utf-8') as f:
-                        json.dump(mapset, f, ensure_ascii=False, indent=4)
+            bid = str(bid)
+            msid = links[bid]
 
-                    break
+            with open(f"{PATH_BEATMAPSETS}/{msid}.json", "r", encoding='utf-8') as f:
+                mapset = json.load(f)
+            
+            if bid in mapset["beatmaps"].keys():
+                mapset["beatmaps"][bid]["scores"] |= scores
+
+                with open(f"{PATH_BEATMAPSETS}/{file}", "w", encoding='utf-8') as f:
+                    json.dump(mapset, f, ensure_ascii=False, indent=4)
 
     helper = Helper()
     mapsets = helper.cum_search_beatmapsets(

@@ -1,24 +1,24 @@
 /** @type {typeof import("plotly.js-dist-min")} */
 const Plotly = window.Plotly;
 const scoreData = Object.values(beatmapData.scores);
-const playData = Object.values(beatmapData["play history"])
-const passData = Object.values(beatmapData["pass history"])
-const timeData = Object.keys(beatmapData["play history"])
+const playData = Object.values(beatmapData["play history"]);
+const passData = Object.values(beatmapData["pass history"]);
+const timeData = Object.keys(beatmapData["play history"]);
 
 const accs = scoreData.map(score => score["acc"]);
 const scores = scoreData.map(score => score["score"]);
 const users = scoreData.map(score => userLinksData[score["uid"]]);
-const timesScores = scoreData.map(score => dateFromTimestamp(score["time"]))
-const colors = scoreData.map(score => colorFromSeed(score["uid"]))
+const timesScores = scoreData.map(score => dateFromTimestamp(score["time"]));
+const colors = scoreData.map(score => colorFromSeed(score["uid"]));
 
-const plays = Array.from(playData.values())
-const passes = Array.from(passData.values())
-const timesPlays = timeData.map(ts => dateFromTimestamp(ts))
+const plays = Array.from(playData.values());
+const passes = Array.from(passData.values());
+const timesPlays = timeData.map(ts => dateFromTimestamp(ts));
 
 const customdata = users.map((u, i) => [u, 
                                         scores[i], 
                                         `${Math.round(accs[i]*10000)/100}%`, 
-                                        formatDate(timesScores[i])])
+                                        formatDate(timesScores[i])]);
 const templateStr = 'Player: %{customdata[0]}<br>Score: %{customdata[1]}<br>Accuracy: %{customdata[2]}<br>Date: %{customdata[3]}';
 
 const traceAccScore = {

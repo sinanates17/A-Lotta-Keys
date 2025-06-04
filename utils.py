@@ -1,5 +1,5 @@
 from ossapi import Ossapi, Beatmapset, Beatmap, Score, User, Statistics
-from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA
+from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA, PATH_BEATMAPSETS
 from datetime import datetime, timezone
 from time import sleep
 from os import listdir
@@ -153,7 +153,7 @@ class Helper:
         acc = (320 * c320 + 300 * c300 + 200 * c200 + 100 * c100 + 50 * c50) / (320 * total_hits)
 
         if sr is None:
-            sr = Helper.get_sr_of_beatmap(score_dict["bmid"])
+            sr = Helper.get_sr_of_beatmap(score_dict["bid"])
 
         base_mult = 8
         sr_mult = max(.05, (sr - .15)) ** 2.2
@@ -162,16 +162,58 @@ class Helper:
 
         pp = base_mult * sr_mult * acc_mult * length_mult
 
+        pp = round(pp, 2)
+
         return pp
+    
+    @staticmethod
+    def calculate_profile_pp(pps: list):
+        N = len(pps)
+
+        bonus_pp = 416.6667 * (1 - .995 ** min(N, 1000))
+
+        pps.sort(reverse=True)
+
+        if N > 200:
+            pps = pps[0:200]
+
+        total_pp = 0
+
+        for n, pp in enumerate(pps):
+            total_pp += pp * (.95 ** (n-1))
+
+        total_pp += bonus_pp
+
+        total_pp = round(total_pp, 2)
+
+        return total_pp
 
     @staticmethod
-    def get_sr_of_beatmap(bmid):
+    def get_sr_of_beatmap(bid):
+
+        bid = str(bid)
+        links = Helper.load_beatmap_links()
+        msid = links[bid]
+        
+        mapset = Helper.load_mapset(msid)
+
+        sr = mapset["beatmaps"][bid]["sr"]
+
+        return sr
+
+    @staticmethod
+    def load_beatmap_links():
         with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
             links = json.load(f)
 
-        msid = links[str(bmid)]
-        
-        return msid
+        return links
+
+    @staticmethod
+    def load_mapset(msid):
+        with open(f"{PATH_BEATMAPSETS}/{msid}.json") as f:
+            mapset = json.load(f)
+
+        return mapset
 
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)

@@ -12,8 +12,7 @@ def main():
     now = now.strftime("%y%m%d%H%M%S")
     output = f"scores_{now}.json"
     cum_scores = { "timestamp": now }
-    with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
-        beatmap_links = json.load(f)
+    links = Helper.load_beatmap_links()
 
     for file in listdir(PATH_USERS):
         if not file.endswith(".json"): continue
@@ -25,7 +24,7 @@ def main():
             for score in scores:
                 if score.beatmap.cs > 8 and score.beatmap.mode.value == "mania":
                     score_dict = Helper.score_to_dict(score)
-                    score_dict["msid"] = beatmap_links[str(score_dict["bid"])] if str(score_dict["bid"]) in beatmap_links.keys() else None
+                    score_dict["msid"] = links[str(score_dict["bid"])] if str(score_dict["bid"]) in links.keys() else None
                     id = f"{score_dict['uid']}{score_dict['time']}"
                     cum_scores[id] = score_dict
     
