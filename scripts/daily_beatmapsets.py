@@ -89,20 +89,20 @@ def main():
             if bid in mapset["beatmaps"].keys():
                 mapset["beatmaps"][bid]["scores"] |= scores
 
-                with open(f"{PATH_BEATMAPSETS}/{file}", "w", encoding='utf-8') as f:
+                with open(f"{PATH_BEATMAPSETS}/{msid}.json", "w", encoding='utf-8') as f:
                     json.dump(mapset, f, ensure_ascii=False, indent=4)
 
     helper = Helper()
-    mapsets = helper.cum_search_beatmapsets(
-        query="keys>8", 
-        explicit_content="show", 
-        category="any")
+    #mapsets = helper.cum_search_beatmapsets(
+    #    query="keys>8", 
+    #    explicit_content="show", 
+    #    category="any")
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=2)
     now = now.strftime("%y%m%d%H%M%S")
     cutoff = cutoff.strftime("%y%m%d%H%M%S")
 
-    _update_mapsets()
+    #_update_mapsets()
     _update_scores()
 
 if __name__ == '__main__':
