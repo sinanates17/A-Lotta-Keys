@@ -8,7 +8,7 @@ const accs = scoreData.map(score => score["acc"]);
 const scores = scoreData.map(score => score["score"]);
 const grades = scoreData.map(score => score["grade"]);
 const pps = scoreData.map(score => score["pp"]);
-const beatmaps = scoreData.map(score => userLinksData[score["bid"]]);
+const beatmaps = scoreData.map(score => score["bid"]);
 const timesScores = scoreData.map(score => dateFromTimestamp(score["time"]));
 const colors = scoreData.map(score => colorFromSeed(score["bid"]));
 
@@ -21,8 +21,8 @@ const customdata = beatmaps.map((b, i) => [b,
 const templateStr = 'Beatmap: %{customdata[0]}<br>Score: %{customdata[1]}<br>Accuracy: %{customdata[2]}<br>PP: %{customdata[3]}<br>Grade: %{customdata[4]}<br>Date: %{customdata[5]}';
 
 const traceTimePP = {
-    x: pps,
-    y: timesScores,
+    x: timesScores,
+    y: pps,
     customdata: customdata,
     colors: colors,
     mode: "markers",
@@ -54,6 +54,8 @@ const layoutTimePP = {
     paper_bgcolor: "#18121b",
     plot_bgcolor: "#18121b"
 };
+
+Plotly.newPlot("plotTimePP", [traceTimePP], layoutTimePP)
 
 function dateFromTimestamp(ts) {
     const year = 2000 + parseInt(ts.slice(0, 2));
