@@ -5,6 +5,7 @@ from utils import Helper
 from config import PATH_SCORES, PATH_USERS, PATH_BEATMAPSETS, PATH_DATA
 from os import listdir
 import json
+from time import time
 
 def main():
     def _initialize_new_users():
@@ -42,6 +43,7 @@ def main():
         uids_scores = {}
 
         for file in listdir(PATH_SCORES):
+
             if not file.endswith(".json"): continue
             with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
                 scores = json.load(f)
@@ -56,16 +58,15 @@ def main():
                     uids_scores[uid] = uid_scores
 
         for uid, scores in uids_scores.items():
-            for file in listdir(PATH_USERS):
-                if str(uid) in file and file.endswith(".json"):
-                    with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
-                        user = json.load(f)
-                    
-                    user["scores"] |= scores
-                    with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
-                        json.dump(user, f, ensure_ascii=False, indent=4)
+            with open(f"{PATH_USERS}/{uid}.json", "r", encoding='utf-8') as f:
+                user = json.load(f)
+            
+            user["scores"] |= scores
 
-                    break
+            with open(f"{PATH_USERS}/{uid}.json", "w", encoding='utf-8') as f:
+                json.dump(user, f, ensure_ascii=False, indent=4)
+
+            break
 
     def _update_mapsets_playhistory():
         uids_mapsets = {}
@@ -126,6 +127,7 @@ def main():
 
         for file in listdir(PATH_USERS):
             if not file.endswith(".json"): continue
+
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user_dict = json.load(f)
             
@@ -146,15 +148,64 @@ def main():
         with open(f"{PATH_DATA}/user_links.json", "w", encoding='utf-8') as f:
             json.dump(user_links, f, ensure_ascii=False, indent=4)
 
+    def _set_pb_scores():
+        a = 0
+        b = 0
+        for file in listdir(PATH_USERS):
+            if not file.endswith(".json"): continue
+
+            start = time()
+
+            with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
+                user = json.load(f)
+        
+            scores = user["scores"]
+
+            if scores == {}: continue
+            
+            bids = {score["bid"] for score in scores.values()}
+
+            bids = {bid: [score for score in scores.items() if score[1]["bid"] == bid] for bid in bids}
+
+            updated_scores = {}
+
+            i = 0
+            for subscores in bids.values():
+                subscores.sort(key=lambda x: int(x[1]["time"]))
+
+                record = 0
+                for score in subscores:
+                    b += 1
+                    if score[1]["score"] > record:
+                        score[1]["pb"] = True
+                        record = score[1]["score"]
+                        i += 1
+                        a += 1
+
+                    else:
+                        score[1]["pb"] = False
+
+                    updated_scores |= dict([score])
+
+            user["scores"] = updated_scores
+
+            with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
+                json.dump(user, f, ensure_ascii=False, indent=4)
+
+            end = time()
+            print(f"{round(end - start, 2)} | Scores: {len(scores)} | { round(100*  a / b, 2)}%")
+
+
     helper = Helper()
     now = datetime.now(timezone.utc)
     now_str = now.strftime("%y%m%d%H%M%S")
     uids = []
     
-    _initialize_new_users()
-    _update_scores()
-    _update_mapsets_playhistory()
-    _update_name_url()
+    #_initialize_new_users()
+    #_update_scores()
+    #_update_mapsets_playhistory()
+    #_update_name_url()
+    _set_pb_scores()
 
 if __name__ == '__main__':
     main()

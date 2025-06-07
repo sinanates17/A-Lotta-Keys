@@ -4,8 +4,12 @@ from datetime import datetime, timezone
 from time import sleep
 from os import listdir
 import json
+import numpy as np
 
 class Helper:
+
+    PP_WEIGHTS = np.array([.95 ** n for n in range(200)])
+
     def __init__(self, prefix="[Helper] "):
         self.prefix = prefix
         self.osu_api = Ossapi(client_id=OSU_API_ID, client_secret=OSU_API_SECRET)
@@ -177,10 +181,12 @@ class Helper:
         if N > 200:
             pps = pps[0:200]
 
-        total_pp = 0
+        if N < 200:
+            pps += [0] * (200 - N)
 
-        for n, pp in enumerate(pps):
-            total_pp += pp * (.95 ** (n-1))
+        pps = np.array(pps)
+
+        total_pp = float(np.dot(pps, Helper.PP_WEIGHTS))
 
         total_pp += bonus_pp
 
@@ -214,6 +220,13 @@ class Helper:
             mapset = json.load(f)
 
         return mapset
+
+    @staticmethod
+    def load_user(uid):
+        with open(f"{PATH_USERS}/{uid}.json") as f:
+            user = json.load(f)
+
+        return user
 
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)

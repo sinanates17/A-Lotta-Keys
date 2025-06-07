@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request, render_template, abort
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS
+from utils import Helper
 import json
 
 search_bp = Blueprint("search", __name__)
@@ -130,23 +131,23 @@ def get_beatmaps():
 @search_bp.route("/users/<uid>", methods=["GET"])
 def user_page(uid):
     users = load_user_compact()
+    beatmaps = load_beatmap_compact()
+    beatmaps = { bid: {"name": beatmap["name"], 
+                       "status": beatmap["status"]} 
+                       for bid, beatmap in beatmaps["beatmaps"].items() }
     users = users["users"]
     user_compact = users.get(uid)
-    with open(f"{PATH_USERS}/{uid}.json", "r", encoding="utf-8") as f:
-        user = json.load(f)
 
-    return render_template("user.html",user=user, compact=user_compact)
+    user = Helper.load_user(uid)
+
+    return render_template("user.html",user=user, compact=user_compact, beatmaps=beatmaps)
 
 @search_bp.route("/beatmaps/<bid>", methods=["GET"])
 def beatmap_page(bid):
     user_links = load_user_links()
     msid = msid_from_bid(bid)
-    beatmaps = load_beatmap_compact()
-    beatmaps = beatmaps["beatmaps"]
-    beatmap_compact = beatmaps.get(bid)
 
-    with open(f"{PATH_BEATMAPSETS}/{msid}.json", "r", encoding="utf-8") as f:
-        beatmapset = json.load(f)
+    beatmapset = Helper.load_mapset(msid)
 
     beatmap = beatmapset["beatmaps"][bid]
     title = beatmapset["title"]

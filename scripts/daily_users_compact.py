@@ -7,7 +7,7 @@ from multiprocessing import Pool
 from functools import partial
 import json
 
-def _process_user_files(file, max_ranked_score, max_score):
+def _process_user_file(file, max_ranked_score, max_score):
     if not file.endswith(".json"): return
     with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
         user = json.load(f)
@@ -153,7 +153,7 @@ def main():
 
     files = listdir(PATH_USERS)
 
-    parfunct = partial(_process_user_files, max_ranked_score=max_ranked_score, max_score=max_score)
+    parfunct = partial(_process_user_file, max_ranked_score=max_ranked_score, max_score=max_score)
 
     with Pool() as pool:
         results = pool.map(parfunct, files)
