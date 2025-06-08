@@ -100,6 +100,7 @@ class Helper:
             'combo': score.max_combo,
             'passed': score.passed,
             'pp': score.pp,
+            'pb': None,
             'acc': _calc_judgements(score.statistics)[0],
             'grade': _calc_judgements(score.statistics)[1],
             'score': score.legacy_total_score if score.legacy_total_score != 0 else score.classic_total_score,

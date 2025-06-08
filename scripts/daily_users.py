@@ -201,10 +201,10 @@ def main():
     now_str = now.strftime("%y%m%d%H%M%S")
     uids = []
     
-    #_initialize_new_users()
-    #_update_scores()
-    #_update_mapsets_playhistory()
-    #_update_name_url()
+    _initialize_new_users()
+    _update_scores()
+    _update_mapsets_playhistory()
+    _update_name_url()
     _set_pb_scores()
 
 if __name__ == '__main__':
