@@ -93,7 +93,7 @@ class Helper:
 
         score_dict = {
             'uid': score.user_id,
-            'bid': int(score.beatmap_id) if isinstance(score.beatmap_id, str) else int(score.beatmap.id),
+            'bid': int(score.beatmap_id) if isinstance(score.beatmap_id, str) or isinstance(score.beatmap_id, int) else int(score.beatmap.id),
             'msid': None,
             'time': score.ended_at.strftime("%y%m%d%H%M%S"),
             'mods': [mod.acronym for mod in score.mods],
@@ -334,5 +334,5 @@ class Helper:
     
     def user_scores_recent(self, user_id: int) -> list[Score]:
         sleep(REQUEST_INTERVAL)
-        scores = self.osu_api.user_scores(user_id=user_id, type="recent", limit=200)
+        scores = self.osu_api.user_scores(user_id=user_id, type="recent", limit=500)
         return scores
