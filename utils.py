@@ -217,7 +217,7 @@ class Helper:
 
     @staticmethod
     def load_mapset(msid):
-        with open(f"{PATH_BEATMAPSETS}/{msid}.json") as f:
+        with open(f"{PATH_BEATMAPSETS}/{msid}.json", "r", encoding="utf-8") as f:
             mapset = json.load(f)
 
         return mapset
