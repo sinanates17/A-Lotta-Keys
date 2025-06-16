@@ -25,7 +25,6 @@ def load_user_links():
 
     return links
 
-
 def msid_from_bid(bid):
     with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
         links = json.load(f)
