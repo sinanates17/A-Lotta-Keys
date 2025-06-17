@@ -66,8 +66,6 @@ def main():
             with open(f"{PATH_USERS}/{uid}.json", "w", encoding='utf-8') as f:
                 json.dump(user, f, ensure_ascii=False, indent=4)
 
-            break
-
     def _update_mapsets_playhistory():
         uids_mapsets = {}
         
