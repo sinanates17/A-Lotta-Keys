@@ -42,10 +42,37 @@
                 <div id="plotTimeScore" class="plot"></div>
             </div>
         </div>
+        </div>
+            <table class="table">
+                <thead>
+                    <th style="width: 4%; text-align: left;">#</th>
+                    <th style="width: 12%;">Player</th>
+                    <th style="width: 7%;">PP</th>
+                    <th style="width: 8%;">Score</th>
+                    <th style="width: 10%;">Accuracy</th>
+                    <th style="width: 8%;">Combo</th>
+                    <th style="width: 6%;">Ratio</th>
+                    <th style="width: 6%;">Marv</th>
+                    <th style="width: 6%;">Perf</th>
+                    <th style="width: 6%;">Great</th>
+                    <th style="width: 6%;">Good</th>
+                    <th style="width: 6%;">Bad</th>
+                    <th style="width: 6%;">Miss</th>
+                    <th style="width: 9%;">Date</th>
+                </thead>
+            </table>
+        <div class="tableCont2">
+            <table class=" table">
+                <tbody id="leaderboard">
+
+                </tbody>
+            </table>
+        </div>
     </body>
     <script>
         const beatmapData = {{ beatmap|tojson|safe }};
         const userLinksData = {{ userLinks|tojson|safe }};
+        const pbData = {{ pbs|tojson|safe}}
     </script>
     <script src="{{ url_for('static', filename='js/plotly-basic-3.0.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/beatmap.js') }}"></script>

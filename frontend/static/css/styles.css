@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow-y: scroll
 }
 
 .backgroundHome{
@@ -140,6 +141,11 @@ html, body {
 
 .tableCont {
     max-height: calc(100vh - 430px);
+    overflow-y: auto;
+}
+
+.tableCont2 {
+    min-height: 600px;
     overflow-y: auto;
 }
 

@@ -1,6 +1,7 @@
 from flask import Blueprint, jsonify, request, render_template, abort
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+from datetime import datetime
 from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS
 from utils import Helper
 import json
@@ -143,7 +144,25 @@ def user_page(uid):
 
 @search_bp.route("/beatmaps/<bid>", methods=["GET"])
 def beatmap_page(bid):
+
     user_links = load_user_links()
+
+    def rowify(score):
+        return {"uid": score["uid"],
+                "player": user_links[str(score["uid"])],
+                "pp": round(score["pp"], 2),
+                "score": score["score"],
+                "acc": round(score["acc"] * 100, 2),
+                "combo": score["combo"],
+                "ratio": round(score["320"] / score["300"], 2) if score["300"] > 0 else "-",
+                "marv": score["320"],
+                "perf": score["300"],
+                "great": score["200"],
+                "good": score["100"],
+                "bad": score["50"],
+                "miss": score["0"],
+                "date": datetime.strptime(score["time"], "%y%m%d%H%M%S").strftime("%-d %b %Y")}
+
     msid = msid_from_bid(bid)
 
     beatmapset = Helper.load_mapset(msid)
@@ -152,4 +171,27 @@ def beatmap_page(bid):
     title = beatmapset["title"]
     artist = beatmapset["artist"]
 
-    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, userLinks=user_links)
+    scores = beatmapset["beatmaps"][bid]["scores"]
+
+    pbs = {}
+
+    for score in scores.values():
+        uid = str(score["uid"])
+
+        if uid not in pbs.keys():
+            pbs[uid] = rowify(score)
+            continue
+
+        if score["score"] > pbs[uid]["score"]:
+            pbs[uid] = rowify(score)
+
+    pbs = list(pbs.values())
+
+    pbs.sort(key=lambda x: x["score"], reverse=True)
+
+    i = 1
+    for pb in pbs:
+        pb["pos"] = i
+        i += 1
+
+    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, userLinks=user_links, pbs=pbs)

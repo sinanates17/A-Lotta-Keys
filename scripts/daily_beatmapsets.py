@@ -60,6 +60,7 @@ def main():
             json.dump(beatmap_links, f, ensure_ascii=False, indent=4)
 
     def _update_scores():
+
         bids_scores = {}
 
         for file in listdir(PATH_SCORES):

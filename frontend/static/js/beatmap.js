@@ -167,3 +167,34 @@ function formatDate(date) {
     const formatted = `${day} ${monthNames[month]} ${year}`;
     return formatted;
 }
+
+const isDev = window.location.hostname === "127.0.0.1";
+
+API_BASE = isDev
+  ? "http://127.0.0.1:5000/"
+  : "https://alottakeys.xyz/";
+
+const body = document.getElementById("leaderboard")
+
+for (const row of pbData) {
+    const tr = document.createElement('tr');
+    tr.id = row["uid"];
+    tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
+    tr.innerHTML = `
+        <td style="width: 4%; text-align: left;">${row["pos"]}</td>
+        <td style="width: 12%;">${row["player"]}</td>
+        <td style="width: 7%;">${row["pp"]}</td>
+        <td style="width: 8;">${row["score"]}</td>
+        <td style="width: 10%;">${row["acc"]}%</td>
+        <td style="width: 8%;">${row["combo"]}</td>
+        <td style="width: 6%;">${row["ratio"]}</td>
+        <td style="width: 6%;">${row["marv"]}</td>
+        <td style="width: 6%;">${row["perf"]}</td>
+        <td style="width: 6%;">${row["great"]}</td>
+        <td style="width: 6%;">${row["good"]}</td>
+        <td style="width: 6%;">${row["bad"]}</td>
+        <td style="width: 6%;">${row["miss"]}</td>
+        <td style="width: 9%;">${row["date"]}</td>`;
+
+    body.appendChild(tr);
+  }
