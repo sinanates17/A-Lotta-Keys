@@ -133,7 +133,8 @@ def user_page(uid):
     users = load_user_compact()
     beatmaps = load_beatmap_compact()
     beatmaps = { bid: {"name": beatmap["name"], 
-                       "status": beatmap["status"]} 
+                       "status": beatmap["status"],
+                       "keys": beatmap["keys"]} 
                        for bid, beatmap in beatmaps["beatmaps"].items() }
     users = users["users"]
     user_compact = users.get(uid)

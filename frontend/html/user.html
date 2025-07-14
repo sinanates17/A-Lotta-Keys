@@ -31,6 +31,30 @@
             </button>
         </div>
         <div class="hUser">{{ user.name }}</div>
+        <div class="filterMenu">
+            <div class="keymodes" id="keymodesParent">
+                <div class="keymodesHover" id="keymodesButton">Keymodes</div>
+                <div class="keymodesContent hidden" id="keymodesDropdown">
+                    <label><input class="keymodesCheckbox" type="checkbox" value="9" name="key" onclick="applyFilter()"> 9K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="10" name="key" onclick="applyFilter()" checked> 10K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="12" name="key" onclick="applyFilter()"> 12K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="14" name="key" onclick="applyFilter()"> 14K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="16" name="key" onclick="applyFilter()"> 16K </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="18" name="key" onclick="applyFilter()"> 18K </label>
+                </div>
+            </div>
+            <div class="keymodes" id="statusParent">
+                <div class="keymodesHover" id="statusButton">Status</div>
+                <div class="keymodesContent hidden" id="statusDropdown">
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Ranked" name="status" onclick="applyFilter()" checked> Ranked </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Loved" name="status" onclick="applyFilter()" checked> Loved </label>
+                    <label><input class="keymodesCheckbox" type="checkbox" value="Unranked" name="status" onclick="applyFilter()"> Unranked </label>
+                </div>
+            </div>
+            <div class="keymodes" id="pbParent">
+                <div class="keymodesHover" id="pbButton" data-value="false" onclick="togglePBs()">Graph PBs Only</div>
+            </div>
+        </div>
         <div>
             <div class="menuContainer">
                 <div id="plotTimePP" class="plot"></div>
@@ -40,6 +64,26 @@
                 <div id="plotTimePlays" class="plot"></div>
                 <div id="plotTimePlaysDelta" class="plot"></div>
             </div>
+        </div>
+        </div>
+            <table class="table">
+                <thead>
+                    <th style="width: 4%; text-align: left;">#</th>
+                    <th style="width: 20%;">Beatmap</th>
+                    <th style="width: 20%;">Difficulty</th>
+                    <th style="width: 8%;">PP</th>
+                    <th style="width: 8%;">Accuracy</th>
+                    <th style="width: 12%;">Score</th>
+                    <th style="width: 8%;">Ratio</th>
+                    <th style="width: 8%;">Combo</th>
+                    <th style="width: 12%;">Date</th>
+                </thead>
+            </table>
+        <div class="tableCont2">
+            <table class="table">
+                <tbody id="topPlays">
+                </tbody>
+            </table>
         </div>
     </body>
     <script>
