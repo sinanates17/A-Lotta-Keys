@@ -167,21 +167,25 @@ def main():
 
             updated_scores = {}
 
-            i = 0
             for subscores in bids.values():
                 subscores.sort(key=lambda x: int(x[1]["time"]))
 
                 record = 0
                 for score in subscores:
-                    b += 1
                     if score[1]["score"] > record:
                         score[1]["pb"] = True
                         record = score[1]["score"]
-                        i += 1
-                        a += 1
+                        sid_top = score[0]
 
                     else:
                         score[1]["pb"] = False
+
+                for score in subscores:
+                    if score[0] == sid_top:
+                        score[1]["top"] = True
+
+                    else:
+                        score[1]["top"] = False
 
                     updated_scores |= dict([score])
 
@@ -189,10 +193,6 @@ def main():
 
             with open(f"{PATH_USERS}/{file}", "w", encoding='utf-8') as f:
                 json.dump(user, f, ensure_ascii=False, indent=4)
-
-            end = time()
-            print(f"{round(end - start, 2)} | Scores: {len(scores)} | { round(100*  a / b, 2)}%")
-
 
     helper = Helper()
     now = datetime.now(timezone.utc)

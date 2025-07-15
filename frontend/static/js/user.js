@@ -1,4 +1,11 @@
 /** @type {typeof import("plotly.js-dist-min")} */
+
+const isDev = window.location.hostname === "127.0.0.1";
+
+API_BASE = isDev
+  ? "http://127.0.0.1:5000/"
+  : "https://alottakeys.xyz/";
+
 const Plotly = window.Plotly;
 const templateStr = 'Beatmap: %{customdata[0]}<br>' + 
                     'Score: %{customdata[1]}<br>' + 
@@ -78,6 +85,7 @@ statusContainer.addEventListener('pointerleave', hideDropdownStatus);
 /////////////////////////////////////////////////////////////////////////
 
 const pbToggle = document.getElementById("pbButton")
+const topPlays = document.getElementById("topPlays")
 
 let pbOnly = pbToggle.dataset.value === "true"
 
@@ -116,6 +124,20 @@ function togglePBs() {
 
     applyFilter()
 
+}
+
+function fillTopPlays(rows) {
+
+    topPlays.innerHTML = "";
+
+    for (const row of pbData) {
+        const tr = document.createElement('tr');
+        tr.id = row["bid"];
+        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
+        tr.innerHTML = ``;
+
+    body.appendChild(tr);
+    }
 }
 
 function applyFilter() {
