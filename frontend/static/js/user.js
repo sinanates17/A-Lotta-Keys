@@ -86,6 +86,7 @@ statusContainer.addEventListener('pointerleave', hideDropdownStatus);
 
 const pbToggle = document.getElementById("pbButton")
 const topPlays = document.getElementById("topPlays")
+const beatmaps = Object(beatmapData)
 
 let pbOnly = pbToggle.dataset.value === "true"
 
@@ -130,19 +131,45 @@ function fillTopPlays(rows) {
 
     topPlays.innerHTML = "";
 
-    for (const row of pbData) {
+    let pos = 1
+    for (const row of rows) {
         const tr = document.createElement('tr');
         tr.id = row["bid"];
-        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
-        tr.innerHTML = ``;
 
-    body.appendChild(tr);
+        let ratio = "-"
+        if (row["300"] > 0) {
+            ratio = Math.round(row["320"] * 100 / row["300"]) / 100
+        }
+        const acc = Math.round(row.acc * 10000) / 100
+
+        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
+        tr.innerHTML = `
+                    <td style="width: 4%; text-align: left;">${pos}</td>
+                    <td style="width: 40%;">${beatmaps[row.bid].name}</td>
+                    <td style="width: 8%;">${row.pp}pp</td>
+                    <td style="width: 8%;">${acc}%</td>
+                    <td style="width: 12%;">${row.score}</td>
+                    <td style="width: 8%;">${ratio}</td>
+                    <td style="width: 8%;">${row.combo}</td>
+                    <td style="width: 12%;">${formatStrDate(row.time)}</td>`;
+
+        pos = pos + 1
+
+    topPlays.appendChild(tr);
     }
 }
 
-function applyFilter() {
+function formatStrDate(str) {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-    let beatmaps = Object(beatmapData)
+    const year = `20${str.slice(0, 2)}`
+    const month = months[parseInt(str.slice(2, 4)) - 1]
+    const day = parseInt(str.slice(4, 6))
+
+    return `${day} ${month} ${year}`
+}
+
+function applyFilter() {
 
     let scoreData = Object.values(userData["scores"]);
     if (pbOnly) {
@@ -156,6 +183,10 @@ function applyFilter() {
         const status = beatmaps[score.bid]?.status;
         return keys !== undefined && (filters.includes(parseInt(keys)) && filters.includes(status));
     });
+
+    let = rows = Array.from(scoreData).sort((a, b) => b.pp - a.pp);
+    rows = rows.filter(row => row["top"])
+    fillTopPlays(rows);
 
     let playData = Object.values(userData["beatmap plays history"]);
     let ppTimeData = Object.values(userData["pp history"])
