@@ -189,6 +189,7 @@ function applyFilter() {
     fillTopPlays(rows);
 
     let playData = Object.values(userData["beatmap plays history"]);
+    let playDataTimes = Object.keys(userData["beatmap plays history"]);
     let ppTimeData = Object.values(userData["pp history"])
 
     let seriesStatus = (() => {
@@ -255,6 +256,7 @@ function applyFilter() {
     let states = bids.map(bid => beatmapData[bid]?.["status"] || "Unknown");
     let timesScores = scoreData.map(score => dateFromTimestamp(score["time"]));
     let colors = scoreData.map(score => colorFromSeed(score["bid"]));
+    let timesPlays = playDataTimes.map(time => dateFromTimestamp(time))
 
     let customdata = bmnames.map((b, i) => [b, 
                                             scores[i], 
@@ -265,73 +267,104 @@ function applyFilter() {
                                             formatDate(timesScores[i])]);
 
 
-    let traceTimePP = {
-    x: timesScores,
-    y: pps,
-    customdata: customdata,
-    colors: colors,
-    mode: "markers",
-    type: "scatter",
-    hovertemplate: templateStr,
-    marker: {
-        color: colors
-    },
-    hoverlabel: { namelength: 0 },
-};
+        let traceTimePP = {
+        x: timesScores,
+        y: pps,
+        customdata: customdata,
+        colors: colors,
+        mode: "markers",
+        type: "scatter",
+        hovertemplate: templateStr,
+        marker: {
+            color: colors
+        },
+        hoverlabel: { namelength: 0 },
+    };
 
-let layoutTimePP = {
-    font: {
-        family: "ubuntu",
-        color: "#efe5f3"
-    },
-    title: { text: 'PP vs Time'},
-    xaxis: { 
-        title: { text: 'Time' },
-        gridcolor: "#4e4950",
-        zerolinecolor: "#efe5f3"
-    },
-    yaxis: { 
-        title: { text: 'PP' },
-        gridcolor: "#4e4950",
-        zerolinecolor: "#efe5f3"
-    },
-    hovermode: "closest",
-    paper_bgcolor: "#18121b",
-    plot_bgcolor: "#18121b"
-};
+    let layoutTimePP = {
+        font: {
+            family: "ubuntu",
+            color: "#efe5f3"
+        },
+        title: { text: 'PP vs Time'},
+        xaxis: { 
+            title: { text: 'Time' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        yaxis: { 
+            title: { text: 'PP' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        hovermode: "closest",
+        paper_bgcolor: "#18121b",
+        plot_bgcolor: "#18121b"
+    };
 
-Plotly.newPlot("plotTimePP", [traceTimePP], layoutTimePP)
+    Plotly.newPlot("plotTimePP", [traceTimePP], layoutTimePP)
 
-let traceCumTimePP = {
-    x: ppTimes,
-    y: ppSeries,
-    mode: "line",
-    type: "scatter",
-    hoverlabel: { namelength: 0 },
-};
+    let traceCumTimePP = {
+        x: ppTimes,
+        y: ppSeries,
+        mode: "line",
+        type: "scatter",
+        hoverlabel: { namelength: 0 },
+    };
 
-let layoutCumTimePP = {
-    font: {
-        family: "ubuntu",
-        color: "#efe5f3"
-    },
-    title: { text: 'Cumulative PP vs Time'},
-    xaxis: { 
-        title: { text: 'Time' },
-        gridcolor: "#4e4950",
-        zerolinecolor: "#efe5f3"
-    },
-    yaxis: { 
-        title: { text: 'PP' },
-        gridcolor: "#4e4950",
-        zerolinecolor: "#efe5f3"
-    },
-    hovermode: "closest",
-    paper_bgcolor: "#18121b",
-    plot_bgcolor: "#18121b"
-};
+    let layoutCumTimePP = {
+        font: {
+            family: "ubuntu",
+            color: "#efe5f3"
+        },
+        title: { text: 'Cumulative PP vs Time'},
+        xaxis: { 
+            title: { text: 'Time' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        yaxis: { 
+            title: { text: 'PP' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        hovermode: "closest",
+        paper_bgcolor: "#18121b",
+        plot_bgcolor: "#18121b"
+    };
 
-Plotly.newPlot("plotCumTimePP", [traceCumTimePP], layoutCumTimePP)
+    Plotly.newPlot("plotCumTimePP", [traceCumTimePP], layoutCumTimePP)
+
+    let traceTimePlays = {
+        x: timesPlays,
+        y: playData,
+        mode: "line",
+        type: "scatter",
+        hoverlabel: { namelength: 0 },
+    };
+
+    let layoutTimePlays = {
+        font: {
+            family: "ubuntu",
+            color: "#efe5f3"
+        },
+        title: { text: 'Beatmap Plays vs Time'},
+        xaxis: { 
+            title: { text: 'Time' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        yaxis: { 
+            title: { text: 'Plays' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        hovermode: "closest",
+        paper_bgcolor: "#18121b",
+        plot_bgcolor: "#18121b"
+    };
+
+    Plotly.newPlot("plotTimePlays", [traceTimePlays], layoutTimePlays)
 }
 
 applyFilter()
