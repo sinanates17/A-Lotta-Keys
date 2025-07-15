@@ -60,7 +60,7 @@ def _process_user_file(file, bid_keys, states, keys):
             if k != "9":
                 key_groups.append("10+")
 
-            if k != "9" or k != "10":
+            if k != "9" and k != "10":
                 key_groups.append("12+")
 
             status_groups = ["RLU"]

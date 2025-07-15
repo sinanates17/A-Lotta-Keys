@@ -22,7 +22,7 @@ def main():
             if sid == "timestamp": 
                 continue
 
-            if score["pp"] is None:
+            if True: #score["pp"] is None:
                 score["pp"] = Helper.calculate_pp(score)
 
             score["pp"] = round(score["pp"], 2)

@@ -157,17 +157,21 @@ class Helper:
         total_hits = c320 + c300 + c200 + c100 + c50 + c0
         acc = (320 * c320 + 300 * c300 + 200 * c200 + 100 * c100 + 50 * c50) / (320 * total_hits)
 
-        if sr is None:
-            sr = Helper.get_sr_of_beatmap(score_dict["bid"])
+        try:
+            if sr is None:
+                sr = Helper.get_sr_of_beatmap(score_dict["bid"], mods=score_dict["mods"])
 
-        base_mult = 8
-        sr_mult = max(.05, (sr - .15)) ** 2.2
-        acc_mult = max(0, (5 * acc - 4))
-        length_mult = 1 + .1 * min(1, (total_hits / 1500))
+            base_mult = 8
+            sr_mult = max(.05, (sr - .15)) ** 2.2
+            acc_mult = max(0, (5 * acc - 4))
+            length_mult = 1 + .1 * min(1, (total_hits / 1500))
 
-        pp = base_mult * sr_mult * acc_mult * length_mult
+            pp = base_mult * sr_mult * acc_mult * length_mult
 
-        pp = round(pp, 2)
+            pp = round(pp, 2)
+
+        except:
+            pp = 0
 
         return pp
     
@@ -196,15 +200,19 @@ class Helper:
         return total_pp
 
     @staticmethod
-    def get_sr_of_beatmap(bid):
+    def get_sr_of_beatmap(bid, mods):
 
         bid = str(bid)
-        links = Helper.load_beatmap_links()
-        msid = links[bid]
+        compact = Helper.load_beatmaps_compact()
         
-        mapset = Helper.load_mapset(msid)
+        beatmap = compact["beatmaps"][bid]
 
-        sr = mapset["beatmaps"][bid]["sr"]
+        if "HT" in mods:
+            sr = beatmap["sr HT"]
+        elif "DT" in mods or "NC" in mods:
+            sr = beatmap["sr HT"]
+        else:
+            sr = beatmap["sr"]
 
         return sr
 
@@ -214,6 +222,13 @@ class Helper:
             links = json.load(f)
 
         return links
+    
+    @staticmethod
+    def load_beatmaps_compact():
+        with open(f"{PATH_DATA}/beatmaps_compact.json", "r", encoding="utf-8") as f:
+            compact = json.load(f)
+
+        return compact
 
     @staticmethod
     def load_mapset(msid):
@@ -229,6 +244,13 @@ class Helper:
 
         return user
 
+    @staticmethod
+    def datetime_from_timestamp(ts):
+        dt = datetime.strptime(ts, "%y%m%d%H%M%S")
+        dt.replace(tzinfo=timezone.utc)
+
+        return dt
+
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)
         result = self.osu_api.search_beatmapsets(**kwargs)
@@ -243,6 +265,8 @@ class Helper:
             result = self.osu_api.search_beatmapsets(**kwargs, cursor=result.cursor)
 
             for beatmapset in result.beatmapsets:
+                beatmapset.last_updated.replace(tzinfo=timezone.utc)
+                beatmapset.ranked_date.replace(tzinfo=timezone.utc)
                 if isinstance(end_date, datetime):
                     if beatmapset.ranked.value in [1,4]:
                         if beatmapset.ranked_date > end_date: continue
@@ -337,3 +361,15 @@ class Helper:
         sleep(REQUEST_INTERVAL)
         scores = self.osu_api.user_scores(user_id=user_id, type="recent", limit=500)
         return scores
+    
+    def sr_DT(self, beatmap_id):
+        sleep(REQUEST_INTERVAL)
+        attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="DT")
+        sr = attr.attributes.star_rating
+        return sr
+    
+    def sr_HT(self, beatmap_id):
+        sleep(REQUEST_INTERVAL)
+        attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="HT")
+        sr = attr.attributes.star_rating
+        return sr

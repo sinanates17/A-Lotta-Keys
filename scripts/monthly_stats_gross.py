@@ -71,8 +71,8 @@ def main():
         with open(f"{PATH_DATA}/{output}", "r", encoding='utf-8') as f:
             cum_stats_timeline = json.load(f)
         
-        previous_date = datetime.strptime(list(cum_stats_timeline.keys())[-1], "%y%m%d%H%M%S")
-        previous_date.replace(tzinfo=timezone.utc)
+        previous_date = datetime.strptime(list(cum_stats_timeline.keys())[-1], "%y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+        
         mapsets = helper.cum_search_beatmapsets(
             start_date=previous_date,
             end_date=now,
@@ -80,7 +80,7 @@ def main():
             explicit_content="show")
         
         stats = _generate_gross(mapsets=mapsets)
-        stats = _generate_fine(stats=stats)
+        stats = _generate_fine(cum_stats=stats)
         cum_stats_timeline[str_now] = stats
         
     else:
