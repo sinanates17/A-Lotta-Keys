@@ -5,6 +5,15 @@ const playData = Object.values(beatmapData["play history"]);
 const passData = Object.values(beatmapData["pass history"]);
 const timeData = Object.keys(beatmapData["play history"]);
 
+
+let timeRanked = null;
+
+if (rankedDate !== "unranked") {
+    timeRanked = dateFromTimestamp(rankedDate)
+}
+
+const lastUpdated = dateFromTimestamp(beatmapData["updated"])
+
 const accs = scoreData.map(score => score["acc"]);
 const scores = scoreData.map(score => score["score"]);
 const users = scoreData.map(score => userLinksData[score["uid"]]);
@@ -20,6 +29,57 @@ const customdata = users.map((u, i) => [u,
                                         `${Math.round(accs[i]*10000)/100}%`, 
                                         formatDate(timesScores[i])]);
 const templateStr = 'Player: %{customdata[0]}<br>Score: %{customdata[1]}<br>Accuracy: %{customdata[2]}<br>Date: %{customdata[3]}';
+
+const vlines = [
+    {
+      type: "line",
+      x0: timeRanked,
+      x1: timeRanked,
+      y0: 0,
+      y1: 1,
+      xref: "x",
+      yref: "paper",
+      line: { color: "cyan", width: 2 }
+    },
+    {
+      type: "line",
+      x0: lastUpdated,
+      x1: lastUpdated,
+      y0: 0,
+      y1: 1,
+      xref: "x",
+      yref: "paper",
+      line: { color: "red", width: 2 }
+    }
+]
+
+const vlabels = [
+    {
+    x: timeRanked,
+    y: 1,
+    xref: "x",
+    yref: "paper",
+    text: "Ranked",
+    showarrow: false,
+    font: { color: "cyan" },
+    yanchor: "bottom"
+    },
+    {
+    x: lastUpdated,
+    y: 1,
+    xref: "x",
+    yref: "paper",
+    text: "Updated",
+    showarrow: false,
+    font: { color: "red" },
+    yanchor: "bottom"
+    },
+]
+
+if (timeRanked === null) {
+    vlines.shift();
+    vlabels.shift();
+}
 
 const traceAccScore = {
     x: accs,
@@ -89,7 +149,9 @@ const layoutTimeScore = {
     },
     hovermode: "closest",
     paper_bgcolor: "#18121b",
-    plot_bgcolor: "#18121b"
+    plot_bgcolor: "#18121b",
+    shapes: vlines,
+    annotations: vlabels
 };
 
 Plotly.newPlot("plotTimeScore", [traceTimeScore], layoutTimeScore);
@@ -128,7 +190,9 @@ const layoutTimePlays = {
     },
     hovermode: "closest",
     paper_bgcolor: "#18121b",
-    plot_bgcolor: "#18121b"
+    plot_bgcolor: "#18121b",
+    shapes: vlines,
+    annotations: vlabels
 };
 
 Plotly.newPlot("plotTimePlays", [traceTimePlays, traceTimePasses], layoutTimePlays)
@@ -177,6 +241,9 @@ API_BASE = isDev
 const body = document.getElementById("leaderboard")
 
 for (const row of pbData) {
+    if (row.old) {
+            continue;
+    }
     const tr = document.createElement('tr');
     tr.id = row["uid"];
     tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }

@@ -133,14 +133,17 @@ function fillTopPlays(rows) {
 
     let pos = 1
     for (const row of rows) {
+        if (row.old) {
+            continue;
+        }
         const tr = document.createElement('tr');
         tr.id = row["bid"];
 
         let ratio = "-"
         if (row["300"] > 0) {
-            ratio = Math.round(row["320"] * 100 / row["300"]) / 100
+            ratio = Math.round(row["320"] * 100 / row["300"]) / 100;
         }
-        const acc = Math.round(row.acc * 10000) / 100
+        const acc = Math.round(row.acc * 10000) / 100;
 
         tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
         tr.innerHTML = `
@@ -153,27 +156,27 @@ function fillTopPlays(rows) {
                     <td style="width: 8%;">${row.combo}</td>
                     <td style="width: 12%;">${formatStrDate(row.time)}</td>`;
 
-        pos = pos + 1
+        pos = pos + 1;
 
     topPlays.appendChild(tr);
     }
 }
 
 function formatStrDate(str) {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    const year = `20${str.slice(0, 2)}`
-    const month = months[parseInt(str.slice(2, 4)) - 1]
-    const day = parseInt(str.slice(4, 6))
+    const year = `20${str.slice(0, 2)}`;
+    const month = months[parseInt(str.slice(2, 4)) - 1];
+    const day = parseInt(str.slice(4, 6));
 
-    return `${day} ${month} ${year}`
+    return `${day} ${month} ${year}`;
 }
 
 function applyFilter() {
 
     let scoreData = Object.values(userData["scores"]);
     if (pbOnly) {
-        scoreData = scoreData.filter(score => score["pb"])
+        scoreData = scoreData.filter(score => score["pb"]);
     }
 
     let filters = getFilters()
@@ -185,10 +188,11 @@ function applyFilter() {
     });
 
     let = rows = Array.from(scoreData).sort((a, b) => b.pp - a.pp);
-    rows = rows.filter(row => row["top"])
+    rows = rows.filter(row => row["top"]);
     fillTopPlays(rows);
 
     let playData = Object.values(userData["beatmap plays history"]);
+    let playDataDiffs= playData.slice(1).map((val, i) => val - playData[i]);
     let playDataTimes = Object.keys(userData["beatmap plays history"]);
     let ppTimeData = Object.values(userData["pp history"])
 
@@ -267,7 +271,7 @@ function applyFilter() {
                                             formatDate(timesScores[i])]);
 
 
-        let traceTimePP = {
+    let traceTimePP = {
         x: timesScores,
         y: pps,
         customdata: customdata,
@@ -365,6 +369,37 @@ function applyFilter() {
     };
 
     Plotly.newPlot("plotTimePlays", [traceTimePlays], layoutTimePlays)
+
+        let traceTimePlaysDiffs = {
+        x: timesPlays,
+        y: playDataDiffs,
+        mode: "line",
+        type: "scatter",
+        hoverlabel: { namelength: 0 },
+    };
+
+    let layoutTimePlaysDiffs = {
+        font: {
+            family: "ubuntu",
+            color: "#efe5f3"
+        },
+        title: { text: 'Daily Beatmap Plays'},
+        xaxis: { 
+            title: { text: 'Time' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        yaxis: { 
+            title: { text: 'Plays' },
+            gridcolor: "#4e4950",
+            zerolinecolor: "#efe5f3"
+        },
+        hovermode: "closest",
+        paper_bgcolor: "#18121b",
+        plot_bgcolor: "#18121b"
+    };
+
+    Plotly.newPlot("plotTimePlaysDiffs", [traceTimePlaysDiffs], layoutTimePlaysDiffs)
 }
 
 applyFilter()

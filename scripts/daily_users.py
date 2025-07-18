@@ -146,13 +146,12 @@ def main():
         with open(f"{PATH_DATA}/user_links.json", "w", encoding='utf-8') as f:
             json.dump(user_links, f, ensure_ascii=False, indent=4)
 
-    def _set_pb_scores():
-        a = 0
-        b = 0
+    def _set_score_attributes():
+
+        beatmaps_compact = Helper.load_beatmaps_compact()
+
         for file in listdir(PATH_USERS):
             if not file.endswith(".json"): continue
-
-            start = time()
 
             with open(f"{PATH_USERS}/{file}", "r", encoding='utf-8') as f:
                 user = json.load(f)
@@ -167,11 +166,25 @@ def main():
 
             updated_scores = {}
 
-            for subscores in bids.values():
+            for bid, subscores in bids.items():
                 subscores.sort(key=lambda x: int(x[1]["time"]))
+
+                try:
+                    updated = beatmaps_compact["beatmaps"][str(bid)]["date"]
+                    updated = datetime.strptime(updated, "%y%m%d%H%M%S")
+
+                except:
+                    updated = datetime.now()
 
                 record = 0
                 for score in subscores:
+                    time = datetime.strptime(score[1]["time"], "%y%m%d%H%M%S")
+                    
+                    if time > updated:
+                        score[1]["old"] = False
+                    else:
+                        score[1]["old"] = True
+
                     if score[1]["score"] > record:
                         score[1]["pb"] = True
                         record = score[1]["score"]
@@ -203,7 +216,7 @@ def main():
     _update_scores()
     _update_mapsets_playhistory()
     _update_name_url()
-    _set_pb_scores()
+    _set_score_attributes()
 
 if __name__ == '__main__':
     main()

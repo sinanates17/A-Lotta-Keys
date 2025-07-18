@@ -162,7 +162,8 @@ def beatmap_page(bid):
                 "good": score["100"],
                 "bad": score["50"],
                 "miss": score["0"],
-                "date": datetime.strptime(score["time"], "%y%m%d%H%M%S").strftime("%-d %b %Y")}
+                "date": datetime.strptime(score["time"], "%y%m%d%H%M%S").strftime("%-d %b %Y"),
+                "old": score["old"]}
 
     msid = msid_from_bid(bid)
 
@@ -171,6 +172,7 @@ def beatmap_page(bid):
     beatmap = beatmapset["beatmaps"][bid]
     title = beatmapset["title"]
     artist = beatmapset["artist"]
+    ranked = beatmapset["ranked"]
 
     scores = beatmapset["beatmaps"][bid]["scores"]
 
@@ -195,4 +197,4 @@ def beatmap_page(bid):
         pb["pos"] = i
         i += 1
 
-    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, userLinks=user_links, pbs=pbs)
+    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, userLinks=user_links, pbs=pbs, ranked=ranked)

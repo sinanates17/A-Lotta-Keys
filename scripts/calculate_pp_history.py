@@ -22,7 +22,7 @@ def _process_user_file(file, bid_keys, states, keys):
     pp_history = {}
 
     if user["scores"] == {}: return
-    subscores = [score for score in user["scores"].values() if score["pb"]]
+    subscores = [score for score in user["scores"].values() if score["pb"] and not score["old"]]
     bids = {score["bid"] for score in user["scores"].values()}
     cutoff = datetime.now(timezone.utc)
     interval = relativedelta(days=1)

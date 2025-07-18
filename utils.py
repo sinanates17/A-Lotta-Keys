@@ -266,7 +266,8 @@ class Helper:
 
             for beatmapset in result.beatmapsets:
                 beatmapset.last_updated.replace(tzinfo=timezone.utc)
-                beatmapset.ranked_date.replace(tzinfo=timezone.utc)
+                if beatmapset.ranked_date is not None:
+                    beatmapset.ranked_date.replace(tzinfo=timezone.utc)
                 if isinstance(end_date, datetime):
                     if beatmapset.ranked.value in [1,4]:
                         if beatmapset.ranked_date > end_date: continue
@@ -353,7 +354,7 @@ class Helper:
 
         users = []
         for sublist in sublists:
-            sleep(REQUEST_INTERVAL)
+            sleep(REQUEST_INTERVAL * 5)
             users += self.osu_api.users(user_ids=sublist)
         return users
     
@@ -364,12 +365,18 @@ class Helper:
     
     def sr_DT(self, beatmap_id):
         sleep(REQUEST_INTERVAL)
-        attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="DT")
-        sr = attr.attributes.star_rating
+        try:
+            attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="DT")
+            sr = attr.attributes.star_rating
+        except:
+            sr = 0
         return sr
     
     def sr_HT(self, beatmap_id):
         sleep(REQUEST_INTERVAL)
-        attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="HT")
-        sr = attr.attributes.star_rating
+        try:
+            attr = self.osu_api.beatmap_attributes(beatmap_id=beatmap_id, mods="HT")
+            sr = attr.attributes.star_rating
+        except:
+            sr = 0
         return sr

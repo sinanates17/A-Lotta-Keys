@@ -63,6 +63,8 @@ def main():
 
         bids_scores = {}
 
+        beatmaps_compact = Helper.load_beatmaps_compact()
+
         for file in listdir(PATH_SCORES):
             if not file.endswith(".json"): continue
             with open(f"{PATH_SCORES}/{file}", "r", encoding='utf-8') as f:
@@ -73,6 +75,21 @@ def main():
                     if sid == "timestamp": continue
 
                     bid = score["bid"]
+
+                    time = score["time"]
+                    time = datetime.strptime(time, "%y%m%d%H%M%S")
+
+                    try:
+                        updated = beatmaps_compact["beatmaps"][str(bid)]["date"]
+                        updated = datetime.strptime(updated, "%y%m%d%H%M%S")
+
+                        if time > updated:
+                            score["old"] = False
+                        else:
+                            score["old"] = True
+                    except:
+                        score["old"] = True
+
                     bid_scores = bids_scores.get(bid, {})
                     bid_scores[sid] = score
                     bids_scores[bid] = bid_scores

@@ -26,15 +26,19 @@ def main():
         with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
             mapset = json.load(f)
 
+        if mapset["id"] == "2229167":
+            pass
         for bid, beatmap in mapset["beatmaps"].items():
+            if bid == "4729801":
+                pass
             updated = helper.datetime_from_timestamp(beatmap["updated"])
 
             k = str(int(beatmap["keys"]))
             sr = beatmap["sr"]
             passes = beatmap["total passes"]
             if k in ["11", "13", "15", "17"]: continue
-            if sr > 15: continue
-            if passes == 0: continue
+            #if sr > 15: continue
+            #if passes == 0: continue
 
             if beatmap["status"] == 1:
                 ranked[k] += 1
@@ -52,6 +56,8 @@ def main():
             plays = beatmap["total plays"]
             length = beatmap["length"]
             ln_perc = 100 * beatmap["ln"] / (beatmap["rice"] + beatmap["ln"]) if beatmap["rice"] + beatmap["ln"] != 0 else 0
+            ln_perc = round(ln_perc, 2)
+            date = mapset["ranked"] if mapset["ranked"] != "unranked" else beatmap["updated"]
 
             beatmaps_compact["beatmaps"][bid] = {}
             beatmaps_compact["beatmaps"][bid]["name"] = name
@@ -64,6 +70,7 @@ def main():
             beatmaps_compact["beatmaps"][bid]["length"] = length
             beatmaps_compact["beatmaps"][bid]["ln perc"] = ln_perc
             beatmaps_compact["beatmaps"][bid]["status"] = status
+            beatmaps_compact["beatmaps"][bid]["date"] = date
 
             if ("sr HT" not in beatmaps_compact["beatmaps"][bid].keys() or 
                 "sr DT" not in beatmaps_compact["beatmaps"][bid].keys() or
@@ -71,8 +78,8 @@ def main():
 
                 sr_HT = helper.sr_HT(int(bid))
                 sr_DT = helper.sr_DT(int(bid))
-                beatmaps_compact["beatmaps"][bid]["sr HT"] = sr_HT
-                beatmaps_compact["beatmaps"][bid]["sr DT"] = sr_DT
+                beatmaps_compact["beatmaps"][bid]["sr HT"] = round(sr_HT, 2)
+                beatmaps_compact["beatmaps"][bid]["sr DT"] = round(sr_DT, 2)
 
     beatmaps_compact["unranked"] = unranked
     beatmaps_compact["ranked"] = ranked

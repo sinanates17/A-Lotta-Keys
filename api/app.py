@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_cors import CORS
 import sys
+import secrets
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config import PATH_ROOT
 from api.routes.search import search_bp
@@ -10,6 +11,8 @@ app = Flask(__name__,
             static_folder=f"{PATH_ROOT}/frontend/static")
 CORS(app)
 app.register_blueprint(search_bp, url_prefix='/api/search')
+
+app.secret_key = secrets.token_hex(32)
 
 @app.route("/<file>")
 def file(file):
