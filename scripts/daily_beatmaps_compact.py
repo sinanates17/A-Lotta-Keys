@@ -72,14 +72,14 @@ def main():
             beatmaps_compact["beatmaps"][bid]["status"] = status
             beatmaps_compact["beatmaps"][bid]["date"] = date
 
-            #if ("sr HT" not in beatmaps_compact["beatmaps"][bid].keys() or 
-            #    "sr DT" not in beatmaps_compact["beatmaps"][bid].keys() or
-            #    updated > now - timedelta(days=2)):
+            if ("sr HT" not in beatmaps_compact["beatmaps"][bid].keys() or 
+                "sr DT" not in beatmaps_compact["beatmaps"][bid].keys() or
+                updated > now - timedelta(days=2)):
 
-            #    sr_HT = helper.sr_HT(int(bid))
-            #    sr_DT = helper.sr_DT(int(bid))
-            #    beatmaps_compact["beatmaps"][bid]["sr HT"] = round(sr_HT, 2)
-            #    beatmaps_compact["beatmaps"][bid]["sr DT"] = round(sr_DT, 2)
+                sr_HT = helper.sr_HT(int(bid))
+                sr_DT = helper.sr_DT(int(bid))
+                beatmaps_compact["beatmaps"][bid]["sr HT"] = round(sr_HT, 2)
+                beatmaps_compact["beatmaps"][bid]["sr DT"] = round(sr_DT, 2)
 
     beatmaps_compact["unranked"] = unranked
     beatmaps_compact["ranked"] = ranked
