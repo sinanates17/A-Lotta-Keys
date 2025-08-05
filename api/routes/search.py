@@ -37,6 +37,8 @@ def msid_from_bid(bid):
 def get_users():
     filters = request.args.getlist("key")
     sort = request.args.get("sort")
+    reverse = request.args.get("reverse") == "True"
+    country = request.args.get("country")
     pp_state = request.args.get("pp")
     pp_keys = None
     users = load_user_compact()
@@ -62,6 +64,9 @@ def get_users():
 
     response = []
     for id, user in users.items():
+        if not country.lower() in user["country"].lower() and country != '':
+            continue
+
         rscore = sum([user["ranked score"][k] for k in filters])
         tscore = sum([user["total score"][k] for k in filters])
         rperc = round(100 * rscore/(num_ranked*1000000), 2)
@@ -85,7 +90,7 @@ def get_users():
         
         response.append(row)
 
-    response.sort(key=lambda x: x[sort], reverse=True)
+    response.sort(key=lambda x: x[sort], reverse=not reverse)
     i = 1
     for row in response:
         row["pos"] = i

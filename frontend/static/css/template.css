@@ -155,6 +155,7 @@ footer {
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding-left: 1em;
     padding-right: 1em;
+    margin-right: 1em;
     border: none;
 }
 
@@ -191,6 +192,7 @@ footer {
 .options{
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
     gap: 1em;
     padding: 0;
 }
