@@ -97,8 +97,8 @@ async function applyOptions() {
 
 searchBarUsers.addEventListener("input", function() {
   const rows = tableBody.getElementsByTagName("tr")
-  const subString = searchBar.value.toLowerCase()
-  if (searchBar.value === '') {
+  const subString = searchBarUsers.value.toLowerCase()
+  if (searchBarUsers.value === '') {
     for (const row of rows) {
       row.style.display = "table-row"
     }
@@ -108,9 +108,8 @@ searchBarUsers.addEventListener("input", function() {
   for (const row of rows) {
     var cells = row.getElementsByTagName("td");
     var name = cells[1].textContent.toLowerCase()
-    var mapper = cells[2].textContent.toLowerCase()
 
-    if (name.includes(subString) | mapper.includes(subString)) {
+    if (name.includes(subString)) {
       row.style.display = "table-row"
     }
     else {
