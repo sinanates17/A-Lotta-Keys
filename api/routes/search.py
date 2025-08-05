@@ -97,6 +97,7 @@ def get_users():
 def get_beatmaps():
     filters = request.args.getlist("key")
     sort = request.args.get("sort")
+    reverse = request.args.get("reverse") == "True"
     states = request.args.getlist("status")
     beatmaps = load_beatmap_compact()
     beatmaps = beatmaps["beatmaps"]
@@ -106,6 +107,7 @@ def get_beatmaps():
         if str(int(beatmap["keys"])) not in filters: continue
         if beatmap["status"] not in states: continue
         lnperc = round(beatmap["ln perc"], 2)
+        recent = int(beatmap["date"])
         row = {
             "id": bid,
             "name":beatmap["name"],
@@ -116,11 +118,13 @@ def get_beatmaps():
             "passes":beatmap["passes"],
             "length":beatmap["length"],
             "ln perc":lnperc,
-            "status":beatmap["status"]}
+            "status":beatmap["status"],
+            "recent":recent}
 
         response.append(row)
 
-    response.sort(key=lambda x: x[sort], reverse=True)
+    response.sort(key=lambda x: x[sort], reverse=not reverse)
+    print(reverse)
     i = 1
     for row in response:
         row["pos"] = i

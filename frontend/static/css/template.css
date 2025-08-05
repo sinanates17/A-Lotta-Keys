@@ -1,0 +1,230 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow-y: scroll;
+
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("../images/background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(16, 16, 16, .5);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #918396;;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    min-width: 1000px;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .25);
+    width: 60vw;
+    min-width: 1000px;
+    height: 90vh;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(16, 16, 16, .5);
+    border-top: 2px solid #918396;;
+    z-index: 1000;
+}
+
+.navright {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+    width: 100%;
+}
+
+.logo {
+    min-width: fit-content;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: default;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.navbutton1 {
+    font-size: 20px;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 40px;
+    border: none;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    
+}
+
+.navbutton1:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.navbutton2 {
+    font-size: 20px;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.navbutton2:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.hlink {
+    color: #efe5f3;
+}
+
+.container {
+    display: flexbox;
+    flex-direction: column;
+    max-height: calc();
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 25px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+}
+
+.label:hover {
+    cursor: default;
+}
+
+.search {
+    font-size: 20px;
+    color: #bcb0c0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 25px;
+    width: 35%;
+    min-width: 150px;
+    height: 50px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: none;
+}
+
+.search:focus {
+    border: none;
+    outline: none;
+}
+
+.checkbutton {
+    font-size: 20px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 40px;
+    border: none;
+}
+
+.checkbutton:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.checkbutton.checked {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.checkbutton.checked:hover {
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    justify-content: start;
+    gap: 1em;
+    padding: 0;
+}
+
+.tablebeatmaps {
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tablebeatmaps::-webkit-scrollbar {
+    display: none;
+}
+
+.tablecont {
+    height: calc(90vh - 500px);
+    overflow-y: auto;
+}
+
+.tablebeatmaps th, td {
+    padding: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: right;
+}
+
+.tablebeatmaps tr:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.tablebeatmaps thead { 
+    top: 0px; 
+    z-index: 1; 
+    text-align: right;
+}
