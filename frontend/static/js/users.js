@@ -57,6 +57,7 @@ async function applyOptions() {
   const pp = document.querySelectorAll('.checkbutton.checked[name="filterState"]')[0].value
 
   tableBody.innerHTML = ''
+  searchBarUsers.value = ''
 
   if (selectedKeys.length === 0) {
     return

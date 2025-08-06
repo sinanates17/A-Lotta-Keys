@@ -4,12 +4,15 @@
 
 {% block stylesheets %}
 {% endblock%}
+{% block data %}{% endblock%}
 
 {% block content %}
     <div class="container">
         <p class="label">Search</p>
-        <input type="text" autocomplete="off" placeholder="Search Users" class="search" id="searchusers">
-        <input type="text" autocomplete="off" placeholder="Search Country" class="search" id="searchcountry">
+        <div class="block">
+            <input type="text" autocomplete="off" placeholder="Search Users" class="search" id="searchusers">
+            <input type="text" autocomplete="off" placeholder="Search Country" class="search" id="searchcountry">
+        </div>
         <p class="label">Filter</p>
         <div class="options">
             <button value="9" class="checkbutton" name="filterKey">9K</button>
@@ -29,28 +32,28 @@
             <button value="pp" class="checkbutton checked" name="sort">PP</button>
             <button value="rperc" class="checkbutton" name="sort">Ranked Score</button>
             <button value="tperc" class="checkbutton" name="sort">Total Score</button>
-            <button value="numscores" class="checkbutton" name="sort">No. of Scoeres</button>
+            <button value="numscores" class="checkbutton" name="sort">No. of Scores</button>
             <button value="beatmap plays" class="checkbutton" name="sort">Beatmap Plays</button>
             <button value="reverse" class="checkbutton" id="reverse">Reverse</button>
         </div>
         <p class="label">Users</p>
-        <table class="tablebeatmaps">
+        <table class="tablehead">
             <thead>
                     <th style="width: 4%; text-align: left;">#</th>
-                    <th style="width: 12%;">Player</th>
-                    <th style="width: 7%;">PP</th>
-                    <th style="width: 11%;">Ranked Score</th>
+                    <th style="width: 12%; text-align: right;">Player</th>
+                    <th style="width: 7%; text-align: right;">PP</th>
+                    <th style="width: 11%; text-align: right;">Ranked Score</th>
                     <th style="width: 7%; text-align: left; padding-left: 1em;">%</th>
-                    <th style="width: 11%;">Total Score</th>
+                    <th style="width: 11%; text-align: right;">Total Score</th>
                     <th style="width: 7%; text-align: left; padding-left: 1em;">%</th>
-                    <th style="width: 10%;">Tracked Scores</th>
-                    <th style="width: 10%;">Beatmap Plays</th>
-                    <th style="width: 9%;">Last Active</th>
-                    <th style="width: 12%;">Country</th>
+                    <th style="width: 10%; text-align: right;">Tracked Scores</th>
+                    <th style="width: 10%; text-align: right;">Beatmap Plays</th>
+                    <th style="width: 9%; text-align: right;">Last Active</th>
+                    <th style="width: 12%; text-align: right;">Country</th>
                 </thead>
         </table>
         <div class="tablecont">
-            <table class="tablebeatmaps">
+            <table class="table">
                 <tbody id="tablebody">
 
                 </tbody>

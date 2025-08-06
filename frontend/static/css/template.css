@@ -27,6 +27,7 @@ header {
     top: 0;
     width: 100%;
     height: 5vh;
+    min-height: 5vh;
     background-color: rgba(16, 16, 16, .5);
     padding-top: 1em;
     padding-bottom: 1em;
@@ -52,7 +53,7 @@ main {
     background-color: rgba(0, 0, 0, .25);
     width: 60vw;
     min-width: 1000px;
-    height: 90vh;
+    max-height: calc(90vh - 40px);
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -66,6 +67,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 5vh;
+    min-height: 5vh;
     background-color: rgba(16, 16, 16, .5);
     border-top: 2px solid #918396;;
     z-index: 1000;
@@ -96,7 +98,6 @@ footer {
     height: 40px;
     border: none;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    
 }
 
 .navbutton1:hover {
@@ -124,12 +125,24 @@ footer {
 }
 
 .container {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
-    max-height: calc();
     width: 100%;
     overflow: hidden;
-    height: 100%;
+    height: calc(90vh - 40px);
+}
+
+.tabcont {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-grow: 1;
+}
+
+.tabcont.active {
+    display: flex;
 }
 
 .label {
@@ -138,6 +151,38 @@ footer {
     color: #bcb0c0;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.avatar {
+    height:100px;
+    width: 100px;
+    border: #918396 2px solid;
+    border-radius: 50px;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 50px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: center;
+}
+
+.username:hover {
+    cursor: default;
 }
 
 .label:hover {
@@ -197,36 +242,62 @@ footer {
     padding: 0;
 }
 
-.tablebeatmaps {
+.block {
+    display: block;
+}
+
+.tablehead {
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     color: #efe5f3;
     table-layout: fixed;
     width: 100%;
 }
 
-.tablebeatmaps::-webkit-scrollbar {
+.table {
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table::-webkit-scrollbar {
     display: none;
 }
 
 .tablecont {
-    height: calc(90vh - 500px);
+    height: 100%;
     overflow-y: auto;
 }
 
-.tablebeatmaps th, td {
+.table th, td {
     padding: 5px;
     padding-left: 0px;
     padding-right: 0px;
     text-align: right;
 }
 
-.tablebeatmaps tr:hover {
+.table tr:hover {
     background-color: rgba(255, 255, 255, .1);
     cursor: pointer;
 }
 
-.tablebeatmaps thead { 
+.table thead { 
     top: 0px; 
     z-index: 1; 
     text-align: right;
+}
+
+.plot {
+    margin-top: 25px;
+    border: 5px solid #918396;
+    border-radius: 5px;
+}
+
+.plotcont {
+    align-content: stretch;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    z-index: 2;
 }

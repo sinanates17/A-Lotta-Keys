@@ -4,11 +4,14 @@
 
 {% block stylesheets %}
 {% endblock%}
+{% block data %}{% endblock%}
 
 {% block content %}
     <div class="container">
         <p class="label">Search</p>
-        <input type="text" autocomplete="off" placeholder="Search Beatmaps" class="search" id="search">
+        <div class="block">
+            <input type="text" autocomplete="off" placeholder="Search Beatmaps/Mappers" class="search" id="search">
+        </div>
         <p class="label">Filter</p>
         <div class="options">
             <button value="9" class="checkbutton" name="filterKey">9K</button>
@@ -32,22 +35,22 @@
             <button value="reverse" class="checkbutton" id="reverse">Reverse</button>
         </div>
         <p class="label">Beatmaps</p>
-        <table class="tablebeatmaps">
+        <table class="tablehead">
             <thead>
                 <th style="width: 4%; text-align: left;">#</th>
                 <th style="width: 43%; text-align: left;">Beatmap</th>
-                <th style="width: 11%;">Mapper</th>
-                <th style="width: 5%;">Keys</th>
-                <th style="width: 5%;">SR</th>
-                <th style="width: 5%;">Plays</th>
-                <th style="width: 5%;">Passes</th>
-                <th style="width: 7%;">Length</th>
-                <th style="width: 7%;">LN%</th>
-                <th style="width: 7%;">Status</th>
+                <th style="width: 11%; text-align: right;">Mapper</th>
+                <th style="width: 5%; text-align: right;">Keys</th>
+                <th style="width: 5%; text-align: right;">SR</th>
+                <th style="width: 5%; text-align: right;">Plays</th>
+                <th style="width: 5%; text-align: right;">Passes</th>
+                <th style="width: 7%; text-align: right;">Length</th>
+                <th style="width: 7%; text-align: right;">LN%</th>
+                <th style="width: 7%; text-align: right;">Status</th>
             </thead>
         </table>
         <div class="tablecont">
-            <table class="tablebeatmaps">
+            <table class="table">
                 <tbody id="tablebody">
 
                 </tbody>
