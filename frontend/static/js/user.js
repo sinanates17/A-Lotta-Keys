@@ -6,6 +6,14 @@ API_BASE = isDev
   ? "http://127.0.0.1:5000/"
   : "https://alottakeys.xyz/";
 
+/////////////////////////////////////////////////////////////////////////
+
+const beatmaps = Object(beatmapData)
+const topPlaysTable = document.getElementById("topPlaysTable")
+const tabLabel = document.getElementById("tablabel")
+const pbFilter = document.getElementById("filterPB")
+const topFilter = document.getElementById("filterTop") 
+
 const Plotly = window.Plotly;
 const templateStr = 'Beatmap: %{customdata[0]}<br>' + 
                     'Score: %{customdata[1]}<br>' + 
@@ -15,183 +23,81 @@ const templateStr = 'Beatmap: %{customdata[0]}<br>' +
                     'Status: %{customdata[5]}<br>' + 
                     'Date: %{customdata[6]}';
 
-function dateFromTimestamp(ts) {
-    const year = 2000 + parseInt(ts.slice(0, 2));
-    const month = parseInt(ts.slice(2, 4)) - 1;
-    const day = parseInt(ts.slice(4, 6));
-    const hour = parseInt(ts.slice(6, 8));
-    const minute = parseInt(ts.slice(8, 10));
-    const second = parseInt(ts.slice(10, 12));
+let keyFilterElements = document.getElementsByName("filterKey")
+let stateFilterElements = document.getElementsByName("filterState")
+let tabElements = document.getElementsByName("statsTab")
 
-    const date = new Date(year, month, day, hour, minute, second);
+keyFilterElements = Array.from(keyFilterElements)
+stateFilterElements = Array.from(stateFilterElements)
+tabElements = Array.from(tabElements)
 
-    return date;
+keyFilterElements.forEach(elem => elem.addEventListener("click", () => clickFilter(elem)))
+stateFilterElements.forEach(elem => elem.addEventListener("click", () => clickFilter(elem)))
+tabElements.forEach(elem => elem.addEventListener("click", () => clickTab(elem)))
+pbFilter.addEventListener("click", () => clickFilter(pbFilter))
+topFilter.addEventListener("click", () => clickFilter(topFilter))
+
+function clickFilter(elem) {
+  elem.classList.toggle("checked")
+  applyFilters()
 }
 
-function colorFromSeed(seed) {
-    seed = parseFloat(seed);
-    const r =  Math.floor(96 * (Math.sin(seed) + 1)) + 64;
-    const g =  Math.floor(96 * (Math.sin(seed/2) + 1)) + 64;
-    const b =  Math.floor(96 * (Math.sin(seed/3) + 1)) + 64;
+function clickTab(elem) {
+  if (elem.classList.contains("checked")) {
+    return
+  }
 
-    const color = `rgb(${r}, ${g}, ${b})`
-    return color;
+  tabElements.forEach(e => {
+    e.classList.remove("checked")
+    const page = document.getElementById(e.value)
+    page.classList.remove("active")
+  })
+
+  elem.classList.add("checked")
+  tabLabel.textContent = elem.dataset.tabname
+  const page = document.getElementById(elem.value)
+  page.classList.add("active")
 }
 
-function formatDate(date) {
-    const day = date.getUTCDate();
-    const month = date.getUTCMonth();
-    const year = date.getUTCFullYear();
+async function applyFilters() {
 
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const filters = []
+  const pbOnly = pbFilter.classList.contains("checked")
+  const topOnly = topFilter.classList.contains("checked")
 
-    const formatted = `${day} ${monthNames[month]} ${year}`;
-    return formatted;
-}
-
-/////////////////////////////////////////////////////////////////////////
-
-const keymodesContainer = document.getElementById('keymodesParent');
-const keymodesButton = document.getElementById('keymodesButton');
-const keymodesDropdown = document.getElementById("keymodesDropdown");
-const searchBar = document.getElementById("search");
-const body = document.getElementById("leaderboard");
-
-function showDropdownKeymodes() {
-  keymodesDropdown.classList.toggle('hidden', false);}
-
-function hideDropdownKeymodes() {
-  keymodesDropdown.classList.toggle('hidden', true);}
-
-keymodesButton.addEventListener('pointerenter', showDropdownKeymodes);
-keymodesContainer.addEventListener('pointerleave', hideDropdownKeymodes);
-
-/////////////////////////////////////////////////////////////////////////
-
-const statusContainer = document.getElementById('statusParent');
-const statusButton = document.getElementById('statusButton');
-const statusDropdown = document.getElementById("statusDropdown");
-
-function showDropdownStatus() {
-  statusDropdown.classList.toggle('hidden', false);}
-
-function hideDropdownStatus() {
-  statusDropdown.classList.toggle('hidden', true);}
-
-statusButton.addEventListener('pointerenter', showDropdownStatus);
-statusContainer.addEventListener('pointerleave', hideDropdownStatus);
-
-/////////////////////////////////////////////////////////////////////////
-
-const pbToggle = document.getElementById("pbButton")
-const topPlays = document.getElementById("topPlays")
-const beatmaps = Object(beatmapData)
-
-let pbOnly = pbToggle.dataset.value === "true"
-
-function getFilters() {
-
-    let filters = []
-
-    let options = Array.from(document.querySelectorAll(".keymodesCheckbox"))
-
-    for (let option of options) {
-        if (option.checked) {
-            if (option.name === "key") {
-                filters.push(Number(option.value))
-            } 
-            else {
-                filters.push(option.value)
-            }
-        }
+  keyFilterElements.map(elem => {
+    if (elem.classList.contains("checked")) {
+      filters.push(Number(elem.value))
     }
-
-    return filters;
-
-}
-
-function togglePBs() {
-
-    if (pbToggle.dataset.value === "true") {
-        pbToggle.dataset.value = "false"
+  })
+  stateFilterElements.map(elem => {
+    if (elem.classList.contains("checked")) {
+      filters.push(elem.value)
     }
+  })
 
-    else {
-        pbToggle.dataset.value = "true"
-    }
+  let scoreData = Object.values(userData.scores)
 
-    pbOnly = pbToggle.dataset.value === "true"
+  if (pbOnly) {
+    scoreData = scoreData.filter(score => score.pb)
+  }
 
-    applyFilter()
+  if (topOnly) {
+    scoreData = scoreData.filter(score => score.top)
+  }
 
-}
+  scoreData = scoreData.filter(score => {
+    const keys = beatmaps[score.bid]?.keys
+    const state = beatmaps[score.bid]?.status
+    return keys !== undefined && ( filters.includes(parseInt(keys)) && filters.includes(state) )
+  })
 
-function fillTopPlays(rows) {
+  let rows = Array.from(scoreData).sort((a, b) => b.pp - a.pp)
+  rows = rows.filter(r => r.top)
 
-    topPlays.innerHTML = "";
+  fillTopPlays(rows)
 
-    let pos = 1
-    for (const row of rows) {
-        if (row.old) {
-            continue;
-        }
-        const tr = document.createElement('tr');
-        tr.id = row["bid"];
-
-        let ratio = "-"
-        if (row["300"] > 0) {
-            ratio = Math.round(row["320"] * 100 / row["300"]) / 100;
-        }
-        const acc = Math.round(row.acc * 10000) / 100;
-
-        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
-        tr.innerHTML = `
-                    <td style="width: 4%; text-align: left;">${pos}</td>
-                    <td style="width: 40%;">${beatmaps[row.bid].name}</td>
-                    <td style="width: 8%;">${row.pp}pp</td>
-                    <td style="width: 8%;">${acc}%</td>
-                    <td style="width: 12%;">${row.score}</td>
-                    <td style="width: 8%;">${ratio}</td>
-                    <td style="width: 8%;">${row.combo}</td>
-                    <td style="width: 12%;">${formatStrDate(row.time)}</td>`;
-
-        pos = pos + 1;
-
-    topPlays.appendChild(tr);
-    }
-}
-
-function formatStrDate(str) {
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-    const year = `20${str.slice(0, 2)}`;
-    const month = months[parseInt(str.slice(2, 4)) - 1];
-    const day = parseInt(str.slice(4, 6));
-
-    return `${day} ${month} ${year}`;
-}
-
-function applyFilter() {
-
-    let scoreData = Object.values(userData["scores"]);
-    if (pbOnly) {
-        scoreData = scoreData.filter(score => score["pb"]);
-    }
-
-    let filters = getFilters()
-
-    scoreData = scoreData.filter(score => {
-        const keys = beatmaps[score.bid]?.keys;
-        const status = beatmaps[score.bid]?.status;
-        return keys !== undefined && (filters.includes(parseInt(keys)) && filters.includes(status));
-    });
-
-    let rows = Array.from(scoreData).sort((a, b) => b.pp - a.pp);
-    rows = rows.filter(row => row["top"]);
-    fillTopPlays(rows);
-
-    let playData = Object.values(userData["beatmap plays history"]);
+  let playData = Object.values(userData["beatmap plays history"]);
     let playDataDiffs= playData.slice(1).map((val, i) => val - playData[i]);
     let playDataTimes = Object.keys(userData["beatmap plays history"]);
     let ppTimeData = Object.values(userData["pp history"])
@@ -402,4 +308,84 @@ function applyFilter() {
     Plotly.newPlot("plotTimePlaysDiffs", [traceTimePlaysDiffs], layoutTimePlaysDiffs)
 }
 
-applyFilter()
+function fillTopPlays(rows) {
+
+    topPlaysTable.innerHTML = "";
+
+    let pos = 1
+    for (const row of rows) {
+        if (row.old) {
+            continue
+        }
+        const tr = document.createElement('tr')
+        tr.id = row.bid
+
+        let ratio = "-"
+        if (row["300"] > 0) {
+            ratio = Math.round(row["320"] * 100 / row["300"]) / 100
+        }
+        const acc = Math.round(row.acc * 10000) / 100
+
+        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
+        tr.innerHTML = `
+                    <td style="width: 4%; text-align: left;">${pos}</td>
+                    <td style="width: 40%; text-align: left;">${beatmaps[row.bid].name}</td>
+                    <td style="width: 8%;">${row.pp}pp</td>
+                    <td style="width: 8%;">${acc}%</td>
+                    <td style="width: 12%;">${row.score}</td>
+                    <td style="width: 8%;">${ratio}</td>
+                    <td style="width: 8%;">${row.combo}</td>
+                    <td style="width: 12%;">${formatStrDate(row.time)}</td>`
+
+        pos = pos + 1
+
+    topPlaysTable.appendChild(tr)
+    }
+}
+
+function formatStrDate(str) {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+    const year = `20${str.slice(0, 2)}`
+    const month = months[parseInt(str.slice(2, 4)) - 1]
+    const day = parseInt(str.slice(4, 6))
+
+    return `${day} ${month} ${year}`
+}
+
+function formatDate(date) {
+    const day = date.getUTCDate();
+    const month = date.getUTCMonth();
+    const year = date.getUTCFullYear();
+
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    const formatted = `${day} ${monthNames[month]} ${year}`;
+    return formatted;
+}
+
+function colorFromSeed(seed) {
+    seed = parseFloat(seed);
+    const r =  Math.floor(96 * (Math.sin(seed) + 1)) + 64;
+    const g =  Math.floor(96 * (Math.sin(seed/2) + 1)) + 64;
+    const b =  Math.floor(96 * (Math.sin(seed/3) + 1)) + 64;
+
+    const color = `rgb(${r}, ${g}, ${b})`
+    return color;
+}
+
+function dateFromTimestamp(ts) {
+    const year = 2000 + parseInt(ts.slice(0, 2));
+    const month = parseInt(ts.slice(2, 4)) - 1;
+    const day = parseInt(ts.slice(4, 6));
+    const hour = parseInt(ts.slice(6, 8));
+    const minute = parseInt(ts.slice(8, 10));
+    const second = parseInt(ts.slice(10, 12));
+
+    const date = new Date(year, month, day, hour, minute, second);
+
+    return date;
+}
+
+applyFilters()

@@ -150,7 +150,7 @@ def user_page(uid):
 
     user = Helper.load_user(uid)
 
-    return render_template("user2.html",user=user, compact=user_compact, beatmaps=beatmaps)
+    return render_template("user.html",user=user, compact=user_compact, beatmaps=beatmaps)
 
 @search_bp.route("/beatmaps/<bid>", methods=["GET"])
 def beatmap_page(bid):

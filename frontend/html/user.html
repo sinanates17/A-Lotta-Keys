@@ -1,94 +1,89 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ user.name }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../static/css/styles.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="http://127.0.0.1:5500/frontend/static/css/styles.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    </head>
-    <body class="backgroundP">
-        <div class="menuContainer">
-            <button class="homeButton" onclick="window.location.href='/home.html'">Home</button>
-            <button class="homeButton" onclick="window.location.href='/beatmaps.html'">Beatmaps</button>
-            <button class="homeButton" onclick="window.location.href='/homee.html'">Monthly</button>
-            <button class="homeButton" onclick="window.location.href='/home.html'">About</button>
-        </div>
-        <div class="subMenuContainer">
-            <button class="homeButtonSmall" onclick="window.location.href='/home.html'">
-                <i class="fab fa-discord"></i>
-            </button>
-            <button class="homeButtonSmall" onclick="window.open('https://github.com/sinanates17/A-Lotta-Keys', '_blank')">
-                <i class="fab fa-github"></i>
-            </button>
-            <button class="homeButtonSmall" onclick="window.location.href='/home.html'">
-                <i class="fa-solid fa-user"></i>
-            </button>
-        </div>
-        <div class="hUser">{{ user.name }}</div>
-        <div class="filterMenu">
-            <div class="keymodes" id="keymodesParent">
-                <div class="keymodesHover" id="keymodesButton">Keymodes</div>
-                <div class="keymodesContent hidden" id="keymodesDropdown">
-                    <label><input class="keymodesCheckbox" type="checkbox" value="9" name="key" onclick="applyFilter()"> 9K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="10" name="key" onclick="applyFilter()" checked> 10K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="12" name="key" onclick="applyFilter()"> 12K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="14" name="key" onclick="applyFilter()"> 14K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="16" name="key" onclick="applyFilter()"> 16K </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="18" name="key" onclick="applyFilter()"> 18K </label>
-                </div>
-            </div>
-            <div class="keymodes" id="statusParent">
-                <div class="keymodesHover" id="statusButton">Status</div>
-                <div class="keymodesContent hidden" id="statusDropdown">
-                    <label><input class="keymodesCheckbox" type="checkbox" value="Ranked" name="status" onclick="applyFilter()" checked> Ranked </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="Loved" name="status" onclick="applyFilter()" checked> Loved </label>
-                    <label><input class="keymodesCheckbox" type="checkbox" value="Unranked" name="status" onclick="applyFilter()"> Unranked </label>
-                </div>
-            </div>
-            <div class="keymodes" id="pbParent">
-                <div class="keymodesHover" id="pbButton" data-value="false" onclick="togglePBs()">Graph PBs Only</div>
-            </div>
-        </div>
-        <div>
-            <div class="menuContainer">
-                <div id="plotTimePP" class="plot"></div>
-                <div id="plotCumTimePP" class="plot"></div>
-            </div>
-        </div>
-        </div>
-            <table class="table">
-                <thead>
-                    <th style="width: 4%; text-align: left;">#</th>
-                    <th style="width: 40%; text-align: left;">Beatmap</th>
-                    <th style="width: 8%;">PP</th>
-                    <th style="width: 8%;">Accuracy</th>
-                    <th style="width: 12%;">Score</th>
-                    <th style="width: 8%;">Ratio</th>
-                    <th style="width: 8%;">Combo</th>
-                    <th style="width: 12%;">Date</th>
-                </thead>
-            </table>
-        <div class="tableCont2">
-            <table class="table">
-                <tbody id="topPlays">
-                </tbody>
-            </table>
-        </div>
-        <div class="menuContainer">
-                <div id="plotTimePlays" class="plot"></div>
-                <div id="plotTimePlaysDiffs" class="plot"></div>
-            </div>
-    </body>
+{% extends 'template.html' %}
+
+{% block title %}{{user.name}}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+{% endblock %}
+
+{% block data %}
     <script>
         const userData = {{ user|tojson|safe }};
         const beatmapData = {{ beatmaps|tojson|safe }};
     </script>
+{% endblock%}
+
+{% block content %}
+    <div class="container">
+        <div class="user">
+            <img class="avatar" src="{{ user['avatar url'] }}" onclick="window.open('https://osu.ppy.sh/users/{{ user.id }}')">
+            <p class="username">{{ user.name }}</p>
+        </div>
+        <p class="label">Filter Stats (Applies to "Top Plays" and "PP" tabs)</p>
+        <div class="options">
+            <button value="9" class="checkbutton" name="filterKey">9K</button>
+            <button value="10" class="checkbutton checked" name="filterKey">10K</button>
+            <button value="12" class="checkbutton" name="filterKey">12K</button>
+            <button value="14" class="checkbutton" name="filterKey">14K</button>
+            <button value="16" class="checkbutton" name="filterKey">16K</button>
+            <button value="18" class="checkbutton" name="filterKey">18K</button>
+            <button value="Ranked" class="checkbutton checked" name="filterState">Ranked</button>
+            <button value="Loved" class="checkbutton" name="filterState">Loved</button>
+            <button value="Unranked" class="checkbutton" name="filterState">Unranked</button>
+            <button class="checkbutton" id="filterPB">PBs Only</button>
+            <button class="checkbutton" id="filterTop">Top Plays Only</button>
+        </div>
+        <p class="label">View</p>
+        <div class="options">
+            <button class="checkbutton" name="statsTab" value="summary" data-tabname="Summary" id="tabSummary">Summary</button>
+            <button class="checkbutton checked" name="statsTab" value="topPlays" data-tabname="Top Plays" id="tabTopPlays">Top Plays</button>
+            <button class="checkbutton" name="statsTab" value="pp" data-tabname="PP" id="tabPP">PP</button>
+            <button class="checkbutton" name="statsTab" value="sumBeatmaps" data-tabname="Beatmap Summary" id="tabSumBeatmaps">Beatmap Summary</button>
+            <button class="checkbutton" name="statsTab" value="beatmaps" data-tabname="Beatmaps" id="tabBeatmaps">Beatmaps</button>
+        </div>
+        <p class="label" id="tablabel">Top Plays</p>
+        <div class="tabcont" id="summary">
+            Nothing here yet.
+        </div>
+        <div class="tabcont active" id="topPlays">
+            <table class="tablehead">
+                <thead>
+                    <th style="width: 4%; text-align: left;">#</th>
+                    <th style="width: 40%; text-align: left;">Beatmap</th>
+                    <th style="width: 8%; text-align: right;">PP</th>
+                    <th style="width: 8%; text-align: right;">Accuracy</th>
+                    <th style="width: 12%; text-align: right;">Score</th>
+                    <th style="width: 8%; text-align: right;">Ratio</th>
+                    <th style="width: 8%; text-align: right;">Combo</th>
+                    <th style="width: 12%; text-align: right;">Date</th>
+                </thead>
+            </table>
+            <div class="tablecont">
+                <table class="table">
+                    <tbody id="topPlaysTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tabcont" id="pp">
+            <div class="plotcont">
+                <div id="plotTimePP" class="plot"></div>
+                <div id="plotCumTimePP" class="plot"></div>
+            </div>
+        </div>
+        <div class="tabcont" id="sumBeatmaps">
+            <div class="plotcont">
+                <div id="plotTimePlays" class="plot"></div>
+                <div id="plotTimePlaysDiffs" class="plot"></div>
+            </div>
+        </div>
+        <div class="tabcont" id="beatmaps">
+            Nothing here yet.
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/plotly-basic-3.0.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/user.js') }}"></script>
-</html>
+{% endblock %}
