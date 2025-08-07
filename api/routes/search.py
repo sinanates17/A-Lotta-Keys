@@ -182,6 +182,7 @@ def beatmap_page(bid):
     title = beatmapset["title"]
     artist = beatmapset["artist"]
     ranked = beatmapset["ranked"]
+    mapper = user_links.get(str(beatmap["mapper id"]), "null")
 
     scores = beatmapset["beatmaps"][bid]["scores"]
 
@@ -206,4 +207,4 @@ def beatmap_page(bid):
         pb["pos"] = i
         i += 1
 
-    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, userLinks=user_links, pbs=pbs, ranked=ranked)
+    return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, mapper=mapper, userLinks=user_links, pbs=pbs, ranked=ranked)

@@ -73,6 +73,12 @@ footer {
     z-index: 1000;
 }
 
+p {
+    font-size: 18px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+
 .navright {
     display: flex;
     justify-content: end;
@@ -137,7 +143,7 @@ footer {
     flex-direction: column;
     width: 100%;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     flex-grow: 1;
 }
 
@@ -155,6 +161,15 @@ footer {
 
 .user {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.beatmap {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
@@ -181,7 +196,34 @@ footer {
     text-align: center;
 }
 
-.username:hover {
+.beatmapname {
+    font-weight: bold;
+    font-size: 50px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: center;
+    margin-block-end: 0;
+}
+
+.diffname {
+    font-weight: bold;
+    font-size: 35px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: center;
+}
+
+.username:hover .beatmapname:hover .diffname:hover {
+    cursor: default;
+}
+
+.beatmapname:hover {
+    cursor: default;
+}
+
+.diffname:hover {
     cursor: default;
 }
 
@@ -279,6 +321,10 @@ footer {
 .table tr:hover {
     background-color: rgba(255, 255, 255, .1);
     cursor: pointer;
+}
+
+thead:hover {
+    cursor: default;
 }
 
 .table thead { 

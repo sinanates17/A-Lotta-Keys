@@ -1,80 +1,75 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ artist }} - {{ title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../static/css/styles.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="http://127.0.0.1:5500/frontend/static/css/styles.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    </head>
-    <body class="backgroundP">
-        <div class="menuContainer">
-            <button class="homeButton" onclick="window.location.href='/home.html'">Home</button>
-            <button class="homeButton" onclick="window.location.href='/beatmaps.html'">Beatmaps</button>
-            <button class="homeButton" onclick="window.location.href='/home.html'">Monthly</button>
-            <button class="homeButton" onclick="window.location.href='/home.html'">About</button>
+{% extends 'template.html' %}
+
+{% block title %}{{ artist }} - {{ title }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+{% endblock %}
+
+{% block data %}
+    <script>
+        const beatmapData = {{ beatmap|tojson|safe }}
+        const userLinksData = {{ userLinks|tojson|safe }}
+        const pbData = {{ pbs|tojson|safe}}
+        const rankedDate = {{ ranked|tojson|safe}}
+    </script>
+{% endblock%}
+
+{% block content %}
+    <div class="container">
+        <div class="beatmap">
+            <p class="beatmapname">{{ artist }} - {{ title }}</p>
+            <div class="diffname">{{ beatmap.version }} by {{mapper}}</div>
         </div>
-        <div class="subMenuContainer">
-            <button class="homeButtonSmall" onclick="window.location.href='/home.html'">
-                <i class="fab fa-discord"></i>
-            </button>
-            <button class="homeButtonSmall" onclick="window.open('https://github.com/sinanates17/A-Lotta-Keys', '_blank')">
-                <i class="fab fa-github"></i>
-            </button>
-            <button class="homeButtonSmall" onclick="window.location.href='/home.html'">
-                <i class="fa-solid fa-user"></i>
-            </button>
+        <p class="label">View</p>
+        <div class="options">
+            <button class="checkbutton" name="statsTab" value="summary" data-tabname="Summary" id="tabSummary">Summary</button>
+            <button class="checkbutton checked" name="statsTab" value="leaderboard" data-tabname="Leaderboard" id="tabLeaderboard">Leaderboard</button>
+            <button class="checkbutton" name="statsTab" value="data" data-tabname="Data" id="tabData">Data</button>
         </div>
-        <div class="hUser">{{ artist }} - {{ title }}</div>
-        <div class="hdiff">{{ beatmap.version }}</div>
-        <div>
-            <div class="menuContainer">
-                <div id="plotTimePlays" class="plot"></div>
-                <div></div>
+        <p class="label" id="tablabel">Leaderboard</p>
+        <div class="tabcont" id="summary">
+            Nothing here yet.
+        </div>
+        <div class="tabcont active" id="leaderboard">
+            <table class="tablehead">
+                <thead>
+                    <th style="width: 4%; text-align: left;">#</th>
+                    <th style="width: 12%; text-align: right;">Player</th>
+                    <th style="width: 7%; text-align: right;">PP</th>
+                    <th style="width: 8%; text-align: right;">Score</th>
+                    <th style="width: 10%; text-align: right;">Accuracy</th>
+                    <th style="width: 8%; text-align: right;">Combo</th>
+                    <th style="width: 6%; text-align: right;">Ratio</th>
+                    <th style="width: 6%; text-align: right;">Marv</th>
+                    <th style="width: 6%; text-align: right;">Perf</th>
+                    <th style="width: 6%; text-align: right;">Great</th>
+                    <th style="width: 6%; text-align: right;">Good</th>
+                    <th style="width: 6%; text-align: right;">Bad</th>
+                    <th style="width: 6%; text-align: right;">Miss</th>
+                    <th style="width: 9%; text-align: right;">Date</th>
+                </thead>
+            </table>
+            <div class="tablecont">
+                <table class="table">
+                    <tbody id="leaderboardtable">
+                    </tbody>
+                </table>
             </div>
-            <div class="menuContainer">
+        </div>
+        <div class="tabcont" id="data">
+            <div class="plotcont">
+                <div id="plotTimePlays" class="plot"></div>
+            </div>
+            <div class="plotcont">
                 <div id="plotAccScore" class="plot"></div>
                 <div id="plotTimeScore" class="plot"></div>
             </div>
         </div>
-        </div>
-            <table class="table">
-                <thead>
-                    <th style="width: 4%; text-align: left;">#</th>
-                    <th style="width: 12%;">Player</th>
-                    <th style="width: 7%;">PP</th>
-                    <th style="width: 8%;">Score</th>
-                    <th style="width: 10%;">Accuracy</th>
-                    <th style="width: 8%;">Combo</th>
-                    <th style="width: 6%;">Ratio</th>
-                    <th style="width: 6%;">Marv</th>
-                    <th style="width: 6%;">Perf</th>
-                    <th style="width: 6%;">Great</th>
-                    <th style="width: 6%;">Good</th>
-                    <th style="width: 6%;">Bad</th>
-                    <th style="width: 6%;">Miss</th>
-                    <th style="width: 9%;">Date</th>
-                </thead>
-            </table>
-        <div class="tableCont2">
-            <table class=" table">
-                <tbody id="leaderboard">
+    </div>
+{% endblock %}
 
-                </tbody>
-            </table>
-        </div>
-    </body>
-    <script>
-        const beatmapData = {{ beatmap|tojson|safe }};
-        const userLinksData = {{ userLinks|tojson|safe }};
-        const pbData = {{ pbs|tojson|safe}}
-        const rankedDate = {{ ranked|tojson|safe}}
-    </script>
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/plotly-basic-3.0.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/beatmap.js') }}"></script>
-</html>
+{% endblock %}
