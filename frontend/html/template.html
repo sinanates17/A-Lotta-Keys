@@ -16,6 +16,7 @@
             let sessionSettings = {{ session_settings|tojson|safe }}
         </script>
     {% endif%}
+    <script src="{{ url_for('static', filename='js/template.js') }}"></script>
 
     {% block data %}{% endblock%}
 </head>
@@ -87,6 +88,5 @@
     {% block scripts %}
 
     {% endblock %}
-    <script src="{{ url_for('static', filename='js/template.js') }}"></script>
 </body>
 </html>
