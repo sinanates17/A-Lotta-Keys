@@ -1,12 +1,18 @@
 /** @type {typeof import("plotly.js-dist-min")} */
 
-const isDev = window.location.hostname === "127.0.0.1";
+const userPageSettings = Object(userSettings)
+const dispFav = document.getElementById("favpattern")
+const labFav = document.getElementById("favpatternlabel")
 
-API_BASE = isDev
-  ? "http://127.0.0.1:5000/"
-  : "https://alottakeys.xyz/";
+if (userPageSettings?.fav) {
+    dispFav.textContent = userPageSettings.fav
+}
 
-/////////////////////////////////////////////////////////////////////////
+else {
+    dispFav.style.display = 'none'
+    labFav.style.display = 'none'
+}
+
 
 const beatmaps = Object(beatmapData)
 const topPlaysTable = document.getElementById("topPlaysTable")

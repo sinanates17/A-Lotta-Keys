@@ -94,6 +94,25 @@ p {
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
 
+.settings {
+    position: absolute;
+    top: calc(50vh - 400px);
+    left: calc(50vw - 300px);
+    height: 800px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.settings.active {
+    display: flex;
+}
+
+
 .navbutton1 {
     font-size: 20px;
     color: #efe5f3;
@@ -138,6 +157,14 @@ p {
     height: calc(90vh - 40px);
 }
 
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    width: 100%;
+    overflow: hidden;
+}
+
 .tabcont {
     display: none;
     flex-direction: column;
@@ -159,9 +186,41 @@ p {
     padding: 0;
 }
 
+.label2 {
+    font-weight: bold;
+    font-size: 35px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+}
+
+.label3 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding-left: 20px;
+}
+
+.label4 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+}
+
+.label2:hover {
+    cursor: default;
+}
+
+.label3:hover {
+    cursor: default;
+}
+
 .user {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     gap: 1em;
     padding: 0;
@@ -183,6 +242,15 @@ p {
     border-radius: 50px;
 }
 
+.avataricon {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.avataricon:hover {
+    cursor: pointer;
+}
+
 .avatar:hover {
     cursor: pointer;
 }
@@ -193,7 +261,8 @@ p {
     color: #efe5f3;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
-    text-align: center;
+    text-align: left;
+    width: 40%;
 }
 
 .beatmapname {
@@ -215,7 +284,7 @@ p {
     text-align: center;
 }
 
-.username:hover .beatmapname:hover .diffname:hover {
+.username:hover {
     cursor: default;
 }
 
@@ -268,11 +337,36 @@ p {
     background-color: rgba(255, 255, 255, .1);
 }
 
+.checkbutton2 {
+    font-size: 16x;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 10px;
+    height: 20px;
+    border: none;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.checkbutton2:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
+}
+
 .checkbutton.checked {
     background-color: rgba(255, 255, 255, .2);
 }
 
 .checkbutton.checked:hover {
+    cursor: pointer;
+}
+
+.checkbutton2.checked {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.checkbutton2.checked:hover {
     cursor: pointer;
 }
 
@@ -282,6 +376,15 @@ p {
     flex-wrap: wrap;
     gap: 1em;
     padding: 0;
+}
+
+.options2{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    row-gap: .5em;
+    padding-top: 1em;
+    padding-left: 20px;
 }
 
 .block {

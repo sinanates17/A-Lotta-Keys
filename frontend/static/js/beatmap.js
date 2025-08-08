@@ -1,13 +1,5 @@
 /** @type {typeof import("plotly.js-dist-min")} */
 
-const isDev = window.location.hostname === "127.0.0.1";
-
-API_BASE = isDev
-  ? "http://127.0.0.1:5000/"
-  : "https://alottakeys.xyz/";
-
-/////////////////////////////////////////////////////////////////////////
-
 const Plotly = window.Plotly;
 const leaderboard = document.getElementById("leaderboardtable")
 const tabLabel = document.getElementById("tablabel")

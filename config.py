@@ -10,6 +10,7 @@ load_dotenv(dotenv_path)
 
 OSU_API_ID = os.getenv("OSU_API_ID")
 OSU_API_SECRET = os.getenv("OSU_API_SECRET")
+OSU_REDIRECT_URI = os.getenv("OSU_REDIRECT_URI")
 
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 

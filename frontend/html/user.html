@@ -10,6 +10,7 @@
     <script>
         const userData = {{ user|tojson|safe }};
         const beatmapData = {{ beatmaps|tojson|safe }};
+        const userSettings = {{ user_settings|tojson|safe }}
     </script>
 {% endblock%}
 
@@ -18,8 +19,10 @@
         <div class="user">
             <img class="avatar" src="{{ user['avatar url'] }}" onclick="window.open('https://osu.ppy.sh/users/{{ user.id }}')">
             <p class="username">{{ user.name }}</p>
+            <p class="label" id="favpatternlabel">Favorite Pattern:</p>
+            <p class="label4" id="favpattern"></p>
         </div>
-        <p class="label">Filter Stats (Applies to "Top Plays" and "PP" tabs)</p>
+        <p class="label">Filter Stats</p>
         <div class="options">
             <button value="9" class="checkbutton" name="filterKey">9K</button>
             <button value="10" class="checkbutton checked" name="filterKey">10K</button>

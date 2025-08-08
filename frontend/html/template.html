@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../static/css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     {% block stylesheets %}{% endblock%}
+
+    {% if logged_in%}
+        <script>
+            const sessionID = {{ id }}
+        </script>
+    {% endif%}
+
     {% block data %}{% endblock%}
 </head>
 
@@ -29,9 +36,41 @@
                 <button class="navbutton2" onclick="window.location.href='/'">
                     <i class="fab fa-discord"></i>
                 </button>
-                <button class="navbutton2" onclick="window.location.href='/'">
-                    <i class="fa-solid fa-user"></i>
-                </button>
+                {% if logged_in %}
+                    <button class="navbutton2" id="settingsbutton">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <button class="navbutton2" onclick="window.location.href='http://127.0.0.1:5000/auth/logout'">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </button>
+                    <img class="avataricon" src="{{ avatar_url }}" onclick="window.location.href='http://127.0.0.1:5000/api/search/users/{{ id }}'">
+                    <div class="settings" id="settings">
+                        <p class="label2">Settings</p>
+                        <div class="container2">
+                            <div class="label3">Favorite Pattern</div>
+                            <div class="options2">
+                                <button name="settingfav" class="checkbutton2" value="Chordstream">Chordstream</button>
+                                <button name="settingfav" class="checkbutton2" value="Brackstream">Brackstream</button>
+                                <button name="settingfav" class="checkbutton2" value="Chordjack">Chordjack</button>
+                                <button name="settingfav" class="checkbutton2" value="Brackjack">Brackjack</button>
+                                <button name="settingfav" class="checkbutton2" value="Brackets">Brackets</button>
+                                <button name="settingfav" class="checkbutton2" value="Release">Release</button>
+                                <button name="settingfav" class="checkbutton2" value="10Jam">10Jam</button>
+                                <button name="settingfav" class="checkbutton2" value="Inverse">Inverse</button>
+                                <button name="settingfav" class="checkbutton2" value="Hybrid">Hybrid</button>
+                                <button name="settingfav" class="checkbutton2" value="Tech">Tech</button>
+                                <button name="settingfav" class="checkbutton2" value="Speed">Speed</button>
+                                <button name="settingfav" class="checkbutton2" value="Dump">Dump</button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="{{ url_for('static', filename='js/loggedin.js') }}"></script>
+                {% else %}
+                    <button class="navbutton2" onclick="window.location.href='http://127.0.0.1:5000/auth/login'">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                {% endif %}
+                
             <div>
         </nav>
     </header>
@@ -47,5 +86,6 @@
     {% block scripts %}
 
     {% endblock %}
+    <script src="{{ url_for('static', filename='js/template.js') }}"></script>
 </body>
 </html>
