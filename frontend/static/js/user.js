@@ -13,7 +13,6 @@ else {
     labFav.style.display = 'none'
 }
 
-
 const beatmaps = Object(beatmapData)
 const topPlaysTable = document.getElementById("topPlaysTable")
 const tabLabel = document.getElementById("tablabel")
