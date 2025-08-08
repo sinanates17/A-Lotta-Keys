@@ -6,6 +6,7 @@ from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent
 from config import PATH_ROOT, OSU_API_ID, OSU_API_SECRET, OSU_REDIRECT_URI
 from api.routes.search import search_bp
 from api.routes.auth import auth_bp
+from utils import Helper
 
 app = Flask(__name__, 
             template_folder=f"{PATH_ROOT}/frontend/html",
@@ -23,9 +24,15 @@ app.register_blueprint(auth_bp, url_prefix='/auth')
 @app.context_processor
 def logged_in():
     if "user" in session:
+        uid = session.get("user").get("id")
+
+        user = Helper.load_user(uid)
+
+        session_settings = user["settings"]
         return dict(logged_in=("user" in session), 
                     avatar_url=session.get("user").get("avatar url"),
-                    id=session.get("user").get("id"))
+                    id=uid,
+                    session_settings=session_settings)
     
     else:
         return dict(logged_in=("user" in session))

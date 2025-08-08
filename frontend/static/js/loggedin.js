@@ -1,9 +1,15 @@
 const settingsbutton = document.getElementById("settingsbutton")
 const settings = document.getElementById("settings")
-
 let justToggled = false
 
+sessionSettings = Object(sessionSettings)
+
 settingsbutton.addEventListener("click", () => toggleSettings())
+currentFav = document.querySelector(`[value='${sessionSettings?.fav}']`)
+
+if (currentFav) {
+    currentFav.classList.add("checked")
+}
 
 const settingsFav = Array.from(document.getElementsByName("settingfav"))
 settingsFav.forEach(elem => elem.addEventListener("click", () => clickSettingFav(elem)))
