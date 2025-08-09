@@ -42,10 +42,10 @@
                     <button class="navbutton2" id="settingsbutton">
                         <i class="fa-solid fa-gear"></i>
                     </button>
-                    <button class="navbutton2" onclick="window.location.href='http://alottakeys.xyz/auth/logout'">
+                    <button class="navbutton2" id="logout">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </button>
-                    <img class="avataricon" src="{{ avatar_url }}" onclick="window.location.href='http://alottakeys.xyz/api/search/users/{{ id }}'">
+                    <img class="avataricon" id="avataricon" src="{{ avatar_url }}">
                     <div class="settings" id="settings">
                         <p class="label2">Settings</p>
                         <div class="container2">
@@ -68,7 +68,7 @@
                     </div>
                     <script src="{{ url_for('static', filename='js/loggedin.js') }}"></script>
                 {% else %}
-                    <button class="navbutton2" onclick="window.location.href='http://alottakeys.xyz/auth/login'">
+                    <button class="navbutton2" id="login">
                         <i class="fa-solid fa-user"></i>
                     </button>
                 {% endif %}
@@ -83,8 +83,6 @@
         {% endblock %}
     </main>
 
-    <footer>
-    </footer>
     {% block scripts %}
 
     {% endblock %}
