@@ -11,8 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const login = document.getElementById("login")
 
     if (logout) {
+        const id = Object(sessionID)
         logout.onclick = () => { window.location.href = `${API_BASE}auth/logout` }
-        avataricon.onclick = () => { window.location.href = `${API_BASE}api/search/users/{{ id }}` }
+        avataricon.onclick = () => { window.location.href = `${API_BASE}api/search/users/${id}` }
     }
 
     else {

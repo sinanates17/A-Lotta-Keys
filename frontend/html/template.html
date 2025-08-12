@@ -12,7 +12,7 @@
 
     {% if logged_in%}
         <script>
-            const sessionID = {{ id }}
+            const sessionID = {{ id|tojson|safe }}
             let sessionSettings = {{ session_settings|tojson|safe }}
         </script>
     {% endif%}
