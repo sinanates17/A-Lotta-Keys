@@ -72,6 +72,22 @@ p {
     color: #bcb0c0;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #efe5f3;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
+}
 
 .navright {
     display: flex;

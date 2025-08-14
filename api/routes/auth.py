@@ -6,6 +6,7 @@ from datetime import datetime
 from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS
 from utils import Helper
 from os import listdir
+from routes.db import get_pf_db
 import json
 
 auth_bp = Blueprint("auth", __name__)
@@ -67,19 +68,22 @@ def callback():
         helper = Helper()
         user = helper.osu_api.user(uid)
         user_dict = Helper.user_to_dict(user)
-        user_dict["settings"] = {}
 
         with open (output, "w", encoding='utf-8') as f:
             json.dump(user_dict, f, ensure_ascii=False, indent=4)
 
-    else:
-         user = Helper.load_user(uid)
 
-         if "settings" not in user.keys():
-            user["settings"] = {}
+    pf_db = get_pf_db()
+    cur = pf_db.cursor()
+    cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
+    row = cur.fetchone()
 
-            with open(output, "w", encoding='utf-8') as f:
-                json.dump(user, f, ensure_ascii=False, indent=4)
+    if not row:
+        cur.execute("""
+        INSERT INTO profiles (uid)
+        VALUES (?)
+        """, (uid,))
+        pf_db.commit()
 
     return redirect(url_for(f"search.user_page", uid=session["user"]["id"]))
 
@@ -91,16 +95,16 @@ def logout():
 @auth_bp.route("/setting_fav", methods=['POST'])
 def setting_fav():
     data = request.get_json()
-    settingFav = data.get("settingFav")
+    setting_fav = data.get("settingFav")
     uid = data.get("id")
 
-    user = Helper.load_user(uid)
-
-    user["settings"]["fav"] = settingFav
-
-    output = f"{PATH_USERS}/{uid}.json"
-
-    with open (output, "w", encoding='utf-8') as f:
-        json.dump(user, f, ensure_ascii=False, indent=4)
+    pf_db = get_pf_db()
+    cur = pf_db.cursor()
+    cur.execute("""
+        UPDATE profiles
+        SET fav = ?
+        WHERE uid = ?
+    """, (setting_fav, uid))
+    pf_db.commit()
 
     return jsonify({"status": "ok", "received": data})

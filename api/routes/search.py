@@ -1,10 +1,13 @@
-from flask import Blueprint, jsonify, request, render_template, abort
+from flask import Blueprint, jsonify, request, render_template, abort, g
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from datetime import datetime
 from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS
 from utils import Helper
 import json
+from pathlib import Path
+import sqlite3
+from routes.db import get_pf_db
 
 search_bp = Blueprint("search", __name__)
 
@@ -150,7 +153,20 @@ def user_page(uid):
 
     user = Helper.load_user(uid)
 
-    return render_template("user.html", user=user, compact=user_compact, beatmaps=beatmaps, user_settings=user.get("settings", {}))
+    pf_db = get_pf_db()
+    cur = pf_db.cursor()
+    cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
+    row = cur.fetchone()
+
+    if row:
+        row = dict(row)
+        settings = {
+            "fav": row.get("fav", "")
+        }
+    else:
+        settings = {}
+
+    return render_template("user.html", user=user, compact=user_compact, beatmaps=beatmaps, user_settings=settings)
 
 @search_bp.route("/beatmaps/<bid>", methods=["GET"])
 def beatmap_page(bid):
