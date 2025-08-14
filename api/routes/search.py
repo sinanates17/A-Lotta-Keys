@@ -143,15 +143,23 @@ def get_beatmaps():
 @search_bp.route("/users/<uid>", methods=["GET"])
 def user_page(uid):
     users = load_user_compact()
-    beatmaps = load_beatmap_compact()
+    beatmaps_compact = load_beatmap_compact()
     beatmaps = { bid: {"name": beatmap["name"], 
                        "status": beatmap["status"],
                        "keys": beatmap["keys"]} 
-                       for bid, beatmap in beatmaps["beatmaps"].items() }
+                       for bid, beatmap in beatmaps_compact["beatmaps"].items() }
     users = users["users"]
     user_compact = users.get(uid)
 
     user = Helper.load_user(uid)
+
+    self_bmids = []
+
+    for bmids in user["beatmapsets"].values():
+        self_bmids += bmids
+
+    self_beatmaps = { bid: beatmaps_compact["beatmaps"].get(bid, {}) for bid in self_bmids }
+    self_beatmaps = { bid: {**bm, "bid": bid} for bid, bm in self_beatmaps.items() if bm != {} }
 
     pf_db = get_pf_db()
     cur = pf_db.cursor()
@@ -166,7 +174,7 @@ def user_page(uid):
     else:
         settings = {}
 
-    return render_template("user.html", user=user, compact=user_compact, beatmaps=beatmaps, user_settings=settings)
+    return render_template("user.html", user=user, compact=user_compact, beatmaps=beatmaps, self_beatmaps=self_beatmaps, user_settings=settings)
 
 @search_bp.route("/beatmaps/<bid>", methods=["GET"])
 def beatmap_page(bid):

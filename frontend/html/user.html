@@ -11,6 +11,7 @@
         const userData = {{ user|tojson|safe }};
         const beatmapData = {{ beatmaps|tojson|safe }};
         const userSettings = {{ user_settings|tojson|safe }}
+        let selfBeatmaps = {{ self_beatmaps|tojson|safe }}
     </script>
 {% endblock%}
 
@@ -22,7 +23,7 @@
             <p class="label" id="favpatternlabel">Favorite Pattern:</p>
             <p class="label4" id="favpattern"></p>
         </div>
-        <p class="label">Filter Stats</p>
+        <p class="label">Filter</p>
         <div class="options">
             <button value="9" class="checkbutton" name="filterKey">9K</button>
             <button value="10" class="checkbutton checked" name="filterKey">10K</button>
@@ -81,7 +82,26 @@
             </div>
         </div>
         <div class="tabcont" id="beatmaps">
-            Nothing here yet.
+            <table class="tablehead">
+                <thead>
+                    <th style="width: 4%; text-align: left;">#</th>
+                    <th style="width: 54%; text-align: left;">Beatmap</th>
+                    <th style="width: 5%; text-align: right;">Keys</th>
+                    <th style="width: 5%; text-align: right;">SR</th>
+                    <th style="width: 5%; text-align: right;">Plays</th>
+                    <th style="width: 5%; text-align: right;">Passes</th>
+                    <th style="width: 7%; text-align: right;">Length</th>
+                    <th style="width: 7%; text-align: right;">LN%</th>
+                    <th style="width: 7%; text-align: right;">Status</th>
+                </thead>
+            </table>
+            <div class="tablecont">
+                <table class="table">
+                    <tbody id="beatmapTableBody">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 {% endblock %}

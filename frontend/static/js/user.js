@@ -15,6 +15,7 @@ else {
 
 const beatmaps = Object(beatmapData)
 const topPlaysTable = document.getElementById("topPlaysTable")
+const beatmapTableBody = document.getElementById("beatmapTableBody")
 const tabLabel = document.getElementById("tablabel")
 const pbFilter = document.getElementById("filterPB")
 const topFilter = document.getElementById("filterTop") 
@@ -101,6 +102,15 @@ async function applyFilters() {
   rows = rows.filter(r => r.top)
 
   fillTopPlays(rows)
+
+  rowsBeatmaps = Object.values(selfBeatmaps)
+  rowsBeatmaps = rowsBeatmaps.filter(beatmap => {
+    const keys = beatmap.keys
+    const state = beatmap.status
+    return ( filters.includes(parseInt(keys)) && filters.includes(state) )
+  })
+
+  fillBeatmaps(rowsBeatmaps)
 
   let playData = Object.values(userData["beatmap plays history"]);
     let playDataDiffs= playData.slice(1).map((val, i) => val - playData[i]);
@@ -345,6 +355,34 @@ function fillTopPlays(rows) {
         pos = pos + 1
 
     topPlaysTable.appendChild(tr)
+    }
+}
+
+function fillBeatmaps(rows) {
+
+    beatmapTableBody.innerHTML = "";
+
+    let pos = 1
+    for (const row of rows) {
+
+        const tr = document.createElement('tr')
+        tr.id = row.bid
+        tr.onclick = function() { window.location.href = `${API_BASE}api/search/beatmaps/${tr.id}` }
+        const time = `${Math.floor(row["length"]/60)}:${(row["length"]%60).toString().padStart(2, '0')}`
+        tr.innerHTML = `
+                    <td style="width: 4%; text-align: left;">${pos}</td>
+                    <td style="width: 54%; text-align: left;">${row.name}</td>
+                    <td style="width: 5%; text-align: right;">${parseInt(row.keys)}</td>
+                    <td style="width: 5%; text-align: right;">${row.sr}</td>
+                    <td style="width: 5%; text-align: right;">${row.plays}</td>
+                    <td style="width: 5%; text-align: right;">${row.passes}</td>
+                    <td style="width: 7%; text-align: right;">${time}</td>
+                    <td style="width: 7%; text-align: right;">${row["ln perc"]}</td>
+                    <td style="width: 7%; text-align: right;">${row.status}</td>
+        `
+        pos = pos + 1
+
+    beatmapTableBody.appendChild(tr)
     }
 }
 
