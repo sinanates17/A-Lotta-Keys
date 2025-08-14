@@ -6,7 +6,7 @@ from datetime import datetime
 from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS
 from utils import Helper
 from os import listdir
-from routes.db import get_pf_db
+from api.routes.db import get_pf_db
 import json
 
 auth_bp = Blueprint("auth", __name__)

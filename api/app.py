@@ -6,7 +6,7 @@ from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent
 from config import PATH_ROOT, OSU_API_ID, OSU_API_SECRET, OSU_REDIRECT_URI, PATH_DATA
 from api.routes.search import search_bp
 from api.routes.auth import auth_bp
-from routes.db import get_pf_db
+from api.routes.db import get_pf_db
 from utils import Helper
 import sqlite3
 from pathlib import Path
@@ -37,7 +37,7 @@ def logged_in():
         session_settings = {
             key: value for key, value in row.items()
         }
-        
+
         return dict(logged_in=("user" in session), 
                     avatar_url=session.get("user").get("avatar url"),
                     id=uid,

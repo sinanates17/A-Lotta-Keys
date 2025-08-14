@@ -7,7 +7,7 @@ from utils import Helper
 import json
 from pathlib import Path
 import sqlite3
-from routes.db import get_pf_db
+from api.routes.db import get_pf_db
 
 search_bp = Blueprint("search", __name__)
 
