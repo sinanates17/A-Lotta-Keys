@@ -52,6 +52,18 @@ def close_pf_db(exception):
     if pf_db is not None:
         pf_db.close()
 
+def init_pf_db():
+    pf_db = sqlite3.connect(DATABASE)
+    pf_db.execute("PRAGMA journal_mode=WAL;")
+    pf_db.execute("""
+        CREATE TABLE IF NOT EXISTS profiles (
+            uid INTEGER PRIMARY KEY,
+            fav TEXT
+        );
+    """)
+    pf_db.commit()
+    pf_db.close()
+
 @app.route("/<file>")
 def file(file):
     return render_template(file)
@@ -68,15 +80,5 @@ def print_routes(app):
 print_routes(app)
 
 if __name__ == '__main__':
+    init_pf_db()
     app.run(debug=True)
-
-    pf_db = get_pf_db()
-
-    pf_db.execute("""
-    CREATE TABLE IF NOT EXISTS profiles (
-        uid             INTEGER PRIMARY KEY,
-        fav             TEXT
-    );
-    """)
-
-    pf_db.commit()
