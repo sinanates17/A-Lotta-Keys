@@ -1,6 +1,8 @@
 {% extends 'template.html' %}
 
-{% block title %}{{user.name}}{% endblock %}
+{% block title %}
+    {{user.name}}
+{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
