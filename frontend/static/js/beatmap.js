@@ -3,12 +3,41 @@
 const Plotly = window.Plotly;
 const leaderboard = document.getElementById("leaderboardtable")
 const tabLabel = document.getElementById("tablabel")
+const plotCont1 = document.getElementById("plotcont1")
 let tabElements = document.getElementsByName("statsTab")
+let full = true
+let X = 0
+let Y = 0
 
 tabElements = Array.from(tabElements)
 tabElements.forEach(elem => elem.addEventListener("click", () => clickTab(elem)))
 
-fillData()
+document.addEventListener("mousemove", (event) => {
+    X = event.clientX
+    Y = event.clientY
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.code !== "KeyQ") {
+        return
+    }
+
+    if (event.code === "KeyQ" && !full) {
+        full = true
+        fillData(null)
+        return
+    }
+
+    const el = document.elementFromPoint(X, Y)
+    if (el.tagName === "TD") {
+        const row = el.parentElement
+        const uid = row.getAttribute("id")
+        full = false
+        fillData(uid)
+    }
+})
+
+fillData(null)
 
 function clickTab(elem) {
   if (elem.classList.contains("checked")) {
@@ -72,12 +101,18 @@ function dateFromTimestamp(ts) {
     return date;
 }
 
-function fillData() {
-    const scoreData = Object.values(beatmapData.scores)
+function fillData(uid) {
+    let scoreData = []
+    if (uid) {
+        scoreData = Object.values(beatmapData.scores).filter(score => score.uid == uid)
+        scoreData.sort((a, b) => b.score - a.score)
+    }
+    else {
+        scoreData = Object.values(beatmapData.scores)
+    }
     const playData = Object.values(beatmapData["play history"])
     const passData = Object.values(beatmapData["pass history"])
     const timeData = Object.keys(beatmapData["play history"])
-
 
     let timeRanked = null
 
@@ -270,29 +305,75 @@ function fillData() {
 
     Plotly.newPlot("plotTimePlays", [traceTimePlays, traceTimePasses], layoutTimePlays)
 
-    for (const row of pbData) {
-    if (row.old) {
-            continue
-    }
-    const tr = document.createElement('tr')
-    tr.id = row["uid"]
-    tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
-    tr.innerHTML = `
-        <td style="width: 4%; text-align: left;">${row["pos"]}</td>
-        <td style="width: 12%; text-align: right;">${row["player"]}</td>
-        <td style="width: 7%; text-align: right;">${row["pp"]}</td>
-        <td style="width: 8; text-align: right;">${row["score"]}</td>
-        <td style="width: 10%; text-align: right;">${row["acc"]}%</td>
-        <td style="width: 8%; text-align: right;">${row["combo"]}</td>
-        <td style="width: 6%; text-align: right;">${row["ratio"]}</td>
-        <td style="width: 6%; text-align: right;">${row["marv"]}</td>
-        <td style="width: 6%; text-align: right;">${row["perf"]}</td>
-        <td style="width: 6%; text-align: right;">${row["great"]}</td>
-        <td style="width: 6%; text-align: right;">${row["good"]}</td>
-        <td style="width: 6%; text-align: right;">${row["bad"]}</td>
-        <td style="width: 6%; text-align: right;">${row["miss"]}</td>
-        <td style="width: 9%; text-align: right;">${row["date"]}</td>`
+    leaderboard.innerHTML = ""
 
-    leaderboard.appendChild(tr);
-  }
+    if (uid) {
+        plotCont1.style.display = "none"
+        const player = userLinksData[uid]
+        tabElements[1].innerHTML = `${player}'s Scores`
+        tabElements[2].innerHTML = `${player}'s Data`
+        let i = 1
+        for (const row of scoreData) {
+            if (row.old) {
+                    continue
+            }
+            const tr = document.createElement('tr')
+            tr.id = row["uid"]
+            tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
+            const acc = (row.acc * 100).toFixed(2)
+            let ratio = "-"
+            if (row["300"] != 0) {
+                ratio = (row["320"]/row["300"]).toFixed(2)
+            }
+            tr.innerHTML = `
+                <td style="width: 4%; text-align: left;">${i}</td>
+                <td style="width: 12%; text-align: right;">${player}</td>
+                <td style="width: 7%; text-align: right;">${row["pp"]}</td>
+                <td style="width: 8; text-align: right;">${row["score"]}</td>
+                <td style="width: 10%; text-align: right;">${acc}%</td>
+                <td style="width: 8%; text-align: right;">${row["combo"]}</td>
+                <td style="width: 6%; text-align: right;">${ratio}</td>
+                <td style="width: 6%; text-align: right;">${row["320"]}</td>
+                <td style="width: 6%; text-align: right;">${row["300"]}</td>
+                <td style="width: 6%; text-align: right;">${row["200"]}</td>
+                <td style="width: 6%; text-align: right;">${row["100"]}</td>
+                <td style="width: 6%; text-align: right;">${row["50"]}</td>
+                <td style="width: 6%; text-align: right;">${row["0"]}</td>
+                <td style="width: 9%; text-align: right;">${formatStrDate(row["time"])}</td>`
+
+            leaderboard.appendChild(tr)
+            i = i + 1
+        }
+
+    }
+    else {
+        plotCont1.style.display = "flex"
+        tabElements[1].innerHTML = `Leaderboard`
+        tabElements[2].innerHTML = `Data`
+        for (const row of pbData) {
+            if (row.old) {
+                    continue
+            }
+            const tr = document.createElement('tr')
+            tr.id = row["uid"]
+            tr.onclick = function() { window.location.href = `${API_BASE}api/search/users/${tr.id}` }
+            tr.innerHTML = `
+                <td style="width: 4%; text-align: left;">${row.pos}</td>
+                <td style="width: 12%; text-align: right;">${row["player"]}</td>
+                <td style="width: 7%; text-align: right;">${row["pp"]}</td>
+                <td style="width: 8; text-align: right;">${row["score"]}</td>
+                <td style="width: 10%; text-align: right;">${row["acc"]}%</td>
+                <td style="width: 8%; text-align: right;">${row["combo"]}</td>
+                <td style="width: 6%; text-align: right;">${row["ratio"]}</td>
+                <td style="width: 6%; text-align: right;">${row["marv"]}</td>
+                <td style="width: 6%; text-align: right;">${row["perf"]}</td>
+                <td style="width: 6%; text-align: right;">${row["great"]}</td>
+                <td style="width: 6%; text-align: right;">${row["good"]}</td>
+                <td style="width: 6%; text-align: right;">${row["bad"]}</td>
+                <td style="width: 6%; text-align: right;">${row["miss"]}</td>
+                <td style="width: 9%; text-align: right;">${row["date"]}</td>`
+
+            leaderboard.appendChild(tr);
+        }
+    }
 }

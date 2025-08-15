@@ -360,7 +360,7 @@ function fillTopPlays(rows) {
 
 function fillBeatmaps(rows) {
 
-    beatmapTableBody.innerHTML = "";
+    beatmapTableBody.innerHTML = ""
 
     let pos = 1
     for (const row of rows) {

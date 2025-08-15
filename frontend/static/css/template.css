@@ -218,6 +218,14 @@ p {
     padding: 0;
 }
 
+.label5 {
+    font-size: 18px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    padding-top:  25px;
+}
+
 .label2:hover {
     cursor: default;
 }
