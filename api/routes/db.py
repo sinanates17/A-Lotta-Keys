@@ -11,3 +11,9 @@ def get_pf_db():
         g.pf_db.execute("PRAGMA journal_mode=WAL;")
         g.pf_db.row_factory = sqlite3.Row
     return g.pf_db
+
+def get_pf_db_bot():
+    pf_db = sqlite3.connect(DATABASE)
+    pf_db.execute("PRAGMA journal_mode=WAL;")
+    pf_db.row_factory = sqlite3.Row
+    return pf_db

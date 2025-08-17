@@ -30,5 +30,3 @@ async def main():
     await bot.start(DISCORD_BOT_TOKEN)
 
 asyncio.run(main())
-
-#https://discord.com/oauth2/authorize?client_id=1373138929573691443&scope=bot&permissions=8

@@ -13,6 +13,7 @@ OSU_API_SECRET = os.getenv("OSU_API_SECRET")
 OSU_REDIRECT_URI = os.getenv("OSU_REDIRECT_URI")
 
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+BOT_REDIRECT_URI = os.getenv("BOT_REDIRECT_URI")
 
 PATH_USERS = f"{os.getenv("PATH_DATA")}/users"
 PATH_BEATMAPSETS = f"{os.getenv("PATH_DATA")}/beatmapsets"

@@ -3,7 +3,7 @@ from flask_cors import CORS
 import sys
 import secrets
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import PATH_ROOT, OSU_API_ID, OSU_API_SECRET, OSU_REDIRECT_URI, PATH_DATA
+from config import PATH_ROOT, OSU_API_ID, OSU_API_SECRET, OSU_REDIRECT_URI, PATH_DATA, BOT_REDIRECT_URI
 from api.routes.search import search_bp
 from api.routes.auth import auth_bp
 from api.routes.db import get_pf_db, DATABASE
@@ -19,6 +19,7 @@ CORS(app)
 app.config["CLIENT_ID"] = OSU_API_ID
 app.config["CLIENT_SECRET"] = OSU_API_SECRET
 app.config["REDIRECT_URI"] = OSU_REDIRECT_URI
+app.config["BOT_REDIRECT_URI"] = BOT_REDIRECT_URI
 app.secret_key = secrets.token_hex(32)
 
 app.register_blueprint(search_bp, url_prefix='/api/search')
@@ -58,9 +59,16 @@ def init_pf_db():
     pf_db.execute("""
         CREATE TABLE IF NOT EXISTS profiles (
             uid INTEGER PRIMARY KEY,
+            discord_uid INTEGER
             fav TEXT
         );
     """)
+    cur = pf_db.cursor()
+    cur.execute(f"PRAGMA table_info(profiles)")
+    columns = [info[1] for info in cur.fetchall()]
+    if "discord_uid" not in columns:
+        pf_db.execute(f"ALTER TABLE profiles ADD COLUMN discord_uid INTEGER")
+
     pf_db.commit()
     pf_db.close()
 
