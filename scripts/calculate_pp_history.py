@@ -64,10 +64,10 @@ def _process_user_file(file, bid_keys, states, keys):
                 key_groups.append("12+")
 
             status_groups = ["RLU"]
-            if status == 1:
+            if status == "Ranked":
                 status_groups += ["R", "RL"]
 
-            elif status == 4:
+            elif status == "Loved":
                 status_groups += ["L", "RL"]
 
             else:
@@ -95,13 +95,9 @@ def main():
     states = ["R", "L", "U", "RL", "RLU"]
     keys = ["9", "10", "12", "14", "16", "18", "9+", "10+", "12+"]
     bid_keys = {}
-    for file in listdir(PATH_BEATMAPSETS):
-        if not file.endswith(".json"): continue
-        with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding="utf-8") as f:
-            mapset = json.load(f)
-
-        for bid, beatmap in mapset["beatmaps"].items():
-            bid_keys |= {bid: (str(int(beatmap["keys"])), beatmap["status"])}
+    beatmaps_compact = Helper.load_beatmaps_compact()["beatmaps"]
+    for bid, beatmap in beatmaps_compact.items():
+        bid_keys |= {bid: (str(int(beatmap["keys"])), beatmap["status"])}
         
     parfunct = partial(_process_user_file, bid_keys=bid_keys, states=states, keys=keys)
 

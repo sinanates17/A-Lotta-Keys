@@ -1,11 +1,13 @@
 from ossapi import Ossapi, Beatmapset, Beatmap, Score, User, Statistics
-from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA, PATH_BEATMAPSETS
+from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA, PATH_BEATMAPSETS, PATH_PYTHON, PATH_ROOT
 from datetime import datetime, timezone
+from dateutil.relativedelta import relativedelta
 from time import sleep
 from os import listdir
 import json
 import numpy as np
 import requests
+import subprocess
 
 class Helper:
 
@@ -102,6 +104,8 @@ class Helper:
             'passed': score.passed,
             'pp': score.pp,
             'pb': None,
+            'top': None,
+            'old': None,
             'acc': _calc_judgements(score.statistics)[0],
             'grade': _calc_judgements(score.statistics)[1],
             'score': score.legacy_total_score if score.legacy_total_score != 0 else score.classic_total_score,
@@ -413,3 +417,163 @@ class Helper:
         resp = resp["beatmapsets"]
 
         return resp[0:5]
+
+    def initialize_user(self, uid):
+        filename = f"{uid}.json"
+        output = f"{PATH_USERS}/{filename}"
+
+        if filename not in listdir(PATH_USERS):
+            helper = Helper()
+            sleep(REQUEST_INTERVAL)
+            user = helper.osu_api.user(uid)
+            user_dict = Helper.user_to_dict(user)
+        else:
+            user_dict = Helper.load_user(uid)
+
+        beatmaps = Helper.load_beatmaps_compact()["beatmaps"]
+        bids = [bid for bid, beatmap in beatmaps.items() if beatmap["status"] in ["Ranked", "Loved"]]
+        beatmap_links = Helper.load_beatmap_links()
+
+        for bid in bids:
+            subscores_dict = {}
+            updated = int(beatmaps[str(bid)]["date"])
+            msid = beatmap_links[str(bid)]
+            sleep(REQUEST_INTERVAL)
+            subscores = self.osu_api.beatmap_user_scores(bid, uid)
+            if not subscores: continue
+            for subscore in subscores:    
+                score_dict = Helper.score_to_dict(subscore)
+                sid = f"{uid}{score_dict["time"]}"
+                score_dict["msid"] = msid
+                score_dict["top"] = False
+                if int(score_dict["time"]) < updated:
+                    score_dict["old"] = True
+                else:
+                    score_dict["old"] = False
+
+                subscores_dict |= {sid: score_dict}
+
+            subscores_dict = dict(sorted(subscores_dict.items(), key=lambda score: int(score[1]["time"])))
+
+            highest = 0
+            for score in subscores_dict.values():
+                if score["score"] > highest:
+                    score["pb"] = True
+                    highest = score["score"]
+
+            subscores_dict = sorted(subscores_dict.items(), key=lambda score: score[1]["score"], reverse=True)
+            subscores_dict[0][1]["top"] = True
+            subscores_dict = dict(subscores_dict)
+
+            user_dict["scores"] |= subscores_dict
+
+            mapset_file = f"{msid}.json"
+            if mapset_file in listdir(PATH_BEATMAPSETS):
+                beatmapset = Helper.load_mapset(msid)
+                beatmapset["beatmaps"][str(bid)]["scores"] |= subscores_dict
+                with open(f"{PATH_BEATMAPSETS}/{mapset_file}", "w", encoding='utf-8') as f:
+                    json.dump(beatmapset, f, ensure_ascii=False, indent=4)
+
+        user_beatmapsets = {}
+
+        for file in listdir(PATH_BEATMAPSETS):
+            if not file.endswith(".json"): continue
+            mapset = Helper.load_mapset(file[0:-5])
+            msid = mapset["id"]
+            _bids = []
+            for _bid, beatmap in mapset["beatmaps"].items():
+                if beatmap["mapper id"] == int(uid):
+                    _bids.append(_bid)
+            if _bids:
+                user_beatmapsets |= {msid: _bids}
+
+        user_dict["beatmapsets"] = user_beatmapsets
+
+        with open(output, "w", encoding='utf-8') as f:
+            json.dump(user_dict, f, ensure_ascii=False, indent=4)
+
+        states = ["R", "L", "U", "RL", "RLU"]
+        keys = ["9", "10", "12", "14", "16", "18", "9+", "10+", "12+"]
+        bid_keys = {}
+        beatmaps_compact = Helper.load_beatmaps_compact()["beatmaps"]
+        for bid, beatmap in beatmaps_compact.items():
+            bid_keys |= {bid: (str(int(beatmap["keys"])), beatmap["status"])}
+
+        self.process_pp_history_userfile(output, bid_keys, states, keys)
+        subprocess.run([PATH_PYTHON, "scripts/daily_users_compact.py"], cwd=PATH_ROOT)
+
+    def process_pp_history_userfile(self, file, bid_keys, states, keys):
+        if not file.endswith(".json"): return
+        with open(file, "r", encoding="utf-8") as f:
+            user = json.load(f)
+
+        pp_history = {}
+
+        if user["scores"] == {}: return
+        subscores = [score for score in user["scores"].values() if score["pb"] and not score["old"]]
+        bids = {score["bid"] for score in user["scores"].values()}
+        cutoff = datetime.now(timezone.utc)
+        interval = relativedelta(days=1)
+        key = (lambda x: 
+                    datetime.strptime(x["time"], "%y%m%d%H%M%S")
+                    .replace(tzinfo=timezone.utc)
+                    < cutoff)
+
+        while True:
+            n_old = len(subscores)
+            subscores = list(filter(key, subscores))
+            n_new = len(subscores)
+
+            if n_new == 0: 
+                break
+            if n_new == n_old:
+                cutoff -= interval
+                continue
+
+            pps = { state: { k:0 for k in keys } for state in states }
+            pp_lists = { state: { k:[] for k in keys } for state in states }
+
+            for bid in bids:
+                subsubscores = list(filter(lambda x: x["bid"] == bid, subscores))
+                if len(subsubscores) == 0: continue
+
+                bid_pps = [score["pp"] for score in subsubscores]
+
+                pp = max(bid_pps)
+                bid = str(bid)
+                k = bid_keys[bid][0]
+                status = bid_keys[bid][1]
+
+                key_groups = [k, "9+"]
+                if k != "9":
+                    key_groups.append("10+")
+
+                if k != "9" and k != "10":
+                    key_groups.append("12+")
+
+                status_groups = ["RLU"]
+                if status == "Ranked":
+                    status_groups += ["R", "RL"]
+
+                elif status == "Loved":
+                    status_groups += ["L", "RL"]
+
+                else:
+                    status_groups += ["U"]
+
+                for status_group in status_groups:
+                    for key_group in key_groups:
+                        pp_lists[status_group][key_group].append(pp)
+
+            timestamp = cutoff.strftime("%y%m%d%H%M%S")
+            for state in states:
+                for k in keys:
+                    pps[state][k] = Helper.calculate_profile_pp(pp_lists[state][k])
+
+            pp_history[timestamp] = pps
+            cutoff -= interval
+
+        user["pp history"] = pp_history
+
+        with open(file, "w", encoding='utf-8') as f:
+            json.dump(user, f, ensure_ascii=False, indent=4)

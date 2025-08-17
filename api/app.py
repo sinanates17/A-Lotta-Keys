@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, g
+from flask import Flask, render_template, session, g, send_from_directory
 from flask_cors import CORS
 import sys
 import secrets
@@ -79,6 +79,14 @@ def file(file):
 @app.route("/")
 def home():
     return render_template("home.html")
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(
+        app.static_folder,
+        'favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
 
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)

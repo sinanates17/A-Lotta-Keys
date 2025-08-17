@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request, render_template, abort, g
+from flask import Blueprint, jsonify, request, render_template, abort, g, redirect, url_for
 import sys
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from datetime import datetime
@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import sqlite3
 from api.routes.db import get_pf_db
+from os import listdir
 
 search_bp = Blueprint("search", __name__)
 
@@ -142,6 +143,9 @@ def get_beatmaps():
 
 @search_bp.route("/users/<uid>", methods=["GET"])
 def user_page(uid):
+    if f"{uid}.json" not in listdir(PATH_USERS):
+        return redirect(url_for("auth.wait"))
+
     users = load_user_compact()
     beatmaps_compact = load_beatmap_compact()
     beatmaps = { bid: {"name": beatmap["name"], 
@@ -244,3 +248,4 @@ def profile_from_discord_uid(discord_uid):
         return jsonify(row)
     else:
         return jsonify({"error": "not found"}), 404
+    

@@ -3,12 +3,13 @@ import sys
 import requests
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from datetime import datetime
-from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS, DISCORD_BOT_TOKEN
+from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS, DISCORD_BOT_TOKEN, SERVER
 from utils import Helper
 from os import listdir
 from api.routes.db import get_pf_db
 import json
 import traceback
+import threading
 
 DISCORD_API_BASE = "https://discord.com/api/v10"
 
@@ -33,6 +34,11 @@ def discord_dm(discord_uid: int, content):
         json={"content": content}
     )
     r.raise_for_status()
+
+def build_profile(uid):
+    helper = Helper()
+    helper.initialize_user(uid)
+    return
 
 @auth_bp.route("/login")
 def login():
@@ -103,28 +109,26 @@ def callback():
     session["user"]["avatar url"] = user_response.json()["avatar_url"]
 
     filename = f"{uid}.json"
-    output = f"{PATH_USERS}/{filename}"
+
+    def update_db():
+        pf_db = get_pf_db()
+        cur = pf_db.cursor()
+        cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
+        row = cur.fetchone()
+
+        if not row:
+            cur.execute("""
+            INSERT INTO profiles (uid)
+            VALUES (?)
+            """, (uid,))
+            pf_db.commit()
 
     if filename not in listdir(PATH_USERS):
-        helper = Helper()
-        user = helper.osu_api.user(uid)
-        user_dict = Helper.user_to_dict(user)
+        threading.Thread(target=build_profile, args=(uid,)).start()
+        update_db()
+        return redirect(url_for("auth.wait"))
 
-        with open (output, "w", encoding='utf-8') as f:
-            json.dump(user_dict, f, ensure_ascii=False, indent=4)
-
-
-    pf_db = get_pf_db()
-    cur = pf_db.cursor()
-    cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
-    row = cur.fetchone()
-
-    if not row:
-        cur.execute("""
-        INSERT INTO profiles (uid)
-        VALUES (?)
-        """, (uid,))
-        pf_db.commit()
+    update_db()
 
     return redirect(url_for(f"search.user_page", uid=session["user"]["id"]))
 
@@ -181,7 +185,11 @@ def callback_bot():
 
         pf_db.commit()
 
-        discord_dm(int(state), "Discord and osu! accounts are linked!")
+        warning = ""
+        if f"{uid}.json" not in listdir(PATH_USERS):
+            warning = f"\n\n**WARNING:** There is no profile for you on A Lotta Keys. Create one by logging in:\n{SERVER}/auth/login"
+
+        discord_dm(int(state), f"Discord and osu! accounts are linked!{warning}")
 
         return redirect(url_for(f"auth.verified"))
     
@@ -193,6 +201,10 @@ def callback_bot():
 @auth_bp.route("/verified")
 def verified():
     return render_template("verified.html")
+
+@auth_bp.route("/wait")
+def wait():
+    return render_template("wait.html")
 
 @auth_bp.route("/logout")
 def logout():

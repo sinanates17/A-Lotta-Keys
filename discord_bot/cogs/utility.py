@@ -48,7 +48,8 @@ class Utility(commands.Cog):
             row = resp.json()
 
         except:
-            await ctx.channel.send("Something went wrong.")
+            await ctx.channel.send("Something went wrong. You may not be linked, or you may not have a profile on A Lotta Keys.\nTry `!link`.")
+            return
 
         if not row["discord_uid"] or "error" in row:
             await ctx.channel.send("You're not linked. Link your osu! account with `!link`")
@@ -56,7 +57,11 @@ class Utility(commands.Cog):
         
         uid = row["uid"]
 
-        user = Helper.load_user(uid)
+        try:
+            user = Helper.load_user(uid)
+        except:
+            await ctx.channel.send(f"You don't have a profile on A Lotta Keys. Create one by logging in:\n{SERVER}/auth/login")
+            return
 
         played_bids = {score["bid"] for score in user["scores"].values()}
         available_bids = {int(bid) for bid, beatmap in Helper.load_beatmaps_compact()["beatmaps"].items() if beatmap["keys"] == keys and beatmap["status"].lower() == status}
