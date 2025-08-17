@@ -27,7 +27,7 @@ class Utility(commands.Cog):
     async def link(self, ctx):
         state = str(ctx.author.id)
 
-        url = f"https://alottakeys.xyz/auth/verify?state={state}"
+        url = f"http://alottakeys.xyz/auth/verify?state={state}"
         msg = f"Click here to link your Discord account with your osu! account: {url}"
 
         await ctx.author.send(msg)
