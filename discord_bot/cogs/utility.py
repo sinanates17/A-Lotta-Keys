@@ -9,7 +9,7 @@ from textwrap import dedent
 from os import listdir
 from discord.ext import commands, tasks
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import DISCORD_BOT_TOKEN, PATH_USERS, PATH_DATA
+from config import DISCORD_BOT_TOKEN, PATH_USERS, PATH_DATA, SERVER
 from utils import Helper
 from datetime import datetime, timezone
 from api.routes.db import get_pf_db_bot
@@ -27,7 +27,7 @@ class Utility(commands.Cog):
     async def link(self, ctx):
         state = str(ctx.author.id)
 
-        url = f"http://127.0.0.1:5000/auth/verify?state={state}"
+        url = f"{SERVER}/auth/verify?state={state}"
         msg = f"Click here to link your Discord account with your osu! account: {url}"
 
         await ctx.author.send(msg)
