@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 import sys
+import pprint
 
 from pathlib import Path
 dotenv_path = Path(__file__).resolve().parent / ".env"
@@ -31,4 +32,4 @@ PATH_PYTHON = f"{os.getenv("PATH_VENV")}/bin/python"
 PATH_ROOT = os.getenv("PATH_ROOT")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")
 
-#print("DEBUG: ENV VALUE =", PATH_ROOT, file=sys.stderr)
+pprint.pprint(dict(os.environ))
