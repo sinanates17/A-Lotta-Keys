@@ -8,6 +8,7 @@ from utils import Helper
 from os import listdir
 from api.routes.db import get_pf_db
 import json
+import traceback
 
 DISCORD_API_BASE = "https://discord.com/api/v10"
 
@@ -129,60 +130,65 @@ def callback():
 
 @auth_bp.route("/callback_bot")
 def callback_bot():
+    try:
+        CLIENT_ID = current_app.config["CLIENT_ID"]
+        CLIENT_SECRET = current_app.config["CLIENT_SECRET"]
+        BOT_REDIRECT_URI = current_app.config["BOT_REDIRECT_URI"]
 
-    CLIENT_ID = current_app.config["CLIENT_ID"]
-    CLIENT_SECRET = current_app.config["CLIENT_SECRET"]
-    BOT_REDIRECT_URI = current_app.config["BOT_REDIRECT_URI"]
+        code = request.args.get("code")
+        state = int(request.args.get("state"))
 
-    code = request.args.get("code")
-    state = int(request.args.get("state"))
+        if not code:
+            return "No code received", 400
 
-    if not code:
-        return "No code received", 400
+        token_response = requests.post("https://osu.ppy.sh/oauth/token", json={
+            "client_id": CLIENT_ID,
+            "client_secret": CLIENT_SECRET,
+            "code": code,
+            "grant_type": "authorization_code",
+            "redirect_uri": BOT_REDIRECT_URI,
+        })
 
-    token_response = requests.post("https://osu.ppy.sh/oauth/token", json={
-        "client_id": CLIENT_ID,
-        "client_secret": CLIENT_SECRET,
-        "code": code,
-        "grant_type": "authorization_code",
-        "redirect_uri": BOT_REDIRECT_URI,
-    })
+        token_data = token_response.json()
+        access_token = token_data.get("access_token")
 
-    token_data = token_response.json()
-    access_token = token_data.get("access_token")
+        if not access_token:
+            return "Failed to get access token", 400
 
-    if not access_token:
-        return "Failed to get access token", 400
+        user_response = requests.get(
+            "https://osu.ppy.sh/api/v2/me",
+            headers={"Authorization": f"Bearer {access_token}"}
+        )
 
-    user_response = requests.get(
-        "https://osu.ppy.sh/api/v2/me",
-        headers={"Authorization": f"Bearer {access_token}"}
-    )
+        uid = int(user_response.json()["id"])
 
-    uid = int(user_response.json()["id"])
+        pf_db = get_pf_db()
+        cur = pf_db.cursor()
+        cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
+        row = cur.fetchone()
 
-    pf_db = get_pf_db()
-    cur = pf_db.cursor()
-    cur.execute("SELECT * FROM profiles WHERE uid = ?", (uid,))
-    row = cur.fetchone()
+        if not row:
+            cur.execute("""
+            INSERT INTO profiles (uid, discord_uid)
+            VALUES (?, ?)
+            """, (uid, state))
 
-    if not row:
         cur.execute("""
-        INSERT INTO profiles (uid, discord_uid)
-        VALUES (?, ?)
-        """, (uid, state))
+            UPDATE profiles
+            SET discord_uid = ?
+            WHERE uid = ?
+        """, (state, uid))
 
-    cur.execute("""
-        UPDATE profiles
-        SET discord_uid = ?
-        WHERE uid = ?
-    """, (state, uid))
+        pf_db.commit()
 
-    pf_db.commit()
+        discord_dm(int(state), "Discord and osu! accounts are linked!")
 
-    discord_dm(int(state), "Discord and osu! accounts are linked!")
-
-    return redirect(url_for(f"auth.verified"))
+        return redirect(url_for(f"auth.verified"))
+    
+    except Exception as e:
+        print("Callback error:", e)
+        traceback.print_exc()
+        return "Internal server error", 500
 
 @auth_bp.route("/verified")
 def verified():
