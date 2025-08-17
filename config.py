@@ -4,6 +4,8 @@ import sys
 
 from pathlib import Path
 dotenv_path = Path(__file__).resolve().parent / ".env"
+if not dotenv_path.exists():
+    print(f"WARNING: .env not found at {dotenv_path}", file=sys.stderr)
 #print("=== CONFIG IMPORTED ===", file=sys.stderr)
 #print(f"DEBUG: dotenv_path used = {dotenv_path}", file=sys.stderr)
 load_dotenv(dotenv_path)
