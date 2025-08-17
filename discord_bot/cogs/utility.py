@@ -16,7 +16,6 @@ from api.routes.db import get_pf_db_bot
 
 class Utility(commands.Cog):
     def __init__(self, bot):
-        super().__init__()
         self.bot = bot
         self.pending = {}
 
@@ -34,7 +33,7 @@ class Utility(commands.Cog):
         await ctx.author.send(msg)
 
     @commands.command(name="suggest")
-    async def link(self, ctx, keys=10, status="ranked"):
+    async def suggest(self, ctx, keys=10, status="ranked"):
         status = status.lower()
         if status not in ["ranked", "loved", "unranked"] or keys not in [9, 10, 12, 14, 16, 18]:
             await ctx.channel.send("Command usage:\n`!suggest <keys> <status>`\n`<keys>` must be one of `9`, `10`, `12`, `14`, `16`, or `18`. Default `10`.\n<status must be one of `ranked`, `loved`, or `unranked`. Deafult `ranked`.>")
@@ -54,7 +53,7 @@ class Utility(commands.Cog):
         user = Helper.load_user(uid)
 
         played_bids = {score["bid"] for score in user["scores"].values()}
-        available_bids = {int(bid) for bid, beatmap in Helper.load_beatmaps_compact()["beatmaps"].items() if beatmap["keys"] == 10 and beatmap["status"].lower() == status}
+        available_bids = {int(bid) for bid, beatmap in Helper.load_beatmaps_compact()["beatmaps"].items() if beatmap["keys"] == keys and beatmap["status"].lower() == status}
         target_bids = available_bids - played_bids
 
         suggestion = random.choice(list(target_bids))
