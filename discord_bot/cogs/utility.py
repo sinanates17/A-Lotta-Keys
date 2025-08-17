@@ -5,6 +5,7 @@ import aiohttp
 import uuid
 import asyncio
 import random
+import requests
 from textwrap import dedent
 from os import listdir
 from discord.ext import commands, tasks
@@ -36,15 +37,20 @@ class Utility(commands.Cog):
     async def suggest(self, ctx, keys=10, status="ranked"):
         status = status.lower()
         if status not in ["ranked", "loved", "unranked"] or keys not in [9, 10, 12, 14, 16, 18]:
-            await ctx.channel.send("Command usage:\n`!suggest <keys> <status>`\n`<keys>` must be one of `9`, `10`, `12`, `14`, `16`, or `18`. Default `10`.\n<status must be one of `ranked`, `loved`, or `unranked`. Deafult `ranked`.>")
+            await ctx.channel.send("Command usage:\n`!suggest <keys> <status>`\n`<keys>` must be one of `9`, `10`, `12`, `14`, `16`, or `18`. Default `10`.\n<status> must be one of `ranked`, `loved`, or `unranked`. Default `ranked`.>")
             return
 
-        pf_db = get_pf_db_bot()
-        cur = pf_db.cursor()
-        cur.execute("SELECT * FROM profiles WHERE discord_uid = ?", (ctx.author.id,))
-        row = cur.fetchone()
+        try:
+            resp = requests.get(
+                f"{SERVER}/api/search/discord/{ctx.author.id}",
+                timeout=5
+            )
+            row = resp.json()
 
-        if not row:
+        except:
+            await ctx.channel.send("Something went wrong.")
+
+        if not row["discord_uid"] or "error" in row:
             await ctx.channel.send("You're not linked. Link your osu! account with `!link`")
             return
         

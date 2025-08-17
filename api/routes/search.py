@@ -232,3 +232,15 @@ def beatmap_page(bid):
         i += 1
 
     return render_template("beatmap.html", beatmap=beatmap, title=title, artist=artist, mapper=mapper, userLinks=user_links, pbs=pbs, ranked=ranked)
+
+@search_bp.route("/discord/<discord_uid>", methods=["GET"])
+def profile_from_discord_uid(discord_uid):
+    pf_db = get_pf_db()
+    cur = pf_db.cursor()
+    cur.execute("SELECT * FROM profiles WHERE discord_uid = ?", (discord_uid,))
+    row = cur.fetchone()
+    row = dict(row)
+    if row:
+        return jsonify(row)
+    else:
+        return jsonify({"error": "not found"}), 404

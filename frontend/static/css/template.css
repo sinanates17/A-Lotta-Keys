@@ -122,7 +122,6 @@ p {
     display: flex;
 }
 
-
 .navbutton1 {
     font-size: 20px;
     color: #efe5f3;
@@ -169,8 +168,22 @@ p {
     display: flex;
     flex-direction: column;
     justify-items: left;
-    width: 100%;
+    width: calc(100% - 40px);
     overflow: hidden;
+    row-gap: 1em;
+}
+
+.filedrop {
+    border-radius: 20px;
+    border:#918396 2px dashed;
+    padding: 20px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #bcb0c0;
+    text-align: center;
+}
+
+.filedrop:hover {
+    cursor: default
 }
 
 .tabcont {
@@ -207,7 +220,6 @@ p {
     font-size: 20px;
     color: #bcb0c0;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    padding-left: 20px;
 }
 
 .label4 {
@@ -226,11 +238,20 @@ p {
     padding-top:  25px;
 }
 
+
 .label2:hover {
     cursor: default;
 }
 
 .label3:hover {
+    cursor: default;
+}
+
+.label4:hover {
+    cursor: default;
+}
+
+.label5:hover {
     cursor: default;
 }
 
@@ -399,8 +420,6 @@ p {
     justify-content: start;
     flex-wrap: wrap;
     row-gap: .5em;
-    padding-top: 1em;
-    padding-left: 20px;
 }
 
 .block {

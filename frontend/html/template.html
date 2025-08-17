@@ -35,7 +35,7 @@
                 <button class="navbutton2" onclick="window.open('https://github.com/sinanates17/A-Lotta-Keys', '_blank')">
                     <i class="fab fa-github"></i>
                 </button>
-                <button class="navbutton2" onclick="window.location.href='/'">
+                <button class="navbutton2" onclick="window.open('https://discord.gg/CCR5xgJMCA')">
                     <i class="fab fa-discord"></i>
                 </button>
                 {% if logged_in %}
@@ -64,6 +64,8 @@
                                 <button name="settingfav" class="checkbutton2" value="Speed">Speed</button>
                                 <button name="settingfav" class="checkbutton2" value="Dump">Dump</button>
                             </div>
+                            <div class="label3">Score Imports</div>
+                            <div class="scoresdrop" id="filedrop">Drop scores.db to import local scores.</div>
                         </div>
                     </div>
                     <script src="{{ url_for('static', filename='js/loggedin.js') }}"></script>
