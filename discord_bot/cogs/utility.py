@@ -4,7 +4,6 @@ import discord
 import aiohttp
 import uuid
 import asyncio
-import redis
 import random
 from textwrap import dedent
 from os import listdir
@@ -20,7 +19,6 @@ class Utility(commands.Cog):
         super().__init__()
         self.bot = bot
         self.pending = {}
-        self.r = redis.Redis()
 
     @commands.Cog.listener()
     async def on_ready(self):

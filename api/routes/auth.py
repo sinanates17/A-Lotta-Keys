@@ -8,7 +8,6 @@ from utils import Helper
 from os import listdir
 from api.routes.db import get_pf_db
 import json
-import redis
 
 DISCORD_API_BASE = "https://discord.com/api/v10"
 
