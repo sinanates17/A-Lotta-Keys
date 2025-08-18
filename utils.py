@@ -1,9 +1,10 @@
 from ossapi import Ossapi, Beatmapset, Beatmap, Score, User, Statistics
 from config import OSU_API_ID, OSU_API_SECRET, REQUEST_INTERVAL, PATH_USERS, PATH_DATA, PATH_BEATMAPSETS, PATH_PYTHON, PATH_ROOT
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from dateutil.relativedelta import relativedelta
 from time import sleep
 from os import listdir
+from osu_db_tools.score import Score as ScoreDB
 import json
 import numpy as np
 import requests
@@ -12,6 +13,23 @@ import subprocess
 class Helper:
 
     PP_WEIGHTS = np.array([.95 ** n for n in range(200)])
+    DOTNET_EPOCH = datetime(1, 1, 1, tzinfo=timezone.utc)
+    MOD_BITFLAGS = {
+        1 << 0: "NF",
+        1 << 1: "EZ",
+        1 << 3: "HD",
+        1 << 4: "HR",
+        1 << 5: "SD",
+        1 << 6: "DT",
+        1 << 8: "HT",
+        1 << 9: "NC",
+        1 << 10: "FL",
+        1 << 14: "PF",
+        1 << 20: "FI",
+        1 << 21: "RD",
+        1 << 29: "V2",
+        1 << 30: "MR"
+    }
 
     def __init__(self, prefix="[Helper] "):
         self.prefix = prefix
@@ -63,6 +81,74 @@ class Helper:
 
         return beatmap_dict
     
+    @staticmethod
+    def score_to_dict_db(score: ScoreDB, uid, bid) -> dict:
+        def _mods_from_int(val) -> list:
+            mods = ["CL"]
+            mods += [mod for bit, mod in Helper.MOD_BITFLAGS.items() if val & bit]
+            return mods
+        
+        def _time_from_winticks(ts) -> str:
+            score_datetime = Helper.DOTNET_EPOCH + timedelta(seconds=ts / 10_000_000)
+            score_timestamp = score_datetime.strftime("%y%m%d%H%M%S")
+            return score_timestamp
+
+        c320 = score.num_gekis
+        c300 = score.num_300s
+        c200 = score.num_katus
+        c100 = score.num_100s
+        c50 = score.num_50s
+        c0 = score.num_misses
+        t = c320 + c300 + c200 + c100 + c50 + c0
+
+        acc = ((c320 + c300)*300 + c200*200 + c100*100 + c50*50) / (t * 300)
+
+        grade = "F"
+        match acc:
+            case x if x == 1:
+                grade = 'X'
+            case x if x >=.95:
+                grade = 'S'
+            case x if x >= .9:
+                grade = 'A'
+            case x if x >= .8:
+                grade = 'B'
+            case x if x >= .7:
+                grade = 'C'
+            case x if x < .7:
+                grade = 'D'
+
+        score_dict = {
+            'uid': uid,
+            'bid': bid,
+            'msid': None,
+            'time': _time_from_winticks(score.timestamp),
+            'mods': _mods_from_int(score.mods),
+            'combo': score.max_combo,
+            'passed': True,
+            'pp': 0,
+            'pb': None,
+            'top': None,
+            'old': None,
+            'acc': acc,
+            'grade': grade,
+            'score': score.replay_score,
+            '320': c320,
+            '300': c300,
+            '200': c200,
+            '100': c100,
+            '50': c50,
+            '0': c0
+        }
+
+        if score_dict["pp"] == 0:
+            try:
+                score_dict["pp"] = Helper.calculate_pp(score_dict)
+            except:
+                pass
+
+        return score_dict
+
     @staticmethod
     def score_to_dict(score: Score):
 
@@ -227,6 +313,16 @@ class Helper:
             links = json.load(f)
 
         return links
+    
+    @staticmethod
+    def load_beatmap_hashes():
+        try:
+            with open(f"{PATH_DATA}/beatmap_hashes.json", "r", encoding="utf-8") as f:
+                links = json.load(f)
+
+            return links
+        except:
+            return {}
     
     @staticmethod
     def load_beatmaps_compact():

@@ -14,6 +14,26 @@ if (currentFav) {
 const settingsFav = Array.from(document.getElementsByName("settingfav"))
 settingsFav.forEach(elem => elem.addEventListener("click", () => clickSettingFav(elem)))
 
+const filedrop = document.getElementById("filedrop")
+
+filedrop.addEventListener("drop", e => {
+    const files = e.dataTransfer.files
+    const db = files[0]
+    const formData = new FormData()
+    formData.append("db", db)
+    fetch("/auth/upload_scores_db", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        filedrop.innerHTML = `Drop scores.db to import local scores.\nUploaded. Refresh the page to check status.`
+    })
+    .catch(e => {
+        filedrop.innerHTML = `Drop scores.db to import local scores.\nError. Try again.`
+    })
+})
+
 function clickSettingFav(elem) {
     if (elem.classList.contains("checked")) {
         elem.classList.remove("checked")

@@ -34,4 +34,4 @@ PATH_PYTHON = f"{os.getenv("PATH_VENV")}/bin/python"
 PATH_ROOT = os.getenv("PATH_ROOT")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("1", "true", "yes")
 
-pprint.pprint(dict(os.environ))
+#pprint.pprint(dict(os.environ))

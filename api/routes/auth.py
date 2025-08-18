@@ -7,9 +7,11 @@ from config import PATH_DATA, PATH_USERS, PATH_BEATMAPSETS, DISCORD_BOT_TOKEN, S
 from utils import Helper
 from os import listdir
 from api.routes.db import get_pf_db
+from osu_db_tools.parse_scores import unpack_scores
 import json
 import traceback
 import threading
+import tempfile
 
 DISCORD_API_BASE = "https://discord.com/api/v10"
 
@@ -227,3 +229,37 @@ def setting_fav():
     pf_db.commit()
 
     return jsonify({"status": "ok", "received": data})
+
+@auth_bp.route("/upload_scores_db", methods=['POST'])
+def upload_scores_db():
+    def _process_db(db):
+        db = dict(db[0])
+        beatmap_hashes = Helper.load_beatmap_hashes()
+
+        for hash, scores in db.items():
+            try:
+                bid = beatmap_hashes[hash]
+                for score in scores:
+                    score_dict = Helper.score_to_dict_db(score)
+                    #Left off here
+            except:
+                continue
+
+    if "db" not in request.files:
+        return jsonify({"error": "No file"}), 400
+    
+    db_file = request.files["db"]
+    if db_file.filename != "scores.db":
+        return jsonify({"error": "Not scores.db"}), 400
+    
+    with tempfile.NamedTemporaryFile(delete=True, suffix=".db") as tmp:
+        tmp.write(db_file.getvalue())
+        tmp_path = tmp.name
+        try:
+            db = unpack_scores(tmp_path)
+            threading.Thread(target=_process_db, args=(db,)).start()
+            return jsonify({"status": "ok", "message": "Received. Check back in a few minutes."})
+        except:
+            return jsonify({"error": "scores.db seems corrupted"}), 400
+
+    
