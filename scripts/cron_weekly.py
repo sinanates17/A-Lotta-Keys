@@ -22,7 +22,7 @@ def main():
         "tar",
         "-c", 
         "-I", 
-        "xz -9e", 
+        "xz -6", 
         "-f", 
         path_archive,  
         path_data 
