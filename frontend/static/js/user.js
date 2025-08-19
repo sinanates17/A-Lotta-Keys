@@ -201,7 +201,8 @@ async function applyFilters() {
         type: "scatter",
         hovertemplate: templateStr,
         marker: {
-            color: colors
+            color: colors,
+            size: 3
         },
         hoverlabel: { namelength: 0 },
     };

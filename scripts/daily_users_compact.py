@@ -125,8 +125,6 @@ def _process_user_file(file, max_ranked_score, max_score):
     return id, user_compact
 
 def main():
-    #with open(f"{PATH_DATA}/beatmap_links.json", "r", encoding="utf-8") as f:
-    #    beatmap_links = json.load(f)
 
     output = f"{PATH_DATA}/users_compact.json"
     users_compact = {}

@@ -232,34 +232,93 @@ def setting_fav():
 
 @auth_bp.route("/upload_scores_db", methods=['POST'])
 def upload_scores_db():
-    def _process_db(db):
+    def _process_db(db, uid, discord_uid):
         db = dict(db[0])
         beatmap_hashes = Helper.load_beatmap_hashes()
+        beatmap_links = Helper.load_beatmap_links()
+        beatmap_compact = Helper.load_beatmaps_compact()["beatmaps"]
 
+        new_scores = {}
+        near_misses = 0
         for hash, scores in db.items():
             try:
                 bid = beatmap_hashes[hash]
+                msid = beatmap_links[str(bid)]
+                mapset = Helper.load_mapset(msid)
+                path_mapset = f"{PATH_BEATMAPSETS}/{msid}.json"
+                updated = int(beatmap_compact[str(bid)]["date"])
+
                 for score in scores:
-                    score_dict = Helper.score_to_dict_db(score)
-                    #Left off here
+                    score_dict = Helper.score_to_dict_db(score, uid=uid, bid=bid, msid=msid)
+                    sid = f"{score_dict["uid"]}{score_dict["time"]}"
+
+                    if int(score_dict["time"]) > updated:
+                        score_dict["old"] = False
+                    else:
+                        score_dict["old"] = True
+                    
+                    old_scores_user = [score for score in mapset["beatmaps"][str(bid)]["scores"].values() if int(score["uid"]) == int(uid)]
+
+                    cont = False
+                    for old_score in old_scores_user:
+                        diff = abs(int(old_score["time"]) - int(score_dict["time"]))
+                        if diff < 10 and diff != 0:
+                            cont = True
+                            near_misses += 1
+                            break
+
+                    if cont:
+                        continue
+                    new_scores |= {sid: score_dict}
+                    mapset["beatmaps"][str(bid)]["scores"] |= {sid: score_dict}
+
+                with open(path_mapset, "w", encoding='utf-8') as f:
+                    json.dump(mapset, f, ensure_ascii=False, indent=4)
+            
             except:
                 continue
 
+        path_user = f"{PATH_USERS}/{uid}.json"
+        user = Helper.load_user(uid)
+
+        old_total = len(user["scores"])
+        user["scores"] = new_scores | user["scores"]
+        new_total = len(user["scores"])
+        with open(path_user, "w", encoding='utf-8') as f:
+            json.dump(user, f, ensure_ascii=False, indent=4)
+
+        found = len(new_scores) + near_misses
+        message = f"""
+            Your scores have been processed. We found:\n
+            **{found}** local 9K+ scores, of which\n
+            **{new_total - old_total}** were unique to our database.\n
+            There are now **{new_total}** scores under your name on A Lotta Keys.
+
+            Your new scores will not be reflected in leaderboards, your top plays, or your PP for up to another 24 hours.\n
+            However, you can see them right now on your "PP vs Time" scatterplot, or the "Data" tab under a beatmap.
+        """
+        if discord_uid != "null":
+            discord_dm(discord_uid=discord_uid, content=message)
+        
     if "db" not in request.files:
-        return jsonify({"error": "No file"}), 400
+        return jsonify({"error": "No file. Refresh the page and try again."}), 400
     
-    db_file = request.files["db"]
+    db_file = request.files.get("db")
+    uid = request.form.get("uid")
+    discord_uid = request.form.get("discord_uid")
+
     if db_file.filename != "scores.db":
-        return jsonify({"error": "Not scores.db"}), 400
+        return jsonify({"error": "File must me named 'scores.db'."}), 400
     
     with tempfile.NamedTemporaryFile(delete=True, suffix=".db") as tmp:
-        tmp.write(db_file.getvalue())
-        tmp_path = tmp.name
         try:
+            data = db_file.read()
+            tmp.write(data)
+            tmp_path = tmp.name
             db = unpack_scores(tmp_path)
-            threading.Thread(target=_process_db, args=(db,)).start()
-            return jsonify({"status": "ok", "message": "Received. Check back in a few minutes."})
+            threading.Thread(target=_process_db, args=(db, uid, discord_uid)).start()
+            return jsonify({"status": "ok", "message": "Received. If you linked your Discord account with !link, you will get a dm when scores are processed."})
         except:
-            return jsonify({"error": "scores.db seems corrupted"}), 400
+            return jsonify({"error": "Can't unpack. Scores.db seems corrupted."}), 400
 
     

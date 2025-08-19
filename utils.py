@@ -82,7 +82,7 @@ class Helper:
         return beatmap_dict
     
     @staticmethod
-    def score_to_dict_db(score: ScoreDB, uid, bid) -> dict:
+    def score_to_dict_db(score: ScoreDB, uid, bid, msid) -> dict:
         def _mods_from_int(val) -> list:
             mods = ["CL"]
             mods += [mod for bit, mod in Helper.MOD_BITFLAGS.items() if val & bit]
@@ -121,7 +121,7 @@ class Helper:
         score_dict = {
             'uid': uid,
             'bid': bid,
-            'msid': None,
+            'msid': msid,
             'time': _time_from_winticks(score.timestamp),
             'mods': _mods_from_int(score.mods),
             'combo': score.max_combo,
@@ -351,6 +351,65 @@ class Helper:
         dt.replace(tzinfo=timezone.utc)
 
         return dt
+
+    @staticmethod
+    def process_user_scores(uid):
+        try:
+            user = Helper.load_user(uid)
+        except:
+            return
+        
+        beatmaps_compact = Helper.load_beatmaps_compact()
+
+        scores = user["scores"]
+
+        if scores == {}: return
+        
+        bids = {score["bid"] for score in scores.values()}
+        bids = {bid: [score for score in scores.items() if score[1]["bid"] == bid] for bid in bids}
+
+        updated_scores = {}
+
+        for bid, subscores in bids.items():
+            subscores.sort(key=lambda x: int(x[1]["time"]))
+
+            try:
+                updated = beatmaps_compact["beatmaps"][str(bid)]["date"]
+                updated = datetime.strptime(updated, "%y%m%d%H%M%S")
+
+            except:
+                updated = datetime.now()
+
+            record = 0
+            for score in subscores:
+                time = datetime.strptime(score[1]["time"], "%y%m%d%H%M%S")
+                
+                if time > updated:
+                    score[1]["old"] = False
+                else:
+                    score[1]["old"] = True
+
+                if score[1]["score"] > record:
+                    score[1]["pb"] = True
+                    record = score[1]["score"]
+                    sid_top = score[0]
+
+                else:
+                    score[1]["pb"] = False
+
+            for score in subscores:
+                if score[0] == sid_top:
+                    score[1]["top"] = True
+
+                else:
+                    score[1]["top"] = False
+
+                updated_scores |= dict([score])
+
+        user["scores"] = updated_scores
+
+        with open(f"{PATH_USERS}/{uid}.json", "w", encoding='utf-8') as f:
+            json.dump(user, f, ensure_ascii=False, indent=4)
 
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)

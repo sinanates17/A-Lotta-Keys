@@ -16,6 +16,7 @@ app = Flask(__name__,
             static_folder=f"{PATH_ROOT}/frontend/static")
 CORS(app)
 
+app.config["MAX_CONTENT_LENGTH"] = 32 * 1024 * 1024
 app.config["CLIENT_ID"] = OSU_API_ID
 app.config["CLIENT_SECRET"] = OSU_API_SECRET
 app.config["REDIRECT_URI"] = OSU_REDIRECT_URI

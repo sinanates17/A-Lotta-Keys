@@ -12,7 +12,7 @@ def main():
     now = datetime.now(timezone.utc)
 
     output = f"{PATH_DATA}/beatmaps_compact.json"
-    output_hashes = f"{PATH_DATA}/beatmaps_hashes.json"
+    output_hashes = f"{PATH_DATA}/beatmap_hashes.json"
     beatmaps_compact = {}
     beatmap_hashes = Helper.load_beatmap_hashes()
     beatmaps_compact["unranked"] = {}
@@ -24,6 +24,7 @@ def main():
     ranked = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
     loved = { k:0 for k in ["9", "10", "12", "14", "16", "18"] }
 
+    c = 0
     for file in listdir(PATH_BEATMAPSETS):
         if not file.endswith(".json"): continue
         with open(f"{PATH_BEATMAPSETS}/{file}", "r", encoding='utf-8') as f:
@@ -78,15 +79,19 @@ def main():
             if ("sr HT" not in beatmaps_compact["beatmaps"][bid].keys() or 
                 "sr DT" not in beatmaps_compact["beatmaps"][bid].keys() or
                 updated > now - timedelta(days=2)):
-                    pass
-                #sr_HT = helper.sr_HT(int(bid))
-                #sr_DT = helper.sr_DT(int(bid))
-                #beatmaps_compact["beatmaps"][bid]["sr HT"] = round(sr_HT, 2)
-                #beatmaps_compact["beatmaps"][bid]["sr DT"] = round(sr_DT, 2)
+                sr_HT = helper.sr_HT(int(bid))
+                sr_DT = helper.sr_DT(int(bid))
+                beatmaps_compact["beatmaps"][bid]["sr HT"] = round(sr_HT, 2)
+                beatmaps_compact["beatmaps"][bid]["sr DT"] = round(sr_DT, 2)
 
             if int(bid) not in beatmap_hashes.values():
                 try:
+                    if c > 500: 
+                        break
                     resp = requests.get(f"https://us.catboy.best/api/b/{bid}").json()
+                    if "error" not in resp:
+                        pass
+                    c += 1
                     hash =  resp["FileMD5"]
                     beatmap_hashes[hash] = int(bid)
                 except:

@@ -1,5 +1,6 @@
 const settingsbutton = document.getElementById("settingsbutton")
 const settings = document.getElementById("settings")
+const isFireFox = typeof InstallTrigger !== 'undefined'
 let justToggled = false
 
 sessionSettings = Object(sessionSettings)
@@ -16,21 +17,53 @@ settingsFav.forEach(elem => elem.addEventListener("click", () => clickSettingFav
 
 const filedrop = document.getElementById("filedrop")
 
-filedrop.addEventListener("drop", e => {
+Array.from(["dragenter", "dragover", "dragleave", "drop"]).forEach(eventName => {
+      filedrop.addEventListener(eventName, e => e.preventDefault());
+      document.body.addEventListener(eventName, e => e.preventDefault());
+})
+
+filedrop.addEventListener("dragover", e => {
+    e.preventDefault()
+    filedrop.classList.add("dragover")
+})
+
+filedrop.addEventListener("dragleave", e => {
+    e.preventDefault()
+    filedrop.classList.remove("dragover")
+})
+
+if (isFireFox){
+        filedrop.innerHTML = `<b>Drop scores.db to import local scores.</b><br>This feature is bugged on FireFox. Try a chromium-based browser.`
+    }
+
+filedrop.addEventListener("drop", (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    filedrop.classList.remove("dragover")
+    if (isFireFox){
+        return
+    }
+
     const files = e.dataTransfer.files
     const db = files[0]
     const formData = new FormData()
     formData.append("db", db)
+    formData.append("uid", sessionID)
+    formData.append("discord_uid", sessionSettings.discord_uid)
     fetch("/auth/upload_scores_db", {
         method: "POST",
-        body: formData
+        body: formData,
     })
-    .then(response => response.json())
+    .then(async response => {
+        const resp = await response.json()
+        if (!response.ok) { throw resp }
+        return resp
+    })
     .then(data => {
-        filedrop.innerHTML = `Drop scores.db to import local scores.\nUploaded. Refresh the page to check status.`
+        filedrop.innerHTML = `<b>Drop scores.db to import local scores.</b><br>${data.message}`
     })
     .catch(e => {
-        filedrop.innerHTML = `Drop scores.db to import local scores.\nError. Try again.`
+        filedrop.innerHTML = `<b>Drop scores.db to import local scores.</b><br>Error: ${e.error}`
     })
 })
 
