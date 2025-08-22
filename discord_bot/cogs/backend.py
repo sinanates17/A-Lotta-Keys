@@ -13,7 +13,6 @@ class Backend(commands.Cog):
     def __init__(self, bot):
         super().__init__()
         self.bot = bot
-        
 
     def cog_unload(self):
         self.mapfeed.cancel()
@@ -59,8 +58,10 @@ class Backend(commands.Cog):
     async def mapfeed(self):
         channel = self.bot.get_channel(1405791012533829645)
         helper = Helper()
-        recents = helper.recent_beatmaps()
+        recents = Helper.recent_beatmaps()
         del helper
+
+        role = self.bot.get_guild(1373152697057939476).get_role(1406327626242592928)
         
         for mapset in recents:
             artist = mapset["artist"]
@@ -71,30 +72,44 @@ class Backend(commands.Cog):
             status = mapset["ranked"]
             submitted = datetime.strptime(mapset["submitted_date"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
             updated = datetime.strptime(mapset["last_updated"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
-            
+
+            diff_info = "\n\n"
+            hs_keywords = ["hs", "hitsounds", "hit sounds", "keysounds", "key sounds"]
+            hs_only = True
+            for beatmap in mapset["beatmaps"]:
+                if beatmap["version"].lower() not in hs_keywords:
+                    hs_only = False
+                    sr = round(beatmap["difficulty_rating"], 2)
+                    keys = int(beatmap["cs"])
+                    ver = beatmap["version"]
+                    diff_info += f"*{sr}* | **{keys}** - [{ver}]\n"
+
+            if hs_only:
+                continue
+
             if status in [1, 3, 4]:
                 ranked = datetime.strptime(mapset["ranked_date"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
             
             #card_url = mapset.covers.card
 
             if submitted > self.previous_mapfeed:
-                msg = f"{mapper} just uploaded **[{artist} - {title}]({url})**, give it a playtest!"
+                msg = f"{mapper} just uploaded **[{artist} - {title}]({url})**, give it a playtest!{diff_info}"
                 await channel.send(msg)
 
             elif updated > self.previous_mapfeed:
-                msg = f"{mapper} just updated **[{artist} - {title}]({url})**, give it a playtest!"
+                msg = f"{mapper} just updated **[{artist} - {title}]({url})**, give it a playtest!{diff_info}"
                 await channel.send(msg)
 
             elif status == 3 and ranked > self.previous_mapfeed:
-                msg = f"@rankfeed\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been qualified!**"
+                msg = f"{role.mention}\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been qualified!**{diff_info}"
                 await channel.send(msg)
 
             elif status == 1 and ranked > self.previous_mapfeed:
-                msg = f"@rankfeed\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been ranked!**"
+                msg = f"{role.mention}\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been ranked!**{diff_info}"
                 await channel.send(msg)
 
             elif status == 4 and ranked > self.previous_mapfeed:
-                msg = f"@rankfeed\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been loved!**"
+                msg = f"{role.mention}\n**[{artist} - {title}]({url})**, hosted by {mapper}, has just been loved!**{diff_info}"
                 await channel.send(msg)
 
         self.previous_mapfeed = datetime.now(timezone.utc)

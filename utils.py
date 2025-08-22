@@ -411,6 +411,39 @@ class Helper:
         with open(f"{PATH_USERS}/{uid}.json", "w", encoding='utf-8') as f:
             json.dump(user, f, ensure_ascii=False, indent=4)
 
+    @staticmethod
+    def recent_beatmaps():
+        """
+        Manually request the beatmapsets/search endpoint because ossapi doesn't
+        work with the "updated_desc" sort option. This is specifically for the
+        Discord bot's mapfeed loop.
+        """
+
+        token_url = "https://osu.ppy.sh/oauth/token"
+        data = {
+            "client_id": OSU_API_ID,
+            "client_secret": OSU_API_SECRET,
+            "grant_type": "client_credentials",
+            "scope": "public"
+        }
+
+        resp = requests.post(token_url, json=data)
+        resp.raise_for_status()
+        token_info = resp.json()
+        access_token = token_info["access_token"]
+
+        headers = {
+            "Authorization": f"Bearer {access_token}"
+        }
+
+        url = "https://osu.ppy.sh/api/v2/beatmapsets/search?e=&c=&g=&l=&m=&nsfw=&played=&q=keys%3E8&r=&sort=updated_desc&s=any"
+        resp = requests.get(url, headers=headers)
+        resp.raise_for_status()
+        resp = resp.json()
+        resp = resp["beatmapsets"]
+
+        return resp[0:5]
+
     def cum_search_beatmapsets(self, start_date=None, end_date=None, **kwargs) -> list[Ossapi.beatmapset]:
         sleep(REQUEST_INTERVAL)
         result = self.osu_api.search_beatmapsets(**kwargs)
@@ -540,38 +573,6 @@ class Helper:
         except:
             sr = 0
         return sr
-    
-    def recent_beatmaps(self):
-        """
-        Manually request the beatmapsets/search endpoint because ossapi doesn't
-        work with the "updated_desc" sort option. This is specifically for the
-        Discord bot's mapfeed loop.
-        """
-
-        token_url = "https://osu.ppy.sh/oauth/token"
-        data = {
-            "client_id": OSU_API_ID,
-            "client_secret": OSU_API_SECRET,
-            "grant_type": "client_credentials",
-            "scope": "public"
-        }
-
-        resp = requests.post(token_url, json=data)
-        resp.raise_for_status()
-        token_info = resp.json()
-        access_token = token_info["access_token"]
-
-        headers = {
-            "Authorization": f"Bearer {access_token}"
-        }
-
-        url = "https://osu.ppy.sh/api/v2/beatmapsets/search?e=&c=&g=&l=&m=&nsfw=&played=&q=keys%3E8&r=&sort=updated_desc&s=any"
-        resp = requests.get(url, headers=headers)
-        resp.raise_for_status()
-        resp = resp.json()
-        resp = resp["beatmapsets"]
-
-        return resp[0:5]
 
     def initialize_user(self, uid):
         filename = f"{uid}.json"
