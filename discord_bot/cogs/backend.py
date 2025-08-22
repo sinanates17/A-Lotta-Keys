@@ -77,12 +77,21 @@ class Backend(commands.Cog):
             hs_keywords = ["hs", "hitsounds", "hit sounds", "keysounds", "key sounds"]
             hs_only = True
             for beatmap in mapset["beatmaps"]:
-                if beatmap["version"].lower() not in hs_keywords:
+                diffname = beatmap["version"].lower()
+                condition = True
+                for word in hs_keywords[1:]:
+                    if word in diffname:
+                        condition = False
+                        break
+
+                if diffname not in hs_keywords and condition:
+                    keys = int(beatmap["cs"])
+                    if keys < 9:
+                        continue
                     hs_only = False
                     sr = round(beatmap["difficulty_rating"], 2)
-                    keys = int(beatmap["cs"])
                     ver = beatmap["version"]
-                    diff_info += f"*{sr}* | **{keys}** - [{ver}]\n"
+                    diff_info += f"*{sr}*☆ | **{keys}K** - [{ver}]\n"
 
             if hs_only:
                 continue
