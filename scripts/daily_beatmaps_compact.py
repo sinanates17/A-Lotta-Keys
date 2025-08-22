@@ -87,7 +87,7 @@ def main():
             if int(bid) not in beatmap_hashes.values():
                 try:
                     if c > 500: 
-                        break
+                        continue
                     resp = requests.get(f"https://us.catboy.best/api/b/{bid}").json()
                     if "error" not in resp:
                         pass
