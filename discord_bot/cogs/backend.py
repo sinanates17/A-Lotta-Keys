@@ -74,7 +74,7 @@ class Backend(commands.Cog):
             updated = datetime.strptime(mapset["last_updated"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
 
             diff_info = "\n\n"
-            hs_keywords = ["hs", "hitsounds", "hit sounds", "keysounds", "key sounds"]
+            hs_keywords = ["hs", "hitsounds", "hitsound","hit sounds", "keysounds", "keysound","key sounds"]
             hs_only = True
             for beatmap in mapset["beatmaps"]:
                 diffname = beatmap["version"].lower()
@@ -91,7 +91,7 @@ class Backend(commands.Cog):
                     hs_only = False
                     sr = round(beatmap["difficulty_rating"], 2)
                     ver = beatmap["version"]
-                    diff_info += f"*{sr}*☆ | **{keys}K** - [{ver}]\n"
+                    diff_info += f"*{sr}* ☆ | **{keys}K** - [{ver}]\n"
 
             if hs_only:
                 continue

@@ -11,9 +11,14 @@ intents.message_content = True
 
 bot = commands.Bot(intents=intents, command_prefix="!")
 
+GUILD_ID = 1373152697057939476
+guild = discord.Object(id=GUILD_ID)
+
 @bot.event
 async def on_ready():
+    synced = await bot.tree.sync(guild=guild)
     print(f'{bot.user} has connected to Discord!')
+    print(synced)
 
 @bot.command(name="ping")
 async def ping(ctx):

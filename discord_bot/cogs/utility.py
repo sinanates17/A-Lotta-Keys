@@ -6,6 +6,7 @@ import uuid
 import asyncio
 import random
 import requests
+from discord import app_commands
 from textwrap import dedent
 from os import listdir
 from discord.ext import commands, tasks
@@ -15,7 +16,14 @@ from utils import Helper
 from datetime import datetime, timezone
 from api.routes.db import get_pf_db_bot
 
+KEYMODES = [9, 10, 12, 14, 16, 18]
+STATES = ["ranked", "unranked", "loved"]
+
+GUILD_ID = 1373152697057939476
+GUILD = discord.Object(id=GUILD_ID)
+
 class Utility(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
         self.pending = {}
@@ -24,35 +32,44 @@ class Utility(commands.Cog):
     async def on_ready(self):
         print("Utility cog online")
 
-    @commands.command(name="link")
-    async def link(self, ctx):
-        state = str(ctx.author.id)
+    @app_commands.command(name="link",
+                          description="Link your Discord, osu!, and ALK profiles together.")
+    async def link(self, interaction: discord.Interaction):
+        state = str(interaction.user.id)
 
         url = f"{SERVER}/auth/verify?state={state}"
         msg = f"Click here to link your Discord account with your osu! account: {url}"
 
-        await ctx.author.send(msg)
+        await interaction.response.send_message(msg, ephemeral=True)
 
-    @commands.command(name="suggest")
-    async def suggest(self, ctx, keys=10, status="ranked"):
-        status = status.lower()
-        if status not in ["ranked", "loved", "unranked"] or keys not in [9, 10, 12, 14, 16, 18]:
-            await ctx.channel.send("Command usage:\n`!suggest <keys> <status>`\n`<keys>` must be one of `9`, `10`, `12`, `14`, `16`, or `18`. Default `10`.\n<status> must be one of `ranked`, `loved`, or `unranked`. Default `ranked`.>")
-            return
-
+    @app_commands.command(name="suggest",
+                          description="Suggest a map that you don't have a score for in the ALK database.")
+    @app_commands.describe(keys="Keymode",
+                           status="Map status",
+                           min_sr="Minimum SR",
+                           max_sr="Maximum SR")
+    @app_commands.choices(
+        keys=[app_commands.Choice(name=f"{key}K", value=key) for key in KEYMODES],
+        status=[app_commands.Choice(name=state, value=state ) for state in STATES]
+    )
+    async def suggest(self,
+                      interaction: discord.Interaction,
+                      keys: app_commands.Choice[int],
+                      status: app_commands.Choice[str],
+                      min_sr: float = 0.0,
+                      max_sr: float = 69420.0):
         try:
             resp = requests.get(
-                f"{SERVER}/api/search/discord/{ctx.author.id}",
-                timeout=5
-            )
+                f"{SERVER}/api/search/discord/{interaction.user.id}",
+                timeout=5)
             row = resp.json()
 
         except:
-            await ctx.channel.send("Something went wrong. You may not be linked, or you may not have a profile on A Lotta Keys.\nTry `!link`.")
+            await interaction.response.send_message("Something went wrong. You may not be linked, or you may not have a profile on A Lotta Keys.\nTry `/link`.")
             return
 
         if not row["discord_uid"] or "error" in row:
-            await ctx.channel.send("You're not linked. Link your osu! account with `!link`")
+            await interaction.response.send_message("You're not linked. Link your osu! account with `/link`")
             return
         
         uid = row["uid"]
@@ -60,16 +77,31 @@ class Utility(commands.Cog):
         try:
             user = Helper.load_user(uid)
         except:
-            await ctx.channel.send(f"You don't have a profile on A Lotta Keys. Create one by logging in:\n{SERVER}/auth/login")
+            await interaction.response.send_message(f"You don't have a profile on A Lotta Keys. Create one by logging in:\n{SERVER}/auth/login")
             return
 
         played_bids = {score["bid"] for score in user["scores"].values()}
-        available_bids = {int(bid) for bid, beatmap in Helper.load_beatmaps_compact()["beatmaps"].items() if beatmap["keys"] == keys and beatmap["status"].lower() == status}
+
+        beatmaps = Helper.load_beatmaps_compact()["beatmaps"]
+        available_bids = {int(bid) for bid, beatmap in beatmaps.items() if beatmap["keys"] == keys.value and 
+                                                                           beatmap["status"].lower() == status.value and
+                                                                           beatmap["sr"] > min_sr and
+                                                                           beatmap["sr"] < max_sr}
         target_bids = available_bids - played_bids
 
-        suggestion = random.choice(list(target_bids))
+        if target_bids == {}:
+            await interaction.response.send_message("No beatmaps found. Try different filters.")
+            return
 
-        await ctx.channel.send(f"Here's a random {status} {keys}K map you don't have any scores for in A Lotta Keys:\nhttps://osu.ppy.sh/beatmaps/{suggestion}")
-        
+        suggestion_bid = str(random.choice(list(target_bids)))
+        suggestion_name = beatmaps[suggestion_bid]["name"]
+        suggestion_sr = beatmaps[suggestion_bid]["sr"]
+        suggestion_desc = f"**Difficulty:** {suggestion_name}\n**SR**: {suggestion_sr}"
+
+        await interaction.response.send_message(f"## Here's a [**random {status.value} {keys.value}K map**](<https://osu.ppy.sh/beatmaps/{suggestion_bid}>) you don't have any scores for in A Lotta Keys:\n\n{suggestion_desc}")
+
 async def setup(bot):
+    cog = Utility(bot)
     await bot.add_cog(Utility(bot))
+    bot.tree.add_command(cog.suggest, guild=GUILD)
+    bot.tree.add_command(cog.link, guild=GUILD)
