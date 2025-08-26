@@ -1,151 +1,458 @@
-html, body {
-    height: 100%;
+body {
     margin: 0;
-    overflow-y: scroll
-}
+    overflow-y: hidden;
 
-.backgroundHome{
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background-image: url("../images/background.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
 
+header {
+    position: sticky;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-.background{
-    background-image: url("../images/background.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    display: flex;
-    flex-direction: column;
     align-items: center;
-
-    margin-top: 25px;
-    overflow: hidden;
-    overflow-x: auto;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    background-color: rgba(16, 16, 16, .5);
+    border-bottom: 2px solid #918396;;
+    z-index: 1000;
 }
 
-.backgroundP{
-    background-image: url("../images/background.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
+nav {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-
-    margin-top: 25px;
-}
-
-.h1 {
-    font-size: 80px;
-    height: 75px;
-    color: #efe5f3;
-    font-family: Ubuntu;
-}
-
-.h2 {
-    font-size: 25px;
-    color: #efe5f3;
-    font-family: Ubuntu;
-}
-
-.p {
-    font-size: 18px;
-    color: #c2aec9;
-    font-family: Ubuntu;
     width: 60vw;
-    text-wrap: pre-wrap;
-    text-align: justify;
+    min-width: 1000px;
+}
+
+main {
+    display: flex;
+    overflow-y: auto;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .25);
+    width: 60vw;
+    min-width: 1000px;
+    height: calc(100vh - 100px);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    min-height: 5vh;
+    background-color: rgba(16, 16, 16, .5);
+    border-top: 2px solid #918396;;
+    z-index: 1000;
+}
+
+p {
+    font-size: 18px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #efe5f3;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent !important;
+}
+
+.navright {
+    display: flex;
+    justify-content: end;
+    gap: 1em;
+    width: 100%;
+}
+
+.logo {
+    min-width: fit-content;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: default;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.settings {
+    position: absolute;
+    top: calc(50vh - 400px);
+    left: calc(50vw - 300px);
+    height: 800px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 20px;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.settings.active {
+    display: flex;
+}
+
+.navbutton1 {
+    font-size: 20px;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 40px;
+    border: none;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.navbutton1:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
+}
+
+.navbutton2 {
+    font-size: 20px;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.navbutton2:hover {
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
 }
 
 .hlink {
     color: #efe5f3;
 }
 
-.homeButton {
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+    width: calc(100% - 40px);
+    overflow: hidden;
+    row-gap: 1em;
+}
+
+.filedrop {
+    border-radius: 20px;
+    border:#918396 2px dashed;
+    padding: 20px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #bcb0c0;
+    text-align: center;
+    background-color: transparent;
+    transition: ease 0.1s background-color;
+}
+
+.filedrop:hover {
+    cursor: default;
+}
+
+.filedrop.dragover {
+    background-color: rgba(255, 255, 255, .2);
+    cursor: grab;
+}
+
+.tabcont {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    flex-grow: 1;
+}
+
+.tabcont.active {
+    display: flex;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 25px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+}
+
+.label2 {
+    font-weight: bold;
+    font-size: 35px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+}
+
+.label3 {
+    font-weight: bold;
     font-size: 20px;
     color: #bcb0c0;
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 37px;
-    width: 200px;
-    height: 75px;
-    border: none;
-    font-family: Ubuntu;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
 
-.homeButton:hover {
-    background-color: rgba(255, 255, 255, .1);
+.label4 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
 }
 
-.homeButtonSmall {
+.label5 {
+    font-size: 18px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    padding-top:  25px;
+}
+
+
+.label2:hover {
+    cursor: default;
+}
+
+.label3:hover {
+    cursor: default;
+}
+
+.label4:hover {
+    cursor: default;
+}
+
+.label5:hover {
+    cursor: default;
+}
+
+.user {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.beatmap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 0;
+}
+
+.avatar {
+    height:100px;
+    width: 100px;
+    border: #918396 2px solid;
+    border-radius: 50px;
+}
+
+.avataricon {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.avataricon:hover {
+    cursor: pointer;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 50px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: left;
+    width: 40%;
+}
+
+.beatmapname {
+    font-weight: bold;
+    font-size: 50px;
+    color: #efe5f3;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: center;
+    margin-block-end: 0;
+}
+
+.diffname {
+    font-weight: bold;
+    font-size: 35px;
+    color: #bcb0c0;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding: 0;
+    text-align: center;
+}
+
+.username:hover {
+    cursor: default;
+}
+
+.beatmapname:hover {
+    cursor: default;
+}
+
+.diffname:hover {
+    cursor: default;
+}
+
+.label:hover {
+    cursor: default;
+}
+
+.search {
     font-size: 20px;
     color: #bcb0c0;
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 25px;
-    width: 50px;
+    width: 35%;
+    min-width: 150px;
     height: 50px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
     border: none;
-    font-family: Ubuntu;
 }
 
-.homeButtonSmall:hover {
+.search:focus {
+    border: none;
+    outline: none;
+}
+
+.checkbutton {
+    font-size: 20px;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 40px;
+    border: none;
+}
+
+.checkbutton:hover {
+    cursor: pointer;
     background-color: rgba(255, 255, 255, .1);
 }
 
-.menuContainer {
-    align-content: stretch;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding-bottom: 25px;
-    z-index: 2;
+.checkbutton2 {
+    font-size: 16x;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    background-color: transparent;
+    border-radius: 10px;
+    height: 20px;
+    border: none;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
-.subMenuContainer {
-    width: 875px;
-    align-content: stretch;
-    display: flex;
-    justify-content: right;
-    gap: 25px;
-    z-index: 2;
+.checkbutton2:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .1);
 }
 
-.spacer1 {
-    height:400px;
-    background: transparent;
+.checkbutton.checked {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.checkbutton.checked:hover {
+    cursor: pointer;
+}
+
+.checkbutton2.checked {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.checkbutton2.checked:hover {
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0;
+}
+
+.options2{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    row-gap: .5em;
+}
+
+.block {
+    display: block;
+}
+
+.tablehead {
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    color: #efe5f3;
+    table-layout: fixed;
+    width: 100%;
 }
 
 .table {
-    font-family: Ubuntu;
+    font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     color: #efe5f3;
-    width: 1200px;
     table-layout: fixed;
+    width: 100%;
 }
 
-.table thead { 
-    top: 0px; 
-    z-index: 1; 
-    text-align: right;}
-
-.tableCont {
-    max-height: calc(100vh - 430px);
-    overflow-y: auto;
+.table::-webkit-scrollbar {
+    display: none;
 }
 
-.tableCont2 {
-    min-height: 600px;
+.tablecont {
+    height: 100%;
     overflow-y: auto;
 }
 
@@ -161,145 +468,27 @@ html, body {
     cursor: pointer;
 }
 
-.searchMenu {
-    width: 875px;
-    align-content: stretch;
-    display: flex;
-    justify-content: left;
-    gap: 25px;
-    z-index: 2;
-}
-.filterMenu {
-    width: 875px;
-    height: 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    align-content: stretch;
-    display: flex;
-    justify-content: left;
-    gap: 25px;
-    z-index: 2;
-    overflow: visible;
+thead:hover {
+    cursor: default;
 }
 
-.search {
-    font-size: 20px;
-    color: #bcb0c0;
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 25px;
-    width: 250px;
-    height: 50px;
-    border: none;
-    font-family: Ubuntu;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.search:focus {
-    border: none;
-    outline: none;
-}
-
-.keymodes {
-    border: none;
-    font-family: Ubuntu;
-    color: #efe5f3;
-    overflow: visible;
-    position: relative;
-}
-
-.keymodesHover {
-    font-size: 20px;
-    color: #bcb0c0;
-    background-color: rgba(255, 255, 255, 0.03);
-    border-radius: 25px;
-    width: 150px;
-    height: 50px;
-    border: none;
-    font-family: Ubuntu;
-    padding-left: 25px;
-    padding-right: 25px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.keymodesContent {
-    border: none;
-    font-family: Ubuntu;
-    color: #bcb0c0;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #342738;
-    padding: 25px;
-    border-radius: 25px;
-    width: 150px;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.keymodesCheckbox {
-    font-family: Ubuntu;
-    height: 25px;
-    width: 25px;
-    accent-color: #66516d;
-}
-
-.keymodesHover:hover {
-    background-color: rgba(255, 255, 255, .1);
-}
-
-.header:hover {
-    background-color: rgba(255, 255, 255, .1);
-    cursor: pointer;
-}
-
-.sortName {
-    font-family: Ubuntu;
-    border: none;
-    font-size: 18px;
-    color: #bcb0c0;
-    background-color: transparent;
-    width: 100%;
-}
-
-.sortName:hover {
-    background-color: rgba(255, 255, 255, .1);
-    cursor: pointer;
-}
-
-.sortContent {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    background-color: #342738;
-    border-radius: 25px;
-    width: 200px;
-    padding: 0;
-    overflow: hidden;
-}
-
-.hUser {
-    padding-top: 25px;
-    font-size: 40px;
-    color: #efe5f3;
-    font-family: Ubuntu;
-}
-
-.hdiff {
-    padding-top: 25px;
-    font-size: 25px;
-    color: #bcb0c0;
-    font-family: Ubuntu;
+.table thead { 
+    top: 0px; 
+    z-index: 1; 
+    text-align: right;
 }
 
 .plot {
     margin-top: 25px;
-    border: 5px solid #bcb0c0;
+    border: 5px solid #918396;
     border-radius: 5px;
+}
+
+.plotcont {
+    align-content: stretch;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 25px;
+    z-index: 2;
 }

@@ -11,16 +11,14 @@ from textwrap import dedent
 from os import listdir
 from discord.ext import commands, tasks
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import DISCORD_BOT_TOKEN, PATH_USERS, PATH_DATA, SERVER
+from config import DISCORD_BOT_TOKEN, PATH_USERS, PATH_DATA, SERVER, DISCORD_GUILD_ID
 from utils import Helper
 from datetime import datetime, timezone
 from api.routes.db import get_pf_db_bot
 
 KEYMODES = [9, 10, 12, 14, 16, 18]
 STATES = ["ranked", "unranked", "loved"]
-
-GUILD_ID = 1373152697057939476
-GUILD = discord.Object(id=GUILD_ID)
+GUILD = discord.Object(id=DISCORD_GUILD_ID)
 
 class Utility(commands.Cog):
 
@@ -100,8 +98,13 @@ class Utility(commands.Cog):
 
         await interaction.response.send_message(f"## Here's a [**random {status.value} {keys.value}K map**](<https://osu.ppy.sh/beatmaps/{suggestion_bid}>) you don't have any scores for in A Lotta Keys:\n\n{suggestion_desc}")
 
+    @app_commands.command(name="ping")
+    async def ping(self, interaction: discord.Interaction):
+        await interaction.response.send_message("pong!")
+
 async def setup(bot):
     cog = Utility(bot)
     await bot.add_cog(Utility(bot))
     bot.tree.add_command(cog.suggest, guild=GUILD)
     bot.tree.add_command(cog.link, guild=GUILD)
+    bot.tree.add_command(cog.ping, guild=GUILD)

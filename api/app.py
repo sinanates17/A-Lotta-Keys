@@ -1,5 +1,7 @@
-from flask import Flask, render_template, session, g, send_from_directory
+from flask import Flask, render_template, session, g, send_from_directory, Response, url_for
 from flask_cors import CORS
+from os import listdir
+from apscheduler.schedulers.background import BackgroundScheduler
 import sys
 import secrets
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -10,11 +12,19 @@ from api.routes.db import get_pf_db, DATABASE
 from utils import Helper
 import sqlite3
 from pathlib import Path
+import json
+import redis
 
 app = Flask(__name__, 
             template_folder=f"{PATH_ROOT}/frontend/html",
             static_folder=f"{PATH_ROOT}/frontend/static")
 CORS(app)
+
+r = redis.Redis(host='localhost', port=6379, db=0)
+
+THEMES_DIR = f"{PATH_ROOT}/frontend/static/themes"
+THEMES = listdir(THEMES_DIR)
+current_theme = THEMES[0]
 
 app.config["MAX_CONTENT_LENGTH"] = 32 * 1024 * 1024
 app.config["CLIENT_ID"] = OSU_API_ID
@@ -47,6 +57,22 @@ def logged_in():
     
     else:
         return dict(logged_in=("user" in session))
+
+@app.route("/favicon.ico")
+def serve_favicon():
+    path = f"{THEMES_DIR}/{current_theme}"
+    return send_from_directory(path, "favicon.ico", mimetype="image/vnd.microsoft.icon")
+
+@app.route("/styles")
+def styles():
+    theme_dir = f"{THEMES_DIR}/{current_theme}"
+    theme_json = f"{theme_dir}/theme.json"
+
+    with open(theme_json, "r", encoding="utf-8") as f:
+        theme = json.load(f)
+
+    css = render_template('styles.css.j2', theme=theme)
+    return Response(css, mimetype="text/css")
 
 @app.teardown_request
 def close_pf_db(exception):
@@ -86,16 +112,27 @@ def favicon():
     return send_from_directory(
         app.static_folder,
         'favicon.ico',
-        mimetype='image/vnd.microsoft.icon'
-    )
+        mimetype='image/vnd.microsoft.icon')
 
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)
     for rule in app.url_map.iter_rules():
         print(f"{rule.endpoint}: {rule}", file=sys.stderr)
 
-print_routes(app)
+def rotate_theme():
+    global current_theme
+    num_themes = len(THEMES)
+    i = THEMES.index(current_theme)
+    i = (i + 1) % num_themes
+    current_theme = THEMES[i]
+
+    r.publish("theme_rotate", current_theme)
+
+scheduler = BackgroundScheduler()
+scheduler.add_job(rotate_theme, trigger="interval", seconds=5)
 
 if __name__ == '__main__':
     init_pf_db()
+    scheduler.start()
     app.run(debug=True)
+    print_routes(app)

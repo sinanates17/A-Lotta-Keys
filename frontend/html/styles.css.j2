@@ -3,13 +3,13 @@ body {
     overflow-y: hidden;
 
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background-image: url("../images/background.png");
+    background-image: url("{{ url_for("static", filename="themes/" + theme.name + "/background.png")}}");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,8 +25,8 @@ header {
     width: 100%;
     height: 100px;
     min-height: 100px;
-    background-color: rgba(16, 16, 16, .5);
-    border-bottom: 2px solid #918396;;
+    background-color: rgba(16, 16, 16, .85);
+    border-bottom: 2px solid {{ theme.color3 }};
     z-index: 1000;
 }
 
@@ -44,7 +44,7 @@ main {
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, .25);
+    background-color: rgba(0, 0, 0, .7);
     width: 60vw;
     min-width: 1000px;
     height: calc(100vh - 100px);
@@ -63,13 +63,13 @@ footer {
     height: 5vh;
     min-height: 5vh;
     background-color: rgba(16, 16, 16, .5);
-    border-top: 2px solid #918396;;
+    border-top: 2px solid {{ theme.color3 }};
     z-index: 1000;
 }
 
 p {
     font-size: 18px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
 ::-webkit-scrollbar {
@@ -81,7 +81,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #efe5f3;
+    background: {{ theme.color1 }};
     border-radius: 4px;
 }
 
@@ -102,6 +102,13 @@ p {
     font-weight: bold;
     cursor: default;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    background-image: url("{{ url_for("static", filename="themes/" + theme.name + "/logo.png")}}");
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 90px;
+    border: 1px white solid;
 }
 
 .settings {
@@ -124,7 +131,7 @@ p {
 
 .navbutton1 {
     font-size: 20px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     background-color: transparent;
     border-radius: 20px;
     padding-left: 1em;
@@ -141,7 +148,7 @@ p {
 
 .navbutton2 {
     font-size: 20px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     background-color: transparent;
     border-radius: 20px;
     width: 40px;
@@ -155,7 +162,7 @@ p {
 }
 
 .hlink {
-    color: #efe5f3;
+    color: {{ theme.color1 }};
 }
 
 .container {
@@ -175,10 +182,10 @@ p {
 
 .filedrop {
     border-radius: 20px;
-    border:#918396 2px dashed;
+    border:{{ theme.color3 }} 2px dashed;
     padding: 20px;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     text-align: center;
     background-color: transparent;
     transition: ease 0.1s background-color;
@@ -209,7 +216,7 @@ p {
 .label {
     font-weight: bold;
     font-size: 25px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
 }
@@ -217,7 +224,7 @@ p {
 .label2 {
     font-weight: bold;
     font-size: 35px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
 }
@@ -225,21 +232,21 @@ p {
 .label3 {
     font-weight: bold;
     font-size: 20px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
 
 .label4 {
     font-weight: bold;
     font-size: 25px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
 }
 
 .label5 {
     font-size: 18px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
     padding-top:  25px;
@@ -282,7 +289,7 @@ p {
 .avatar {
     height:100px;
     width: 100px;
-    border: #918396 2px solid;
+    border: {{ theme.color3 }} 2px solid;
     border-radius: 50px;
 }
 
@@ -302,7 +309,7 @@ p {
 .username {
     font-weight: bold;
     font-size: 50px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
     text-align: left;
@@ -312,7 +319,7 @@ p {
 .beatmapname {
     font-weight: bold;
     font-size: 50px;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
     text-align: center;
@@ -322,7 +329,7 @@ p {
 .diffname {
     font-weight: bold;
     font-size: 35px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
     padding: 0;
     text-align: center;
@@ -346,7 +353,7 @@ p {
 
 .search {
     font-size: 20px;
-    color: #bcb0c0;
+    color: {{ theme.color2 }};
     background-color: rgba(255, 255, 255, 0.03);
     border-radius: 25px;
     width: 35%;
@@ -367,7 +374,7 @@ p {
 .checkbutton {
     font-size: 20px;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     background-color: transparent;
     border-radius: 20px;
     padding-left: 1em;
@@ -384,7 +391,7 @@ p {
 .checkbutton2 {
     font-size: 16x;
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     background-color: transparent;
     border-radius: 10px;
     height: 20px;
@@ -435,14 +442,14 @@ p {
 
 .tablehead {
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     table-layout: fixed;
     width: 100%;
 }
 
 .table {
     font-family: "Ubuntu", "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
-    color: #efe5f3;
+    color: {{ theme.color1 }};
     table-layout: fixed;
     width: 100%;
 }
@@ -480,7 +487,7 @@ thead:hover {
 
 .plot {
     margin-top: 25px;
-    border: 5px solid #918396;
+    border: 5px solid {{ theme.color3 }};
     border-radius: 5px;
 }
 

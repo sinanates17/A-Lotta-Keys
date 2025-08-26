@@ -1,11 +1,13 @@
 import sys
 import json
+import redis
+import asyncio
 import discord
 from textwrap import dedent
 from os import listdir
 from discord.ext import commands, tasks
 from pathlib import Path; sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from config import DISCORD_BOT_TOKEN, PATH_USERS
+from config import DISCORD_BOT_TOKEN, PATH_USERS, PATH_ROOT, DISCORD_GUILD_ID
 from utils import Helper
 from datetime import datetime, timezone
 
@@ -13,13 +15,29 @@ class Backend(commands.Cog):
     def __init__(self, bot):
         super().__init__()
         self.bot = bot
+        self.r = redis.Redis(host='localhost', port=6379, db=0)
+        self.pubsub = self.r.pubsub()
+        self.pubsub.subscribe("theme_rotate")
 
     def cog_unload(self):
         self.mapfeed.cancel()
 
+    async def listen_redis(self):
+        while True:
+            message = self.pubsub.get_message(ignore_subscribe_messages=True)
+            if message:
+                theme = message["data"]
+                theme = theme.decode()
+                path = f"{PATH_ROOT}/frontend/static/themes/{theme}/discord.png"
+                with open(path, "rb") as f:
+                    await self.bot.guild.edit(icon=f.read())
+
+            await asyncio.sleep(180)
+
     @commands.Cog.listener()
     async def on_ready(self):
         self.previous_mapfeed = datetime.now(timezone.utc)
+        self.bot.loop.create_task(self.listen_redis())
         self.mapfeed.start()
         print("Backend cog online")
 
@@ -61,7 +79,7 @@ class Backend(commands.Cog):
         recents = Helper.recent_beatmaps()
         del helper
 
-        role = self.bot.get_guild(1373152697057939476).get_role(1406327626242592928)
+        role = self.bot.get_guild(DISCORD_GUILD_ID).get_role(1406327626242592928)
         
         for mapset in recents:
             artist = mapset["artist"]
