@@ -24,7 +24,7 @@ r = redis.Redis(host='localhost', port=6379, db=0)
 
 THEMES_DIR = f"{PATH_ROOT}/frontend/static/themes"
 THEMES = listdir(THEMES_DIR)
-current_theme = THEMES[0]
+current_theme = THEMES[-1]
 
 app.config["MAX_CONTENT_LENGTH"] = 32 * 1024 * 1024
 app.config["CLIENT_ID"] = OSU_API_ID
