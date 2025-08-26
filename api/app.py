@@ -58,6 +58,21 @@ def logged_in():
     else:
         return dict(logged_in=("user" in session))
 
+@app.context_processor
+def theme_info():
+    theme = load_theme_json()
+    return dict(theme_info=theme)
+
+def load_theme_json():
+    global current_theme
+    theme_dir = f"{THEMES_DIR}/{current_theme}"
+    theme_json = f"{theme_dir}/theme.json"
+
+    with open(theme_json, "r", encoding="utf-8") as f:
+        theme = json.load(f)
+
+    return theme
+
 @app.route("/favicon.ico")
 def serve_favicon():
     path = f"{THEMES_DIR}/{current_theme}"
@@ -65,12 +80,7 @@ def serve_favicon():
 
 @app.route("/styles")
 def styles():
-    theme_dir = f"{THEMES_DIR}/{current_theme}"
-    theme_json = f"{theme_dir}/theme.json"
-
-    with open(theme_json, "r", encoding="utf-8") as f:
-        theme = json.load(f)
-
+    theme = load_theme_json()
     css = render_template('styles.css.j2', theme=theme)
     return Response(css, mimetype="text/css")
 
@@ -129,7 +139,7 @@ def rotate_theme():
     r.publish("theme_rotate", current_theme)
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(rotate_theme, trigger="interval", seconds=5)
+scheduler.add_job(rotate_theme, trigger="interval", hours=3)
 
 if __name__ == '__main__':
     init_pf_db()
