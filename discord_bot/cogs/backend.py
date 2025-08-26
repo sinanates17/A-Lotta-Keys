@@ -22,22 +22,10 @@ class Backend(commands.Cog):
     def cog_unload(self):
         self.mapfeed.cancel()
 
-    async def listen_redis(self):
-        while True:
-            message = self.pubsub.get_message(ignore_subscribe_messages=True)
-            if message:
-                theme = message["data"]
-                theme = theme.decode()
-                path = f"{PATH_ROOT}/frontend/static/themes/{theme}/discord.png"
-                with open(path, "rb") as f:
-                    await self.bot.guild.edit(icon=f.read())
-
-            await asyncio.sleep(180)
-
     @commands.Cog.listener()
     async def on_ready(self):
         self.previous_mapfeed = datetime.now(timezone.utc)
-        self.bot.loop.create_task(self.listen_redis())
+        self.listen_redis.start()
         self.mapfeed.start()
         print("Backend cog online")
 
@@ -72,7 +60,7 @@ class Backend(commands.Cog):
         
         await ctx.send(f"User {name} not in A Lotta Keys database!")
 
-    @tasks.loop(minutes=3)
+    @tasks.loop(minutes=1)
     async def mapfeed(self):
         channel = self.bot.get_channel(1405791012533829645)
         helper = Helper()
@@ -140,6 +128,16 @@ class Backend(commands.Cog):
                 await channel.send(msg)
 
         self.previous_mapfeed = datetime.now(timezone.utc)
+
+    @tasks.loop(minutes=3)
+    async def listen_redis(self):
+        message = self.pubsub.get_message(ignore_subscribe_messages=True)
+        if message:
+            theme = message["data"]
+            theme = theme.decode()
+            path = f"{PATH_ROOT}/frontend/static/themes/{theme}/discord.png"
+            with open(path, "rb") as f:
+                await self.bot.guild.edit(icon=f.read())
 
 async def setup(bot):
     await bot.add_cog(Backend(bot))

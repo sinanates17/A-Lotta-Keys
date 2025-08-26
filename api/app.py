@@ -117,13 +117,6 @@ def file(file):
 def home():
     return render_template("home.html")
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(
-        app.static_folder,
-        'favicon.ico',
-        mimetype='image/vnd.microsoft.icon')
-
 def print_routes(app):
     print(">>> Registered routes:", file=sys.stderr)
     for rule in app.url_map.iter_rules():
@@ -139,7 +132,7 @@ def rotate_theme():
     r.publish("theme_rotate", current_theme)
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(rotate_theme, trigger="interval", hours=3)
+scheduler.add_job(rotate_theme, trigger="interval", seconds=60)#hours=3)
 
 if __name__ == '__main__':
     init_pf_db()
